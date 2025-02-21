@@ -13,7 +13,7 @@ function addProduct() {
     let productSubtotal = productPrice * productQuantity;
 
     // Reject invalid input
-    if (productQuantity == '') {
+    if (productQuantity == '' || isNaN(productQuantity)) {
         alert('Insert a valid product quantity.')
         return;
     }
