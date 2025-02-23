@@ -53,9 +53,6 @@ function addProduct() {
 
     // Reset quantity
     document.getElementById('quantidade').value = '';
-
-    // Debug
-    alert(cartItems);
 }
 
 function clearCart() {
