@@ -1,67 +1,72 @@
-let cartItems = ['1 - Celular - R$1400'];
-let cartList = document.getElementById('lista-produtos');
-let cartTotal = document.getElementById('valor-total');
+// Pool
+let friendList = [];
+let friendListText = document.getElementById('lista-amigos');
+// Result
+let friendPairing = [];
+let friendPairingText = document.getElementById('lista-sorteio');
 
-clearCart();
+function addFriend() {
+    // Obtain
+    let friendName = document.getElementById('nome-amigo');
+    let friendIndex = friendList.findIndex(element => element == friendName.value);
 
-function addProduct() {
-    // Obtain input
-    let product = document.getElementById('produto').value;
-    let productName = product.split(' - R$')[0];
-    let productPrice = product.split(' - R$')[1];
-    let productQuantity = parseInt(document.getElementById('quantidade').value);
-    let productSubtotal = productPrice * productQuantity;
-
-    // Reject invalid input
-    if (productQuantity == '' || isNaN(productQuantity)) {
-        alert('Insert a valid product quantity.')
+    // Rejection message
+    let rejectionMessage =
+    friendName.value == '' ? 'Please enter a valid name.'
+    : friendIndex != -1 ? 'Name is already registered. Enter a different name.'
+    : '';
+    // Rejection
+    if (friendName.value == '' || friendIndex != -1) {
+        alert(rejectionMessage);
         return;
     }
 
-    // Obtain index
-    let productIndex = cartItems.findIndex(element => element.includes(productName));
-    // Add item
-    if (productIndex == -1) {
-        // Array
-        cartItems.push(`${productQuantity} - ${productName} - R$${productSubtotal}`);
-        // List
-        let productItem = document.createElement('section');
-        productItem.classList.add('carrinho__produtos__produto');
-        productItem.setAttribute('id', `cart-${product}`);
-        productItem.innerHTML = `<span class="texto-azul">${productQuantity}x</span> ${productName} <span class="texto-azul">R$${productPrice}</span>`;
-        cartList.appendChild(productItem);
-    // Update item
-    } else {
-        // Array
-        let productCurrentPrice = parseInt(cartItems[productIndex].split(' - R$')[1]);
-        let productCurrentQuantity = parseInt(cartItems[productIndex].split(' - ')[0]);
-        cartItems.splice(productIndex, 1);
-        let productNewPrice = productCurrentPrice + productSubtotal;
-        let productNewQuantity = productCurrentQuantity + productQuantity;
-        cartItems.push(`${productNewQuantity} - ${productName} - R$${productNewPrice}`);
-        // List
-        let productItem = document.getElementById(`cart-${product}`);
-        productItem.innerHTML = `<span class="texto-azul">${productNewQuantity}x</span> ${productName} <span class="texto-azul">R$${productPrice}</span>`;
-    }
+    // Add
+    friendList.push(friendName.value);
 
-    // Total
-    let cartSum = 0;
-    for (i = 0; i < cartItems.length; i++) {
-        cartSum += parseInt(cartItems[i].split(' - R$')[1]);
-    }
-    cartTotal.innerHTML = `R$${cartSum}`;
+    // Print
+    friendListText.innerHTML = `${friendList.join(", ")}.`;
 
-    // Reset quantity
-    document.getElementById('quantidade').value = '';
+    // Reset input
+    friendName.value = '';
 }
 
-function clearCart() {
-    // Array
-    cartItems = [];
+function sortFriend() {
+    // Rejection message
+    let rejectionMessage =
+    friendList.length < 2 ? 'Insert at least 2 names.'
+    : !Number.isInteger(friendList.length / 2) ? 'Insert an even number of names.'
+    : 'null';
+    // Rejection
+    if (friendList.length < 2 || !Number.isInteger(friendList.length / 2)) {
+        alert(rejectionMessage);
+        return;
+    }
 
-    // List
-    cartList.innerHTML = '';
+    // Reset result
+    friendPairing = [];
+    friendPairingText.innerHTML = '';
 
-    // Total
-    cartTotal.innerHTML = `R$0`;
+    // Sort order
+    for (i = friendList.length; i > 0; i--) {
+        let randomIndex = parseInt(Math.random() * i);
+        [friendList[i - 1], friendList[randomIndex]] = [friendList[randomIndex], friendList[i - 1]];
+    }
+    // Sort pairing
+    for (i = 0; i < (friendList.length - 1); i++) {
+        friendPairing.push(`${friendList[i]} --> ${friendList[i + 1]}`);
+    }
+    friendPairing.push(`${friendList[friendList.length - 1]} --> ${friendList[0]}`);
+
+    // Print
+    friendPairingText.innerHTML = friendPairing.join('<br>');
+}
+
+function reset() {
+    // Reset pool
+    friendList = [];
+    friendListText.innerHTML = '';
+    // Reset result
+    friendPairing = [];
+    friendPairingText.innerHTML = '';
 }
