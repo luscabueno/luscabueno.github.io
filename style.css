@@ -67,12 +67,28 @@ body {
   padding: 100px;
 }
 
+.friend__p {
+  width: fit-content;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #1875e8;
+}
+
+.friend__p__button {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
 .friends__container {
   align-items: center;
   border: 1px solid #1875e8;
   border-radius: 8px;
   color: #fff;
   display: flex;
+  flex-wrap: wrap;
   font-size: 21px;
   font-weight: 400;
   justify-content: center;

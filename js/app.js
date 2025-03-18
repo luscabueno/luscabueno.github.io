@@ -25,10 +25,27 @@ function addFriend() {
     friendList.push(friendName.value);
 
     // Print
-    friendListText.innerHTML = `${friendList.join(", ")}.`;
+    let friendText = document.createElement('p');
+    friendText.innerHTML = `${friendName.value}<span class="friend__p__button" onclick="deleteFriend('list-${friendName.value}')">&#10799</span>`;
+    friendText.classList.add('friend__p');
+    friendText.setAttribute('id', `list-${friendName.value}`);
+    // friendText.setAttribute('onclick', `deleteFriend('list-${friendName.value}')`);
+    friendListText.appendChild(friendText);
 
     // Reset input
     friendName.value = '';
+}
+
+function deleteFriend(friendId) {
+    // Obtain
+    let friendName = document.getElementById(friendId);
+    let friendIndex = friendList.findIndex(element => element == friendId.split('-')[1]);
+
+    // Remove
+    friendList.splice(friendIndex, 1);
+
+    // Print
+    friendListText.removeChild(friendName);
 }
 
 function sortFriend() {
