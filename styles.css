@@ -1,3 +1,46 @@
+/* ROOT SCALING */
+
+:root {
+    font-size: 16px;
+    /* REM size definition. */
+    /* 4K seems to work great on 22px. */
+    /* Web seems to work great on 14px. */
+    /* Tablet seems to work great on 13px. */
+    /* Mobile L seems to work great on 13px. */
+    /* Mobile M seems to work great on 12px. */
+    /* Mobile S seems to work great on 11px. */
+}
+
+@media (max-width: 2560px) {
+    :root {
+        font-size: 22px;
+    }    
+}
+
+@media (max-width: 1920px) {
+    :root {
+        font-size: 14px;
+    }    
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 13px;
+    }    
+}
+
+@media (max-width: 375px) {
+    :root {
+        font-size: 12px;
+    }    
+}
+
+@media (max-width: 320px) {
+    :root {
+        font-size: 11px;
+    }
+}
+
 /* MARKUP */
 
 /* MARKUP RESET */
@@ -38,12 +81,12 @@ td {
     padding: 0 1rem;
 }
 
-.card--body td {
-    padding: 0 1rem 0 2rem;
+th.number, td.number {
+    text-align: right;
 }
 
-.card--body th.number, td.number {
-    text-align: right;
+.card--body td {
+    padding: 0 1rem 0 2rem;
 }
 
 /* MARKUP OBJECTS */
@@ -112,7 +155,7 @@ td {
 }
 
 .highlight--label {
-    height: 5px;
+    height: 0.25rem;
 }
 
 .header--filter {
@@ -219,19 +262,11 @@ td {
 
 /* TEXT */
 
-/* TEXT ROOT */
-
-:root {
-    font-size: 13px;
-    /* REM size definition. */
-    /* Mobile seems to work great on 13px. */
-}
+/* TEXT ELEMENTS */
 
 body, input {
     font-family: "Inter";
 }
-
-/* TEXT ELEMENTS */
 
 h1 {
     font-size: 2.25rem;
@@ -348,7 +383,7 @@ th, td {
 .card {
     background: #223348;
     border: 1px solid #b4cdee3d;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
 .card--header--wrapper {
@@ -375,17 +410,17 @@ th, td {
 
 .button--primary {
     background: #0c6ce9;
-    border-radius: 4px;
+    border-radius: 0.25rem;
 }
 
 .button--secondary {
     background: #c0d5f20f;
-    border-radius: 4px;
+    border-radius: 0.25rem;
 }
 
 .text--field {
     background: #adc8eB24;
-    border-radius: 4px;
+    border-radius: 0.25rem;
 }
 
 /* STYLING HACKS */
