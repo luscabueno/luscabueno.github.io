@@ -1,5 +1,7 @@
 /* MARKUP */
 
+/* MARKUP RESET */
+
 body, div, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
@@ -13,8 +15,11 @@ body {
     line-height: 1;
 }
 
+/* MARKUP ELEMENTS */
+
 input {
-    flex: 1 1;
+    flex: 1;
+    width: 0;
 }
 
 table {
@@ -23,33 +28,35 @@ table {
 }
 
 th {
-    height: 45px;
+    height: 3rem;
     text-align: left;
-    padding: 0 16px;
+    padding: 0 1rem;
 }
 
 td {
-    height: 40px;
-    padding: 0 16px;
+    height: 2.5rem;
+    padding: 0 1rem;
 }
 
 .card--body td {
-    padding: 0 16px 0 32px;
+    padding: 0 1rem 0 2rem;
 }
 
 .card--body th.number, td.number {
     text-align: right;
 }
 
+/* MARKUP OBJECTS */
+
 .nav--top {
-    height: 68px;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 1rem;
 }
 
-.nav--top--left, .nav--top--right {
-    gap: 16px;
+.nav--top--wrapper {
+    gap: 1rem;
     display: flex;
     align-items: center;
 }
@@ -60,49 +67,48 @@ td {
 }
 
 .header--wrapper {
-    flex: 1 1 640px;
+    flex: 1 40rem;
     display: flex;
     flex-flow: row wrap;
 }
 
 .header--wrapper--sub {
+    flex: 1 20rem;
     display: flex;
     flex-flow: row wrap;
-    flex: 1 1 320px;
 }
 
 .header--title {
-    height: 152px;
-    flex: 1 1;
+    flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 0 32px;
-    gap: 16px;
+    padding: 2rem;
+    gap: 1rem;
 }
 
 .header--highlight {
-    flex: 1 1 160px;
+    flex: 1 10rem;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
 }
 
 .highlight--data--regular {
-    flex: 1 1;
-    height: 147px;
+    flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 0 32px;
-    gap: 16px;
+    padding: 2rem;
+    gap: 1rem;
 }
 
 .highlight--data--small {
-    flex: 1 1;
-    height: 48px;
+    flex: 1;
     display: flex;
     align-items: center;
-    padding: 0 16px;
-    gap: 8px;
+    padding: 0 1rem;
+    gap: 0.5rem;
 }
 
 .highlight--label {
@@ -110,43 +116,34 @@ td {
 }
 
 .header--filter {
-    flex: 1 1;
+    flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 32px;
-    gap: 16px;
-    box-sizing: border-box;
+    padding: 2rem;
+    gap: 1rem;
 }
 
 .filter {
-    /* min-width: 400px; */
     display: flex;
     flex-flow: row;
-    gap: 16px;
-    box-sizing: border-box;
-}
-
-.filter--field {
-    height: 36px;
-    flex: 1 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
+    gap: 1rem;
 }
 
 .body {
     display: flex;
     flex-flow: row wrap;
-    padding: 32px;
-    gap: 16px;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
 }
 
 .card {
     height: fit-content;
-    min-width: 360px;
-    flex: 1 1 30%;
+    flex: 1 30%;
+    /* Means if there is no space for another .card of 30% width (main row axis) it breaks to a new line, ensuring there will always be 3 cards max in each line. */
+    min-width: 25rem;
+    /* Means .card minimum width is 25rem, ensuring card breaks to a new line after the value is hit since flex-basis is 30% and will never be untrue unless child elements have fixed width that make the .card overflow. */
 }
 
 .card--header {
@@ -155,134 +152,165 @@ td {
 }
 
 .card--header--wrapper {
-    flex: 1 1;
+    flex: 1;
     display: flex;
 }
 
 .card--header--title {
-    width: 100%;
+    flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 16px;
-    gap: 8px;
+    padding: 1rem;
+    gap: 0.5rem;
 }
 
 .card--header--highlight {
-    width: 100%;
+    flex: 1;
     display: flex;
     flex-flow: column;
 }
 
 .card--body {
-    padding: 0 16px;
+    padding: 0 1rem;
 }
 
 .card--footer {
     display: flex;
     justify-content: right;
-    padding: 16px;
+    padding: 1rem;
 }
 
+/* MARKUP COMPONENTS */
+
 .badge {
-    height: 25px;
     width: min-content;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    border-radius: 4px;
-    padding: 0 8px;
+    padding: 0.5rem;
 }
 
 .button {
-    height: 36px;
+    height: 2.2rem;
     width: min-content;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 0 14px;
-    gap: 8px;
-    box-sizing: border-box;
+    padding: 0 0.8rem;
+    gap: 0.5rem;
+}
+
+.icon--small {
+    height: 1rem;
+    width: 1rem;
+}
+
+.icon--regular {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.text--field {
+    height: 2.2rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 0.8rem;
+    gap: 0.5rem;
 }
 
 /* TEXT */
 
-html {
-    font-size: 16px;
+/* TEXT ROOT */
+
+:root {
+    font-size: 13px;
+    /* REM size definition. */
+    /* Mobile seems to work great on 13px. */
 }
 
 body, input {
     font-family: "Inter";
 }
 
+/* TEXT ELEMENTS */
+
 h1 {
-    font-size: 40px;
+    font-size: 2.25rem;
     font-weight: 600;
     color: #f5f9ff;
 }
 
 h3 {
-    font-size: 22px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #f5f9ff;
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #f5f9ff;
 }
 
 h6, th {
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 600;
     color: #f5f9ff;
     text-transform: uppercase;
 }
 
-p.body--small {
-    font-size: 14px;
+p, td, input {
+    font-size: 1rem;
     font-weight: 400;
     color: #ebf4ffe6;
 }
 
-p.body--regular, td, input {
-    font-size: 16px;
-    font-weight: 400;
-    color: #ebf4ffe6;
+p.secondary {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #d9e8fcb0;
 }
 
 p.tertiary, input::placeholder {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     color: #c9ddf880;
 }
 
+p.small {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #ebf4ffe6;
+}
+
+/* TEXT COMPONENTS */
+
 .badge--success p {
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #12d965;
 }
 
 .badge--error p {
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #ff9e99;
 }
 
 .badge--warning p {
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #fecb45;
 }
 
 .button--secondary p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     color: #90bdf9;
 }
 
 /* STYLING */
+
+/* STYLING ELEMENTS */
 
 body {
     background: #223348;
@@ -298,18 +326,23 @@ th, td {
     border-bottom: 1px solid #adc8eB24;
 }
 
+/* STYLING OBJECTS */
+
 .nav--top, .header--wrapper--sub {
     border-bottom: 1px solid #adc8eB24;
     border-right: 1px solid #adc8eB24;
 }
 
-.filter--field {
-    background: #adc8eB24;
-    border-radius: 4px;
-}
-
 .body {
     background: #2b3d52;
+}
+
+.highlight--label--primary {
+    background: #0c6ce9;
+}
+
+.highlight--label--error {
+    background: #e0241a;
 }
 
 .card {
@@ -322,18 +355,10 @@ th, td {
     border-bottom: 1px solid #adc8eB24;
 }
 
-.border-left--add {
-    border-left: 1px solid #adc8eB24;
-}
+/* STYLING COMPONENTS */
 
-.button--primary {
-    background: #0c6ce9;
-    border-radius: 4px;
-}
-
-.button--secondary {
-    background: #c0d5f20f;
-    border-radius: 4px;
+.badge {
+    border-radius: 0.25rem;
 }
 
 .badge--success {
@@ -348,10 +373,23 @@ th, td {
     background: #ffaa001a;
 }
 
-.color--primary {
+.button--primary {
     background: #0c6ce9;
+    border-radius: 4px;
 }
 
-.color--error {
-    background: #e0241a;
+.button--secondary {
+    background: #c0d5f20f;
+    border-radius: 4px;
+}
+
+.text--field {
+    background: #adc8eB24;
+    border-radius: 4px;
+}
+
+/* STYLING HACKS */
+
+.border-left--add {
+    border-left: 1px solid #adc8eB24;
 }
