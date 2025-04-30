@@ -3,9 +3,13 @@ window.addEventListener('scroll', function() {
     let elemShow = document.getElementById("header_filter_s");
     let rect = elem.getBoundingClientRect();
 
-    if (rect.bottom < 0) {
+    if (rect.bottom < convertRemToPixels(4)) {
         elemShow.style.display = "flex";
     } else {
         elemShow.style.display = "none";
     }
 })
+
+function convertRemToPixels(rem) {    
+    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
