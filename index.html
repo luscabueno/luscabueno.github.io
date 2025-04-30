@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="app.js"></script>
     </head>
     <body>
         <div class="nav--top">
@@ -48,7 +49,7 @@
             </div>
             <div class="header--wrapper">
                 <div class="header--wrapper--sub">
-                    <div class="header--filter">
+                    <div class="header--filter" id="header_filter">
                         <div class="filter">
                             <div class="text--field">
                                 <input placeholder="Selecionar filtro de data inicial">
@@ -68,6 +69,26 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="header--filter--s" id="header_filter_s">
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar filtro de data inicial">
+                    <img src="img/icon_contrast_60/date.svg" class="icon--small">
+                </div>
+            </div>
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar filtro de data final">
+                    <img src="img/icon_contrast_60/date.svg" class="icon--small">
+                </div>
+                <div class="button button--secondary">
+                    <img src="img/icon_primary_text/expand.svg" class="icon--small">
+                </div>
+                <div class="button button--primary">
+                    <img src="img/icon_contrast_100/search.svg" class="icon--small">
                 </div>
             </div>
         </div>

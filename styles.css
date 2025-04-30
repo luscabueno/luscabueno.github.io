@@ -3,12 +3,6 @@
 :root {
     font-size: 16px;
     /* REM size definition. */
-    /* 4K seems to work great on 22px. */
-    /* Web seems to work great on 14px. */
-    /* Tablet seems to work great on 13px. */
-    /* Mobile L seems to work great on 13px. */
-    /* Mobile M seems to work great on 12px. */
-    /* Mobile S seems to work great on 11px. */
 }
 
 @media (max-width: 2560px) {
@@ -96,6 +90,8 @@ th.number, td.number {
     display: flex;
     justify-content: space-between;
     padding: 0 1rem;
+    position: sticky;
+    top: 0rem;
 }
 
 .nav--top--wrapper {
@@ -118,7 +114,7 @@ th.number, td.number {
 .header--wrapper--sub {
     flex: 1 20rem;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
 }
 
 .header--title {
@@ -167,9 +163,33 @@ th.number, td.number {
     gap: 1rem;
 }
 
+@media (max-width: 768px) {
+    .header--filter--s {
+        flex: 1;
+        display: none;
+        flex-flow: column;
+        justify-content: center;
+        padding: 2rem;
+        gap: 1rem;
+        position: sticky;
+        top: 4.1rem;
+    }
+}
+
+@media (max-width: 2560px) {
+    .header--filter--s {
+        flex: 1;
+        display: none;
+        padding: 2rem;
+        gap: 1rem;
+        position: sticky;
+        top: 4rem;
+    }
+}
+
 .filter {
+    flex: 1;
     display: flex;
-    flex-flow: row;
     gap: 1rem;
 }
 
@@ -347,7 +367,7 @@ p.small {
 
 /* STYLING ELEMENTS */
 
-body {
+body, .nav--top, .header, .header--filter--s {
     background: #223348;
 }
 
@@ -363,9 +383,13 @@ th, td {
 
 /* STYLING OBJECTS */
 
-.nav--top, .header--wrapper--sub {
+.nav--top, .header--wrapper--sub, .header--filter--s {
     border-bottom: 1px solid #adc8eB24;
     border-right: 1px solid #adc8eB24;
+}
+
+.header--filter--s {
+    border-top: 1px solid #adc8eB24;
 }
 
 .body {
