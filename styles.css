@@ -145,7 +145,7 @@ td {
 
 .card {
     height: fit-content;
-    min-width: 400px;
+    min-width: 320px;
     flex: 1 1 30%;
 }
 
