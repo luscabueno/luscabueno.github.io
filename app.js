@@ -1,7 +1,7 @@
 window.addEventListener('scroll', function() {
-    let elem = document.getElementById("header_filter");
+    let elemRead = document.getElementById("header_filter");
     let elemShow = document.getElementById("header_filter_s");
-    let rect = elem.getBoundingClientRect();
+    let rect = elemRead.getBoundingClientRect();
 
     if (rect.bottom < convertRemToPixels(4)) {
         elemShow.style.display = "flex";
