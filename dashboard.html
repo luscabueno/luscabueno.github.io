@@ -1,0 +1,458 @@
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="nav--top">
+            <div class="nav--top--sub">
+                <img src="img/icon_contrast_60/menu.svg" class="icon--regular">
+                <h3>LOGO</h3>
+            </div>
+            <div class="nav--top--sub">
+                <p class="secondary">Log out</p>
+                <img src="img/icon_contrast_60/notification.svg" class="icon--regular">
+                <img src="img/icon_contrast_60/settings.svg" class="icon--regular">
+                <img src="img/preview_avatar.png">
+            </div>
+        </div>
+        <div class="header">
+            <div class="header--sub">
+                <div class="header--sub--sub">
+                    <div class="title">
+                        <p class="tertiary">Dashboard / Tarefas</p>
+                        <h3>Geral</h3>
+                        <div class="badge badge--success"><p>Estável</p></div>
+                    </div>
+                </div>
+                <div class="header--sub--sub">
+                    <div class="highlight">
+                        <div class="highlight--data">
+                            <img src="img/icon_contrast_100/pendentes.svg" class="icon--small">
+                            <h6>Pendentes</h6>
+                            <h1>141</h1>
+                        </div>
+                        <div class="highlight--label highlight--label--primary"></div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight--data">
+                            <img src="img/icon_contrast_100/atrasadas.svg" class="icon--small">
+                            <h6>Atrasadas</h6>
+                            <h1>33</h1>
+                        </div>
+                        <div class="highlight--label highlight--label--error"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header--sub">
+                <div class="header--sub--sub">
+                    <div class="group--filter" id="header_filter">
+                        <div class="filter">
+                            <div class="text--field">
+                                <input placeholder="Selecionar filtro de data inicial">
+                                <img src="img/icon_contrast_60/date.svg" class="icon--small">
+                            </div>
+                        </div>
+                        <div class="filter">
+                            <div class="text--field">
+                                <input placeholder="Selecionar filtro de data final">
+                                <img src="img/icon_contrast_60/date.svg" class="icon--small">
+                            </div>
+                            <div class="button button--secondary">
+                                <img src="img/icon_primary_text/expand.svg" class="icon--small">
+                            </div>
+                            <div class="button button--primary">
+                                <img src="img/icon_contrast_100/search.svg" class="icon--small">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group--filter-s" id="header_filter_s">
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar filtro de data inicial">
+                    <img src="img/icon_contrast_60/date.svg" class="icon--small">
+                </div>
+            </div>
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar filtro de data final">
+                    <img src="img/icon_contrast_60/date.svg" class="icon--small">
+                </div>
+                <div class="button button--secondary">
+                    <img src="img/icon_primary_text/expand.svg" class="icon--small">
+                </div>
+                <div class="button button--primary">
+                    <img src="img/icon_contrast_100/search.svg" class="icon--small">
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="card">
+                <div class="card--header">
+                    <div class="card--header--sub">
+                        <div class="title-s">
+                            <h4>Sustentação</h4>
+                            <div class="badge badge--success"><p>Estável</p></div>
+                        </div>
+                    </div>
+                    <div class="card--header--sub">
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/pendentes.svg" class="icon--small">
+                                <h4>20</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--primary"></div>
+                        </div>
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/atrasadas.svg" class="icon--small">
+                                <h4>2</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--error"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card--body">
+                    <table>
+                        <tr>
+                            <th>Abertas</th>
+                            <th class="number">11</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">11</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                        <tr>
+                            <th>Fechadas</th>
+                            <th class="number">79</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">78</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">1</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card--footer">
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/more.svg" class="icon--small">
+                        <p>Detalhes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card--header">
+                    <div class="card--header--sub">
+                        <div class="title-s">
+                            <h4>Processos</h4>
+                            <div class="badge badge--error"><p>Crítico</p></div>
+                        </div>
+                    </div>
+                    <div class="card--header--sub">
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/pendentes.svg" class="icon--small">
+                                <h4>57</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--primary"></div>
+                        </div>
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/atrasadas.svg" class="icon--small">
+                                <h4>10</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--error"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card--body">
+                    <table>
+                        <tr>
+                            <th>Abertas</th>
+                            <th class="number">69</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">60</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">9</td>
+                        </tr>
+                        <tr>
+                            <th>Fechadas</th>
+                            <th class="number">122</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">56</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">66</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card--footer">
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/more.svg" class="icon--small">
+                        <p>Detalhes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card--header">
+                    <div class="card--header--sub">
+                        <div class="title-s">
+                            <h4>QA</h4>
+                            <div class="badge badge--error"><p>Crítico</p></div>
+                        </div>
+                    </div>
+                    <div class="card--header--sub">
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/pendentes.svg" class="icon--small">
+                                <h4>23</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--primary"></div>
+                        </div>
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/atrasadas.svg" class="icon--small">
+                                <h4>14</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--error"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card--body">
+                    <table>
+                        <tr>
+                            <th>Abertas</th>
+                            <th class="number">18</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">17</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">1</td>
+                        </tr>
+                        <tr>
+                            <th>Fechadas</th>
+                            <th class="number">7</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">7</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card--footer">
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/more.svg" class="icon--small">
+                        <p>Detalhes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card--header">
+                    <div class="card--header--sub">
+                        <div class="title-s">
+                            <h4>Projetos</h4>
+                            <div class="badge badge--success"><p>Estável</p></div>
+                        </div>
+                    </div>
+                    <div class="card--header--sub">
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/pendentes.svg" class="icon--small">
+                                <h4>5</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--primary"></div>
+                        </div>
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/atrasadas.svg" class="icon--small">
+                                <h4>0</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--contrast"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card--body">
+                    <table>
+                        <tr>
+                            <th>Abertas</th>
+                            <th class="number">0</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                        <tr>
+                            <th>Fechadas</th>
+                            <th class="number">0</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card--footer">
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/more.svg" class="icon--small">
+                        <p>Detalhes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card--header">
+                    <div class="card--header--sub">
+                        <div class="title-s">
+                            <h4>Produtos</h4>
+                            <div class="badge badge--success"><p>Estável</p></div>
+                        </div>
+                    </div>
+                    <div class="card--header--sub">
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/pendentes.svg" class="icon--small">
+                                <h4>14</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--primary"></div>
+                        </div>
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/atrasadas.svg" class="icon--small">
+                                <h4>1</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--error"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card--body">
+                    <table>
+                        <tr>
+                            <th>Abertas</th>
+                            <th class="number">0</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                        <tr>
+                            <th>Fechadas</th>
+                            <th class="number">0</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card--footer">
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/more.svg" class="icon--small">
+                        <p>Detalhes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card--header">
+                    <div class="card--header--sub">
+                        <div class="title-s">
+                            <h4>Desenvolvimento</h4>
+                            <div class="badge badge--warning"><p>Instável</p></div>
+                        </div>
+                    </div>
+                    <div class="card--header--sub">
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/pendentes.svg" class="icon--small">
+                                <h4>22</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--primary"></div>
+                        </div>
+                        <div class="highlight-s">
+                            <div class="highlight-s--data">
+                                <img src="img/icon_contrast_100/atrasadas.svg" class="icon--small">
+                                <h4>6</h4>
+                            </div>
+                            <div class="highlight--label highlight--label--error"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card--body">
+                    <table>
+                        <tr>
+                            <th>Abertas</th>
+                            <th class="number">8</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">5</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">3</td>
+                        </tr>
+                        <tr>
+                            <th>Fechadas</th>
+                            <th class="number">8</th>
+                        </tr>
+                        <tr>
+                            <td>Dentro do prazo</td>
+                            <td class="number">6</td>
+                        </tr>
+                        <tr>
+                            <td>Fora do prazo</td>
+                            <td class="number">2</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card--footer">
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/more.svg" class="icon--small">
+                        <p>Detalhes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
