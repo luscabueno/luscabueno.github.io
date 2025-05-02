@@ -310,6 +310,8 @@ th.number, td.number, th.number > *, td.number > * {
 }
 
 .popover {
+    left: 41rem;
+    top: 40rem;
     display: none;
     position: absolute;
     width: fit-content;
@@ -482,6 +484,10 @@ tr:last-child {
     border-top: 1px solid #adc8eB24;
 }
 
+.column--div {
+    border-left: 1px solid #adc8eB24;
+}
+
 /* STYLING major components */
 
 .nav--top, .group--filter-s {
@@ -545,6 +551,12 @@ tr:last-child {
 
 .highlight--label--error {
     background: #e0241a;
+}
+
+.popover {
+    background: #2b3d52;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem #0d0f1152, 0 0.15rem 0.25rem #05050512;
 }
 
 .text--field {
