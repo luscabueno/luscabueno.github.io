@@ -310,6 +310,7 @@ th.number, td.number, th.number > *, td.number > * {
 }
 
 .popover {
+    display: none;
     position: absolute;
     width: fit-content;
     padding: 1rem;
