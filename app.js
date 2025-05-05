@@ -43,7 +43,6 @@ function popoverPosition(mousePosition) {
     // determine header position for scroll compensation
     let elemRead = document.getElementById("header");
     let rect = elemRead.getBoundingClientRect();
-    let popoverTriggerRect = popoverTrigger.getBoundingClientRect();
 
     // determine viewport position
     let popoverTriggerPosition = popoverTrigger.getBoundingClientRect();
@@ -56,7 +55,7 @@ function popoverPosition(mousePosition) {
     let viewportRight = parseInt((popoverTriggerPosition.right / viewportWidth) * 100);
 
     // position popover
-    if (viewportTop <= 50 && viewportWidth > 700) {
+    if (viewportTop <= 50) {
         popover.style.top = (mousePosition.clientY - rect.top + 70) + 'px';
     } else {
         popover.style.top = (mousePosition.clientY - rect.top - 200) + 'px';
