@@ -128,19 +128,20 @@ th.number, td.number, th.number > *, td.number > * {
     flex-flow: row wrap;
 }
 
-.header--sub--sub {
+.group--highlight {
     flex: 1 20rem;
     display: flex;
     flex-flow: row;
 }
 
 .group--filter {
-    flex: 1;
+    flex: 1 20rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
     padding: 2rem;
     gap: 1rem;
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -328,12 +329,13 @@ th.number, td.number, th.number > *, td.number > * {
 }
 
 .title {
-    flex: 1;
+    flex: 1 20rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
     padding: 2rem;
     gap: 1rem;
+    box-sizing: border-box;
 }
 
 .title-s {
