@@ -417,6 +417,10 @@ th.number, td.number, th.number > *, td.number > * {
     width: 20rem;
 }
 
+.nav--top .logo {
+    width: 7rem;
+}
+
 /* TEXT */
 
 /* TEXT elements */
