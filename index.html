@@ -6,217 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="nav--top">
-            <div class="nav--top--sub">
-                <img src="img/icon_contrast_60/menu.svg" class="icon--regular">
-                <h3>LOGO</h3>
+        <div class="login" background->
+            <div class="login--sub login--sub--logo">
             </div>
-            <div class="nav--top--sub">
-                <p class="secondary">Log out</p>
-                <img src="img/icon_contrast_60/notification.svg" class="icon--regular">
-                <img src="img/icon_contrast_60/settings.svg" class="icon--regular">
-                <img src="img/preview_avatar.png">
-            </div>
-        </div>
-        <div class="header" id="header">
-            <div class="header--sub">
-                <div class="title">
-                    <p class="tertiary">Dashboard / Tarefas / Projetos / #4</p>
-                    <h3>JAL - Sistema de priorização de tarefas</h3>
-                    <div class="group--badge">
-                        <div class="badge badge--contrast"><p>Em andamento</p></div>
-                        <div class="badge badge--success"><p>15.5</p></div>
+            <div class="login--sub">
+                <img src="img/login_logo.svg" class="logo">
+                <div class="group--text--field">
+                    <div class="text--field--label">
+                        <p class="secondary">Login</p>
+                        <div class="text--field">
+                            <input placeholder="E-mail ou nome do usuário">
+                        </div>
                     </div>
+                    <div class="text--field--label">
+                        <p class="secondary">Senha</p>
+                        <div class="text--field">
+                            <input placeholder="Senha">
+                            <img src="img/icon_contrast_60/hide.svg" class="icon--small">
+                        </div>
+                    </div>
+                    <p class="center link">Esqueceu suas credenciais?</p>
                 </div>
-            </div>
-            <div class="header--sub">
-                <div class="group--highlight">
-                    <div class="highlight border-left--add">
-                        <div class="highlight--data">
-                            <img src="img/icon_contrast_100/ligadas.svg" class="icon--small">
-                            <h6>Ligadas</h6>
-                            <h1>7</h1>
-                        </div>
-                        <div class="highlight--label highlight--label--contrast"></div>
+                <div class="group--button">
+                    <div class="button button--primary">
+                        <p>Entrar</p>
                     </div>
-                    <div class="highlight border-left--add">
-                        <div class="highlight--data">
-                            <img src="img/icon_contrast_100/concluidas.svg" class="icon--small">
-                            <h6>Concluídas</h6>
-                            <h1>2</h1>
-                        </div>
-                        <div class="highlight--label highlight--label--contrast"></div>
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/new_user.svg" class="icon--small">
+                        <p>Solicitar acesso</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="kanban--body">
-            <div class="kanban--column">
-                <div class="title-s">
-                    <h4>Análise</h4>
-                    <div class="badge badge--contrast"><p>Em andamento</p></div>
-                </div>
-                <div class="kanban--column--body">
-                    <div class="kanban--card">
-                        <p class="tertiary">#1442</p>
-                        <h4>JAL - Sistema de priorização de tarefas: API para coleta de dados via Git</h4>
-                        <div class="user">
-                            <img src="img/avatar.svg" class="avatar">
-                            <p>Wrayan Bontorin</p>
-                        </div>
-                        <p class="tertiary">Concluído em 02/05/2025</p>
-                        <div class="group--badge">
-                            <div class="badge badge--success"><p>Concluído</p></div>
-                        </div>
-                    </div>
-                    <div class="kanban--card">
-                        <p class="tertiary">#1444</p>
-                        <h4>JAL - Sistema de priorização de tarefas: estruturação de banco de dados</h4>
-                        <div class="user">
-                            <img src="img/avatar.svg" class="avatar">
-                            <p>Wrayan Bontorin</p>
-                        </div>
-                        <p class="tertiary">Expectativa de conclusão em 10/05/2025</p>
-                        <div class="group--badge">
-                            <div class="badge badge--contrast"><p>Em andamento</p></div>
-                            <div class="badge badge--error"><p>79.0</p></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kanban--column">
-                <div class="title-s">
-                    <h4>Produtos</h4>
-                    <div class="badge badge--contrast"><p>Em andamento</p></div>
-                </div>
-                <div class="kanban--column--body">
-                    <div class="kanban--card">
-                        <p class="tertiary">#3</p>
-                        <h4>JAL - Sistema de priorização de tarefas: tela de dashboard</h4>
-                        <div class="user">
-                            <img src="img/avatar.svg" class="avatar">
-                            <p>Lucas Bueno</p>
-                        </div>
-                        <p class="tertiary">Concluído em 20/04/2025</p>
-                        <div class="group--badge">
-                            <div class="badge badge--success"><p>Concluído</p></div>
-                        </div>
-                    </div>
-                    <div class="kanban--card">
-                        <p class="tertiary">#4</p>
-                        <h4>JAL - Sistema de priorização de tarefas: telas de priorização e cadastro</h4>
-                        <div class="user">
-                            <img src="img/avatar.svg" class="avatar">
-                            <p>Lucas Bueno</p>
-                        </div>
-                        <p class="tertiary">Expectativa de conclusão em 06/05/2025</p>
-                        <div class="group--badge">
-                            <div class="badge badge--contrast"><p>Em andamento</p></div>
-                            <div class="badge badge--warning" id="popover_trigger"><p>57.8</p></div>
-                        </div>
-                    </div>
-                    <div class="kanban--card">
-                        <p class="tertiary">#5</p>
-                        <h4>JAL - Sistema de priorização de tarefas: tela de tarefas relacionadas</h4>
-                        <div class="user">
-                            <img src="img/avatar.svg" class="avatar">
-                            <p>Lucas Bueno</p>
-                        </div>
-                        <p class="tertiary">Expectativa de conclusão em 10/05/2025</p>
-                        <div class="group--badge">
-                            <div class="badge badge--contrast"><p>Em andamento</p></div>
-                            <div class="badge badge--success"><p>9.0</p></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kanban--column">
-                <div class="title-s">
-                    <h4>Desenvolvimento</h4>
-                    <div class="badge badge--contrast"><p>Em andamento</p></div>
-                </div>
-                <div class="kanban--column--body">
-                    <div class="kanban--card">
-                        <p class="tertiary">#4903</p>
-                        <h4>JAL - Sistema de priorização de tarefas: desenvolvimento e integração com banco de dados</h4>
-                        <div class="user">
-                            <img src="img/avatar.svg" class="avatar">
-                            <p>Leonardo Campos</p>
-                        </div>
-                        <p class="tertiary">Expectativa de conclusão em 30/05/2025</p>
-                        <div class="group--badge">
-                            <div class="badge badge--contrast"><p>Em andamento</p></div>
-                            <div class="badge badge--warning"><p>57.5</p></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kanban--column">
-                <div class="title-s">
-                    <h4>QA</h4>
-                    <div class="badge badge--contrast"><p>Em andamento</p></div>
-                </div>
-                <div class="kanban--column--body">
-                    <div class="kanban--card">
-                        <p class="tertiary">#860</p>
-                        <h4>JAL - Sistema de priorização de tarefas</h4>
-                        <div class="user">
-                            <img src="img/avatar.svg" class="avatar">
-                            <p>Jeniffer Marcondes</p>
-                        </div>
-                        <p class="tertiary">Sem expectativa de conclusão</p>
-                        <div class="group--badge">
-                            <div class="badge badge--contrast"><p>Aguardando</p></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="popover" id="popover">
-            <table>
-                <tr>
-                    <th>Categoria</th>
-                    <th class="number">Peso</th>
-                    <th class="column--div">Classificação</th>
-                    <th class="number">Score</th>
-                    <th class="number column--div">Score sub-total</th>
-                </tr>
-                <tr>
-                    <td>Cliente</td>
-                    <td class="number">30%</td>
-                    <td class="column--div"><div class="badge badge--contrast"><p>JAL</p></td>
-                    <td class="number"><div class="badge badge--warning"><p>5.0</p></td>
-                    <td class="number column--div"><div class="badge badge--warning"><p>15.0</p></td>
-                </tr>
-                <tr>
-                    <td>Prazo</td>
-                    <td class="number">30%</td>
-                    <td class="column--div">06/05/2025</td>
-                    <td class="number"><div class="badge badge--error"><p>8.0</p></td>
-                    <td class="number column--div"><div class="badge badge--error"><p>24.0</p></td>
-                </tr>
-                <tr>
-                    <td>Urgência</td>
-                    <td class="number">20%</td>
-                    <td class="column--div"><div class="badge badge--contrast"><p>Médio</p></td>
-                    <td class="number"><div class="badge badge--warning"><p>5.0</p></td>
-                    <td class="number column--div"><div class="badge badge--warning"><p>10.0</p></td>
-                </tr>
-                <tr>
-                    <td>Complexidade</td>
-                    <td class="number">15%</td>
-                    <td class="column--div"><div class="badge badge--contrast"><p>Baixo</p></td>
-                    <td class="number"><div class="badge badge--success"><p>2.5</p></td>
-                    <td class="number column--div"><div class="badge badge--success"><p>3.8</p></td>
-                </tr>
-                <tr>
-                    <td>Impacto</td>
-                    <td class="number">5%</td>
-                    <td class="column--div"><div class="badge badge--contrast"><p>Alto</p></td>
-                    <td class="number"><div class="badge badge--error"><p>10.0</p></td>
-                    <td class="number column--div"><div class="badge badge--error"><p>5.0</p></td>
-                </tr>
-            </table>
         </div>
         <script src="app.js"></script>
     </body>
