@@ -144,6 +144,17 @@ th.number, td.number, th.number > *, td.number > * {
     box-sizing: border-box;
 }
 
+@media (max-width: 2560px) {
+    .group--filter-s {
+        flex: 1;
+        display: none;
+        padding: 2rem;
+        gap: 1rem;
+        position: sticky;
+        top: 4rem;
+    }
+}
+
 @media (max-width: 768px) {
     .group--filter-s {
         flex: 1;
@@ -154,17 +165,6 @@ th.number, td.number, th.number > *, td.number > * {
         gap: 1rem;
         position: sticky;
         top: 4.1rem;
-    }
-}
-
-@media (max-width: 2560px) {
-    .group--filter-s {
-        flex: 1;
-        display: none;
-        padding: 2rem;
-        gap: 1rem;
-        position: sticky;
-        top: 4rem;
     }
 }
 
@@ -233,29 +233,48 @@ th.number, td.number, th.number > *, td.number > * {
     gap: 1rem;
 }
 
-.login {
-    height: 100%;
-    display: flex;
-    flex-flow: row wrap;
+@media (max-width: 2560px) {
+    .login {
+        height: 100%;
+        display: flex;
+    }
+    
+    .login--sub--logo {
+        flex: 1;
+        border-right:1px solid #adc8eB24;
+        background-image: url(img/login_bg.png);
+        background-size: 70rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 768px) {
+    .login {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .login--sub--logo {
+        flex: 0.15;
+        border-bottom: 1px solid #adc8eB24;
+        border-right: none;
+        background-image: url(img/login_bg.png);
+        background-size: 70rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
 .login--sub {
-    flex: 1 20rem;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     gap: 2rem;
-}
-
-.login--sub--logo {
-    border-right:1px solid #adc8eB24;
-    border-bottom:1px solid #adc8eB24;
-    background-image: url(img/login_bg.png);
-    background-size: 65rem;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 /* MARKUP minor components */
