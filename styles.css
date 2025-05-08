@@ -96,11 +96,13 @@ th.number, td.number, th.number > *, td.number > * {
     text-align: right;
 }
 
-.card--body td {
+.dashboard--card--body td {
     padding: 0 1rem 0 2rem;
 }
 
 /* MARKUP major components */
+
+/* .nav--top */
 
 .nav--top {
     height: 4rem;
@@ -117,6 +119,8 @@ th.number, td.number, th.number > *, td.number > * {
     align-items: center;
 }
 
+/* .header */
+
 .header {
     display: flex;
     flex-flow: row wrap;
@@ -128,47 +132,9 @@ th.number, td.number, th.number > *, td.number > * {
     flex-flow: row wrap;
 }
 
-.group--highlight {
-    flex: 1 20rem;
-    display: flex;
-    flex-flow: row;
-}
+/* .dashboard */
 
-.group--filter {
-    flex: 1 20rem;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    padding: 2rem;
-    gap: 1rem;
-    box-sizing: border-box;
-}
-
-@media (max-width: 2560px) {
-    .group--filter-s {
-        flex: 1;
-        display: none;
-        padding: 2rem;
-        gap: 1rem;
-        position: sticky;
-        top: 4rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .group--filter-s {
-        flex: 1;
-        display: none;
-        flex-flow: column;
-        justify-content: center;
-        padding: 2rem;
-        gap: 1rem;
-        position: sticky;
-        top: 4.1rem;
-    }
-}
-
-.body {
+.dashboard--body {
     flex: 1;
     display: flex;
     flex-flow: row wrap;
@@ -177,7 +143,7 @@ th.number, td.number, th.number > *, td.number > * {
     gap: 1rem;
 }
 
-.card {
+.dashboard--card {
     height: fit-content;
     flex: 1 30%;
     /* Means if there is no space for another .card of 30% width (main row axis) it breaks to a new line, ensuring there will always be 3 cards max in each line. */
@@ -185,25 +151,27 @@ th.number, td.number, th.number > *, td.number > * {
     /* Means .card minimum width is 25rem, ensuring card breaks to a new line after the value is hit since flex-basis is 30% and will never be untrue unless child elements have fixed width that make the .card overflow. */
 }
 
-.card--header {
+.dashboard--card--header {
     height: fit-content;
     display: flex;
 }
 
-.card--header--sub {
+.dashboard--card--header--sub {
     flex: 1;
     display: flex;
 }
 
-.card--body {
+.dashboard--card--body {
     padding: 0 1rem;
 }
 
-.card--footer {
+.dashboard--card--footer {
     display: flex;
     justify-content: right;
     padding: 1rem;
 }
+
+/* .kanban */
 
 .kanban--body {
     display: flex;
@@ -233,41 +201,56 @@ th.number, td.number, th.number > *, td.number > * {
     gap: 1rem;
 }
 
+/* .login */
+
 @media (max-width: 2560px) {
-    .login {
+    .login--body {
         height: 100%;
         display: flex;
-    }
-    
-    .login--sub--logo {
-        flex: 1;
-        border-right:1px solid #adc8eB24;
-        background-image: url(img/login_bg.png);
-        background-size: 70rem;
-        background-position: center;
+        background-image: url(img/bg_001.png);
+        background-size: 1000px;
+        background-position: -3rem center;
         background-repeat: no-repeat;
     }
 }
 
-@media (max-width: 768px) {
-    .login {
-        height: 100%;
-        display: flex;
+@media (max-width: 1300px) {
+    .login--body {
         flex-direction: column;
-    }
-    
-    .login--sub--logo {
-        flex: 0.15;
-        border-bottom: 1px solid #adc8eB24;
-        border-right: none;
-        background-image: url(img/login_bg.png);
-        background-size: 70rem;
+        background-image: url(img/bg_001.png);
+        background-size: 800px;
         background-position: center;
+        background-position-y: 35rem;
         background-repeat: no-repeat;
     }
 }
 
-.login--sub {
+@media (max-width: 320px) {
+    .login--body {
+        flex-direction: column;
+        background-image: url(img/bg_001.png);
+        background-size: 600px;
+        background-position: center;
+        background-position-y: 30rem;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 2560px) {
+    .login--padding {
+        flex: 1;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 1300px) {
+    .login--padding {
+        flex: 0;
+        padding: 0;
+    }
+}
+
+.login--content {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -275,6 +258,7 @@ th.number, td.number, th.number > *, td.number > * {
     align-items: center;
     padding: 2rem;
     gap: 2rem;
+    box-sizing: border-box;
 }
 
 /* MARKUP minor components */
@@ -284,21 +268,16 @@ th.number, td.number, th.number > *, td.number > * {
     width: 1.5rem;
 }
 
-.group--badge {
-    display: flex;
-    gap: 0.5rem;
-}
-
 .badge {
     width: fit-content;
     display: flex;
     padding: 0.5rem;
 }
 
-.group--button {
-    display: flex;
-    gap: 0.5rem;
-}
+    .group--badge {
+        display: flex;
+        gap: 0.5rem;
+    }
 
 .button {
     height: 2.2rem;
@@ -310,24 +289,83 @@ th.number, td.number, th.number > *, td.number > * {
     gap: 0.5rem;
 }
 
+    .group--button {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .login--body .button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .login--body .group--button {
+        width: 100%;
+        max-width: 25rem;
+        flex-direction: column;
+    }
+
 .filter {
     flex: 1;
     display: flex;
     gap: 1rem;
 }
 
+    .group--filter {
+        flex: 1 20rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: 2rem;
+        gap: 1rem;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 2560px) {
+        .group--filter-s {
+            flex: 1;
+            display: none;
+            padding: 2rem;
+            gap: 1rem;
+            position: sticky;
+            top: 4rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .group--filter-s {
+            flex: 1;
+            display: none;
+            flex-flow: column;
+            justify-content: center;
+            padding: 2rem;
+            gap: 1rem;
+            position: sticky;
+            top: 4.1rem;
+        }
+    }
+
 .highlight {
     flex: 1;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
 }
+
+    .group--highlight {
+        flex: 1 20rem;
+        display: flex;
+    }
 
 .highlight-s {
     flex: 1;
     display: flex;
     flex-flow: column;
 }
+
+    .group--highlight-s {
+        flex: 1;
+        display: flex;
+    }
 
 .highlight--data {
     flex: 1;
@@ -350,15 +388,31 @@ th.number, td.number, th.number > *, td.number > * {
     height: 0.25rem;
 }
 
-.icon--small {
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.icon-s {
     height: 1rem;
     width: 1rem;
 }
 
-.icon--regular {
-    height: 1.5rem;
-    width: 1.5rem;
+.logo {
+    width: 7rem;
 }
+
+    @media (max-width: 2560px) {
+        .login--body .logo {
+            width: 17.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .login--body .logo {
+            width: 15rem;
+        }
+    }
 
 .popover {
     left: 41rem;
@@ -379,10 +433,16 @@ th.number, td.number, th.number > *, td.number > * {
     gap: 0.5rem;
 }
 
-.group--text--field {
-    display: flex;
-    gap: 1rem;
-}
+    .group--text--field {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .login--body .group--text--field {
+        width: 100%;
+        max-width: 25rem;
+        flex-direction: column;
+    }
 
 .text--field--label {
     display: flex;
@@ -407,37 +467,13 @@ th.number, td.number, th.number > *, td.number > * {
     justify-content: center;
     padding: 1rem;
     gap: 0.5rem;
+    box-sizing: border-box;
 }
 
 .user {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-.login .button {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.login .group--button {
-    width: 100%;
-    max-width: 25rem;
-    flex-direction: column;
-}
-
-.login .group--text--field {
-    width: 100%;
-    max-width: 25rem;
-    flex-direction: column;
-}
-
-.login .logo {
-    width: 20rem;
-}
-
-.nav--top .logo {
-    width: 7rem;
 }
 
 /* TEXT */
@@ -481,6 +517,10 @@ p, td, input {
     color: #ebf4ffe6;
 }
 
+    .login--body p {
+        max-width: 25rem;
+    }
+
 p.secondary {
     font-size: 0.85rem;
     font-weight: 500;
@@ -497,18 +537,14 @@ p.link {
     color: #90bdf9;
 }
 
+    .login--body p.link {
+        text-align: center;
+    }
+
 p.small {
     font-size: 0.8rem;
     font-weight: 500;
     color: #ebf4ffe6;
-}
-
-.login p {
-    max-width: 25rem;
-}
-
-p.center {
-    text-align: center;
 }
 
 /* TEXT minor components */
@@ -581,7 +617,7 @@ tr:last-child {
     border-bottom: 1px solid #adc8eB24;
 }
 
-.card--footer {
+.dashboard--card--footer {
     border-top: 1px solid #adc8eB24;
 }
 
@@ -595,11 +631,15 @@ tr:last-child {
     background: #223348;
 }
 
-.body, .kanban--body {
+.dashboard--body, .kanban--body {
     background: #2b3d52;
 }
 
-.card, .kanban--column {
+.login--body {
+    background-color: linear-gradient(180deg,#223348 0%, #223348 50%, #17644B 100%);
+}
+
+.dashboard--card, .kanban--column {
     background: #223348;
     border: 1px solid #b4cdee3d;
     border-radius: 0.5rem;
