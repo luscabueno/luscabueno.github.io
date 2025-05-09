@@ -94,6 +94,10 @@ table {
         min-width: 40rem;
     }
 
+    table#prioridade {
+        min-width: 80rem;
+    }
+
 @media (max-width: 768px) {
     col.descricao {
         display: none;
