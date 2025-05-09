@@ -1,12 +1,19 @@
 /*
 - ROOT SCALING
 - MARKUP
+  - MARKUP reset
   - MARKUP elements
-  - MARKUP major components
-  - MARKUP minor components
+  - MARKUP page components
+    - .login
+    - .nav--top
+    - .header
+    - .dashboard
+    - .kanban
+    - .table
+  - MARKUP global components
 - TEXT
   - TEXT elements
-  - TEXT minor components
+  - TEXT global components
 - STYLING
   - STYLING elements
   - STYLING header borders
@@ -80,11 +87,25 @@ table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
+    table-layout: fixed;
 }
 
-thead {
-    position: sticky;
-    top: 0px;
+    table#cadastro_score {
+        min-width: 40rem;
+    }
+
+@media (max-width: 768px) {
+    col.descricao {
+        display: none;
+    }
+
+    table#cadastro_score > tbody > tr > td:nth-child(2) {
+        display: none;
+    }
+
+    table#cadastro_score > thead > tr > th:nth-child(2) {
+        display: none;
+    }
 }
 
 th {
@@ -93,31 +114,114 @@ th {
     padding: 0 1rem;
 }
 
+    th.number {
+        text-align: right;
+    }
+
+    th > *.action {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        text-align: right;
+        gap: 0.5rem;
+    }
+
 td {
     height: 2.5rem;
     padding: 0 1rem;
 }
 
-th.number, td.number, th.number > *, td.number > * {
-    margin: auto 0 auto auto;
-    text-align: right;
+    td.nesting {
+        padding: 0 1rem 0 2rem;
+    }
+
+    td.number {
+        text-align: right;
+    }
+
+    td > *.action {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        text-align: right;
+        gap: 0.5rem;
+    }
+
+    td > *.date {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    td > *.underline {
+        text-decoration: underline;
+    }
+
+    td > *.user {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+col.action {
+    width: 5rem;
 }
 
-td > *.date {
+/* MARKUP page components */
+
+/* .login */
+
+@media (max-width: 2560px) {
+    .login--body {
+        height: 100%;
+        display: flex;
+        background-image: url(img/bg_001.png);
+        background-size: 1000px;
+        background-position: -3rem center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 1300px) {
+    .login--body {
+        flex-direction: column;
+        background-size: 800px;
+        background-position: center;
+        background-position-y: 30rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .login--body {
+        background-size: 600px;
+        background-position-y: 25rem;
+    }
+}
+
+@media (max-width: 2560px) {
+    .login--padding {
+        flex: 1;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 1300px) {
+    .login--padding {
+        flex: 0;
+        padding: 0;
+    }
+}
+
+.login--content {
+    flex: 1;
     display: flex;
-    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    box-sizing: border-box;
 }
-
-td > *.user {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.dashboard--card--body td {
-    padding: 0 1rem 0 2rem;
-}
-
-/* MARKUP major components */
 
 /* .nav--top */
 
@@ -221,82 +325,47 @@ td > *.user {
 /* .table */
 
 .table--body {
-    height: 600px;
     flex: 1;
     display: flex;
+    flex-direction: column;
     padding: 2rem;
     gap: 1rem;
 }
 
 .table--card {
-    height: 100%;
     flex: 1;
     min-width: 25rem;
+    /* overflow: auto; */
+}
+
+.table--card--header {
+    height: fit-content;
+    display: flex;
+}
+
+.table--card--header--sub {
+    flex: 1;
+    display: flex;
+}
+
+.table--card--body {
     padding: 0 1rem;
     overflow: auto;
 }
 
-/* .login */
+/* MARKUP global components */
 
-@media (max-width: 2560px) {
-    .login--body {
-        height: 100%;
-        display: flex;
-        background-image: url(img/bg_001.png);
-        background-size: 1000px;
-        background-position: -3rem center;
-        background-repeat: no-repeat;
-    }
-}
-
-@media (max-width: 1300px) {
-    .login--body {
-        flex-direction: column;
-        background-image: url(img/bg_001.png);
-        background-size: 800px;
-        background-position: center;
-        background-position-y: 35rem;
-        background-repeat: no-repeat;
-    }
-}
-
-@media (max-width: 320px) {
-    .login--body {
-        flex-direction: column;
-        background-image: url(img/bg_001.png);
-        background-size: 600px;
-        background-position: center;
-        background-position-y: 30rem;
-        background-repeat: no-repeat;
-    }
-}
-
-@media (max-width: 2560px) {
-    .login--padding {
-        flex: 1;
-        padding: 2rem;
-    }
-}
-
-@media (max-width: 1300px) {
-    .login--padding {
-        flex: 0;
-        padding: 0;
-    }
-}
-
-.login--content {
-    flex: 1;
+.group--action {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 2rem;
-    box-sizing: border-box;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
-/* MARKUP minor components */
+.group--action--sub {
+    display: flex;
+    gap: 1rem;
+}
 
 .avatar {
     height: 1.5rem;
@@ -316,7 +385,6 @@ td > *.user {
 
 .button {
     height: 2.2rem;
-    width: min-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -346,20 +414,9 @@ td > *.user {
     gap: 1rem;
 }
 
-    .group--filter {
-        flex: 1 20rem;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        padding: 2rem;
-        gap: 1rem;
-        box-sizing: border-box;
-    }
-
     @media (max-width: 2560px) {
-        .group--filter-s {
-            flex: 1;
-            display: none;
+        .group--filter {
+            display: flex;
             padding: 2rem;
             gap: 1rem;
             position: sticky;
@@ -368,15 +425,8 @@ td > *.user {
     }
     
     @media (max-width: 768px) {
-        .group--filter-s {
-            flex: 1;
-            display: none;
+        .group--filter {
             flex-flow: column;
-            justify-content: center;
-            padding: 2rem;
-            gap: 1rem;
-            position: sticky;
-            top: 4.1rem;
         }
     }
 
@@ -431,6 +481,11 @@ td > *.user {
 .icon-s {
     height: 1rem;
     width: 1rem;
+}
+
+.icon-xs {
+    height: 0.6rem;
+    width: 0.6rem;
 }
 
 .logo {
@@ -503,19 +558,31 @@ td > *.user {
     }
 
 .title-s {
+    min-height: 2rem;
     flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 1rem;
     gap: 0.5rem;
-    box-sizing: border-box;
 }
+
+    .group--title-s {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        gap: 0.5rem;
+        box-sizing: border-box;
+    }
 
 .user {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.padding {
+    flex: 1;
 }
 
 /* TEXT */
@@ -589,7 +656,7 @@ p.small {
     color: #ebf4ffe6;
 }
 
-/* TEXT minor components */
+/* TEXT global components */
 
 .badge--contrast p {
     font-size: 0.8rem;
@@ -640,23 +707,22 @@ thead, th, td {
     border-bottom: 1px solid #adc8eB24;
 }
 
-tbody tr:last-child {
-    border-bottom: none;
-}
+    tr:last-child > td {
+        border-bottom: none;
+    }
 
 /* STYLING div borders */
 
-.nav--top, .group--title, .title-s {
+.nav--top, .group--title, .group--title-s {
     border-bottom: 1px solid #adc8eB24;
 }
 
-.highlight, .highlight-s, .group--filter {
+.highlight, .highlight-s {
     border-left: 1px solid #adc8eB24;
     border-bottom: 1px solid #adc8eB24;
 }
 
-.group--filter-s {
-    border-top: 1px solid #adc8eB24;
+.group--filter {
     border-bottom: 1px solid #adc8eB24;
 }
 
@@ -668,18 +734,18 @@ tbody tr:last-child {
     border-left: 1px solid #adc8eB24;
 }
 
-/* STYLING major components */
+.padding {
+    border-bottom: 1px solid #adc8eB24;
+}
 
-.nav--top, .group--filter-s {
+/* STYLING page components */
+
+.nav--top {
     background: #223348;
 }
 
 .dashboard--body, .kanban--body, .table--body {
     background: #2b3d52;
-}
-
-.login--body {
-    background-color: linear-gradient(180deg,#223348 0%, #223348 50%, #17644B 100%);
 }
 
 .dashboard--card, .kanban--column, .table--card {
@@ -693,7 +759,7 @@ tbody tr:last-child {
     border-radius: 0.5rem;
 }
 
-/* STYLING minor components */
+/* STYLING global components */
 
 .badge {
     border-radius: 0.25rem;
@@ -723,6 +789,10 @@ tbody tr:last-child {
 .button--secondary {
     background: #c0d5f20f;
     border-radius: 0.25rem;
+}
+
+.group--filter {
+    background: #223348;
 }
 
 .highlight--label--contrast {

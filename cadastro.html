@@ -1,0 +1,554 @@
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="nav--top">
+            <div class="nav--top--sub">
+                <img src="img/icon_contrast_60/menu.svg" class="icon--regular">
+                <img src="img/login_logo.svg" class="logo">
+            </div>
+            <div class="nav--top--sub">
+                <p class="secondary">Log out</p>
+                <img src="img/icon_contrast_60/notification.svg" class="icon--regular">
+                <img src="img/icon_contrast_60/settings.svg" class="icon--regular">
+                <img src="img/avatar/example.png">
+            </div>
+        </div>
+        <div class="header">
+            <div class="header--sub">
+                <div class="group--title">
+                    <div class="title">
+                        <p class="tertiary">Cadastro</p>
+                        <h3>Score</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group--filter">
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar coluna de filtro">
+                    <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                </div>
+            </div>
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Escrever valor de filtro">
+                </div>
+                <div class="button button--primary">
+                    <img src="img/icon_contrast_100/search.svg" class="icon-s">
+                </div>
+            </div>
+        </div>
+        <div class="table--body">
+            <div class="group--action">
+                <div class="group--action--sub">
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/collide_all.svg" class="icon-s">
+                    </div>
+                </div>
+                <div class="group--action--sub">
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/edit.svg" class="icon-s">
+                        <p>Editar categorias</p>
+                    </div>
+                    <div class="button button--primary">
+                        <img src="img/icon_contrast_100/more.svg" class="icon-s">
+                        <p>Nova classificação</p>
+                    </div>
+                </div>
+            </div>
+            <div class="table--card">
+                <div class="table--card--header">
+                    <div class="table--card--header--sub">
+                        <div class="group--title-s">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                            <div class="title-s">
+                                <h4>Cliente</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table--card--header--sub">
+                        <div class="group--highlight-s">
+                            <div class="padding"></div>
+                            <div class="highlight-s">
+                                <div class="highlight-s--data">
+                                    <img src="img/icon_contrast_100/peso.svg" class="icon-s">
+                                    <h4>30%</h4>
+                                </div>
+                                <div class="highlight--label highlight--label--contrast">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table--card--body">
+                    <table id="cadastro_score">
+                        <colgroup>
+                            <col>
+                            <col class="descricao">
+                            <col>
+                            <col class="action">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Classificação</th>
+                                <th>Descrição</th>
+                                <th>Score</th>
+                                <th><span class="action">Ações</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>ALO</p></div></td>
+                                <td>ALELO</td>
+                                <td><div class="badge badge--error"><p>9.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>CBD</p></div></td>
+                                <td>JAÉ</td>
+                                <td><div class="badge badge--error"><p>10.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>CDZ</p></div></td>
+                                <td>CREDZ</td>
+                                <td><div class="badge badge--warning"><p>5.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>LCD</p></div></td>
+                                <td>LECARD</td>
+                                <td><div class="badge badge--success"><p>2.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>SDX</p></div></td>
+                                <td>PLUXEE</td>
+                                <td><div class="badge badge--error"><p>9.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>SIC</p></div></td>
+                                <td>SICOOB</td>
+                                <td><div class="badge badge--error"><p>10.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>TIC</p></div></td>
+                                <td>TICKET</td>
+                                <td><div class="badge badge--error"><p>8.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="table--card">
+                <div class="table--card--header">
+                    <div class="table--card--header--sub">
+                        <div class="group--title-s">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                            <div class="title-s">
+                                <h4>Prazo</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table--card--header--sub">
+                        <div class="group--highlight-s">
+                            <div class="padding"></div>
+                            <div class="highlight-s">
+                                <div class="highlight-s--data">
+                                    <img src="img/icon_contrast_100/peso.svg" class="icon-s">
+                                    <h4>30%</h4>
+                                </div>
+                                <div class="highlight--label highlight--label--contrast">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table--card--body">
+                    <table id="cadastro_score">
+                        <colgroup>
+                            <col>
+                            <col class="descricao">
+                            <col>
+                            <col class="action">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Classificação</th>
+                                <th>Descrição</th>
+                                <th>Score</th>
+                                <th><span class="action">Ações</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dentro do prazo</td>
+                                <td>Cálculo automatizado via <span class="underline">due date</span></td>
+                                <td><div class="badge badge--contrast"><p>1~10</p></div></td>
+                                <td>
+                                    <div class="action">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Atraso nível 1</td>
+                                <td>Até 10 dias de atraso</td>
+                                <td><div class="badge badge--error"><p>+1.0/dia</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Atraso nível 2</td>
+                                <td>Até 20 dias de atraso</td>
+                                <td><div class="badge badge--error"><p>+2.0/dia</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Atraso nível 3</td>
+                                <td>Até 30 dias de atraso</td>
+                                <td><div class="badge badge--error"><p>+3.0/dia</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Atraso nível 4</td>
+                                <td>Acima de 30 dias de atraso</td>
+                                <td><div class="badge badge--error"><p>+5.0/dia</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="table--card">
+                <div class="table--card--header">
+                    <div class="table--card--header--sub">
+                        <div class="group--title-s">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                            <div class="title-s">
+                                <h4>Urgência</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table--card--header--sub">
+                        <div class="group--highlight-s">
+                            <div class="padding"></div>
+                            <div class="highlight-s">
+                                <div class="highlight-s--data">
+                                    <img src="img/icon_contrast_100/peso.svg" class="icon-s">
+                                    <h4>20%</h4>
+                                </div>
+                                <div class="highlight--label highlight--label--contrast">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table--card--body">
+                    <table id="cadastro_score">
+                        <colgroup>
+                            <col>
+                            <col class="descricao">
+                            <col>
+                            <col class="action">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Classificação</th>
+                                <th>Descrição</th>
+                                <th>Score</th>
+                                <th><span class="action">Ações</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Baixo</p></div></td>
+                                <td>Urgência flexível</td>
+                                <td><div class="badge badge--success"><p>2.5</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Médio</p></div></td>
+                                <td>Urgência programável</td>
+                                <td><div class="badge badge--warning"><p>5.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Alto</p></div></td>
+                                <td>Urgência de tempo sensível</td>
+                                <td><div class="badge badge--error"><p>7.5</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Crítico</p></div></td>
+                                <td>Inadiável</td>
+                                <td><div class="badge badge--error"><p>10.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="table--card">
+                <div class="table--card--header">
+                    <div class="table--card--header--sub">
+                        <div class="group--title-s">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                            <div class="title-s">
+                                <h4>Complexidade</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table--card--header--sub">
+                        <div class="group--highlight-s">
+                            <div class="padding"></div>
+                            <div class="highlight-s">
+                                <div class="highlight-s--data">
+                                    <img src="img/icon_contrast_100/peso.svg" class="icon-s">
+                                    <h4>15%</h4>
+                                </div>
+                                <div class="highlight--label highlight--label--contrast">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table--card--body">
+                    <table id="cadastro_score">
+                        <colgroup>
+                            <col>
+                            <col class="descricao">
+                            <col>
+                            <col class="action">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Classificação</th>
+                                <th>Descrição</th>
+                                <th>Score</th>
+                                <th><span class="action">Ações</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Baixo</p></div></td>
+                                <td>Complexidade rotineira</td>
+                                <td><div class="badge badge--success"><p>2.5</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Médio</p></div></td>
+                                <td>Complexidade moderada</td>
+                                <td><div class="badge badge--warning"><p>5.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Alto</p></div></td>
+                                <td>Complexidade desafiadora</td>
+                                <td><div class="badge badge--error"><p>7.5</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Crítico</p></div></td>
+                                <td>Conhecimento externo</td>
+                                <td><div class="badge badge--error"><p>10.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+                        <div class="table--card">
+                <div class="table--card--header">
+                    <div class="table--card--header--sub">
+                        <div class="group--title-s">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                            <div class="title-s">
+                                <h4>Complexidade</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table--card--header--sub">
+                        <div class="group--highlight-s">
+                            <div class="padding"></div>
+                            <div class="highlight-s">
+                                <div class="highlight-s--data">
+                                    <img src="img/icon_contrast_100/peso.svg" class="icon-s">
+                                    <h4>15%</h4>
+                                </div>
+                                <div class="highlight--label highlight--label--contrast">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table--card--body">
+                    <table id="cadastro_score">
+                        <colgroup>
+                            <col>
+                            <col class="descricao">
+                            <col>
+                            <col class="action">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Classificação</th>
+                                <th>Descrição</th>
+                                <th>Score</th>
+                                <th><span class="action">Ações</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Baixo</p></div></td>
+                                <td>Complexidade rotineira</td>
+                                <td><div class="badge badge--success"><p>2.5</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Médio</p></div></td>
+                                <td>Complexidade moderada</td>
+                                <td><div class="badge badge--warning"><p>5.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Alto</p></div></td>
+                                <td>Complexidade desafiadora</td>
+                                <td><div class="badge badge--error"><p>7.5</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="badge badge--contrast"><p>Crítico</p></div></td>
+                                <td>Conhecimento externo</td>
+                                <td><div class="badge badge--error"><p>10.0</p></div></td>
+                                <td>
+                                    <div class="action">
+                                        <img src="img/icon_contrast_60/edit.svg" class="icon-s">
+                                        <img src="img/icon_contrast_60/delete.svg" class="icon-s">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -16,7 +16,7 @@
                 <p class="secondary">Log out</p>
                 <img src="img/icon_contrast_60/notification.svg" class="icon--regular">
                 <img src="img/icon_contrast_60/settings.svg" class="icon--regular">
-                <img src="img/preview_avatar.png">
+                <img src="img/avatar/example.png">
             </div>
         </div>
         <div class="header">
@@ -28,6 +28,8 @@
                         <div class="badge badge--success"><p>Estável</p></div>
                     </div>
                 </div>
+            </div>
+            <div class="header--sub">
                 <div class="group--highlight">
                     <div class="highlight">
                         <div class="highlight--data">
@@ -47,43 +49,22 @@
                     </div>
                 </div>
             </div>
-            <div class="header--sub">
-                <div class="group--filter" id="header_filter">
-                    <div class="filter">
-                        <div class="text--field">
-                            <input placeholder="Selecionar filtro de data inicial">
-                            <img src="img/icon_contrast_60/date.svg" class="icon-s">
-                        </div>
-                    </div>
-                    <div class="filter">
-                        <div class="text--field">
-                            <input placeholder="Selecionar filtro de data final">
-                            <img src="img/icon_contrast_60/date.svg" class="icon-s">
-                        </div>
-                        <div class="button button--secondary">
-                            <img src="img/icon_primary_text/expand.svg" class="icon-s">
-                        </div>
-                        <div class="button button--primary">
-                            <img src="img/icon_contrast_100/search.svg" class="icon-s">
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="group--filter-s" id="header_filter_s">
+        <div class="group--filter">
             <div class="filter">
                 <div class="text--field">
-                    <input placeholder="Selecionar filtro de data inicial">
-                    <img src="img/icon_contrast_60/date.svg" class="icon-s">
+                    <input placeholder="Período personalizado" value="Período personalizado">
+                    <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
                 </div>
             </div>
             <div class="filter">
                 <div class="text--field">
-                    <input placeholder="Selecionar filtro de data final">
-                    <img src="img/icon_contrast_60/date.svg" class="icon-s">
+                    <input placeholder="Data de início">
+                    <img src="img/icon_contrast_60/date.svg">
                 </div>
-                <div class="button button--secondary">
-                    <img src="img/icon_primary_text/expand.svg" class="icon-s">
+                <div class="text--field">
+                    <input placeholder="Data de fim">
+                    <img src="img/icon_contrast_60/date.svg">
                 </div>
                 <div class="button button--primary">
                     <img src="img/icon_contrast_100/search.svg" class="icon-s">
@@ -94,9 +75,11 @@
             <div class="dashboard--card">
                 <div class="dashboard--card--header">
                     <div class="dashboard--card--header--sub">
-                        <div class="title-s">
-                            <h4>Sustentação</h4>
-                            <div class="badge badge--success"><p>Estável</p></div>
+                        <div class="group--title-s">
+                            <div class="title-s">
+                                <h4>Sustentação</h4>
+                                <div class="badge badge--success"><p>Estável</p></div>
+                            </div>
                         </div>
                     </div>
                     <div class="dashboard--card--header--sub">
@@ -125,11 +108,11 @@
                             <th class="number">11</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">11</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">0</td>
                         </tr>
                         <tr>
@@ -137,11 +120,11 @@
                             <th class="number">79</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">78</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">1</td>
                         </tr>
                     </table>
@@ -156,9 +139,11 @@
             <div class="dashboard--card">
                 <div class="dashboard--card--header">
                     <div class="dashboard--card--header--sub">
-                        <div class="title-s">
-                            <h4>Processos</h4>
-                            <div class="badge badge--error"><p>Crítico</p></div>
+                        <div class="group--title-s">
+                            <div class="title-s">
+                                <h4>Processos</h4>
+                                <div class="badge badge--error"><p>Crítico</p></div>
+                            </div>
                         </div>
                     </div>
                     <div class="dashboard--card--header--sub">
@@ -187,11 +172,11 @@
                             <th class="number">69</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">60</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">9</td>
                         </tr>
                         <tr>
@@ -199,11 +184,11 @@
                             <th class="number">122</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">56</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">66</td>
                         </tr>
                     </table>
@@ -218,9 +203,11 @@
             <div class="dashboard--card">
                 <div class="dashboard--card--header">
                     <div class="dashboard--card--header--sub">
-                        <div class="title-s">
-                            <h4>QA</h4>
-                            <div class="badge badge--error"><p>Crítico</p></div>
+                        <div class="group--title-s">
+                            <div class="title-s">
+                                <h4>QA</h4>
+                                <div class="badge badge--error"><p>Crítico</p></div>
+                            </div>
                         </div>
                     </div>
                     <div class="dashboard--card--header--sub">
@@ -249,11 +236,11 @@
                             <th class="number">18</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">17</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">1</td>
                         </tr>
                         <tr>
@@ -261,11 +248,11 @@
                             <th class="number">7</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">7</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">0</td>
                         </tr>
                     </table>
@@ -280,9 +267,11 @@
             <div class="dashboard--card">
                 <div class="dashboard--card--header">
                     <div class="dashboard--card--header--sub">
-                        <div class="title-s">
-                            <h4>Projetos</h4>
-                            <div class="badge badge--success"><p>Estável</p></div>
+                        <div class="group--title-s">
+                            <div class="title-s">
+                                <h4>Projetos</h4>
+                                <div class="badge badge--success"><p>Estável</p></div>
+                            </div>
                         </div>
                     </div>
                     <div class="dashboard--card--header--sub">
@@ -311,11 +300,11 @@
                             <th class="number">0</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">0</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">0</td>
                         </tr>
                         <tr>
@@ -323,11 +312,11 @@
                             <th class="number">0</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">0</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">0</td>
                         </tr>
                     </table>
@@ -342,9 +331,11 @@
             <div class="dashboard--card">
                 <div class="dashboard--card--header">
                     <div class="dashboard--card--header--sub">
-                        <div class="title-s">
-                            <h4>Produtos</h4>
-                            <div class="badge badge--success"><p>Estável</p></div>
+                        <div class="group--title-s">
+                            <div class="title-s">
+                                <h4>Produtos</h4>
+                                <div class="badge badge--success"><p>Estável</p></div>
+                            </div>
                         </div>
                     </div>
                     <div class="dashboard--card--header--sub">
@@ -373,11 +364,11 @@
                             <th class="number">0</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">0</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">0</td>
                         </tr>
                         <tr>
@@ -385,11 +376,11 @@
                             <th class="number">0</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">0</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">0</td>
                         </tr>
                     </table>
@@ -404,9 +395,11 @@
             <div class="dashboard--card">
                 <div class="dashboard--card--header">
                     <div class="dashboard--card--header--sub">
-                        <div class="title-s">
-                            <h4>Desenvolvimento</h4>
-                            <div class="badge badge--warning"><p>Instável</p></div>
+                        <div class="group--title-s">
+                            <div class="title-s">
+                                <h4>Desenvolvimento</h4>
+                                <div class="badge badge--warning"><p>Instável</p></div>
+                            </div>
                         </div>
                     </div>
                     <div class="dashboard--card--header--sub">
@@ -435,11 +428,11 @@
                             <th class="number">8</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">5</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">3</td>
                         </tr>
                         <tr>
@@ -447,11 +440,11 @@
                             <th class="number">8</th>
                         </tr>
                         <tr>
-                            <td>Dentro do prazo</td>
+                            <td class="nesting">Dentro do prazo</td>
                             <td class="number">6</td>
                         </tr>
                         <tr>
-                            <td>Fora do prazo</td>
+                            <td class="nesting">Fora do prazo</td>
                             <td class="number">2</td>
                         </tr>
                     </table>
