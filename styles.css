@@ -131,7 +131,7 @@ th {
     }
 
 td {
-    height: 2.5rem;
+    height: 3rem;
     padding: 0 1rem;
 }
 
@@ -618,7 +618,7 @@ h4 {
 }
 
 h6, th {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #f5f9ff;
     text-transform: uppercase;
@@ -635,13 +635,11 @@ p, td, input {
     }
 
 p.secondary {
-    font-size: 0.85rem;
     font-weight: 500;
     color: #d9e8fcb0;
 }
 
 p.tertiary, input::placeholder {
-    font-size: 1rem;
     font-weight: 500;
     color: #c9ddf880;
 }
@@ -663,25 +661,25 @@ p.small {
 /* TEXT global components */
 
 .badge--contrast p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: #e2eefecc;
 }
 
 .badge--success p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: #12d965;
 }
 
 .badge--error p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: #ff9e99;
 }
 
 .badge--warning p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: #fecb45;
 }
