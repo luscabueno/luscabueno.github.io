@@ -173,6 +173,57 @@ col.action {
 
 /* MARKUP page components */
 
+.body {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+}
+
+.nav--lateral {
+    width: 15rem;
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    padding: 1.25rem 2rem;
+    gap: 3rem;
+    overflow: auto;
+}
+
+.nav--lateral--header {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav--lateral--body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav--lateral--tab {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav--lateral--tab--header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav--lateral--tab--header--sub {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav--lateral--tab--option {
+    padding: 0 2rem;
+}
+
 /* .login */
 
 @media (max-width: 2560px) {
@@ -635,6 +686,7 @@ p, td, input {
     }
 
 p.secondary {
+    font-size: 0.9rem;
     font-weight: 500;
     color: #d9e8fcb0;
 }
@@ -741,6 +793,10 @@ thead, th, td {
 }
 
 /* STYLING page components */
+
+.nav--lateral {
+    background: #2b3d52;
+}
 
 .nav--top {
     background: #223348;
