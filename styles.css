@@ -76,6 +76,10 @@ body {
     line-height: 1;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* MARKUP elements */
 
 input {
@@ -173,44 +177,40 @@ col.action {
 
 /* MARKUP page components */
 
-.body {
-    display: flex;
-}
-
-.content {
-    flex: 1;
-}
-
 .nav--lateral {
-    width: 15rem;
+    height: 100vh;
+    width: 20rem;
     display: flex;
-    /* display: none; */
     flex-direction: column;
     padding: 1.25rem 2rem;
     gap: 3rem;
     overflow: auto;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
 }
 
 .nav--lateral--header {
     display: flex;
+    justify-content: space-between;
     gap: 1rem;
 }
 
 .nav--lateral--body {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .nav--lateral--tab {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
 .nav--lateral--tab--header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
     gap: 1rem;
 }
 
@@ -221,7 +221,7 @@ col.action {
 }
 
 .nav--lateral--tab--option {
-    padding: 0 2rem;
+    padding: 1.75rem 2.25rem;
 }
 
 /* .login */
@@ -287,6 +287,7 @@ col.action {
     padding: 0 1rem;
     position: sticky;
     top: 0rem;
+    box-sizing: border-box;
 }
 
 .nav--top--sub {
@@ -529,8 +530,8 @@ col.action {
 }
 
 .icon {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
 }
 
 .icon-s {
@@ -766,6 +767,14 @@ thead, th, td {
     }
 
 /* STYLING div borders */
+
+.nav--lateral {
+    border-right: 1px solid #adc8eB24;
+}
+
+.nav--lateral--tab--option {
+    border-bottom: 1px solid #adc8eB24;
+}
 
 .nav--top, .group--title, .group--title-s {
     border-bottom: 1px solid #adc8eB24;

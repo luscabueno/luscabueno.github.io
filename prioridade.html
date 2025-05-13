@@ -1,0 +1,445 @@
+<html>
+    <head>
+        <title>Legacy</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="nav--lateral">
+            <div class="nav--lateral--header">
+                <a href="index.html"><img src="img/login_logo.svg" class="logo"></a>
+                <img src="img/icon_contrast_60/close.svg" class="icon">
+            </div>
+            <div class="nav--lateral--body">
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/menu_dashboard.svg" class="icon">
+                            <p class="secondary secondary">Dashboard</p>
+                        </div>
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <a href="dashboard.html" class="nav--lateral--tab--option">
+                        <p>Tarefas</p>
+                    </a>
+                    <a href="prioridade.html" class="nav--lateral--tab--option">
+                        <p>Prioridades</p>
+                    </a>
+                    <a href="link.html" class="nav--lateral--tab--option">
+                        <p>Links</p>
+                    </a>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/menu_cadastro.svg" class="icon">
+                            <p class="secondary">Cadastro</p>
+                        </div>
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <a href="cadastro.html" class="nav--lateral--tab--option">
+                        <p>Score</p>
+                    </a>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/menu_configuracoes.svg" class="icon">
+                            <p class="secondary">Configurações</p>
+                        </div>
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <a class="nav--lateral--tab--option">
+                        <p>Usuários</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav--top">
+            <div class="nav--top--sub">
+                <img src="img/icon_contrast_60/menu.svg" class="icon">
+                <img src="img/login_logo.svg" class="logo">
+            </div>
+            <div class="nav--top--sub">
+                <p class="secondary">Log out</p>
+                <img src="img/icon_contrast_60/notification.svg" class="icon">
+                <img src="img/icon_contrast_60/settings.svg" class="icon">
+                <img src="img/avatar/example.png">
+            </div>
+        </div>
+        <div class="header">
+            <div class="header--sub">
+                <div class="group--title">
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/return.svg" class="icon-s">
+                    </div>
+                    <div class="title">
+                        <p class="tertiary">Dashboard / Tarefas</p>
+                        <h3>Sustentação</h3>
+                        <div class="badge badge--success"><p>Estável</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header--sub">
+                <div class="group--highlight">
+                    <div class="highlight">
+                        <div class="highlight--data">
+                            <img src="img/icon_contrast_100/pendentes.svg" class="icon-s">
+                            <h6>Pendentes</h6>
+                            <h1>20</h1>
+                        </div>
+                        <div class="highlight--label highlight--label--primary"></div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight--data">
+                            <img src="img/icon_contrast_100/atrasadas.svg" class="icon-s">
+                            <h6>Atrasadas</h6>
+                            <h1>2</h1>
+                        </div>
+                        <div class="highlight--label highlight--label--error"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group--filter">
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar coluna do filtro">
+                    <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                </div>
+            </div>
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Inserir valor do filtro">
+                </div>
+                <div class="button button--primary">
+                    <img src="img/icon_contrast_100/search.svg" class="icon-s">
+                </div>
+            </div>
+        </div>
+        <div class="table--body">
+            <div class="table--card">
+                <div class="table--card--body">
+                    <table id="prioridade">
+                        <thead>
+                            <tr>
+                                <th>Prioridade</th>
+                                <th>Score total</th>
+                                <th>Código IS</th>
+                                <th>Repositório</th>
+                                <th>Cliente</th>
+                                <th>Status</th>
+                                <th>Prazo</th>
+                                <th>Responsável</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td><div class="badge badge--error"><p>85.0</p></div></td>
+                                <td>#1151</td>
+                                <td>Documento</td>
+                                <td><div class="badge badge--contrast"><p>DGO</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em validação</p></div></td>
+                                <td>20/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Nathalia Pires</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><div class="badge badge--error"><p>74.0</p></div></td>
+                                <td>#1150</td>
+                                <td>Documento</td>
+                                <td><div class="badge badge--contrast"><p>SDX</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em andamento</p></div></td>
+                                <td>20/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Nathalia Pires</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><div class="badge badge--warning"><p>35.0</p></div></td>
+                                <td>#1149</td>
+                                <td>Documento</td>
+                                <td><div class="badge badge--contrast"><p>ALO</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em andamento</p></div></td>
+                                <td>16/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Ewerton Bontorin</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td><div class="badge badge--success"><p>12.5</p></div></td>
+                                <td>#1148</td>
+                                <td>Documento</td>
+                                <td><div class="badge badge--contrast"><p>LCD</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Aguardando</p></div></td>
+                                <td>10/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td><div class="badge badge--success"><p>11.0</p></div></td>
+                                <td>#1147</td>
+                                <td>Documento</td>
+                                <td><div class="badge badge--contrast"><p>CAB</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Aguardando</p></div></td>
+                                <td>10/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><div class="badge badge--error"><p>64.5</p></div></td>
+                                <td>#863</td>
+                                <td>Layout Cartão</td>
+                                <td><div class="badge badge--contrast"><p>ALO</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em validação</p></div></td>
+                                <td>22/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Charles Hreciw</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><div class="badge badge--warning"><p>38.5</p></div></td>
+                                <td>#862</td>
+                                <td>Layout Cartão</td>
+                                <td><div class="badge badge--contrast"><p>FOR</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em validação</p></div></td>
+                                <td>21/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Lívia Celegato</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><div class="badge badge--success"><p>22.0</p></div></td>
+                                <td>#860</td>
+                                <td>Layout Cartão</td>
+                                <td><div class="badge badge--contrast"><p>TIC</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em andamento</p></div></td>
+                                <td>15/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Charles Hreciw</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td><div class="badge badge--success"><p>14.5</p></div></td>
+                                <td>#859</td>
+                                <td>Layout Cartão</td>
+                                <td><div class="badge badge--contrast"><p>UNP</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Aguardando</p></div></td>
+                                <td>15/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td><div class="badge badge--success"><p>13.0</p></div></td>
+                                <td>#858</td>
+                                <td>Layout Cartão</td>
+                                <td><div class="badge badge--contrast"><p>DMC</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em andamento</p></div></td>
+                                <td>12/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Lívia Celegato</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td><div class="badge badge--success"><p>8.5</p></div></td>
+                                <td>#855</td>
+                                <td>Layout Cartão</td>
+                                <td><div class="badge badge--contrast"><p>FIT</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em andamento</p></div></td>
+                                <td>09/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Nathalis Pires</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><div class="badge badge--error"><p>91.0</p></div></td>
+                                <td>#1231</td>
+                                <td>Report</td>
+                                <td><div class="badge badge--contrast"><p>CBD</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em validação</p></div></td>
+                                <td>
+                                    <div class="date">
+                                        <img src="img/status/error.svg">
+                                        <span>03/04/2025</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Gabriel Jordão</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><div class="badge badge--error"><p>57.0</p></div></td>
+                                <td>#1230</td>
+                                <td>Report</td>
+                                <td><div class="badge badge--contrast"><p>TIC</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em validação</p></div></td>
+                                <td>17/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Gabriel Jordão</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><div class="badge badge--error"><p>56.5</p></div></td>
+                                <td>#1229</td>
+                                <td>Report</td>
+                                <td><div class="badge badge--contrast"><p>PML</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em andamento</p></div></td>
+                                <td>17/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Nathalia Pires</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><div class="badge badge--error"><p>42.0</p></div></td>
+                                <td>#1228</td>
+                                <td>Report</td>
+                                <td><div class="badge badge--contrast"><p>TIC</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Em andamento</p></div></td>
+                                <td>14/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                        <img src="img/avatar/default.svg">
+                                        <span>Alexandre Sell</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><div class="badge badge--warning"><p>37.5</p></div></td>
+                                <td>#1227</td>
+                                <td>Report</td>
+                                <td><div class="badge badge--contrast"><p>SDX</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Aguardando</p></div></td>
+                                <td>12/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><div class="badge badge--warning"><p>31.0</p></div></td>
+                                <td>#1226</td>
+                                <td>Report</td>
+                                <td><div class="badge badge--contrast"><p>ALO</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Aguardando</p></div></td>
+                                <td>09/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td><div class="badge badge--success"><p>16.0</p></div></td>
+                                <td>#1225</td>
+                                <td>Report</td>
+                                <td><div class="badge badge--contrast"><p>TLG</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Aguardando</p></div></td>
+                                <td>08/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td><div class="badge badge--success"><p>14.5</p></div></td>
+                                <td>#1225</td>
+                                <td>Report</td>
+                                <td><div class="badge badge--contrast"><p>ITU</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Aguardando</p></div></td>
+                                <td>07/04/2025</td>
+                                <td>
+                                    <div class="user">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td><div class="badge badge--success"><p>3.5</p></div></td>
+                                <td>#1224</td>
+                                <td>Report</td>
+                                <td><div class="badge badge--contrast"><p>ITU</p></div></td>
+                                <td><div class="badge badge--contrast"><p>Aguardando</p></div></td>
+                                <td>
+                                    <div class="date">
+                                        <img src="img/status/error.svg">
+                                        <span>03/04/2025</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="user">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

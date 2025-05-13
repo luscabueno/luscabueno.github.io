@@ -1,24 +1,81 @@
 <html>
     <head>
-        <title>Test</title>
+        <title>Legacy</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="app.js"></script>
     </head>
     <body>
+        <div class="nav--lateral">
+            <div class="nav--lateral--header">
+                <a href="index.html"><img src="img/login_logo.svg" class="logo"></a>
+                <img src="img/icon_contrast_60/close.svg" class="icon">
+            </div>
+            <div class="nav--lateral--body">
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/menu_dashboard.svg" class="icon">
+                            <p class="secondary secondary">Dashboard</p>
+                        </div>
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <a href="dashboard.html" class="nav--lateral--tab--option">
+                        <p>Tarefas</p>
+                    </a>
+                    <a href="prioridade.html" class="nav--lateral--tab--option">
+                        <p>Prioridades</p>
+                    </a>
+                    <a href="link.html" class="nav--lateral--tab--option">
+                        <p>Links</p>
+                    </a>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/menu_cadastro.svg" class="icon">
+                            <p class="secondary">Cadastro</p>
+                        </div>
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <a href="cadastro.html" class="nav--lateral--tab--option">
+                        <p>Score</p>
+                    </a>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/menu_configuracoes.svg" class="icon">
+                            <p class="secondary">Configurações</p>
+                        </div>
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <a class="nav--lateral--tab--option">
+                        <p>Usuários</p>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="nav--top">
             <div class="nav--top--sub">
-                <img src="img/icon_contrast_60/menu.svg" class="icon--regular">
+                <img src="img/icon_contrast_60/menu.svg" class="icon">
                 <img src="img/login_logo.svg" class="logo">
             </div>
             <div class="nav--top--sub">
                 <p class="secondary">Log out</p>
-                <img src="img/icon_contrast_60/notification.svg" class="icon--regular">
-                <img src="img/icon_contrast_60/settings.svg" class="icon--regular">
+                <img src="img/icon_contrast_60/notification.svg" class="icon">
+                <img src="img/icon_contrast_60/settings.svg" class="icon">
                 <img src="img/avatar/example.png">
             </div>
         </div>
-        <div class="header" id="header">
+        <div class="header">
             <div class="header--sub">
                 <div class="group--title">
                     <div class="title">
@@ -228,6 +285,5 @@
                 </tr>
             </table>
         </div>
-        <script src="app.js"></script>
     </body>
 </html>
