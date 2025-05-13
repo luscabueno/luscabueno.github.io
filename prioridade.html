@@ -4,13 +4,12 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="app.js"></script>
     </head>
     <body>
-        <div class="nav--lateral">
+        <div class="nav--lateral" id="lateral_nav">
             <div class="nav--lateral--header">
                 <a href="index.html"><img src="img/login_logo.svg" class="logo"></a>
-                <img src="img/icon_contrast_60/close.svg" class="icon">
+                <a onclick="lateralNavClose()"><img src="img/icon_contrast_60/close.svg" class="icon"></a>
             </div>
             <div class="nav--lateral--body">
                 <div class="nav--lateral--tab">
@@ -65,7 +64,7 @@
         </div>
         <div class="nav--top">
             <div class="nav--top--sub">
-                <img src="img/icon_contrast_60/menu.svg" class="icon">
+                <a onclick="lateralNavOpen()"><img src="img/icon_contrast_60/menu.svg" class="icon"></a>
                 <img src="img/login_logo.svg" class="logo">
             </div>
             <div class="nav--top--sub">
@@ -441,5 +440,6 @@
                 </div>
             </div>
         </div>
+        <script src="app.js"></script>
     </body>
 </html>

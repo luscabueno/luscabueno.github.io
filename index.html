@@ -4,13 +4,12 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="app.js"></script>
     </head>
     <body>
-        <div class="nav--lateral">
+        <div class="nav--lateral" id="lateral_nav">
             <div class="nav--lateral--header">
                 <a href="index.html"><img src="img/login_logo.svg" class="logo"></a>
-                <img src="img/icon_contrast_60/close.svg" class="icon">
+                <a onclick="lateralNavClose()"><img src="img/icon_contrast_60/close.svg" class="icon"></a>
             </div>
             <div class="nav--lateral--body">
                 <div class="nav--lateral--tab">
@@ -85,9 +84,9 @@
                     <p class="link">Esqueceu suas credenciais?</p>
                 </div>
                 <div class="group--button">
-                    <div class="button button--primary">
+                    <a onclick="lateralNavOpen()"><div class="button button--primary">
                         <p>Entrar</p>
-                    </div>
+                    </div></a>
                     <div class="button button--secondary">
                         <img src="img/icon_primary_text/new_user.svg" class="icon-s">
                         <p>Solicitar acesso</p>
@@ -95,5 +94,6 @@
                 </div>
             </div>
         </div>
+        <script src="app.js"></script>
     </body>
 </html>
