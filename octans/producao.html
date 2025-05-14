@@ -1,0 +1,430 @@
+<html>
+    <head>
+        <title>Octans</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="nav--top">
+            <div class="nav--top--sub">
+                <a href="index.html"><img src="img/login_logo.svg" class="logo"></a>
+            </div>
+            <div class="nav--top--sub">
+                <div class="group--button--menu">
+                    <div class="button--menu button--secondary">
+                        <p>Menu</p>
+                        <img src="img/icon_primary_text/expand.svg" class="icon-s">
+                    </div>
+                    <div class="button--menu button--secondary">
+                        <img src="img/icon_primary_text/settings.svg" class="icon-s">
+                        <img src="img/icon_primary_text/expand.svg" class="icon-s">
+                    </div>
+                    <div class="button--menu button--secondary">
+                        <img src="img/icon_primary_text/user.svg" class="icon-s">
+                        <img src="img/icon_primary_text/expand.svg" class="icon-s">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabsheet">
+            <div class="tabsheet--tab tabsheet--tab--active">
+                <div class="tabsheet--title">
+                    <p class="active">Controle de produção</p>
+                    <img src="img/icon_primary_text/close.svg" class="icon-s">
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="tabsheet--tab tabsheet--tab--inactive">
+                <div class="tabsheet--title">
+                    <p>Controle de entregas</p>
+                    <img src="img/icon_primary_text/close.svg" class="icon-s">
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="tabsheet--tab tabsheet--tab--inactive">
+                <div class="tabsheet--title">
+                    <p>Nova aba</p>
+                    <img src="img/icon_primary_text/close.svg" class="icon-s">
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="button button--secondary">
+                <img src="img/icon_primary_text/more.svg" class="icon-s">
+            </div>
+        </div>
+        <div class="group--filter">
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar coluna do filtro" value="Período personalizado">
+                    <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                </div>
+            </div>
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Data de início">
+                    <img src="img/icon_contrast_60/date.svg" class="icon-s">
+                </div>
+                <div class="text--field">
+                    <input placeholder="Data de fim">
+                    <img src="img/icon_contrast_60/date.svg" class="icon-s">
+                </div>
+            </div>
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar cliente do filtro" value="CBD - Consórcio Bilhete Digital">
+                    <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                </div>
+                <div class="button button--primary">
+                    <img src="img/icon_contrast_100/search.svg" class="icon-s">
+                </div>
+            </div>
+        </div>
+        <div class="table--body">
+            <div class="table--card">
+                <div class="table--card--body">
+                    <table id="producao">
+                        <colgroup>
+                            <col class="product">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">
+                                    <div class="cell">
+                                        <span>Produtos</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th colspan="3">
+                                    <div class="cell">
+                                        <span>Processadora</span>
+                                        <div class="badge badge--success">
+                                            <img src="img/icon_success_text/wifi.svg" class="icon-s">
+                                            <p>14/05/2024 - 14h45</p>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th colspan="3">Processamento</th>
+                                <th colspan="2">Produção</th>
+                                <th colspan="2">Retorno</th>
+                                <th colspan="2">Postagem</th>
+                                <th colspan="2">
+                                    <div class="cell">
+                                        <span>Entregadora</span>
+                                        <div class="badge badge--error">
+                                            <img src="img/icon_error_text/wifi_off.svg" class="icon-s">
+                                            <p>14/05/2025 - 09h21</p>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="rowspan--fix">
+                                    <div class="cell">
+                                        <span>Gerado</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Pendente</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Recebido</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="error">
+                                    <div class="cell">
+                                        <span>Pendente</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Rejeitado</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Concluído</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="error">
+                                    <div class="cell">
+                                        <span>Pendente</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Concluído</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="error">
+                                    <div class="cell">
+                                        <span>Pendente</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Concluído</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="error">
+                                    <div class="cell">
+                                        <span>Pendente</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Concluído</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th class="error">
+                                    <div class="cell">
+                                        <span>Pendente</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Entregue</span>
+                                        <div class="sorting">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cell">
+                                        <img src="img/icon_contrast_60/collapsed.svg">
+                                        <div class="badge badge--contrast"><p>G1</p></div>
+                                        <span>Avulso</span>
+                                    </div>
+                                </td>
+                                <td>5.486</td>
+                                <td>2.486</td>
+                                <td>3.000</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>3.000</td>
+                                <td>0</td>
+                                <td>3.000</td>
+                                <td>0</td>
+                                <td>3.000</td>
+                                <td>0</td>
+                                <td>3.000</td>
+                                <td class="error">826</td>
+                                <td>2.177</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cell">
+                                        <img src="img/icon_contrast_60/collapsed.svg">
+                                        <div class="badge badge--contrast"><p>G2</p></div>
+                                        <span>Gratuidade</span>
+                                    </div>
+                                </td>
+                                <td>31.266</td>
+                                <td>19.266</td>
+                                <td>12.000</td>
+                                <td class="error">2.000</td>
+                                <td>0</td>
+                                <td>10.000</td>
+                                <td class="error">2.000</td>
+                                <td>8.000</td>
+                                <td class="error">1.500</td>
+                                <td>6.500</td>
+                                <td class="error">1.500</td>
+                                <td>5.000</td>
+                                <td class="error">219</td>
+                                <td>4.781</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cell">
+                                        <img src="img/icon_contrast_60/expanded.svg">
+                                        <div class="badge badge--contrast"><p>G3</p></div>
+                                        <span>Gratuidade</span>
+                                    </div>
+                                </td>
+                                <td>7.018</td>
+                                <td>1.018</td>
+                                <td>6.000</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>6.000</td>
+                                <td class="error">1.000</td>
+                                <td>5.000</td>
+                                <td>0</td>
+                                <td>5.000</td>
+                                <td>0</td>
+                                <td>5.000</td>
+                                <td>0</td>
+                                <td>5.000</td>
+                            </tr>
+                            <tr class="child">
+                                <td>
+                                    <div class="cell">
+                                        <p class="s secondary">P1CBD0022</p>
+                                        <span>Jaé Gratuidade (Visa) [Individual]</span>
+                                    </div>
+                                </td>
+                                <td>1.008</td>
+                                <td>58</td>
+                                <td>950</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>950</td>
+                                <td class="error">344</td>
+                                <td>606</td>
+                                <td>0</td>
+                                <td>606</td>
+                                <td>0</td>
+                                <td>606</td>
+                                <td>0</td>
+                                <td>606</td>
+                            </tr>
+                            <tr class="child">
+                                <td>
+                                    <div class="cell">
+                                        <p class="s secondary">P1CBD0022</p>
+                                        <span>Jaé Gratuidade (Visa) [Lote]</span>
+                                    </div>
+                                </td>
+                                <td>6.010</td>
+                                <td>960</td>
+                                <td>5.050</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>5.050</td>
+                                <td class="error">656</td>
+                                <td>4.394</td>
+                                <td>0</td>
+                                <td>4.394</td>
+                                <td>0</td>
+                                <td>4.394</td>
+                                <td>0</td>
+                                <td>4.394</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cell">
+                                        <img src="img/icon_contrast_60/collapsed.svg">
+                                        <div class="badge badge--contrast"><p>G4</p></div>
+                                        <span>Vale transporte</span>
+                                    </div>
+                                </td>
+                                <td>1.889</td>
+                                <td>889</td>
+                                <td>1.000</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1.000</td>
+                                <td>0</td>
+                                <td>1.000</td>
+                                <td>0</td>
+                                <td>1.000</td>
+                                <td class="error">500</td>
+                                <td>500</td>
+                                <td>0</td>
+                                <td>500</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th>45.659</th>
+                                <th>23.659</th>
+                                <th>22.000</th>
+                                <th class="error">2.000</th>
+                                <th>0</th>
+                                <th>20.000</th>
+                                <th class="error">3.000</th>
+                                <th>17.000</th>
+                                <th class="error">1.500</th>
+                                <th>15.500</th>
+                                <th class="error">2.000</th>
+                                <th>13.500</th>
+                                <th class="error">1.042</th>
+                                <th>12.458</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

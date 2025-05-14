@@ -120,7 +120,7 @@
                     <div class="kanban--card">
                         <p class="tertiary">#1442</p>
                         <h4>JAL - Sistema de priorização de tarefas: API para coleta de dados via Git</h4>
-                        <div class="user">
+                        <div class="group">
                             <img src="img/avatar/default.svg" class="avatar">
                             <p>Wrayan Bontorin</p>
                         </div>
@@ -132,7 +132,7 @@
                     <div class="kanban--card">
                         <p class="tertiary">#1444</p>
                         <h4>JAL - Sistema de priorização de tarefas: estruturação de banco de dados</h4>
-                        <div class="user">
+                        <div class="group">
                             <img src="img/avatar/default.svg" class="avatar">
                             <p>Wrayan Bontorin</p>
                         </div>
@@ -155,7 +155,7 @@
                     <div class="kanban--card">
                         <p class="tertiary">#3</p>
                         <h4>JAL - Sistema de priorização de tarefas: tela de dashboard</h4>
-                        <div class="user">
+                        <div class="group">
                             <img src="img/avatar/default.svg" class="avatar">
                             <p>Lucas Bueno</p>
                         </div>
@@ -167,7 +167,7 @@
                     <div class="kanban--card">
                         <p class="tertiary">#4</p>
                         <h4>JAL - Sistema de priorização de tarefas: telas de priorização e cadastro</h4>
-                        <div class="user">
+                        <div class="group">
                             <img src="img/avatar/default.svg" class="avatar">
                             <p>Lucas Bueno</p>
                         </div>
@@ -180,7 +180,7 @@
                     <div class="kanban--card">
                         <p class="tertiary">#5</p>
                         <h4>JAL - Sistema de priorização de tarefas: tela de tarefas relacionadas</h4>
-                        <div class="user">
+                        <div class="group">
                             <img src="img/avatar/default.svg" class="avatar">
                             <p>Lucas Bueno</p>
                         </div>
@@ -203,7 +203,7 @@
                     <div class="kanban--card">
                         <p class="tertiary">#4903</p>
                         <h4>JAL - Sistema de priorização de tarefas: desenvolvimento e integração com banco de dados</h4>
-                        <div class="user">
+                        <div class="group">
                             <img src="img/avatar/default.svg" class="avatar">
                             <p>Leonardo Campos</p>
                         </div>
@@ -226,7 +226,7 @@
                     <div class="kanban--card">
                         <p class="tertiary">#860</p>
                         <h4>JAL - Sistema de priorização de tarefas</h4>
-                        <div class="user">
+                        <div class="group">
                             <img src="img/avatar/default.svg" class="avatar">
                             <p>Jeniffer Marcondes</p>
                         </div>
@@ -238,49 +238,89 @@
                 </div>
             </div>
         </div>
-        <div class="popover" id="popover">
+        <div class="popover">
             <table>
                 <tr>
                     <th>Categoria</th>
-                    <th class="number">Peso</th>
+                    <th class="right">Peso</th>
                     <th class="column--div">Classificação</th>
-                    <th class="number">Score</th>
-                    <th class="number column--div">Score sub-total</th>
+                    <th class="right">Score</th>
+                    <th class="right column--div">Score sub-total</th>
                 </tr>
                 <tr>
                     <td>Cliente</td>
-                    <td class="number">30%</td>
-                    <td class="column--div"><div class="badge badge--contrast"><p>JAL</p></td>
-                    <td class="number"><div class="badge badge--warning"><p>5.0</p></td>
-                    <td class="number column--div"><div class="badge badge--warning"><p>15.0</p></td>
+                    <td class="right">30%</td>
+                    <td class="column--div"><div class="badge badge--contrast"><p>JAL</p></div></td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge badge--warning"><p>5.0</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge badge--warning"><p>15.0</p></div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Prazo</td>
-                    <td class="number">30%</td>
+                    <td class="right">30%</td>
                     <td class="column--div">06/05/2025</td>
-                    <td class="number"><div class="badge badge--error"><p>8.0</p></td>
-                    <td class="number column--div"><div class="badge badge--error"><p>24.0</p></td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge badge--error"><p>8.0</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge badge--error"><p>24.0</p></div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Urgência</td>
-                    <td class="number">20%</td>
+                    <td class="right">20%</td>
                     <td class="column--div"><div class="badge badge--contrast"><p>Médio</p></td>
-                    <td class="number"><div class="badge badge--warning"><p>5.0</p></td>
-                    <td class="number column--div"><div class="badge badge--warning"><p>10.0</p></td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge badge--warning"><p>5.0</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge badge--warning"><p>10.0</p></div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Complexidade</td>
-                    <td class="number">15%</td>
+                    <td class="right">15%</td>
                     <td class="column--div"><div class="badge badge--contrast"><p>Baixo</p></td>
-                    <td class="number"><div class="badge badge--success"><p>2.5</p></td>
-                    <td class="number column--div"><div class="badge badge--success"><p>3.8</p></td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge badge--success"><p>2.5</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge badge--success"><p>3.8</p></div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Impacto</td>
-                    <td class="number">5%</td>
+                    <td class="right">5%</td>
                     <td class="column--div"><div class="badge badge--contrast"><p>Alto</p></td>
-                    <td class="number"><div class="badge badge--error"><p>10.0</p></td>
-                    <td class="number column--div"><div class="badge badge--error"><p>5.0</p></td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge badge--error"><p>10.0</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge badge--error"><p>5.0</p></div>
+                        </div>
+                    </td>
                 </tr>
             </table>
         </div>

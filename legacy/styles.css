@@ -119,52 +119,18 @@ table {
 }
 
 th {
-    height: 3rem;
+    height: 3.25rem;
     text-align: left;
     padding: 0 1rem;
 }
 
-    th.number {
-        text-align: right;
-    }
-
-    th > *.action {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        text-align: right;
-        gap: 0.5rem;
-    }
-
 td {
-    height: 3rem;
+    height: 3.25rem;
     padding: 0 1rem;
 }
 
     td.nesting {
         padding: 0 1rem 0 2rem;
-    }
-
-    td.number {
-        text-align: right;
-    }
-
-    td > *.action {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        text-align: right;
-        gap: 0.5rem;
-    }
-
-    td > *.date {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    td > *.underline {
-        text-decoration: underline;
     }
 
 col.action {
@@ -463,6 +429,12 @@ col.action {
         flex-direction: column;
     }
 
+.group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .filter {
     flex: 1;
     display: flex;
@@ -529,17 +501,14 @@ col.action {
 }
 
 .icon {
-    height: 1.5rem;
     width: 1.5rem;
 }
 
 .icon-s {
-    height: 1rem;
     width: 1rem;
 }
 
 .icon-xs {
-    height: 0.6rem;
     width: 0.6rem;
 }
 
@@ -566,6 +535,12 @@ col.action {
     position: absolute;
     width: fit-content;
     padding: 1rem;
+}
+
+.sorting {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
 }
 
 .text--field {
@@ -630,14 +605,19 @@ col.action {
         box-sizing: border-box;
     }
 
-.user {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
+/* MARKUP global modifiers */
 
 .padding {
     flex: 1;
+}
+
+.right {
+    justify-content: right;
+    text-align: right;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /* TEXT */
@@ -757,7 +737,6 @@ input {
 }
 
 thead, th, td {
-    background: #223348;
     border-bottom: 1px solid #adc8eB24;
 }
 
