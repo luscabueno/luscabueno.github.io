@@ -345,14 +345,14 @@ col.product {
 .filter {
     flex: 1;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
     @media (max-width: 2560px) {
         .group--filter {
             display: flex;
             padding: 1rem 2rem;
-            gap: 1rem;
+            gap: 0.5rem;
             position: sticky;
             top: 4rem;
             box-sizing: border-box;
