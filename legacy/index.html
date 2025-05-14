@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Legacy</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="nav--lateral" id="lateral_nav">
+            <div class="nav--lateral--header">
+                <a href="index.html"><img src="img/login_logo.svg" class="logo"></a>
+                <a onclick="lateralNavClose()"><img src="img/icon_contrast_60/close.svg" class="icon"></a>
+            </div>
+            <div class="nav--lateral--body">
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/menu_dashboard.svg" class="icon">
+                            <p class="secondary secondary">Dashboard</p>
+                        </div>
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <a href="dashboard.html" class="nav--lateral--tab--option">
+                        <p>Tarefas</p>
+                    </a>
+                    <a href="prioridade.html" class="nav--lateral--tab--option">
+                        <p>Prioridades</p>
+                    </a>
+                    <a href="link.html" class="nav--lateral--tab--option">
+                        <p>Links</p>
+                    </a>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/menu_cadastro.svg" class="icon">
+                            <p class="secondary">Cadastro</p>
+                        </div>
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <a href="cadastro.html" class="nav--lateral--tab--option">
+                        <p>Score</p>
+                    </a>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/menu_configuracoes.svg" class="icon">
+                            <p class="secondary">Configurações</p>
+                        </div>
+                        <div class="nav--lateral--tab--header--sub">
+                            <img src="img/icon_contrast_60/expanded.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <a class="nav--lateral--tab--option">
+                        <p>Usuários</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="login--body">
+            <div class="login--padding">
+            </div>
+            <div class="login--content">
+                <img src="img/login_logo.svg" class="logo">
+                <div class="group--text--field">
+                    <div class="text--field--label">
+                        <p class="secondary">Login</p>
+                        <div class="text--field">
+                            <input placeholder="E-mail ou nome do usuário">
+                        </div>
+                    </div>
+                    <div class="text--field--label">
+                        <p class="secondary">Senha</p>
+                        <div class="text--field">
+                            <input placeholder="Senha">
+                            <img src="img/icon_contrast_60/hide.svg" class="icon-s">
+                        </div>
+                    </div>
+                    <p class="link">Esqueceu suas credenciais?</p>
+                </div>
+                <div class="group--button">
+                    <a onclick="lateralNavOpen()"><div class="button button--primary">
+                        <p>Entrar</p>
+                    </div></a>
+                    <div class="button button--secondary">
+                        <img src="img/icon_primary_text/new_user.svg" class="icon-s">
+                        <p>Solicitar acesso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
