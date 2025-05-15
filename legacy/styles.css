@@ -90,18 +90,15 @@ input {
 }
 
 table {
-    width: 100%;
-    table-layout: fixed;
+    min-width: 100%;
     border-collapse: separate;
     border-spacing: 0;
 }
 
-    table#cadastro_score {
+    table.cadastro_score {
+        width: 100%;
         min-width: 40rem;
-    }
-
-    table#prioridade {
-        min-width: 80rem;
+        table-layout: fixed;
     }
 
 @media (max-width: 768px) {

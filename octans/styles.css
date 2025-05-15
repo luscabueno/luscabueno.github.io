@@ -86,15 +86,18 @@ input {
 }
 
 table {
-    width: 100%;
-    table-layout: fixed;
+    min-width: 100%;
     white-space: nowrap;
     border-spacing: 0;
     border: none;
 }
 
-    table#producao {
-        min-width: 200rem;
+    table#controle--produto col.col--quantidade {
+        min-width: 10rem;
+    }
+
+    table#controle--cartao col.col--data {
+        min-width: 15rem;
     }
 
 th {
@@ -132,40 +135,19 @@ td {
         padding: 0 1rem 0 2.75rem;
     }
 
-col.product {
-    width: 25rem;
-}
-
 /* MARKUP page components */
 
 /* .login */
 
-@media (max-width: 2560px) {
-    .login--body {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* background-image: url(img/bg_001.png); */
-        background-size: 1000px;
-        background-position: -3rem center;
-        background-repeat: no-repeat;
-    }
-}
-
-@media (max-width: 1300px) {
-    .login--body {
-        background-size: 800px;
-        background-position: center;
-        background-position-y: 30rem;
-    }
-}
-
-@media (max-width: 320px) {
-    .login--body {
-        background-size: 600px;
-        background-position-y: 25rem;
-    }
+.login--body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/bg_001.png);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .login--card {
@@ -246,7 +228,7 @@ col.product {
 /* .table */
 
 .table--body {
-    flex: 1;
+    /* height: 70vh; */
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -254,22 +236,14 @@ col.product {
 }
 
 .table--card {
-    flex: 1;
+    min-height: 0;
     min-width: 25rem;
-    /* overflow: auto; */
-}
-
-.table--card--header {
-    height: fit-content;
     display: flex;
-}
-
-.table--card--header--sub {
-    flex: 1;
-    display: flex;
+    flex-direction: column;
 }
 
 .table--card--body {
+    flex: 1;
     padding: 0 1rem;
     overflow: auto;
 }
@@ -390,7 +364,7 @@ col.product {
     }
 
 .logo {
-    width: 8rem;
+    width: 9rem;
 }
 
     @media (max-width: 2560px) {
@@ -524,7 +498,7 @@ p, td, input {
 
 /* TEXT global components */
 
-.badge {
+.badge p {
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: none;
@@ -561,6 +535,10 @@ p, td, input {
 
 .tabsheet--tab--active p {
     color: #90bdf9;
+}
+
+.tabsheet--tab--inactive p {
+    color: #d9e8fcb0;
 }
 
 .tabsheet--title p {

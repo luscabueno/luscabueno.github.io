@@ -30,22 +30,22 @@
         <div class="tabsheet">
             <div class="tabsheet--tab tabsheet--tab--active">
                 <div class="tabsheet--title">
-                    <p class="active">Controle de produção</p>
+                    <p>Controle de produção</p>
                     <img class="icon size-s" src="img/icon_primary_text/close.svg">
                 </div>
                 <div class="tabsheet--label"></div>
             </div>
             <div class="tabsheet--tab tabsheet--tab--inactive">
                 <div class="tabsheet--title">
-                    <p>Controle de entregas</p>
-                    <img class="icon size-s" src="img/icon_primary_text/close.svg">
+                    <a href="entrega.html"><p>Controle de entregas</p></a>
+                    <img class="icon size-s" src="img/icon_contrast_60/close.svg">
                 </div>
                 <div class="tabsheet--label"></div>
             </div>
             <div class="tabsheet--tab tabsheet--tab--inactive">
                 <div class="tabsheet--title">
                     <p>Nova aba</p>
-                    <img class="icon size-s" src="img/icon_primary_text/close.svg">
+                    <img class="icon size-s" src="img/icon_contrast_60/close.svg">
                 </div>
                 <div class="tabsheet--label"></div>
             </div>
@@ -72,7 +72,7 @@
             </div>
             <div class="filter">
                 <div class="text--field">
-                    <input placeholder="Selecionar cliente do filtro" value="CBD - Consórcio Bilhete Digital">
+                    <input placeholder="Selecionar cliente do filtro" value="JAL - Jallcard">
                     <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
                 </div>
                 <div class="button button--primary">
@@ -83,23 +83,23 @@
         <div class="table--body">
             <div class="table--card">
                 <div class="table--card--body">
-                    <table id="producao">
+                    <table id="controle--produto">
                         <colgroup>
-                            <col class="product">
                             <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
+                            <col class="col--quantidade">
                         </colgroup>
                         <thead>
                             <tr>
@@ -270,7 +270,7 @@
                                     <div class="cell">
                                         <img src="img/icon_contrast_60/collapsed.svg">
                                         <div class="badge badge--contrast"><p>G1</p></div>
-                                        <span>Avulso</span>
+                                        <span>Vale Alimentação</span>
                                     </div>
                                 </td>
                                 <td>5.486</td>
@@ -293,7 +293,7 @@
                                     <div class="cell">
                                         <img src="img/icon_contrast_60/collapsed.svg">
                                         <div class="badge badge--contrast"><p>G2</p></div>
-                                        <span>Gratuidade</span>
+                                        <span>Vale Refeição</span>
                                     </div>
                                 </td>
                                 <td>31.266</td>
@@ -316,7 +316,7 @@
                                     <div class="cell">
                                         <img src="img/icon_contrast_60/expanded.svg">
                                         <div class="badge badge--contrast"><p>G3</p></div>
-                                        <span>Gratuidade</span>
+                                        <span>Crédito</span>
                                     </div>
                                 </td>
                                 <td>7.018</td>
@@ -337,8 +337,8 @@
                             <tr class="child">
                                 <td>
                                     <div class="cell">
-                                        <p class="size-xs secondary">P1CBD0022</p>
-                                        <span>Jaé Gratuidade (Visa) [Individual]</span>
+                                        <p class="size-xs secondary">P1JAL0022</p>
+                                        <span>Crédito (Mastercard)</span>
                                     </div>
                                 </td>
                                 <td>1.008</td>
@@ -359,8 +359,8 @@
                             <tr class="child">
                                 <td>
                                     <div class="cell">
-                                        <p class="size-xs secondary">P1CBD0022</p>
-                                        <span>Jaé Gratuidade (Visa) [Lote]</span>
+                                        <p class="size-xs secondary">P1JAL0022</p>
+                                        <span>Crédito (Visa)</span>
                                     </div>
                                 </td>
                                 <td>6.010</td>
@@ -383,7 +383,7 @@
                                     <div class="cell">
                                         <img src="img/icon_contrast_60/collapsed.svg">
                                         <div class="badge badge--contrast"><p>G4</p></div>
-                                        <span>Vale transporte</span>
+                                        <span>Débito</span>
                                     </div>
                                 </td>
                                 <td>1.889</td>

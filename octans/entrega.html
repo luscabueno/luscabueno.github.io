@@ -1,0 +1,276 @@
+<html>
+    <head>
+        <title>Octans</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="nav--top">
+            <div class="nav--top--sub">
+                <a href="index.html"><img src="img/login_logo.svg" class="logo"></a>
+            </div>
+            <div class="nav--top--sub">
+                <div class="group--button--menu">
+                    <div class="button--menu button--secondary">
+                        <p>Menu</p>
+                        <img class="icon size-s" src="img/icon_primary_text/expand.svg">
+                    </div>
+                    <div class="button--menu button--secondary">
+                        <img class="icon size-s" src="img/icon_primary_text/settings.svg">
+                        <img class="icon size-s" src="img/icon_primary_text/expand.svg">
+                    </div>
+                    <div class="button--menu button--secondary">
+                        <img class="icon size-s" src="img/icon_primary_text/user.svg">
+                        <img class="icon size-s" src="img/icon_primary_text/expand.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabsheet">
+            <div class="tabsheet--tab tabsheet--tab--inactive">
+                <div class="tabsheet--title">
+                    <a href="producao.html"><p>Controle de produção</p></a>
+                    <img class="icon size-s" src="img/icon_contrast_60/close.svg">
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="tabsheet--tab tabsheet--tab--active">
+                <div class="tabsheet--title">
+                    <p>Controle de entregas</p>
+                    <img class="icon size-s" src="img/icon_primary_text/close.svg">
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="tabsheet--tab tabsheet--tab--inactive">
+                <div class="tabsheet--title">
+                    <p>Nova aba</p>
+                    <img class="icon size-s" src="img/icon_contrast_60/close.svg">
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="button button--secondary">
+                <img class="icon size-s" src="img/icon_primary_text/more.svg">
+            </div>
+        </div>
+        <div class="group--filter">
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar coluna do filtro" value="Período personalizado">
+                    <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                </div>
+            </div>
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Data de início">
+                    <img class="icon size-s" src="img/icon_contrast_60/date.svg">
+                </div>
+                <div class="text--field">
+                    <input placeholder="Data de fim">
+                    <img class="icon size-s" src="img/icon_contrast_60/date.svg">
+                </div>
+            </div>
+            <div class="filter">
+                <div class="text--field">
+                    <input placeholder="Selecionar cliente do filtro" value="JAL - Jallcard">
+                    <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                </div>
+                <div class="button button--primary">
+                    <img class="icon size-s" src="img/icon_contrast_100/search.svg">
+                </div>
+            </div>
+        </div>
+        <div class="table--body">
+            <div class="table--card">
+                <div class="table--card--body">
+                    <table id="controle--cartao">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col class="col--data">
+                            <col class="col--data">
+                            <col class="col--data">
+                            <col class="col--data">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="cell">
+                                        <span>OP</span>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <div class="badge badge--contrast"><p>ID_MIDIA</p></div>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <div class="badge badge--contrast"><p>MODALIDADE_ENTREGA</p></div>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>HAWB</span>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Nome do portador</span>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>CPF</span>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Produto</span>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Data processamento</span>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Data expedição</span>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Data postagem</span>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="cell">
+                                        <span>Data entrega</span>
+                                        <div class="sorting">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
+                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>JAL2500002</td>
+                                <td>009469b9-bda4-99b0-7495-3234d5bf4by4</td>
+                                <td>INDIVIDUAL</td>
+                                <td>11021752063926</td>
+                                <td>LEONARDO DOS SANTOS CAMPOS</td>
+                                <td>143.784.797-55</td>
+                                <td>Crédito (Mastercard)</td>
+                                <td>31/01/2025</td>
+                                <td>02/02/2025</td>
+                                <td>03/02/2025</td>
+                                <td>09/02/2025</td>
+                            </tr>
+                            <tr>
+                                <td>JAL2500001</td>
+                                <td>009469b9-bda4-99b0-7495-3234d5bf4bb7</td>
+                                <td>INDIVIDUAL</td>
+                                <td>11021752063959</td>
+                                <td>LUCAS EDUARDO BUENO SIQUEIRA</td>
+                                <td>143.784.797-88</td>
+                                <td>Crédito (Visa)</td>
+                                <td>30/01/2025</td>
+                                <td>31/01/2025</td>
+                                <td>31/01/2025</td>
+                                <td>12/02/2025</td>
+                            </tr>
+                            <tr>
+                                <td>JAL2500001</td>
+                                <td>009469b9-bda4-99b0-7495-3234d5bf4bz5</td>
+                                <td>LOTE DEPARTAMENTO</td>
+                                <td>11021752063937</td>
+                                <td>MATHEUS PETRUKA</td>
+                                <td>143.784.797-66</td>
+                                <td>Crédito (Visa)</td>
+                                <td>30/01/2025</td>
+                                <td>31/01/2025</td>
+                                <td>31/01/2025</td>
+                                <td>12/02/2025</td>
+                            </tr>
+                            <tr>
+                                <td>JAL2500001</td>
+                                <td>009469b9-bda4-99b0-7495-3234d5bf4ba6</td>
+                                <td>INDIVIDUAL</td>
+                                <td>11021752063948</td>
+                                <td>ROGER VINICIUS SOBRINHO</td>
+                                <td>143.784.797-77</td>
+                                <td>Crédito (Visa)</td>
+                                <td>30/01/2025</td>
+                                <td>31/01/2025</td>
+                                <td>31/01/2025</td>
+                                <td>12/02/2025</td>
+                            </tr>
+                            <tr>
+                                <td>JAL2500002</td>
+                                <td>009469b9-bda4-99b0-7495-3234d5bf4bx3</td>
+                                <td>LOTE DEPARTAMENTO</td>
+                                <td>11021752063937</td>
+                                <td>WRAYAN BONTORIN</td>
+                                <td>143.784.797-44</td>
+                                <td>Crédito (Mastercard)</td>
+                                <td>31/01/2025</td>
+                                <td>02/02/2025</td>
+                                <td>03/02/2025</td>
+                                <td>09/02/2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
