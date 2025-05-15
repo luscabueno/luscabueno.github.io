@@ -550,7 +550,7 @@ p, td, input {
 /* STYLING elements */
 
 body {
-    background: #223348;
+    background: #2b3d52;
 }
 
 input {
@@ -641,8 +641,8 @@ th, td {
     background: #223348;
 }
 
-.table--body {
-    background: #2b3d52;
+.tabsheet {
+    background: #223348;
 }
 
 .table--card {

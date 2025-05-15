@@ -721,7 +721,7 @@ p, td, input {
 /* STYLING elements */
 
 body {
-    background: #223348;
+    background: #2b3d52;
 }
 
 input {
@@ -783,8 +783,8 @@ thead, th, td {
     background: #223348;
 }
 
-.dashboard--body, .kanban--body, .table--body {
-    background: #2b3d52;
+.header {
+    background: #223348;
 }
 
 .dashboard--card, .kanban--column, .table--card {
