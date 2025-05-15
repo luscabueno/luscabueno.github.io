@@ -775,6 +775,10 @@ thead, th, td {
 
 /* STYLING page components */
 
+.login--body {
+    background-color: #223348;
+}
+
 .nav--lateral {
     background: #2b3d52;
 }

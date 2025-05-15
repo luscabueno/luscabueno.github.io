@@ -626,6 +626,10 @@ th, td {
 
 /* STYLING page components */
 
+.login--body {
+    background-color: #223348;
+}
+
 .login--card {
     background: #223348;
     border-radius: 0.5rem;
