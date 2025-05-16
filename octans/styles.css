@@ -331,14 +331,14 @@ td {
 .filter {
     flex: 1;
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
     @media (max-width: 2560px) {
         .group--filter {
             display: flex;
             padding: 1rem 2rem;
-            gap: 0.5rem;
+            gap: 1rem;
             position: sticky;
             top: 4rem;
             box-sizing: border-box;
