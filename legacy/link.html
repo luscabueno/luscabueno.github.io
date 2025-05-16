@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="nav--lateral" id="lateral_nav">
+<div class="nav--lateral" id="lateral_nav">
             <div class="nav--lateral--header">
                 <a href="index.html"><img src="img/login_logo.svg" class="logo"></a>
                 <a onclick="lateralNavClose()"><img class="icon" src="img/icon_contrast_60/close.svg"></a>
@@ -14,51 +14,47 @@
             <div class="nav--lateral--body">
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
-                        <div class="nav--lateral--tab--header--sub">
-                            <img class="icon" src="img/icon_contrast_60/menu_dashboard.svg">
-                            <p class="secondary secondary">Dashboard</p>
-                        </div>
-                        <div class="nav--lateral--tab--header--sub">
-                            <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
-                        </div>
+                        <p class="secondary">Dashboard</p>
+                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
                     </div>
-                    <a href="dashboard.html" class="nav--lateral--tab--option">
-                        <p>Tarefas</p>
-                    </a>
-                    <a href="prioridade.html" class="nav--lateral--tab--option">
-                        <p>Prioridades</p>
-                    </a>
-                    <a href="link.html" class="nav--lateral--tab--option">
-                        <p>Links</p>
-                    </a>
+                    <div class="nav--lateral--tab--body">
+                        <a class="nav--lateral--tab--option" href="dashboard.html">
+                            <img class="icon-s" src="img/icon_contrast_90/dashboard_tarefas.svg">
+                            <p>Tarefas</p>
+                        </a>
+                        <a class="nav--lateral--tab--option" href="prioridade.html">
+                            <img class="icon-s" src="img/icon_contrast_90/dashboard_prioridades.svg">
+                            <p>Prioridades</p>
+                        </a>
+                        <a class="nav--lateral--tab--option" href="link.html">
+                            <img class="icon-s" src="img/icon_contrast_90/dashboard_links.svg">
+                            <p>Links</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
-                        <div class="nav--lateral--tab--header--sub">
-                            <img class="icon" src="img/icon_contrast_60/menu_cadastro.svg">
-                            <p class="secondary">Cadastro</p>
-                        </div>
-                        <div class="nav--lateral--tab--header--sub">
-                            <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
-                        </div>
+                        <p class="secondary">Cadastro</p>
+                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
                     </div>
-                    <a href="cadastro.html" class="nav--lateral--tab--option">
-                        <p>Score</p>
-                    </a>
+                    <div class="nav--lateral--tab--body">
+                        <a href="cadastro.html" class="nav--lateral--tab--option">
+                            <img class="icon-s" src="img/icon_contrast_90/cadastro_score.svg">
+                            <p>Score</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
-                        <div class="nav--lateral--tab--header--sub">
-                            <img class="icon" src="img/icon_contrast_60/menu_configuracoes.svg">
-                            <p class="secondary">Configurações</p>
-                        </div>
-                        <div class="nav--lateral--tab--header--sub">
-                            <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
-                        </div>
+                        <p class="secondary">Configurações</p>
+                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
                     </div>
-                    <a class="nav--lateral--tab--option">
-                        <p>Usuários</p>
-                    </a>
+                    <div class="nav--lateral--tab--body">
+                        <a class="nav--lateral--tab--option">
+                            <img class="icon-s" src="img/icon_contrast_90/configuracoes_usuarios.svg">
+                            <p>Usuários</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,7 +64,7 @@
                 <img src="img/login_logo.svg" class="logo">
             </div>
             <div class="nav--top--sub">
-                <p class="secondary">Log out</p>
+                <a href="index.html"><p class="secondary">Log out</p></a>
                 <img class="icon" src="img/icon_contrast_60/notification.svg">
                 <img class="icon" src="img/icon_contrast_60/settings.svg">
                 <img src="img/avatar/example.png">
@@ -78,8 +74,10 @@
             <div class="header--sub">
                 <div class="group--title">
                     <div class="title">
-                        <p class="tertiary">Dashboard / Tarefas / Projetos / #4</p>
-                        <h3>JAL - Sistema de priorização de tarefas</h3>
+                        <div class="title--sub">
+                            <p class="tertiary">Dashboard / Tarefas / Projetos / #4</p>
+                            <h3>JAL - Sistema de priorização de tarefas</h3>
+                        </div>
                         <div class="group--badge">
                             <div class="badge badge--contrast"><p>Em andamento</p></div>
                             <div class="badge badge--success"><p>15.5</p></div>
@@ -91,16 +89,20 @@
                 <div class="group--highlight">
                     <div class="highlight border-left--add">
                         <div class="highlight--data">
-                            <img class="icon size-s" src="img/icon_contrast_100/ligadas.svg">
-                            <h6>Ligadas</h6>
+                            <div class="highlight--data--sub">
+                                <img class="icon size-s" src="img/icon_contrast_100/ligadas.svg">
+                                <h6>Ligadas</h6>
+                            </div>
                             <h1>7</h1>
                         </div>
                         <div class="highlight--label highlight--label--contrast"></div>
                     </div>
                     <div class="highlight border-left--add">
                         <div class="highlight--data">
-                            <img class="icon size-s" src="img/icon_contrast_100/concluidas.svg">
-                            <h6>Concluídas</h6>
+                            <div class="highlight--data--sub">
+                                <img class="icon size-s" src="img/icon_contrast_100/concluidas.svg">
+                                <h6>Concluídas</h6>
+                            </div>
                             <h1>2</h1>
                         </div>
                         <div class="highlight--label highlight--label--contrast"></div>
