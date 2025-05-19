@@ -58,10 +58,16 @@
         </div>
         <div class="group--filter">
             <div class="filter">
-                <div class="text--field">
-                    <input placeholder="Selecionar coluna do filtro" value="Período personalizado">
-                    <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
-                </div>
+                <select class="text--field" placeholder="Selecionar coluna do filtro" value="Período personalizado">
+                    <button>
+                        <selectedcontent></selectedcontent>
+                    </button>
+                        <option class="placeholder--text">Selecionar período do filtro</option>
+                        <option>Hoje</option>
+                        <option>Esta semana</option>
+                        <option>Este mês</option>
+                        <option>Período personalizado</option>
+                </select>
             </div>
             <div class="filter">
                 <div class="text--field">
@@ -74,9 +80,24 @@
                 </div>
             </div>
             <div class="filter">
-                <div class="text--field">
-                    <input placeholder="Selecionar cliente do filtro" value="JAL - Jallcard">
-                    <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                <div class="dropdown">
+                    <a class="text--field" id="nav_top_controle_button">
+                        <input placeholder="Selecionar cliente do filtro">
+                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                    </a>
+                    <div class="group--dropdown--item--padding" id="nav_top_controle_dropdown">
+                        <div class="group--dropdown--item">
+                            <a href="" class="dropdown--item">
+                                <p>JAL - Jallcard</p>
+                            </a>
+                            <a href="" class="dropdown--item">
+                                <p>LEG - Legacy</p>
+                            </a>
+                            <a href="" class="dropdown--item">
+                                <p>OCT - Octans</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="button primary">
                     <img class="icon size-s" src="img/icon_contrast_100/search.svg">

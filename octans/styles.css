@@ -77,6 +77,15 @@ input {
     outline: none;
 }
 
+select,
+::picker(select) {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: base-select;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
@@ -94,6 +103,44 @@ input {
     flex: 1;
     width: 0;
 }
+
+select {
+    flex: 1;
+}
+
+    select::picker(select) {
+        top: -2.2rem;
+        padding: 0.3rem;
+
+        background: #2b3d52;
+        outline: 1px solid #c0d5f20f;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
+    }
+
+        select::picker-icon {
+            content: url(img/icon_contrast_60/expanded.svg);
+        }
+
+    select button {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    select option {
+        height: 2.2rem;
+
+        border-radius: 0.25rem;
+    }
+
+        select option::checkmark {
+            content: url(img/icon_primary_text/checkmark.svg);
+        }
+
+        select option:hover {
+            background: #0c6ce921;
+        }
 
 /* LAYOUT elements: table */
 
@@ -440,6 +487,7 @@ tr:last-child > td {
 }
 
 .dropdown {
+    flex: 1;
     position: relative;
 }
 
@@ -458,6 +506,7 @@ tr:last-child > td {
     }
 
     .group--dropdown--item--padding {
+        min-width: 100%;
         position: absolute;
         right: 0;
         display: none;
@@ -474,7 +523,8 @@ tr:last-child > td {
     }
 
         #nav_top_controle_button:hover ~ #nav_top_controle_dropdown,
-        #nav_top_controle_dropdown:hover {
+        #nav_top_controle_dropdown:hover,
+        .dropdown--show {
             display: block;
         }
 
@@ -540,6 +590,7 @@ tr:last-child > td {
     height: 2.2rem;
     min-height: 2.2rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 0.8rem;
     gap: 0.5rem;
@@ -599,8 +650,12 @@ tr:last-child > td {
 
 /* TEXT elements */
 
-body, input {
+body, input, select {
     font-family: "Inter";
+}
+
+optgroup {
+    font-weight: 400;
 }
 
 h1 {
@@ -636,7 +691,7 @@ h6, th {
         color: #ff9e99;
     }
 
-p, td, input {
+p, td, input, select {
     font-size: 1rem;
     font-weight: 400;
     color: #ebf4ffe6;
