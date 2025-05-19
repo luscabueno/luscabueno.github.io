@@ -182,6 +182,7 @@ tr:last-child > td {
 .nav--top {
     height: 4rem;
     position: sticky;
+    z-index: 1;
     top: 0rem;
     display: flex;
     justify-content: space-between;
@@ -266,7 +267,7 @@ tr:last-child > td {
     background: #223348;
     border: 1px solid #b4cdee1a;
     border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1.5rem #0d0f1152, 0 0.15rem 0.25rem #05050512;
+    box-shadow: 0 0.25rem 0.75rem -0.1rem #0d0f1129, 0 0.15rem 0.25rem -0.1rem #05050529;
 }
 
 .login--card--header {
@@ -417,12 +418,19 @@ tr:last-child > td {
         background: #c0d5f20f;
     }
 
+    .button--menu:first-child {
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+    }
+
+    .button--menu:last-child {
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+
     .group--button--menu {
         display: flex;
         gap: 0.15rem;
-        overflow: hidden;
-
-        border-radius: 0.25rem;
     }
 
 .cell {
@@ -430,6 +438,45 @@ tr:last-child > td {
     align-items: center;
     gap: 0.5rem;
 }
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown--item {
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    white-space: nowrap;
+
+    border-radius: 0.25rem;
+}
+
+    .dropdown--item:hover {
+        background: #0c6ce921;
+    }
+
+    .group--dropdown--item--padding {
+        position: absolute;
+        right: 0;
+        display: none;
+        padding-top: 0.3rem;
+    }
+
+    .group--dropdown--item {
+        padding: 0.3rem;
+
+        background: #2b3d52;
+        outline: 1px solid #c0d5f20f;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
+    }
+
+        #nav_top_controle_button:hover ~ #nav_top_controle_dropdown,
+        #nav_top_controle_dropdown:hover {
+            display: block;
+        }
 
 .filter {
     flex: 1;
