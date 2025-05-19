@@ -492,10 +492,11 @@ tr:last-child > td {
 }
 
 .dropdown--item {
-    height: 2.2rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     padding: 0 1.5rem;
+    gap: 0.5rem;
     white-space: nowrap;
 
     border-radius: 0.25rem;
