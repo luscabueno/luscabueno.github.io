@@ -381,7 +381,7 @@ tr:last-child > td {
 }
 
 .badge {
-    height: 1.75rem;
+    height: 1.5rem;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -492,7 +492,7 @@ tr:last-child > td {
 }
 
 .dropdown--item {
-    height: 2.5rem;
+    height: 2.2rem;
     display: flex;
     align-items: center;
     padding: 0 1.5rem;
