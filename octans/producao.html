@@ -58,16 +58,57 @@
         </div>
         <div class="group--filter">
             <div class="filter">
-                <select class="text--field" placeholder="Selecionar coluna do filtro" value="Período personalizado">
-                    <button>
-                        <selectedcontent></selectedcontent>
-                    </button>
-                        <option class="placeholder--text">Selecionar período do filtro</option>
-                        <option>Hoje</option>
-                        <option>Esta semana</option>
-                        <option>Este mês</option>
-                        <option>Período personalizado</option>
-                </select>
+                <div class="select">
+                    <div class="group--select" id="select_periodo">
+                        <input type="checkbox" class="select--expand" id="select_periodo_expand">
+                        <div class="select--button text--field">
+                            <div class="select--value cell" id="select_periodo_value">Selecionar cliente do filtro</div>
+                            <img src="img/icon_contrast_60/expanded.svg">
+                        </div>
+                    </div>
+                    <ul class="group--select--item">
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="periodo"
+                                value="hoje"
+                                data-label='<p>Hoje</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Hoje</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="periodo"
+                                value="semana"
+                                data-label='<p>Esta semana</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Esta semana</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="periodo"
+                                value="mes"
+                                data-label='<p>Este mês</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Este mês</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="periodo"
+                                value="personalizado"
+                                data-label='<p>Período personalizado</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Período personalizado</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="filter">
                 <div class="text--field">
@@ -81,39 +122,48 @@
             </div>
             <div class="filter">
                 <div class="select">
-                    <div class="category--select">
-                        <label for="options--view--button">Categoria</label>
-                        <input type="checkbox" id="options--view--button">
-
-                        <div class="select--button">
-                            <div id="selected_value">Selecionar cliente do filtro</div>
-                            <div id="chevrons">
-                                <img src="img/icon_contrast_60/expanded.svg">
-                            </div>
+                    <div class="group--select" id="select_cliente">
+                        <div class="select--button text--field">
+                            <input type="checkbox" class="select--expand" id="select_cliente_expand">
+                            <div class="select--value cell" id="select_cliente_value">Selecionar cliente do filtro</div>
+                            <img src="img/icon_contrast_60/expanded.svg">
                         </div>
                     </div>
-                </div>
-                <!-- <div class="dropdown">
-                    <a class="text--field" id="nav_top_controle_button">
-                        <input placeholder="Selecionar cliente do filtro">
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
-                    </a>
-                    <div class="group--dropdown--item--padding" id="nav_top_controle_dropdown">
-                        <div class="group--dropdown--item">
-                            <a href="" class="dropdown--item">
-                                <div class="badge contrast"><p>JAL</p></div>
-                                <p>Jallcard</p>
-                            </a>
-                            <a href="" class="dropdown--item">
-                                <div class="badge contrast"><p>LEG</p></div>
-                                <p>Legacy</p>
-                            </a>
-                            <a href="" class="dropdown--item">
-                                <div class="badge contrast"><p>OCT</p></div>
-                                <p>Octans</p>
-                            </a>
-                        </div>
-                    </div> -->
+                    <ul class="group--select--item">
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="cliente"
+                                value="JAL"
+                                data-label='<div class="badge contrast"><p>JAL</p></div><p>Jallcard</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <div class="badge contrast"><p>JAL</p></div>
+                            <p>Jallcard</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="cliente"
+                                value="LEG"
+                                data-label='<div class="badge contrast"><p>LEG</p></div><p>Legacy</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <div class="badge contrast"><p>LEG</p></div>
+                            <p>Legacy</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="cliente"
+                                value="OCT"
+                                data-label='<div class="badge contrast"><p>OCT</p></div><p>Octans</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <div class="badge contrast"><p>OCT</p></div>
+                            <p>Octans</p>
+                        </li>
+                    </ul>
                 </div>
                 <div class="button primary">
                     <img class="icon size-s" src="img/icon_contrast_100/search.svg">
