@@ -620,6 +620,23 @@ border-radius: 0.25rem;
             padding: 0.8rem;
         }
 
+        @media (max-width:768px) {
+            .group--select--item {
+                height: fit-content;
+                width: 100%;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                padding: 2.5rem 1rem;
+                margin-top: auto;
+
+                background: #2b3d52;
+                outline: none;
+                border-radius: 0.25rem;
+                box-shadow: 0 -25rem 0 25rem #090a0b3b;
+            }
+        }
+
 .sorting {
     display: flex;
     flex-direction: column;

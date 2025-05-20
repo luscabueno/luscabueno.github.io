@@ -7,12 +7,12 @@ selectButtons = document.querySelectorAll('.select button');
 selectButtons.forEach(button => {
     button.addEventListener('click', event => {
         // close other .select
-        // const selectLists = document.getElementsByClassName('group--select--item');
-        // for (i = 0; i < selectLists.length; i++) {
-        //     if (selectLists[i].classList.contains('show')) {
-        //         selectLists[i].classList.remove('show');
-        //     }
-        // }
+        const selectLists = document.getElementsByClassName('group--select--item');
+        for (i = 0; i < selectLists.length; i++) {
+            if (selectLists[i].classList.contains('show')) {
+                selectLists[i].classList.remove('show');
+            }
+        }
 
         // obtain .select name
         const selectName = button.id.split("_")[2];
