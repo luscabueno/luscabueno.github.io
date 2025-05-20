@@ -89,12 +89,21 @@ input {
     outline: none;
 }
 
+ul, ol, li {
+    list-style-type: none;
+}
+
 /* LAYOUT elements */
 
 /* LAYOUT elements: general */
 
 body {
     background: #2b3d52;
+}
+
+.select--item a {
+    height: 100%;
+    width: 100%;
 }
 
 button {
