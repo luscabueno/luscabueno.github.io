@@ -576,8 +576,8 @@ border-radius: 0.25rem;
 
     .select--item input {
         all: unset;
-        position: absolute;
         inset: 0;
+        position: absolute;
         z-index: 1;
     }
 
@@ -596,10 +596,10 @@ border-radius: 0.25rem;
     .group--select--item {
         min-width: 100%;
         position: absolute;
+        z-index: 1;
         display: none;
         flex-direction: column;
         padding: 0.3rem;
-        z-index: 1;
 
         background: #2b3d52;
         outline: 1px solid #c0d5f20f;
@@ -632,7 +632,7 @@ border-radius: 0.25rem;
 
                 background: #2b3d52;
                 outline: none;
-                border-radius: 0.25rem;
+                border-radius: 0;
                 box-shadow: 0 -25rem 0 25rem #090a0b3b;
             }
         }
