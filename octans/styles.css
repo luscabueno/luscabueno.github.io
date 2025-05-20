@@ -102,47 +102,8 @@ body {
 }
 
 input {
-    /* flex: 1; */
-    width: 0;
+    width: 100%;
 }
-
-select {
-    flex: 1;
-}
-
-    select::picker(select) {
-        top: -2.2rem;
-        padding: 0.3rem;
-
-        background: #2b3d52;
-        outline: 1px solid #c0d5f20f;
-        border-radius: 0.25rem;
-        box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
-    }
-
-        select::picker-icon {
-            content: url(img/icon_contrast_60/expanded.svg);
-        }
-
-    select button {
-        flex: 1;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    select option {
-        height: 2.2rem;
-
-        border-radius: 0.25rem;
-    }
-
-        select option::checkmark {
-            content: url(img/icon_primary_text/checkmark.svg);
-        }
-
-        select option:hover {
-            background: #0c6ce921;
-        }
 
 /* LAYOUT elements: table */
 
@@ -627,9 +588,10 @@ border-radius: 0.25rem;
     .group--select--item {
         min-width: 100%;
         position: absolute;
-        top: 2.5rem;
+        top: 0;
         display: none;
         padding: 0.3rem;
+        z-index: 1;
 
         background: #2b3d52;
         outline: 1px solid #c0d5f20f;
