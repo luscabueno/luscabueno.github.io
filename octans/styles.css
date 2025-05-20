@@ -73,15 +73,6 @@ body {
     line-height: 1;
 }
 
-select,
-::picker(select) {
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    cursor: pointer;
-    appearance: base-select;
-}
-
 a {
     cursor: pointer;
     text-decoration: none;
@@ -434,12 +425,12 @@ tr:last-child > td {
         background: #c0d5f20f;
     }
 
-    .button--menu:first-child {
+    .group--button--menu .select.menu:first-of-type .button--menu {
         border-top-left-radius: 0.25rem;
         border-bottom-left-radius: 0.25rem;
     }
 
-    .button--menu:last-child {
+    .group--button--menu .select.menu:last-of-type .button--menu {
         border-top-right-radius: 0.25rem;
         border-bottom-right-radius: 0.25rem;
     }
@@ -450,7 +441,7 @@ tr:last-child > td {
     }
 
 .dropdown {
-    flex: 1;
+    /* flex: 1; */
     position: relative;
 }
 
@@ -563,7 +554,7 @@ tr:last-child > td {
 }
 
 .select--item {
-height: 2.2rem;
+height: 2.5rem;
 position: relative;
 display: flex;
 align-items: center;
@@ -596,7 +587,6 @@ border-radius: 0.25rem;
     .group--select--item {
         min-width: 100%;
         position: absolute;
-        right: 0;
         display: none;
         flex-direction: column;
         padding: 0.3rem;
@@ -608,12 +598,17 @@ border-radius: 0.25rem;
         box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
     }
 
-        .group--select--item.overlay {
+        .select.single .group--select--item {
             top: 0;
         }
 
-        .group--select--item.gap {
+        .select.menu .group--select--item {
             top: 2.5rem;
+            right: 0;
+        }
+
+        .select.menu .select--item {
+            padding: 0.8rem;
         }
 
 .sorting {
@@ -699,6 +694,7 @@ border-radius: 0.25rem;
 
 :root, button, input {
     font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
 h1 {
@@ -736,7 +732,6 @@ h6, th {
 
 p, td, input, select, button {
     font-size: 1rem;
-    font-weight: 400;
     color: #ebf4ffe6;
 
     text-align: left;
@@ -767,7 +762,6 @@ p, td, input, select, button {
         }
 
     .select:not(.select--item input:checked) button {
-    font-weight: 400;
     color: #c9ddf880;
     }
 

@@ -17,20 +17,23 @@ selectButtons = document.querySelectorAll('.select button');
 selectButtons.forEach(button => {
     button.addEventListener('click', event => {
         // close other .select
-        var selectLists = document.getElementsByClassName('group--select--item');
-
-        for (i = 0; i < selectLists.length; i++) {
-            if (selectLists[i].classList.contains('show')) {
-                selectLists[i].classList.remove('show');
-            }
-        }
+        // const selectLists = document.getElementsByClassName('group--select--item');
+        // for (i = 0; i < selectLists.length; i++) {
+        //     if (selectLists[i].classList.contains('show')) {
+        //         selectLists[i].classList.remove('show');
+        //     }
+        // }
 
         // obtain .select name
         const selectName = button.id.split("_")[2];
 
         // open .group--select--item
         const selectList = document.getElementById(`select_list_${selectName}`);
-        selectList.classList.add('show');
+        if (selectList.classList.contains('show')) {
+            selectList.classList.remove('show')
+        } else {
+            selectList.classList.add('show');
+        }
     })
 })
 
@@ -54,7 +57,7 @@ selectItemInputs.forEach(input => {
 
 // cancel .select
 window.addEventListener('click', event => {
-    var selectLists = document.getElementsByClassName('group--select--item');
+    const selectLists = document.getElementsByClassName('group--select--item');
 
     if (!event.target.closest('.select')) {
         for (i = 0; i < selectLists.length; i++) {
