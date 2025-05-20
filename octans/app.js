@@ -1,3 +1,6 @@
+// lucide icons
+lucide.createIcons();
+
 // access element
 let lateralNav = document.getElementById("lateral_nav");
 

@@ -65,11 +65,13 @@
 
 /* LAYOUT reset */
 
-body, div, h1, h2, h3, h4, h5, h6, p {
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+body, div, h1, h2, h3, h4, h5, h6, p {
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
 }
@@ -97,7 +99,6 @@ body {
 
 input {
     flex: 1;
-    width: 0;
 }
 
 /* LAYOUT elements: table */
