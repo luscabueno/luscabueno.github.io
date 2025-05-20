@@ -87,14 +87,50 @@
         </div>
         <div class="group--filter">
             <div class="filter">
-                <div class="text--field">
-                    <input placeholder="Selecionar coluna de filtro">
-                    <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                <div class="select">
+                    <div class="group--select">
+                        <button class="text--field" id="select_button_coluna">
+                            <div class="select--value cell" id="select_value_coluna">Selecionar coluna do filtro</div>
+                            <img src="img/icon_contrast_60/expanded.svg">
+                        </button>
+                    </div>
+                    <ul class="group--select--item overlay" id="select_list_coluna">
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="classificacao"
+                                data-label='<p>Classificação</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Classificação</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="descricao"
+                                data-label='<p>Descrição</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Descrição</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="score"
+                                data-label='<p>Score</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Score</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="filter">
                 <div class="text--field">
-                    <input placeholder="Escrever valor de filtro">
+                    <input placeholder="Inserir valor do filtro">
                 </div>
                 <div class="button primary">
                     <img class="icon size-s" src="img/icon_contrast_100/search.svg">

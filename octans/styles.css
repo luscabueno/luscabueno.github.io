@@ -107,8 +107,12 @@ body {
 }
 
 button {
-    width: 100%;
+    width: fit-content;
 }
+
+    .select button {
+        width: 100%;
+    }
 
 input {
     width: 100%;
@@ -445,12 +449,6 @@ tr:last-child > td {
         gap: 0.15rem;
     }
 
-.cell {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
 .dropdown {
     flex: 1;
     position: relative;
@@ -520,6 +518,12 @@ tr:last-child > td {
             }
         }
 
+.group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .icon {
     width: 1.5rem;
 }
@@ -558,12 +562,6 @@ tr:last-child > td {
     cursor: pointer;
 }
 
-    .select--expand {
-        all: unset;
-        position: absolute;
-        inset: 0;
-    }
-
 .select--item {
 height: 2.2rem;
 position: relative;
@@ -571,6 +569,7 @@ display: flex;
 align-items: center;
 padding: 0 0.5rem;
 gap: 0.5rem;
+white-space: nowrap;
 
 border-radius: 0.25rem;
 }
@@ -597,7 +596,7 @@ border-radius: 0.25rem;
     .group--select--item {
         min-width: 100%;
         position: absolute;
-        top: 0;
+        right: 0;
         display: none;
         flex-direction: column;
         padding: 0.3rem;
@@ -608,6 +607,14 @@ border-radius: 0.25rem;
         border-radius: 0.25rem;
         box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
     }
+
+        .group--select--item.overlay {
+            top: 0;
+        }
+
+        .group--select--item.gap {
+            top: 2.5rem;
+        }
 
 .sorting {
     display: flex;
@@ -690,7 +697,7 @@ border-radius: 0.25rem;
 
 /* TEXT elements */
 
-:root, button {
+:root, button, input {
     font-family: "Inter", sans-serif;
 }
 
@@ -759,6 +766,11 @@ p, td, input, select, button {
             text-align: center;
         }
 
+    .select:not(.select--item input:checked) button {
+    font-weight: 400;
+    color: #c9ddf880;
+    }
+
 /* TEXT global components */
 
 .badge p {
@@ -808,11 +820,6 @@ p, td, input, select, button {
     .button--menu.secondary p {
         color: #90bdf9;
     }
-
-.select:not(.select--item input:checked) .select--value {
-    font-weight: 400;
-    color: #c9ddf880;
-}
 
 .tabsheet--tab p {
     color: #d9e8fcb0;

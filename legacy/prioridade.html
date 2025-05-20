@@ -115,9 +115,85 @@
         </div>
         <div class="group--filter">
             <div class="filter">
-                <div class="text--field">
-                    <input placeholder="Selecionar coluna do filtro">
-                    <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                <div class="select">
+                    <div class="group--select">
+                        <button class="text--field" id="select_button_coluna">
+                            <div class="select--value cell" id="select_value_coluna">Selecionar coluna do filtro</div>
+                            <img src="img/icon_contrast_60/expanded.svg">
+                        </button>
+                    </div>
+                    <ul class="group--select--item overlay" id="select_list_coluna">
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="score total"
+                                data-label='<p>Score total</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Score total</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="codigo_is"
+                                data-label='<p>Código IS</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Código IS</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="repositorio"
+                                data-label='<p>Repositório</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Repositório</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="cliente"
+                                data-label='<p>Cliente</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Cliente</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="status"
+                                data-label='<p>Status</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Status</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="prazo"
+                                data-label='<p>Prazo</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Prazo</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                value="responsável"
+                                data-label='<p>Responsável</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Responsável</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="filter">

@@ -61,11 +61,11 @@
                 <div class="select">
                     <div class="group--select">
                         <button class="text--field" id="select_button_periodo">
-                            <div class="select--value cell" id="select_value_periodo">Selecionar cliente do filtro</div>
+                            <div class="select--value group" id="select_value_periodo">Selecionar cliente do filtro</div>
                             <img src="img/icon_contrast_60/expanded.svg">
                         </button>
                     </div>
-                    <ul class="group--select--item" id="select_list_periodo">
+                    <ul class="group--select--item overlay" id="select_list_periodo">
                         <li class="select--item">
                             <input
                                 type="radio"
@@ -123,11 +123,11 @@
                 <div class="select">
                     <div class="group--select">
                         <button class="text--field" id="select_button_cliente">
-                            <div class="select--value cell" id="select_value_cliente">Selecionar cliente do filtro</div>
+                            <div class="select--value group" id="select_value_cliente">Selecionar cliente do filtro</div>
                             <img src="img/icon_contrast_60/expanded.svg">
                         </button>
                     </div>
-                    <ul class="group--select--item" id="select_list_cliente">
+                    <ul class="group--select--item overlay" id="select_list_cliente">
                         <li class="select--item">
                             <input
                                 type="radio"
@@ -163,9 +163,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="button primary">
+                <button class="button primary">
                     <img class="icon size-s" src="img/icon_contrast_100/search.svg">
-                </div>
+                </button>
             </div>
         </div>
         <div class="table--body">
@@ -192,7 +192,7 @@
                         <thead>
                             <tr>
                                 <th rowspan="2">
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Produtos</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -201,7 +201,7 @@
                                     </div>
                                 </th>
                                 <th colspan="3">
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Processadora</span>
                                         <div class="badge success">
                                             <img class="icon size-s" src="img/icon_success_text/wifi.svg">
@@ -214,7 +214,7 @@
                                 <th colspan="2">Retorno</th>
                                 <th colspan="2">Postagem</th>
                                 <th colspan="2">
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Entregadora</span>
                                         <div class="badge error">
                                             <img class="icon size-s" src="img/icon_error_text/wifi_off.svg">
@@ -225,7 +225,7 @@
                             </tr>
                             <tr>
                                 <th class="rowspan--fix">
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Gerado</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -234,7 +234,7 @@
                                     </div>
                                 </th>
                                 <th>
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Pendente</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -243,7 +243,7 @@
                                     </div>
                                 </th>
                                 <th>
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Recebido</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -252,7 +252,7 @@
                                     </div>
                                 </th>
                                 <th class="error">
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Pendente</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -261,7 +261,7 @@
                                     </div>
                                 </th>
                                 <th>
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Rejeitado</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -270,7 +270,7 @@
                                     </div>
                                 </th>
                                 <th>
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Concluído</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -279,7 +279,7 @@
                                     </div>
                                 </th>
                                 <th class="error">
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Pendente</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -288,7 +288,7 @@
                                     </div>
                                 </th>
                                 <th>
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Concluído</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -297,7 +297,7 @@
                                     </div>
                                 </th>
                                 <th class="error">
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Pendente</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -306,7 +306,7 @@
                                     </div>
                                 </th>
                                 <th>
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Concluído</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -315,7 +315,7 @@
                                     </div>
                                 </th>
                                 <th class="error">
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Pendente</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -324,7 +324,7 @@
                                     </div>
                                 </th>
                                 <th>
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Concluído</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -333,7 +333,7 @@
                                     </div>
                                 </th>
                                 <th class="error">
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Pendente</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -342,7 +342,7 @@
                                     </div>
                                 </th>
                                 <th>
-                                    <div class="cell">
+                                    <div class="group">
                                         <span>Entregue</span>
                                         <div class="sorting">
                                             <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
@@ -355,7 +355,7 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <div class="cell">
+                                    <div class="group">
                                         <img src="img/icon_contrast_60/collapsed.svg">
                                         <div class="badge contrast"><p>G1</p></div>
                                         <span>Vale Alimentação</span>
@@ -378,7 +378,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="cell">
+                                    <div class="group">
                                         <img src="img/icon_contrast_60/collapsed.svg">
                                         <div class="badge contrast"><p>G2</p></div>
                                         <span>Vale Refeição</span>
@@ -401,7 +401,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="cell">
+                                    <div class="group">
                                         <img src="img/icon_contrast_60/expanded.svg">
                                         <div class="badge contrast"><p>G3</p></div>
                                         <span>Crédito</span>
@@ -424,7 +424,7 @@
                             </tr>
                             <tr class="child">
                                 <td class="nesting">
-                                    <div class="cell">
+                                    <div class="group">
                                         <p class="size-xs secondary">P1JAL0022</p>
                                         <span>Crédito (Mastercard)</span>
                                     </div>
@@ -446,7 +446,7 @@
                             </tr>
                             <tr class="child">
                                 <td class="nesting">
-                                    <div class="cell">
+                                    <div class="group">
                                         <p class="size-xs secondary">P1JAL0022</p>
                                         <span>Crédito (Visa)</span>
                                     </div>
@@ -468,7 +468,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="cell">
+                                    <div class="group">
                                         <img src="img/icon_contrast_60/collapsed.svg">
                                         <div class="badge contrast"><p>G4</p></div>
                                         <span>Débito</span>
@@ -491,7 +491,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="cell">
+                                    <div class="group">
                                         <img src="img/icon_contrast_60/collapsed.svg">
                                         <div class="badge contrast"><p>G5</p></div>
                                         <span>Premium</span>
@@ -514,7 +514,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="cell">
+                                    <div class="group">
                                         <img src="img/icon_contrast_60/collapsed.svg">
                                         <div class="badge contrast"><p>G6</p></div>
                                         <span>Transporte</span>

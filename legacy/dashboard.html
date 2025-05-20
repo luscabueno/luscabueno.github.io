@@ -112,9 +112,55 @@
         </div>
         <div class="group--filter">
             <div class="filter">
-                <div class="text--field">
-                    <input placeholder="Período personalizado" value="Período personalizado">
-                    <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                <div class="select">
+                    <div class="group--select">
+                        <button class="text--field" id="select_button_periodo">
+                            <div class="select--value cell" id="select_value_periodo">Selecionar cliente do filtro</div>
+                            <img src="img/icon_contrast_60/expanded.svg">
+                        </button>
+                    </div>
+                    <ul class="group--select--item overlay" id="select_list_periodo">
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="periodo"
+                                value="hoje"
+                                data-label='<p>Hoje</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Hoje</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="periodo"
+                                value="semana"
+                                data-label='<p>Esta semana</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Esta semana</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="periodo"
+                                value="mes"
+                                data-label='<p>Este mês</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Este mês</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="periodo"
+                                value="personalizado"
+                                data-label='<p>Período personalizado</p>'
+                                >
+                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <p>Período personalizado</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="filter">

@@ -80,15 +80,20 @@ body {
     line-height: 1;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
 input {
     background: none;
     border: none;
     outline: none;
-}
-
-a {
-    cursor: pointer;
-    text-decoration: none;
 }
 
 /* LAYOUT elements */
@@ -96,6 +101,14 @@ a {
 body {
     background: #2b3d52;
 }
+
+button {
+    width: fit-content;
+}
+
+    .select button {
+        width: 100%;
+    }
 
 input {
     /* flex: 1; */
@@ -649,6 +662,10 @@ td {
         width: 1rem;
     }
 
+    .icon.size-xxs {
+        width: 0.8rem;
+    }
+
     .icon.size-xs {
         width: 0.6rem;
     }
@@ -682,6 +699,66 @@ td {
     box-shadow: 0 0.5rem 1.5rem #0d0f1152, 0 0.15rem 0.25rem #05050512;
 }
 
+.select {
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.select--item {
+height: 2.2rem;
+position: relative;
+display: flex;
+align-items: center;
+padding: 0 0.5rem;
+gap: 0.5rem;
+white-space: nowrap;
+
+border-radius: 0.25rem;
+}
+
+    .select--item input {
+        all: unset;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    .select--item .icon {
+        opacity: 0;
+    }
+
+    .select--item:has(input:checked) .icon {
+        opacity: 100;
+    }
+
+    .select--item:hover {
+        background: #0c6ce921;
+    }
+
+    .group--select--item {
+        min-width: 100%;
+        position: absolute;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        padding: 0.3rem;
+        z-index: 1;
+
+        background: #2b3d52;
+        outline: 1px solid #c0d5f20f;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
+    }
+
+        .group--select--item.overlay {
+            top: 0;
+        }
+
+        .group--select--item.gap {
+            top: 2.5rem;
+        }
+
 .sorting {
     display: flex;
     flex-direction: column;
@@ -693,6 +770,7 @@ td {
     height: 2.2rem;
     min-height: 2.2rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 0.8rem;
     gap: 0.5rem;
@@ -818,11 +896,19 @@ td {
     text-decoration: underline;
 }
 
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
 /* TEXT */
 
 /* TEXT elements */
 
-:root {
+:root, button, input {
     font-family: "Inter", sans-serif;
 }
 
@@ -857,7 +943,7 @@ h6, th {
     text-transform: uppercase;
 }
 
-p, td, input {
+p, td, input, button {
     font-size: 1rem;
     font-weight: 400;
     color: #ebf4ffe6;
@@ -886,6 +972,11 @@ p, td, input {
         .login--body p.link {
             text-align: center;
         }
+
+    .select:not(.select--item input:checked) button {
+    font-weight: 400;
+    color: #c9ddf880;
+    }
 
 /* TEXT global components */
 

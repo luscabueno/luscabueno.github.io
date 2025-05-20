@@ -1,24 +1,20 @@
 // lucide icons
 lucide.createIcons();
 
-// access element
-let lateralNav = document.getElementById('lateral_nav');
-
-// open lateral nav
-function lateralNavOpen() {
-    lateralNav.style.display = 'flex';
-}
-
-// close lateral nav
-function lateralNavClose() {
-    lateralNav.style.display = 'none';
-}
-
 // open .select
 selectButtons = document.querySelectorAll('.select button');
 
 selectButtons.forEach(button => {
     button.addEventListener('click', event => {
+        // close other .select
+        var selectLists = document.getElementsByClassName('group--select--item');
+
+        for (i = 0; i < selectLists.length; i++) {
+            if (selectLists[i].classList.contains('show')) {
+                selectLists[i].classList.remove('show');
+            }
+        }
+
         // obtain .select name
         const selectName = button.id.split("_")[2];
 
