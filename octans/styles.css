@@ -609,10 +609,6 @@ border-radius: 0.25rem;
         box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
     }
 
-        .group--select:has(.select--expand:checked) + .group--select--item {
-            display: block;
-        }
-
 .sorting {
     display: flex;
     flex-direction: column;
