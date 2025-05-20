@@ -73,12 +73,6 @@ body {
     line-height: 1;
 }
 
-input {
-    background: none;
-    border: none;
-    outline: none;
-}
-
 select,
 ::picker(select) {
     padding: 0;
@@ -93,12 +87,27 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+}
+
 /* LAYOUT elements */
 
 /* LAYOUT elements: general */
 
 body {
     background: #2b3d52;
+}
+
+button {
+    width: 100%;
 }
 
 input {
@@ -568,9 +577,9 @@ border-radius: 0.25rem;
 
     .select--item input {
         all: unset;
-        
         position: absolute;
         inset: 0;
+        z-index: 1;
     }
 
     .select--item .icon {
@@ -590,6 +599,7 @@ border-radius: 0.25rem;
         position: absolute;
         top: 0;
         display: none;
+        flex-direction: column;
         padding: 0.3rem;
         z-index: 1;
 
@@ -640,6 +650,16 @@ border-radius: 0.25rem;
     gap: 0.5rem;
 }
 
+/* LAYOUT global modifiers */
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
 /* LAYOUT div borders */
 
 .login--card--header {
@@ -674,7 +694,7 @@ border-radius: 0.25rem;
 
 /* TEXT elements */
 
-:root {
+:root, button {
     font-family: "Inter", sans-serif;
 }
 
@@ -711,7 +731,7 @@ h6, th {
         color: #ff9e99;
     }
 
-p, td, input, select {
+p, td, input, select, button {
     font-size: 1rem;
     font-weight: 400;
     color: #ebf4ffe6;
@@ -724,12 +744,10 @@ p, td, input, select {
     }
 
     p.secondary {
-        font-weight: 500;
         color: #d9e8fcb0;
     }
 
     p.tertiary, input::placeholder {
-        font-weight: 500;
         color: #c9ddf880;
     }
 
@@ -796,7 +814,7 @@ p, td, input, select {
     }
 
 .select:not(.select--item input:checked) .select--value {
-    font-weight: 500;
+    font-weight: 400;
     color: #c9ddf880;
 }
 
