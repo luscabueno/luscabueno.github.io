@@ -1,6 +1,9 @@
 // lucide icons
 lucide.createIcons();
 
+// feather icons
+feather.replace();
+
 // open .select
 selectButtons = document.querySelectorAll('.select button');
 

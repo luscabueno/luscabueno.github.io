@@ -524,22 +524,6 @@ tr:last-child > td {
     gap: 0.5rem;
 }
 
-.icon {
-    width: 1.5rem;
-}
-
-    .icon.size-s {
-        width: 1rem;
-    }
-
-    .icon.size-xxs {
-        width: 0.8rem;
-    }
-
-    .icon.size-xs {
-        width: 0.6rem;
-    }
-
 .logo {
     width: 9rem;
 }
@@ -640,7 +624,6 @@ border-radius: 0.25rem;
 .sorting {
     display: flex;
     flex-direction: column;
-    gap: 0.05rem;
 }
 
 .text--field {
@@ -787,44 +770,55 @@ p, td, input, select, button {
             text-align: center;
         }
 
-    .select:not(.select--item input:checked) button {
-    color: #c9ddf880;
+    .select.single:not(:has(.select--item input:checked)) button p {
+        color: #c9ddf880;
     }
 
 /* TEXT global components */
 
-.badge p {
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-transform: none;
+.badge {
+    p {
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: none;
+    }
+    .icon {
+        width: 1rem;
+    }
+    &.contrast {
+        p, .icon {
+            color: #e2eefecc;
+        }
+    }
+    &.error {
+        p, .icon {
+            color: #ff9e99;
+        }
+    }
+    &.success {
+        p, .icon {
+            color: #12d965;  
+        }
+    }
+    &.warning {
+        p, .icon {
+            color: #fecb45;
+        }
+    }
 }
-
-    .badge.contrast p {
-        color: #e2eefecc;
-    }
-
-    .badge.success p {
-        color: #12d965;
-    }
-
-    .badge.error p {
-        color: #ff9e99;
-    }
-
-    .badge.warning p {
-        color: #fecb45;
-    }
 
 .button p {
     font-size: 1rem;
     font-weight: 500;
 }
 
-    .button.primary p {
+    .button.primary p,
+    .button.primary .icon {
         color: #ebf4ffe6;
     }
 
-    .button.secondary p {
+    .button.secondary p,
+    .button.secondary .icon {
         color: #90bdf9;
     }
 
@@ -833,19 +827,63 @@ p, td, input, select, button {
     font-weight: 500;
 }
 
-    .button--menu.primary p {
+    .button--menu.primary p,
+    .button--menu.primary .icon {
         color: #ebf4ffe6;
     }
 
-    .button--menu.secondary p {
+    .button--menu.secondary p,
+    .button--menu.secondary .icon {
         color: #90bdf9;
     }
 
-.tabsheet--tab p {
+.icon {
+    width: 1.5rem;
+}
+
+    .icon.size-s {
+        width: 1rem;
+    }
+
+    .icon.size-xxs {
+        width: 0.8rem;
+    }
+
+    .icon.size-xs {
+        width: 0.6rem;
+    }
+
+.icon {
+    width: 1.1rem;
+    stroke-width: 2.5px;
+
+    &.active {
+        color: #90bdf9;
+    }
+
+    &.secondary {
+        color: #d9e8fcb0;
+    }
+
+    &.sorting {
+        font-size: 1.4rem;
+        width: 1rem;
+        height: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #c9ddf880;
+    }
+}
+
+.tabsheet--tab p,
+.tabsheet--tab .icon {
     color: #d9e8fcb0;
 }
 
-    .tabsheet--tab.active p {
+    .tabsheet--tab.active p,
+    .tabsheet--tab.active .icon {
         color: #90bdf9;
     }
 
