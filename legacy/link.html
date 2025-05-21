@@ -3,31 +3,32 @@
         <title>Legacy</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_drop_down,arrow_drop_up">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-<div class="nav--lateral" id="lateral_nav">
+        <div class="nav--lateral" id="lateral_nav">
             <div class="nav--lateral--header">
                 <a href="dashboard.html"><img src="img/login_logo.svg" class="logo"></a>
-                <a onclick="lateralNavClose()"><img class="icon" src="img/icon_contrast_60/close.svg"></a>
+                <a onclick="lateralNavClose()"><i class="icon secondary" data-feather="x"></i></a>
             </div>
             <div class="nav--lateral--body">
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
                         <p class="secondary">Dashboard</p>
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                        <i class="icon secondary" data-feather="chevron-down"></i>
                     </div>
                     <div class="nav--lateral--tab--body">
                         <a class="nav--lateral--option" href="dashboard.html">
-                            <img class="icon-s" src="img/icon_contrast_90/dashboard_tarefas.svg">
+                            <i class="icon" data-feather="layers"></i>
                             <p>Tarefas</p>
                         </a>
                         <a class="nav--lateral--option" href="prioridade.html">
-                            <img class="icon-s" src="img/icon_contrast_90/dashboard_prioridades.svg">
+                            <i class="icon" data-feather="alert-triangle"></i>
                             <p>Prioridades</p>
                         </a>
                         <a class="nav--lateral--option" href="link.html">
-                            <img class="icon-s" src="img/icon_contrast_90/dashboard_links.svg">
+                            <i class="icon" data-feather="link"></i>
                             <p>Links</p>
                         </a>
                     </div>
@@ -35,11 +36,11 @@
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
                         <p class="secondary">Cadastro</p>
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                        <i class="icon secondary" data-feather="chevron-down"></i>
                     </div>
                     <div class="nav--lateral--tab--body">
                         <a href="cadastro.html" class="nav--lateral--option">
-                            <img class="icon-s" src="img/icon_contrast_90/cadastro_score.svg">
+                            <i class="icon" data-feather="bar-chart-2"></i>
                             <p>Score</p>
                         </a>
                     </div>
@@ -47,11 +48,11 @@
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
                         <p class="secondary">Configurações</p>
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                        <i class="icon secondary" data-feather="chevron-down"></i>
                     </div>
                     <div class="nav--lateral--tab--body">
                         <a class="nav--lateral--option">
-                            <img class="icon-s" src="img/icon_contrast_90/configuracoes_usuarios.svg">
+                            <i class="icon" data-feather="user"></i>
                             <p>Usuários</p>
                         </a>
                     </div>
@@ -60,16 +61,16 @@
         </div>
         <div class="nav--top">
             <div class="nav--top--sub">
-                <a onclick="lateralNavOpen()"><img class="icon" src="img/icon_contrast_60/menu.svg"></a>
+                <a onclick="lateralNavOpen()"><i class="icon secondary" data-feather="menu"></i></a>
                 <img src="img/login_logo.svg" class="logo">
             </div>
             <div class="nav--top--sub">
                 <a href="index.html"><p class="secondary">Log out</p></a>
-                <img class="icon" src="img/icon_contrast_60/notification.svg">
-                <img class="icon" src="img/icon_contrast_60/settings.svg">
+                <i class="icon secondary" data-feather="bell"></i>
+                <i class="icon secondary" data-feather="settings"></i>
                 <div class="avatar">
                     <img class="avatar--photo" src="img/avatar/example.jpg">
-                    <div class="avatar--status error"></div>
+                    <div class="status error"></div>
                 </div>
             </div>
         </div>
@@ -82,7 +83,7 @@
                             <h3>JAL - Sistema de priorização de tarefas</h3>
                         </div>
                         <div class="group--badge">
-                            <div class="badge contrast"><p>Em andamento</p></div>
+                            <div class="badge"><p>Em andamento</p></div>
                             <div class="badge success"><p>15.5</p></div>
                         </div>
                     </div>
@@ -93,22 +94,22 @@
                     <div class="highlight border-left--add">
                         <div class="highlight--data">
                             <div class="highlight--data--sub">
-                                <img class="icon size-s" src="img/icon_contrast_100/ligadas.svg">
+                                <i class="icon" data-feather="link"></i>
                                 <h6>Ligadas</h6>
                             </div>
                             <h1>7</h1>
                         </div>
-                        <div class="highlight--label contrast"></div>
+                        <div class="highlight--label"></div>
                     </div>
                     <div class="highlight border-left--add">
                         <div class="highlight--data">
                             <div class="highlight--data--sub">
-                                <img class="icon size-s" src="img/icon_contrast_100/concluidas.svg">
+                                <i class="icon" data-feather="check-circle"></i>
                                 <h6>Concluídas</h6>
                             </div>
                             <h1>2</h1>
                         </div>
-                        <div class="highlight--label contrast"></div>
+                        <div class="highlight--label"></div>
                     </div>
                 </div>
             </div>
@@ -118,7 +119,7 @@
                 <div class="group--title-s">
                     <div class="title-s">
                         <h4>Análise</h4>
-                        <div class="badge contrast"><p>Em andamento</p></div>
+                        <div class="badge"><p>Em andamento</p></div>
                     </div>
                 </div>
                 <div class="kanban--column--body">
@@ -143,7 +144,7 @@
                         </div>
                         <p class="tertiary">Expectativa de conclusão em 10/05/2025</p>
                         <div class="group--badge">
-                            <div class="badge contrast"><p>Em andamento</p></div>
+                            <div class="badge"><p>Em andamento</p></div>
                             <div class="badge error"><p>79.0</p></div>
                         </div>
                     </div>
@@ -153,7 +154,7 @@
                 <div class="group--title-s">
                     <div class="title-s">
                         <h4>Produtos</h4>
-                        <div class="badge contrast"><p>Em andamento</p></div>
+                        <div class="badge"><p>Em andamento</p></div>
                     </div>
                 </div>
                 <div class="kanban--column--body">
@@ -178,7 +179,7 @@
                         </div>
                         <p class="tertiary">Expectativa de conclusão em 06/05/2025</p>
                         <div class="group--badge">
-                            <div class="badge contrast"><p>Em andamento</p></div>
+                            <div class="badge"><p>Em andamento</p></div>
                             <div class="badge warning" id="popover_trigger"><p>57.8</p></div>
                         </div>
                     </div>
@@ -191,7 +192,7 @@
                         </div>
                         <p class="tertiary">Expectativa de conclusão em 10/05/2025</p>
                         <div class="group--badge">
-                            <div class="badge contrast"><p>Em andamento</p></div>
+                            <div class="badge"><p>Em andamento</p></div>
                             <div class="badge success"><p>9.0</p></div>
                         </div>
                     </div>
@@ -201,7 +202,7 @@
                 <div class="group--title-s">
                     <div class="title-s">
                         <h4>Desenvolvimento</h4>
-                        <div class="badge contrast"><p>Em andamento</p></div>
+                        <div class="badge"><p>Em andamento</p></div>
                     </div>
                 </div>
                 <div class="kanban--column--body">
@@ -214,7 +215,7 @@
                         </div>
                         <p class="tertiary">Expectativa de conclusão em 30/05/2025</p>
                         <div class="group--badge">
-                            <div class="badge contrast"><p>Em andamento</p></div>
+                            <div class="badge"><p>Em andamento</p></div>
                             <div class="badge warning"><p>57.5</p></div>
                         </div>
                     </div>
@@ -224,7 +225,7 @@
                 <div class="group--title-s">
                     <div class="title-s">
                         <h4>QA</h4>
-                        <div class="badge contrast"><p>Em andamento</p></div>
+                        <div class="badge"><p>Em andamento</p></div>
                     </div>
                 </div>
                 <div class="kanban--column--body">
@@ -237,7 +238,7 @@
                         </div>
                         <p class="tertiary">Sem expectativa de conclusão</p>
                         <div class="group--badge">
-                            <div class="badge contrast"><p>Aguardando</p></div>
+                            <div class="badge"><p>Aguardando</p></div>
                         </div>
                     </div>
                 </div>
@@ -255,7 +256,7 @@
                 <tr>
                     <td>Cliente</td>
                     <td class="right">30%</td>
-                    <td class="column--div"><div class="badge contrast"><p>JAL</p></div></td>
+                    <td class="column--div"><div class="badge"><p>JAL</p></div></td>
                     <td>
                         <div class="group right">
                             <div class="badge warning"><p>5.0</p></div>
@@ -285,7 +286,7 @@
                 <tr>
                     <td>Urgência</td>
                     <td class="right">20%</td>
-                    <td class="column--div"><div class="badge contrast"><p>Médio</p></td>
+                    <td class="column--div"><div class="badge"><p>Médio</p></td>
                     <td>
                         <div class="group right">
                             <div class="badge warning"><p>5.0</p></div>
@@ -300,7 +301,7 @@
                 <tr>
                     <td>Complexidade</td>
                     <td class="right">15%</td>
-                    <td class="column--div"><div class="badge contrast"><p>Baixo</p></td>
+                    <td class="column--div"><div class="badge"><p>Baixo</p></td>
                     <td>
                         <div class="group right">
                             <div class="badge success"><p>2.5</p></div>
@@ -315,7 +316,7 @@
                 <tr>
                     <td>Impacto</td>
                     <td class="right">5%</td>
-                    <td class="column--div"><div class="badge contrast"><p>Alto</p></td>
+                    <td class="column--div"><div class="badge"><p>Alto</p></td>
                     <td>
                         <div class="group right">
                             <div class="badge error"><p>10.0</p></div>
@@ -329,6 +330,8 @@
                 </tr>
             </table>
         </div>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
         <script src="app.js"></script>
     </body>
 </html>

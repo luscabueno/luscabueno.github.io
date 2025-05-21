@@ -3,31 +3,32 @@
         <title>Legacy</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_drop_down,arrow_drop_up">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="nav--lateral" id="lateral_nav">
             <div class="nav--lateral--header">
                 <a href="dashboard.html"><img src="img/login_logo.svg" class="logo"></a>
-                <a onclick="lateralNavClose()"><img class="icon" src="img/icon_contrast_60/close.svg"></a>
+                <a onclick="lateralNavClose()"><i class="icon secondary" data-feather="x"></i></a>
             </div>
             <div class="nav--lateral--body">
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
                         <p class="secondary">Dashboard</p>
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                        <i class="icon secondary" data-feather="chevron-down"></i>
                     </div>
                     <div class="nav--lateral--tab--body">
                         <a class="nav--lateral--option" href="dashboard.html">
-                            <img class="icon-s" src="img/icon_contrast_90/dashboard_tarefas.svg">
+                            <i class="icon" data-feather="layers"></i>
                             <p>Tarefas</p>
                         </a>
                         <a class="nav--lateral--option" href="prioridade.html">
-                            <img class="icon-s" src="img/icon_contrast_90/dashboard_prioridades.svg">
+                            <i class="icon" data-feather="alert-triangle"></i>
                             <p>Prioridades</p>
                         </a>
                         <a class="nav--lateral--option" href="link.html">
-                            <img class="icon-s" src="img/icon_contrast_90/dashboard_links.svg">
+                            <i class="icon" data-feather="link"></i>
                             <p>Links</p>
                         </a>
                     </div>
@@ -35,11 +36,11 @@
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
                         <p class="secondary">Cadastro</p>
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                        <i class="icon secondary" data-feather="chevron-down"></i>
                     </div>
                     <div class="nav--lateral--tab--body">
                         <a href="cadastro.html" class="nav--lateral--option">
-                            <img class="icon-s" src="img/icon_contrast_90/cadastro_score.svg">
+                            <i class="icon" data-feather="bar-chart-2"></i>
                             <p>Score</p>
                         </a>
                     </div>
@@ -47,11 +48,11 @@
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
                         <p class="secondary">Configurações</p>
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                        <i class="icon secondary" data-feather="chevron-down"></i>
                     </div>
                     <div class="nav--lateral--tab--body">
                         <a class="nav--lateral--option">
-                            <img class="icon-s" src="img/icon_contrast_90/configuracoes_usuarios.svg">
+                            <i class="icon" data-feather="user"></i>
                             <p>Usuários</p>
                         </a>
                     </div>
@@ -60,16 +61,16 @@
         </div>
         <div class="nav--top">
             <div class="nav--top--sub">
-                <a onclick="lateralNavOpen()"><img class="icon" src="img/icon_contrast_60/menu.svg"></a>
+                <a onclick="lateralNavOpen()"><i class="icon secondary" data-feather="menu"></i></a>
                 <img src="img/login_logo.svg" class="logo">
             </div>
             <div class="nav--top--sub">
                 <a href="index.html"><p class="secondary">Log out</p></a>
-                <img class="icon" src="img/icon_contrast_60/notification.svg">
-                <img class="icon" src="img/icon_contrast_60/settings.svg">
+                <i class="icon secondary" data-feather="bell"></i>
+                <i class="icon secondary" data-feather="settings"></i>
                 <div class="avatar">
                     <img class="avatar--photo" src="img/avatar/example.jpg">
-                    <div class="avatar--status error"></div>
+                    <div class="status error"></div>
                 </div>
             </div>
         </div>
@@ -78,7 +79,7 @@
                 <div class="group--title">
                     <a href="dashboard.html">
                         <button class="button secondary">
-                            <img class="icon size-s" src="img/icon_primary_text/return.svg">
+                            <i class="icon" data-feather="arrow-left"></i>
                         </button>
                     </a>
                     <div class="title">
@@ -95,7 +96,7 @@
                     <div class="highlight">
                         <div class="highlight--data">
                             <div class="highlight--data--sub">
-                                <img class="icon size-s" src="img/icon_contrast_100/pendentes.svg">
+                                <i class="icon" data-feather="layers"></i>
                                 <h6>Pendentes</h6>
                             </div>
                             <h1>20</h1>
@@ -105,7 +106,7 @@
                     <div class="highlight">
                         <div class="highlight--data">
                             <div class="highlight--data--sub">
-                                <img class="icon size-s" src="img/icon_contrast_100/atrasadas.svg">
+                                <i class="icon" data-feather="alert-triangle"></i>
                                 <h6>Atrasadas</h6>
                             </div>
                             <h1>2</h1>
@@ -121,7 +122,7 @@
                     <div class="group--select">
                         <button class="text--field" id="select_button_coluna">
                             <div class="select--value cell" id="select_value_coluna">Selecionar coluna do filtro</div>
-                            <img src="img/icon_contrast_60/expanded.svg">
+                            <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
                     </div>
                     <ul class="group--select--item" id="select_list_coluna">
@@ -132,7 +133,7 @@
                                 value="score total"
                                 data-label='<p>Score total</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Score total</p>
                         </li>
                         <li class="select--item">
@@ -142,7 +143,7 @@
                                 value="codigo_is"
                                 data-label='<p>Código IS</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Código IS</p>
                         </li>
                         <li class="select--item">
@@ -152,7 +153,7 @@
                                 value="repositorio"
                                 data-label='<p>Repositório</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Repositório</p>
                         </li>
                         <li class="select--item">
@@ -162,7 +163,7 @@
                                 value="cliente"
                                 data-label='<p>Cliente</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Cliente</p>
                         </li>
                         <li class="select--item">
@@ -172,7 +173,7 @@
                                 value="status"
                                 data-label='<p>Status</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Status</p>
                         </li>
                         <li class="select--item">
@@ -182,7 +183,7 @@
                                 value="prazo"
                                 data-label='<p>Prazo</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Prazo</p>
                         </li>
                         <li class="select--item">
@@ -192,7 +193,7 @@
                                 value="responsável"
                                 data-label='<p>Responsável</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Responsável</p>
                         </li>
                     </ul>
@@ -203,7 +204,7 @@
                     <input placeholder="Inserir valor do filtro">
                 </div>
                 <button class="button primary">
-                    <img class="icon size-s" src="img/icon_contrast_100/search.svg">
+                    <i class="icon" data-feather="search"></i>
                 </button>
             </div>
         </div>
@@ -217,8 +218,8 @@
                                     <div class="group">
                                         <span>Prioridade</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -226,8 +227,8 @@
                                     <div class="group">
                                         <span>Score total</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -235,8 +236,8 @@
                                     <div class="group">
                                         <span>Código IS</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -244,8 +245,8 @@
                                     <div class="group">
                                         <span>Repositório</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -253,8 +254,8 @@
                                     <div class="group">
                                         <span>Cliente</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -262,8 +263,8 @@
                                     <div class="group">
                                         <span>Status</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -271,8 +272,8 @@
                                     <div class="group">
                                         <span>Prazo</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -280,8 +281,8 @@
                                     <div class="group">
                                         <span>Responsável</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -298,8 +299,8 @@
                                 <td><div class="badge error"><p>85.0</p></div></td>
                                 <td>#1151</td>
                                 <td>Documento</td>
-                                <td><div class="badge contrast"><p>DGO</p></div></td>
-                                <td><div class="badge contrast"><p>Em validação</p></div></td>
+                                <td><div class="badge"><p>DGO</p></div></td>
+                                <td><div class="badge"><p>Em validação</p></div></td>
                                 <td>20/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -309,8 +310,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -319,8 +320,8 @@
                                 <td><div class="badge error"><p>74.0</p></div></td>
                                 <td>#1150</td>
                                 <td>Documento</td>
-                                <td><div class="badge contrast"><p>SDX</p></div></td>
-                                <td><div class="badge contrast"><p>Em andamento</p></div></td>
+                                <td><div class="badge"><p>SDX</p></div></td>
+                                <td><div class="badge"><p>Em andamento</p></div></td>
                                 <td>20/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -330,8 +331,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -340,8 +341,8 @@
                                 <td><div class="badge warning"><p>35.0</p></div></td>
                                 <td>#1149</td>
                                 <td>Documento</td>
-                                <td><div class="badge contrast"><p>ALO</p></div></td>
-                                <td><div class="badge contrast"><p>Em andamento</p></div></td>
+                                <td><div class="badge"><p>ALO</p></div></td>
+                                <td><div class="badge"><p>Em andamento</p></div></td>
                                 <td>16/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -351,8 +352,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -361,8 +362,8 @@
                                 <td><div class="badge success"><p>12.5</p></div></td>
                                 <td>#1148</td>
                                 <td>Documento</td>
-                                <td><div class="badge contrast"><p>LCD</p></div></td>
-                                <td><div class="badge contrast"><p>Aguardando</p></div></td>
+                                <td><div class="badge"><p>LCD</p></div></td>
+                                <td><div class="badge"><p>Aguardando</p></div></td>
                                 <td>10/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -370,8 +371,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -380,8 +381,8 @@
                                 <td><div class="badge success"><p>11.0</p></div></td>
                                 <td>#1147</td>
                                 <td>Documento</td>
-                                <td><div class="badge contrast"><p>CAB</p></div></td>
-                                <td><div class="badge contrast"><p>Aguardando</p></div></td>
+                                <td><div class="badge"><p>CAB</p></div></td>
+                                <td><div class="badge"><p>Aguardando</p></div></td>
                                 <td>10/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -389,8 +390,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -399,8 +400,8 @@
                                 <td><div class="badge error"><p>64.5</p></div></td>
                                 <td>#863</td>
                                 <td>Layout Cartão</td>
-                                <td><div class="badge contrast"><p>ALO</p></div></td>
-                                <td><div class="badge contrast"><p>Em validação</p></div></td>
+                                <td><div class="badge"><p>ALO</p></div></td>
+                                <td><div class="badge"><p>Em validação</p></div></td>
                                 <td>22/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -410,8 +411,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -420,8 +421,8 @@
                                 <td><div class="badge warning"><p>38.5</p></div></td>
                                 <td>#862</td>
                                 <td>Layout Cartão</td>
-                                <td><div class="badge contrast"><p>FOR</p></div></td>
-                                <td><div class="badge contrast"><p>Em validação</p></div></td>
+                                <td><div class="badge"><p>FOR</p></div></td>
+                                <td><div class="badge"><p>Em validação</p></div></td>
                                 <td>21/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -431,8 +432,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -441,8 +442,8 @@
                                 <td><div class="badge success"><p>22.0</p></div></td>
                                 <td>#860</td>
                                 <td>Layout Cartão</td>
-                                <td><div class="badge contrast"><p>TIC</p></div></td>
-                                <td><div class="badge contrast"><p>Em andamento</p></div></td>
+                                <td><div class="badge"><p>TIC</p></div></td>
+                                <td><div class="badge"><p>Em andamento</p></div></td>
                                 <td>15/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -452,8 +453,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -462,8 +463,8 @@
                                 <td><div class="badge success"><p>14.5</p></div></td>
                                 <td>#859</td>
                                 <td>Layout Cartão</td>
-                                <td><div class="badge contrast"><p>UNP</p></div></td>
-                                <td><div class="badge contrast"><p>Aguardando</p></div></td>
+                                <td><div class="badge"><p>UNP</p></div></td>
+                                <td><div class="badge"><p>Aguardando</p></div></td>
                                 <td>15/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -471,8 +472,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -481,8 +482,8 @@
                                 <td><div class="badge success"><p>13.0</p></div></td>
                                 <td>#858</td>
                                 <td>Layout Cartão</td>
-                                <td><div class="badge contrast"><p>DMC</p></div></td>
-                                <td><div class="badge contrast"><p>Em andamento</p></div></td>
+                                <td><div class="badge"><p>DMC</p></div></td>
+                                <td><div class="badge"><p>Em andamento</p></div></td>
                                 <td>12/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -492,8 +493,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -502,8 +503,8 @@
                                 <td><div class="badge success"><p>8.5</p></div></td>
                                 <td>#855</td>
                                 <td>Layout Cartão</td>
-                                <td><div class="badge contrast"><p>FIT</p></div></td>
-                                <td><div class="badge contrast"><p>Em andamento</p></div></td>
+                                <td><div class="badge"><p>FIT</p></div></td>
+                                <td><div class="badge"><p>Em andamento</p></div></td>
                                 <td>09/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -513,8 +514,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -523,11 +524,11 @@
                                 <td><div class="badge error"><p>91.0</p></div></td>
                                 <td>#1231</td>
                                 <td>Report</td>
-                                <td><div class="badge contrast"><p>CBD</p></div></td>
-                                <td><div class="badge contrast"><p>Em validação</p></div></td>
+                                <td><div class="badge"><p>CBD</p></div></td>
+                                <td><div class="badge"><p>Em validação</p></div></td>
                                 <td>
                                     <div class="group">
-                                        <img src="img/status/error.svg">
+                                        <div class="status error"></div>
                                         <span>03/04/2025</span>
                                     </div>
                                 </td>
@@ -539,8 +540,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -549,8 +550,8 @@
                                 <td><div class="badge error"><p>57.0</p></div></td>
                                 <td>#1230</td>
                                 <td>Report</td>
-                                <td><div class="badge contrast"><p>TIC</p></div></td>
-                                <td><div class="badge contrast"><p>Em validação</p></div></td>
+                                <td><div class="badge"><p>TIC</p></div></td>
+                                <td><div class="badge"><p>Em validação</p></div></td>
                                 <td>17/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -560,8 +561,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -570,8 +571,8 @@
                                 <td><div class="badge error"><p>56.5</p></div></td>
                                 <td>#1229</td>
                                 <td>Report</td>
-                                <td><div class="badge contrast"><p>PML</p></div></td>
-                                <td><div class="badge contrast"><p>Em andamento</p></div></td>
+                                <td><div class="badge"><p>PML</p></div></td>
+                                <td><div class="badge"><p>Em andamento</p></div></td>
                                 <td>17/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -581,8 +582,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -591,8 +592,8 @@
                                 <td><div class="badge error"><p>42.0</p></div></td>
                                 <td>#1228</td>
                                 <td>Report</td>
-                                <td><div class="badge contrast"><p>TIC</p></div></td>
-                                <td><div class="badge contrast"><p>Em andamento</p></div></td>
+                                <td><div class="badge"><p>TIC</p></div></td>
+                                <td><div class="badge"><p>Em andamento</p></div></td>
                                 <td>14/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -602,8 +603,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -612,8 +613,8 @@
                                 <td><div class="badge warning"><p>37.5</p></div></td>
                                 <td>#1227</td>
                                 <td>Report</td>
-                                <td><div class="badge contrast"><p>SDX</p></div></td>
-                                <td><div class="badge contrast"><p>Aguardando</p></div></td>
+                                <td><div class="badge"><p>SDX</p></div></td>
+                                <td><div class="badge"><p>Aguardando</p></div></td>
                                 <td>12/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -621,8 +622,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -631,8 +632,8 @@
                                 <td><div class="badge warning"><p>31.0</p></div></td>
                                 <td>#1226</td>
                                 <td>Report</td>
-                                <td><div class="badge contrast"><p>ALO</p></div></td>
-                                <td><div class="badge contrast"><p>Aguardando</p></div></td>
+                                <td><div class="badge"><p>ALO</p></div></td>
+                                <td><div class="badge"><p>Aguardando</p></div></td>
                                 <td>09/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -640,8 +641,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -650,8 +651,8 @@
                                 <td><div class="badge success"><p>16.0</p></div></td>
                                 <td>#1225</td>
                                 <td>Report</td>
-                                <td><div class="badge contrast"><p>TLG</p></div></td>
-                                <td><div class="badge contrast"><p>Aguardando</p></div></td>
+                                <td><div class="badge"><p>TLG</p></div></td>
+                                <td><div class="badge"><p>Aguardando</p></div></td>
                                 <td>08/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -659,8 +660,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -669,8 +670,8 @@
                                 <td><div class="badge success"><p>14.5</p></div></td>
                                 <td>#1225</td>
                                 <td>Report</td>
-                                <td><div class="badge contrast"><p>ITU</p></div></td>
-                                <td><div class="badge contrast"><p>Aguardando</p></div></td>
+                                <td><div class="badge"><p>ITU</p></div></td>
+                                <td><div class="badge"><p>Aguardando</p></div></td>
                                 <td>07/04/2025</td>
                                 <td>
                                     <div class="group">
@@ -678,8 +679,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -688,11 +689,11 @@
                                 <td><div class="badge success"><p>3.5</p></div></td>
                                 <td>#1224</td>
                                 <td>Report</td>
-                                <td><div class="badge contrast"><p>ITU</p></div></td>
-                                <td><div class="badge contrast"><p>Aguardando</p></div></td>
+                                <td><div class="badge"><p>ITU</p></div></td>
+                                <td><div class="badge"><p>Aguardando</p></div></td>
                                 <td>
                                     <div class="group">
-                                        <img src="img/status/error.svg">
+                                        <div class="status error"></div>
                                         <span>03/04/2025</span>
                                     </div>
                                 </td>
@@ -702,8 +703,8 @@
                                 </td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/link.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/external_link.svg">
+                                        <i class="icon secondary" data-feather="link"></i>
+                                        <i class="icon secondary" data-feather="external-link"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -712,6 +713,8 @@
                 </div>
             </div>
         </div>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
         <script src="app.js"></script>
     </body>
 </html>

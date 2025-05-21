@@ -3,6 +3,7 @@
         <title>Legacy</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_drop_down,arrow_drop_up">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -22,7 +23,7 @@
                         <p class="secondary">Senha</p>
                         <div class="text--field">
                             <input placeholder="Senha">
-                            <img class="icon size-s" src="img/icon_contrast_60/hide.svg">
+                            <i class="icon secondary" data-feather="eye-off"></i>
                         </div>
                     </div>
                     <p class="link">Esqueceu suas credenciais?</p>
@@ -35,13 +36,15 @@
                     </a>
                     <a>
                         <button class="button secondary">
-                            <img class="icon size-s" src="img/icon_primary_text/new_user.svg">
+                            <i class="icon" data-feather="user-plus"></i>
                             <p>Solicitar acesso</p>
                         </button>
                     </a>
                 </div>
             </div>
         </div>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
         <script src="app.js"></script>
     </body>
 </html>

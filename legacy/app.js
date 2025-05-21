@@ -1,3 +1,9 @@
+// lucide icons
+lucide.createIcons();
+
+// feather icons
+feather.replace();
+
 // obtain lateral nav
 let lateralNav = document.getElementById("lateral_nav");
 

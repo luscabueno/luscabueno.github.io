@@ -3,31 +3,32 @@
         <title>Legacy</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_drop_down,arrow_drop_up">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="nav--lateral" id="lateral_nav">
             <div class="nav--lateral--header">
                 <a href="dashboard.html"><img src="img/login_logo.svg" class="logo"></a>
-                <a onclick="lateralNavClose()"><img class="icon" src="img/icon_contrast_60/close.svg"></a>
+                <a onclick="lateralNavClose()"><i class="icon secondary" data-feather="x"></i></a>
             </div>
             <div class="nav--lateral--body">
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
                         <p class="secondary">Dashboard</p>
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                        <i class="icon secondary" data-feather="chevron-down"></i>
                     </div>
                     <div class="nav--lateral--tab--body">
                         <a class="nav--lateral--option" href="dashboard.html">
-                            <img class="icon-s" src="img/icon_contrast_90/dashboard_tarefas.svg">
+                            <i class="icon" data-feather="layers"></i>
                             <p>Tarefas</p>
                         </a>
                         <a class="nav--lateral--option" href="prioridade.html">
-                            <img class="icon-s" src="img/icon_contrast_90/dashboard_prioridades.svg">
+                            <i class="icon" data-feather="alert-triangle"></i>
                             <p>Prioridades</p>
                         </a>
                         <a class="nav--lateral--option" href="link.html">
-                            <img class="icon-s" src="img/icon_contrast_90/dashboard_links.svg">
+                            <i class="icon" data-feather="link"></i>
                             <p>Links</p>
                         </a>
                     </div>
@@ -35,11 +36,11 @@
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
                         <p class="secondary">Cadastro</p>
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                        <i class="icon secondary" data-feather="chevron-down"></i>
                     </div>
                     <div class="nav--lateral--tab--body">
                         <a href="cadastro.html" class="nav--lateral--option">
-                            <img class="icon-s" src="img/icon_contrast_90/cadastro_score.svg">
+                            <i class="icon" data-feather="bar-chart-2"></i>
                             <p>Score</p>
                         </a>
                     </div>
@@ -47,11 +48,11 @@
                 <div class="nav--lateral--tab">
                     <div class="nav--lateral--tab--header">
                         <p class="secondary">Configurações</p>
-                        <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                        <i class="icon secondary" data-feather="chevron-down"></i>
                     </div>
                     <div class="nav--lateral--tab--body">
                         <a class="nav--lateral--option">
-                            <img class="icon-s" src="img/icon_contrast_90/configuracoes_usuarios.svg">
+                            <i class="icon" data-feather="user"></i>
                             <p>Usuários</p>
                         </a>
                     </div>
@@ -60,16 +61,16 @@
         </div>
         <div class="nav--top">
             <div class="nav--top--sub">
-                <a onclick="lateralNavOpen()"><img class="icon" src="img/icon_contrast_60/menu.svg"></a>
+                <a onclick="lateralNavOpen()"><i class="icon secondary" data-feather="menu"></i></a>
                 <img src="img/login_logo.svg" class="logo">
             </div>
             <div class="nav--top--sub">
                 <a href="index.html"><p class="secondary">Log out</p></a>
-                <img class="icon" src="img/icon_contrast_60/notification.svg">
-                <img class="icon" src="img/icon_contrast_60/settings.svg">
+                <i class="icon secondary" data-feather="bell"></i>
+                <i class="icon secondary" data-feather="settings"></i>
                 <div class="avatar">
                     <img class="avatar--photo" src="img/avatar/example.jpg">
-                    <div class="avatar--status error"></div>
+                    <div class="status error"></div>
                 </div>
             </div>
         </div>
@@ -91,7 +92,7 @@
                     <div class="group--select">
                         <button class="text--field" id="select_button_coluna">
                             <div class="select--value cell" id="select_value_coluna">Selecionar coluna do filtro</div>
-                            <img src="img/icon_contrast_60/expanded.svg">
+                            <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
                     </div>
                     <ul class="group--select--item" id="select_list_coluna">
@@ -102,7 +103,7 @@
                                 value="classificacao"
                                 data-label='<p>Classificação</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Classificação</p>
                         </li>
                         <li class="select--item">
@@ -112,7 +113,7 @@
                                 value="descricao"
                                 data-label='<p>Descrição</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Descrição</p>
                         </li>
                         <li class="select--item">
@@ -122,7 +123,7 @@
                                 value="score"
                                 data-label='<p>Score</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Score</p>
                         </li>
                     </ul>
@@ -133,7 +134,7 @@
                     <input placeholder="Inserir valor do filtro">
                 </div>
                 <button class="button primary">
-                    <img class="icon size-s" src="img/icon_contrast_100/search.svg">
+                    <i class="icon" data-feather="search"></i>
                 </button>
             </div>
         </div>
@@ -141,16 +142,16 @@
             <div class="group--action">
                 <div class="group--action--sub">
                     <button class="button secondary">
-                        <img class="icon size-s" src="img/icon_primary_text/collide_all.svg">
+                        <i class="icon" data-lucide="list-collapse"></i>
                     </button>
                 </div>
                 <div class="group--action--sub">
                     <button class="button secondary">
-                        <img class="icon size-s" src="img/icon_primary_text/edit.svg">
+                        <i class="icon" data-feather="edit-3"></i>
                         <p>Editar categorias</p>
                     </button>
                     <button class="button primary">
-                        <img class="icon size-s" src="img/icon_contrast_100/more.svg">
+                        <i class="icon" data-feather="plus"></i>
                         <p>Nova classificação</p>
                     </button>
                 </div>
@@ -159,20 +160,20 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title-s">
-                            <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                            <i class="icon secondary" data-feather="chevron-down"></i>
                             <div class="title-s">
                                 <h4>Cliente</h4>
                             </div>
                         </div>
                     </div>
                     <div class="table--card--header--sub">
-                        <div class="group--highlight-s">
-                            <div class="highlight-s">
-                                <div class="highlight-s--data">
-                                    <img class="icon size-s" src="img/icon_contrast_100/peso.svg">
+                        <div class="group--highlight">
+                            <div class="highlight">
+                                <div class="highlight--data size-s">
+                                    <i class="icon" data-feather="anchor"></i>
                                     <h4>30%</h4>
                                 </div>
-                                <div class="highlight--label contrast">
+                                <div class="highlight--label">
                                 </div>
                             </div>
                         </div>
@@ -192,8 +193,8 @@
                                     <div class="group">
                                         <span>Classificação</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -201,8 +202,8 @@
                                     <div class="group">
                                         <span>Descrição</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -210,8 +211,8 @@
                                     <div class="group">
                                         <span>Score</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -220,79 +221,79 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="badge contrast"><p>ALO</p></div></td>
+                                <td><div class="badge"><p>ALO</p></div></td>
                                 <td>ALELO</td>
                                 <td><div class="badge error"><p>9.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>CBD</p></div></td>
+                                <td><div class="badge"><p>CBD</p></div></td>
                                 <td>JAÉ</td>
                                 <td><div class="badge error"><p>10.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>CDZ</p></div></td>
+                                <td><div class="badge"><p>CDZ</p></div></td>
                                 <td>CREDZ</td>
                                 <td><div class="badge warning"><p>5.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>LCD</p></div></td>
+                                <td><div class="badge"><p>LCD</p></div></td>
                                 <td>LECARD</td>
                                 <td><div class="badge success"><p>2.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>SDX</p></div></td>
+                                <td><div class="badge"><p>SDX</p></div></td>
                                 <td>PLUXEE</td>
                                 <td><div class="badge error"><p>9.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>SIC</p></div></td>
+                                <td><div class="badge"><p>SIC</p></div></td>
                                 <td>SICOOB</td>
                                 <td><div class="badge error"><p>10.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>TIC</p></div></td>
+                                <td><div class="badge"><p>TIC</p></div></td>
                                 <td>TICKET</td>
                                 <td><div class="badge error"><p>8.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -304,20 +305,20 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title-s">
-                            <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                            <i class="icon secondary" data-feather="chevron-down"></i>
                             <div class="title-s">
                                 <h4>Prazo</h4>
                             </div>
                         </div>
                     </div>
                     <div class="table--card--header--sub">
-                        <div class="group--highlight-s">
-                            <div class="highlight-s">
-                                <div class="highlight-s--data">
-                                    <img class="icon size-s" src="img/icon_contrast_100/peso.svg">
+                        <div class="group--highlight">
+                            <div class="highlight">
+                                <div class="highlight--data size-s">
+                                    <i class="icon" data-feather="anchor"></i>
                                     <h4>30%</h4>
                                 </div>
-                                <div class="highlight--label contrast">
+                                <div class="highlight--label">
                                 </div>
                             </div>
                         </div>
@@ -337,8 +338,8 @@
                                     <div class="group">
                                         <span>Classificação</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -346,8 +347,8 @@
                                     <div class="group">
                                         <span>Descrição</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -355,8 +356,8 @@
                                     <div class="group">
                                         <span>Score</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -367,7 +368,7 @@
                             <tr>
                                 <td>Dentro do prazo</td>
                                 <td>Cálculo automatizado via <span class="underline">due date</span></td>
-                                <td><div class="badge contrast"><p>1~10</p></div></td>
+                                <td><div class="badge"><p>1~10</p></div></td>
                                 <td>
                                     <div class="group right">
                                     </div>
@@ -379,8 +380,8 @@
                                 <td><div class="badge error"><p>+1.0/dia</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -390,8 +391,8 @@
                                 <td><div class="badge error"><p>+2.0/dia</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -401,8 +402,8 @@
                                 <td><div class="badge error"><p>+3.0/dia</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -412,7 +413,7 @@
                                 <td><div class="badge error"><p>+5.0/dia</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -424,20 +425,20 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title-s">
-                            <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                            <i class="icon secondary" data-feather="chevron-down"></i>
                             <div class="title-s">
                                 <h4>Urgência</h4>
                             </div>
                         </div>
                     </div>
                     <div class="table--card--header--sub">
-                        <div class="group--highlight-s">
-                            <div class="highlight-s">
-                                <div class="highlight-s--data">
-                                    <img class="icon size-s" src="img/icon_contrast_100/peso.svg">
+                        <div class="group--highlight">
+                            <div class="highlight">
+                                <div class="highlight--data size-s">
+                                    <i class="icon" data-feather="anchor"></i>
                                     <h4>20%</h4>
                                 </div>
-                                <div class="highlight--label contrast">
+                                <div class="highlight--label">
                                 </div>
                             </div>
                         </div>
@@ -457,8 +458,8 @@
                                     <div class="group">
                                         <span>Classificação</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -466,8 +467,8 @@
                                     <div class="group">
                                         <span>Descrição</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -475,8 +476,8 @@
                                     <div class="group">
                                         <span>Score</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -485,46 +486,46 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="badge contrast"><p>Baixo</p></div></td>
+                                <td><div class="badge"><p>Baixo</p></div></td>
                                 <td>Urgência flexível</td>
                                 <td><div class="badge success"><p>2.5</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>Médio</p></div></td>
+                                <td><div class="badge"><p>Médio</p></div></td>
                                 <td>Urgência programável</td>
                                 <td><div class="badge warning"><p>5.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>Alto</p></div></td>
+                                <td><div class="badge"><p>Alto</p></div></td>
                                 <td>Urgência de tempo sensível</td>
                                 <td><div class="badge error"><p>7.5</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>Crítico</p></div></td>
+                                <td><div class="badge"><p>Crítico</p></div></td>
                                 <td>Inadiável</td>
                                 <td><div class="badge error"><p>10.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -536,20 +537,20 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title-s">
-                            <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                            <i class="icon secondary" data-feather="chevron-down"></i>
                             <div class="title-s">
                                 <h4>Complexidade</h4>
                             </div>
                         </div>
                     </div>
                     <div class="table--card--header--sub">
-                        <div class="group--highlight-s">
-                            <div class="highlight-s">
-                                <div class="highlight-s--data">
-                                    <img class="icon size-s" src="img/icon_contrast_100/peso.svg">
+                        <div class="group--highlight">
+                            <div class="highlight">
+                                <div class="highlight--data size-s">
+                                    <i class="icon" data-feather="anchor"></i>
                                     <h4>15%</h4>
                                 </div>
-                                <div class="highlight--label contrast">
+                                <div class="highlight--label">
                                 </div>
                             </div>
                         </div>
@@ -569,8 +570,8 @@
                                     <div class="group">
                                         <span>Classificação</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -578,8 +579,8 @@
                                     <div class="group">
                                         <span>Descrição</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -587,8 +588,8 @@
                                     <div class="group">
                                         <span>Score</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -597,46 +598,46 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="badge contrast"><p>Baixo</p></div></td>
+                                <td><div class="badge"><p>Baixo</p></div></td>
                                 <td>Complexidade rotineira</td>
                                 <td><div class="badge success"><p>2.5</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>Médio</p></div></td>
+                                <td><div class="badge"><p>Médio</p></div></td>
                                 <td>Complexidade moderada</td>
                                 <td><div class="badge warning"><p>5.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>Alto</p></div></td>
+                                <td><div class="badge"><p>Alto</p></div></td>
                                 <td>Complexidade desafiadora</td>
                                 <td><div class="badge error"><p>7.5</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>Crítico</p></div></td>
+                                <td><div class="badge"><p>Crítico</p></div></td>
                                 <td>Conhecimento externo</td>
                                 <td><div class="badge error"><p>10.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -648,20 +649,20 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title-s">
-                            <img class="icon size-s" src="img/icon_contrast_60/expanded.svg">
+                            <i class="icon secondary" data-feather="chevron-down"></i>
                             <div class="title-s">
                                 <h4>Complexidade</h4>
                             </div>
                         </div>
                     </div>
                     <div class="table--card--header--sub">
-                        <div class="group--highlight-s">
-                            <div class="highlight-s">
-                                <div class="highlight-s--data">
-                                    <img class="icon size-s" src="img/icon_contrast_100/peso.svg">
+                        <div class="group--highlight">
+                            <div class="highlight">
+                                <div class="highlight--data size-s">
+                                    <i class="icon" data-feather="anchor"></i>
                                     <h4>15%</h4>
                                 </div>
-                                <div class="highlight--label contrast">
+                                <div class="highlight--label">
                                 </div>
                             </div>
                         </div>
@@ -681,8 +682,8 @@
                                     <div class="group">
                                         <span>Classificação</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -690,8 +691,8 @@
                                     <div class="group">
                                         <span>Descrição</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -699,8 +700,8 @@
                                     <div class="group">
                                         <span>Score</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -709,46 +710,46 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div class="badge contrast"><p>Baixo</p></div></td>
+                                <td><div class="badge"><p>Baixo</p></div></td>
                                 <td>Complexidade rotineira</td>
                                 <td><div class="badge success"><p>2.5</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>Médio</p></div></td>
+                                <td><div class="badge"><p>Médio</p></div></td>
                                 <td>Complexidade moderada</td>
                                 <td><div class="badge warning"><p>5.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>Alto</p></div></td>
+                                <td><div class="badge"><p>Alto</p></div></td>
                                 <td>Complexidade desafiadora</td>
                                 <td><div class="badge error"><p>7.5</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td><div class="badge contrast"><p>Crítico</p></div></td>
+                                <td><div class="badge"><p>Crítico</p></div></td>
                                 <td>Conhecimento externo</td>
                                 <td><div class="badge error"><p>10.0</p></div></td>
                                 <td>
                                     <div class="group right">
-                                        <img class="icon size-s" src="img/icon_contrast_60/edit.svg">
-                                        <img class="icon size-s" src="img/icon_contrast_60/delete.svg">
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
                                     </div>
                                 </td>
                             </tr>
@@ -757,6 +758,8 @@
                 </div>
             </div>
         </div>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
         <script src="app.js"></script>
     </body>
 </html>

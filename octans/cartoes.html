@@ -3,6 +3,7 @@
         <title>Octans</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_drop_down,arrow_drop_up">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -11,22 +12,22 @@
                 <img src="img/login_logo.svg" class="logo">
             </div>
             <div class="nav--top--sub">
-                <div class="group--button--menu">
+                <div class="group--button menu">
                     <div class="select menu">
                         <div class="group--select">
-                            <button class="button--menu secondary" id="select_button_menu-controle">
+                            <button class="button secondary" id="select_button_menu-controle">
                                 <p>Controle</p>
-                                <img class="icon size-s" src="img/icon_primary_text/expand.svg">
+                                <i class="icon" data-feather="chevron-down"></i>
                             </button>
                         </div>
                         <ul class="group--select--item" id="select_list_menu-controle">
                             <li>
-                                <a class="select--item" href="producao.html">
+                                <a class="select--item" href="produtos.html">
                                     <p>Controle de produtos</p>
                                 </a>
                             </li>
                             <li>
-                                <a class="select--item" href="entrega.html">
+                                <a class="select--item" href="cartoes.html">
                                     <p>Controle de cartões</p>
                                 </a>
                             </li>
@@ -34,16 +35,16 @@
                     </div>
                     <div class="select menu">
                         <div class="group--select">
-                            <button class="button--menu secondary" id="select_button_menu-configuracao">
-                                <img class="icon size-s" src="img/icon_primary_text/settings.svg">
+                            <button class="button secondary" id="select_button_menu-configuracao">
+                                <i class="icon" data-feather="settings"></i>
                             </button>
                         </div>
                     </div>
                     <div class="select menu">
                         <div class="group--select">
-                            <button class="button--menu secondary" id="select_button_menu-usuario">
-                                <img class="icon size-s" src="img/icon_primary_text/user.svg">
-                                <img class="icon size-s" src="img/icon_primary_text/expand.svg">
+                            <button class="button secondary" id="select_button_menu-usuario">
+                                <i class="icon" data-feather="user"></i>
+                                <i class="icon" data-feather="chevron-down"></i>
                             </button>
                         </div>
                         <ul class="group--select--item" id="select_list_menu-usuario">
@@ -61,19 +62,19 @@
             <div class="tabsheet--tab active">
                 <div class="tabsheet--title">
                     <p>Controle de cartões</p>
-                    <img class="icon size-s" src="img/icon_primary_text/close.svg">
+                    <i class="icon" data-feather="x"></i>
                 </div>
                 <div class="tabsheet--label"></div>
             </div>
             <div class="tabsheet--tab">
                 <div class="tabsheet--title">
                     <p>Nova aba</p>
-                    <img class="icon size-s" src="img/icon_contrast_60/close.svg">
+                    <i class="icon" data-feather="x"></i>
                 </div>
                 <div class="tabsheet--label"></div>
             </div>
             <div class="button secondary">
-                <img class="icon size-s" src="img/icon_primary_text/more.svg">
+                <i class="icon" data-feather="plus"></i>
             </div>
         </div>
         <div class="group--filter">
@@ -82,7 +83,7 @@
                     <div class="group--select">
                         <button class="text--field" id="select_button_coluna">
                             <div class="select--value group" id="select_value_coluna">Selecionar coluna do filtro</div>
-                            <img src="img/icon_contrast_60/expanded.svg">
+                            <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
                     </div>
                     <ul class="group--select--item" id="select_list_coluna">
@@ -93,7 +94,7 @@
                                 value="op"
                                 data-label='<p>OP</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>OP</p>
                         </li>
                         <li class="select--item">
@@ -101,20 +102,20 @@
                                 type="radio"
                                 name="coluna"
                                 value="id_cartao"
-                                data-label='<div class="badge contrast"><p>ID_CARTAO</p></div>'
+                                data-label='<div class="badge"><p>ID_CARTAO</p></div>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
-                            <div class="badge contrast"><p>ID_CARTAO</p></div>
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>ID_CARTAO</p></div>
                         </li>
                         <li class="select--item">
                             <input
                                 type="radio"
                                 name="coluna"
                                 value="modalidade_entrega"
-                                data-label='<div class="badge contrast"><p>MODALIDADE_ENTREGA</p></div>'
+                                data-label='<div class="badge"><p>MODALIDADE_ENTREGA</p></div>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
-                            <div class="badge contrast"><p>MODALIDADE_ENTREGA</p></div>
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>MODALIDADE_ENTREGA</p></div>
                         </li>
                         <li class="select--item">
                             <input
@@ -123,7 +124,7 @@
                                 value="hawb"
                                 data-label='<p>HAWB</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>HAWB</p>
                         </li>
                         <li class="select--item">
@@ -133,7 +134,7 @@
                                 value="nome_portador"
                                 data-label='<p>Nome do portador</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Nome do portador</p>
                         </li>
                         <li class="select--item">
@@ -143,7 +144,7 @@
                                 value="cpf"
                                 data-label='<p>CPF</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>CPF</p>
                         </li>
                         <li class="select--item">
@@ -153,7 +154,7 @@
                                 value="produto"
                                 data-label='<p>Produto</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Produto</p>
                         </li>
                         <li class="select--item">
@@ -163,7 +164,7 @@
                                 value="data_processamento"
                                 data-label='<p>Data de processamento</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Data de processamento</p>
                         </li>
                         <li class="select--item">
@@ -173,7 +174,7 @@
                                 value="data_expedicao"
                                 data-label='<p>Data de expedição</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Data de expedição</p>
                         </li>
                         <li class="select--item">
@@ -183,7 +184,7 @@
                                 value="data_postagem"
                                 data-label='<p>Data de postagem</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Data de postagem</p>
                         </li>
                         <li class="select--item">
@@ -193,7 +194,7 @@
                                 value="data_entrega"
                                 data-label='<p>Data de entrega</p>'
                                 >
-                            <img class="icon size-xxs" src="img/icon_primary_text/checkmark.svg">
+                            <i class="icon active" data-feather="check"></i>
                             <p>Data de entrega</p>
                         </li>
                     </ul>
@@ -204,7 +205,7 @@
                     <input placeholder="Inserir valor do filtro">
                 </div>
                 <div class="button primary">
-                    <img class="icon size-s" src="img/icon_contrast_100/search.svg">
+                    <i class="icon" data-feather="search"></i>
                 </div>
             </div>
         </div>
@@ -231,26 +232,26 @@
                                     <div class="group">
                                         <span>OP</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="group">
-                                        <div class="badge contrast"><p>ID_CARTAO</p></div>
+                                        <div class="badge"><p>ID_CARTAO</p></div>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
                                 <th>
                                     <div class="group">
-                                        <div class="badge contrast"><p>MODALIDADE_ENTREGA</p></div>
+                                        <div class="badge"><p>MODALIDADE_ENTREGA</p></div>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -258,8 +259,8 @@
                                     <div class="group">
                                         <span>HAWB</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -267,8 +268,8 @@
                                     <div class="group">
                                         <span>Nome do portador</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -276,8 +277,8 @@
                                     <div class="group">
                                         <span>CPF</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -285,8 +286,8 @@
                                     <div class="group">
                                         <span>Produto</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -294,8 +295,8 @@
                                     <div class="group">
                                         <span>Data processamento</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -303,8 +304,8 @@
                                     <div class="group">
                                         <span>Data expedição</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -312,8 +313,8 @@
                                     <div class="group">
                                         <span>Data postagem</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
@@ -321,8 +322,8 @@
                                     <div class="group">
                                         <span>Data entrega</span>
                                         <div class="sorting">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_ascend.svg">
-                                            <img class="icon size-xs" src="img/icon_contrast_20/sorting_descend.svg">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
                                         </div>
                                     </div>
                                 </th>
