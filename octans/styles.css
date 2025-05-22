@@ -102,15 +102,15 @@ body {
 }
 
 button {
-    width: fit-content;
     cursor: pointer;
 
-    .select & {
+    .select--button & {
         width: 100%;
     }
 }
 
 input {
+    width: 0;
     flex: 1;
 }
 
@@ -269,11 +269,6 @@ tfoot > tr > th {
 
 .login--card {
     width: 25rem;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     background: #223348;
     border: 1px solid #b4cdee1a;
@@ -282,14 +277,12 @@ tfoot > tr > th {
 }
 
 .login--card--header {
-    width: 100%;
     display: flex;
     justify-content: center;
     padding: 3rem 2rem;
 }
 
 .login--card--body {
-    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 3rem 2rem;
@@ -391,12 +384,12 @@ tfoot > tr > th {
     .group--button.menu & {
         border-radius: 0;
 
-        .select.menu:first-of-type & {
+        .select--button.menu:first-of-type & {
             border-top-left-radius: 0.25rem;
             border-bottom-left-radius: 0.25rem;
         }
 
-        .select.menu:last-of-type & {
+        .select--button.menu:last-of-type & {
             border-top-right-radius: 0.25rem;
             border-bottom-right-radius: 0.25rem;
         }
@@ -413,12 +406,6 @@ tfoot > tr > th {
 
     &.menu {
         gap: 0.15rem;
-    }
-
-    .login--body & {
-        width: 100%;
-        max-width: 25rem;
-        flex-direction: column;
     }
 }
 
@@ -466,22 +453,21 @@ tfoot > tr > th {
         }
     }
 
-.select {
-    flex: 1;
+.select--button {
     position: relative;
-    cursor: pointer;
 }
 
 .select--item {
-height: 2.5rem;
-position: relative;
-display: flex;
-align-items: center;
-padding: 0 0.5rem;
-gap: 0.5rem;
-white-space: nowrap;
+    height: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+    white-space: nowrap;
+    cursor: pointer;
 
-border-radius: 0.25rem;
+    border-radius: 0.25rem;
 
     input {
         all: unset;
@@ -502,7 +488,7 @@ border-radius: 0.25rem;
         background: #0c6ce921;
     }
 
-    .select.menu & {
+    .select--button.menu & {
         padding: 0.8rem;
     }
 }
@@ -520,12 +506,12 @@ border-radius: 0.25rem;
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
 
-    .select.menu & {
+    .select--button.menu & {
         top: 2.5rem;
         right: 0;
     }
 
-    .select.single & {
+    .select--button.single & {
         top: 0;
     }
 }
@@ -578,6 +564,7 @@ border-radius: 0.25rem;
 }
 
 .text--field--label {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -696,7 +683,7 @@ p, td, input, select, button {
             text-align: center;
         }
 
-    .select.single:not(:has(.select--item input:checked)) button p {
+    .select--button.single:not(:has(.select--item input:checked)) button p {
         color: #c9ddf880;
     }
 

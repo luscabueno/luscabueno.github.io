@@ -13,13 +13,11 @@
             </div>
             <div class="nav--top--sub">
                 <div class="group--button menu">
-                    <div class="select menu">
-                        <div class="group--select">
-                            <button class="button secondary" id="select_button_menu-controle">
-                                <p>Controle</p>
-                                <i class="icon" data-feather="chevron-down"></i>
-                            </button>
-                        </div>
+                    <div class="select--button menu">
+                        <button class="button secondary" id="select_button_menu-controle">
+                            <p>Controle</p>
+                            <i class="icon" data-feather="chevron-down"></i>
+                        </button>
                         <ul class="group--select--item" id="select_list_menu-controle">
                             <li>
                                 <a class="select--item" href="produtos.html">
@@ -33,20 +31,16 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="select menu">
-                        <div class="group--select">
-                            <button class="button secondary" id="select_button_menu-configuracao">
-                                <i class="icon" data-feather="settings"></i>
-                            </button>
-                        </div>
+                    <div class="select--button menu">
+                        <button class="button secondary" id="select_button_menu-configuracao">
+                            <i class="icon" data-feather="settings"></i>
+                        </button>
                     </div>
-                    <div class="select menu">
-                        <div class="group--select">
-                            <button class="button secondary" id="select_button_menu-usuario">
-                                <i class="icon" data-feather="user"></i>
-                                <i class="icon" data-feather="chevron-down"></i>
-                            </button>
-                        </div>
+                    <div class="select--button menu">
+                        <button class="button secondary" id="select_button_menu-usuario">
+                            <i class="icon" data-feather="user"></i>
+                            <i class="icon" data-feather="chevron-down"></i>
+                        </button>
                         <ul class="group--select--item" id="select_list_menu-usuario">
                             <li>
                                 <a class="select--item" href="index.html">
@@ -79,55 +73,55 @@
         </div>
         <div class="group--filter">
             <div class="filter">
-                <div class="select single">
-                    <div class="group--select">
+                <div class="text--field--label">
+                    <div class="select--button single">
                         <button class="text--field" id="select_button_periodo">
                             <div class="select--value group" id="select_value_periodo"><p>Selecionar cliente do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
+                        <ul class="group--select--item" id="select_list_periodo">
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="periodo"
+                                    value="hoje"
+                                    data-label='<p>Hoje</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Hoje</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="periodo"
+                                    value="semana"
+                                    data-label='<p>Esta semana</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Esta semana</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="periodo"
+                                    value="mes"
+                                    data-label='<p>Este mês</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Este mês</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="periodo"
+                                    value="personalizado"
+                                    data-label='<p>Período personalizado</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Período personalizado</p>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="group--select--item" id="select_list_periodo">
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="periodo"
-                                value="hoje"
-                                data-label='<p>Hoje</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Hoje</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="periodo"
-                                value="semana"
-                                data-label='<p>Esta semana</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Esta semana</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="periodo"
-                                value="mes"
-                                data-label='<p>Este mês</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Este mês</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="periodo"
-                                value="personalizado"
-                                data-label='<p>Período personalizado</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Período personalizado</p>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <div class="filter">
@@ -141,37 +135,37 @@
                 </div>
             </div>
             <div class="filter">
-                <div class="select single">
-                    <div class="group--select">
+                <div class="text--field--label">
+                    <div class="select--button single">
                         <button class="text--field" id="select_button_cliente">
                             <div class="select--value group" id="select_value_cliente"><p>Selecionar cliente do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
+                        <ul class="group--select--item" id="select_list_cliente">
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="cliente"
+                                    value="LEG"
+                                    data-label='<div class="badge"><p>LEG</p></div><p>Legacy</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <div class="badge"><p>LEG</p></div>
+                                <p>Legacy</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="cliente"
+                                    value="OCT"
+                                    data-label='<div class="badge"><p>OCT</p></div><p>Octans</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <div class="badge"><p>OCT</p></div>
+                                <p>Octans</p>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="group--select--item" id="select_list_cliente">
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="cliente"
-                                value="LEG"
-                                data-label='<div class="badge"><p>LEG</p></div><p>Legacy</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <div class="badge"><p>LEG</p></div>
-                            <p>Legacy</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="cliente"
-                                value="OCT"
-                                data-label='<div class="badge"><p>OCT</p></div><p>Octans</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <div class="badge"><p>OCT</p></div>
-                            <p>Octans</p>
-                        </li>
-                    </ul>
                 </div>
                 <button class="button primary">
                     <i class="icon" data-feather="search"></i>

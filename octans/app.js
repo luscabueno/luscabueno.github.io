@@ -5,7 +5,7 @@ lucide.createIcons();
 feather.replace();
 
 // open .select
-selectButtons = document.querySelectorAll('.select button');
+selectButtons = document.querySelectorAll('.select--button button');
 
 selectButtons.forEach(button => {
     button.addEventListener('click', event => {
@@ -52,7 +52,7 @@ selectItemInputs.forEach(input => {
 window.addEventListener('click', event => {
     const selectLists = document.getElementsByClassName('group--select--item');
 
-    if (!event.target.closest('.select')) {
+    if (!event.target.closest('.select--button')) {
         for (i = 0; i < selectLists.length; i++) {
             if (selectLists[i].classList.contains('show')) {
                 selectLists[i].classList.remove('show');

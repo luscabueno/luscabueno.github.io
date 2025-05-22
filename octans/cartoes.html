@@ -13,13 +13,11 @@
             </div>
             <div class="nav--top--sub">
                 <div class="group--button menu">
-                    <div class="select menu">
-                        <div class="group--select">
-                            <button class="button secondary" id="select_button_menu-controle">
-                                <p>Controle</p>
-                                <i class="icon" data-feather="chevron-down"></i>
-                            </button>
-                        </div>
+                    <div class="select--button menu">
+                        <button class="button secondary" id="select_button_menu-controle">
+                            <p>Controle</p>
+                            <i class="icon" data-feather="chevron-down"></i>
+                        </button>
                         <ul class="group--select--item" id="select_list_menu-controle">
                             <li>
                                 <a class="select--item" href="produtos.html">
@@ -33,20 +31,16 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="select menu">
-                        <div class="group--select">
-                            <button class="button secondary" id="select_button_menu-configuracao">
-                                <i class="icon" data-feather="settings"></i>
-                            </button>
-                        </div>
+                    <div class="select--button menu">
+                        <button class="button secondary" id="select_button_menu-configuracao">
+                            <i class="icon" data-feather="settings"></i>
+                        </button>
                     </div>
-                    <div class="select menu">
-                        <div class="group--select">
-                            <button class="button secondary" id="select_button_menu-usuario">
-                                <i class="icon" data-feather="user"></i>
-                                <i class="icon" data-feather="chevron-down"></i>
-                            </button>
-                        </div>
+                    <div class="select--button menu">
+                        <button class="button secondary" id="select_button_menu-usuario">
+                            <i class="icon" data-feather="user"></i>
+                            <i class="icon" data-feather="chevron-down"></i>
+                        </button>
                         <ul class="group--select--item" id="select_list_menu-usuario">
                             <li>
                                 <a class="select--item" href="index.html">
@@ -79,125 +73,125 @@
         </div>
         <div class="group--filter">
             <div class="filter">
-                <div class="select single">
-                    <div class="group--select">
+                <div class="text--field--label">
+                    <div class="select--button single">
                         <button class="text--field" id="select_button_coluna">
-                            <div class="select--value group" id="select_value_coluna">Selecionar coluna do filtro</div>
+                            <div class="select--value group" id="select_value_coluna"><p>Selecionar coluna do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
+                        <ul class="group--select--item" id="select_list_coluna">
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="op"
+                                    data-label='<p>OP</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>OP</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="id_cartao"
+                                    data-label='<div class="badge"><p>ID_CARTAO</p></div>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <div class="badge"><p>ID_CARTAO</p></div>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="modalidade_entrega"
+                                    data-label='<div class="badge"><p>MODALIDADE_ENTREGA</p></div>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <div class="badge"><p>MODALIDADE_ENTREGA</p></div>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="hawb"
+                                    data-label='<p>HAWB</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>HAWB</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="nome_portador"
+                                    data-label='<p>Nome do portador</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Nome do portador</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="cpf"
+                                    data-label='<p>CPF</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>CPF</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="produto"
+                                    data-label='<p>Produto</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Produto</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="data_processamento"
+                                    data-label='<p>Data de processamento</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Data de processamento</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="data_expedicao"
+                                    data-label='<p>Data de expedição</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Data de expedição</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="data_postagem"
+                                    data-label='<p>Data de postagem</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Data de postagem</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="data_entrega"
+                                    data-label='<p>Data de entrega</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Data de entrega</p>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="group--select--item" id="select_list_coluna">
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="op"
-                                data-label='<p>OP</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>OP</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="id_cartao"
-                                data-label='<div class="badge"><p>ID_CARTAO</p></div>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <div class="badge"><p>ID_CARTAO</p></div>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="modalidade_entrega"
-                                data-label='<div class="badge"><p>MODALIDADE_ENTREGA</p></div>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <div class="badge"><p>MODALIDADE_ENTREGA</p></div>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="hawb"
-                                data-label='<p>HAWB</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>HAWB</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="nome_portador"
-                                data-label='<p>Nome do portador</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Nome do portador</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="cpf"
-                                data-label='<p>CPF</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>CPF</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="produto"
-                                data-label='<p>Produto</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Produto</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="data_processamento"
-                                data-label='<p>Data de processamento</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Data de processamento</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="data_expedicao"
-                                data-label='<p>Data de expedição</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Data de expedição</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="data_postagem"
-                                data-label='<p>Data de postagem</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Data de postagem</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="data_entrega"
-                                data-label='<p>Data de entrega</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Data de entrega</p>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <div class="filter">

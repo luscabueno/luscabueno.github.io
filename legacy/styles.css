@@ -110,12 +110,14 @@ button {
     width: fit-content;
     cursor: pointer;
 
-    .select & {
+    .select--button & {
         width: 100%;
     }
 }
 
 input {
+    /* input has default width, needs width: 0 for overriding it so flex: 1 can work */
+    width: 0;
     flex: 1;
 }
 
@@ -297,10 +299,14 @@ td {
 .login--content {
     flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+}
+
+.login--card {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
@@ -446,6 +452,7 @@ td {
 
 .group--action--sub {
     display: flex;
+    justify-content: end;
     gap: 1rem;
 }
 
@@ -519,8 +526,6 @@ td {
     gap: 0.5rem;
 
     .login--body & {
-        width: 100%;
-        max-width: 25rem;
         flex-direction: column;
     }
 }
@@ -643,28 +648,21 @@ td {
     box-shadow: 0 0.5rem 1.5rem #0d0f1152, 0 0.15rem 0.25rem #05050512;
 }
 
-.select {
-    flex: 1;
+.select--button {
     position: relative;
-    cursor: pointer;
-}
-
-.select--label {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
 }
 
 .select--item {
-height: 2.5rem;
-position: relative;
-display: flex;
-align-items: center;
-padding: 0 0.5rem;
-gap: 0.5rem;
-white-space: nowrap;
+    height: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+    white-space: nowrap;
+    cursor: pointer;
 
-border-radius: 0.25rem;
+    border-radius: 0.25rem;
 
     input {
         all: unset;
@@ -736,7 +734,7 @@ border-radius: 0.25rem;
 }
 
 .text--field {
-    width: 100%;
+    flex: 1;
     height: 2.2rem;
     min-height: 2.2rem;
     display: flex;
@@ -754,13 +752,12 @@ border-radius: 0.25rem;
     gap: 1rem;
 
     .login--body & {
-        width: 100%;
-        max-width: 25rem;
         flex-direction: column;
     }
 }
 
 .text--field--label {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -936,9 +933,8 @@ p, td, input, button {
             text-align: center;
         }
 
-    .select:not(.select--item input:checked) button {
-    font-weight: 400;
-    color: #c9ddf880;
+    .select--button:not(:has(.select--item input:checked)) button p {
+        color: #c9ddf880;
     }
 
 /* TEXT global components */

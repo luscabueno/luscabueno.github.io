@@ -88,45 +88,45 @@
         </div>
         <div class="group--filter">
             <div class="filter">
-                <div class="select">
-                    <div class="group--select">
+                <div class="text--field--label">
+                    <div class="select--button">
                         <button class="text--field" id="select_button_coluna">
-                            <div class="select--value cell" id="select_value_coluna">Selecionar coluna do filtro</div>
+                            <div class="select--value cell" id="select_value_coluna"><p>Selecionar coluna do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
+                        <ul class="group--select--item" id="select_list_coluna">
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="classificacao"
+                                    data-label='<p>Classificação</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Classificação</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="descricao"
+                                    data-label='<p>Descrição</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Descrição</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="score"
+                                    data-label='<p>Score</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <p>Score</p>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="group--select--item" id="select_list_coluna">
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="classificacao"
-                                data-label='<p>Classificação</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Classificação</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="descricao"
-                                data-label='<p>Descrição</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Descrição</p>
-                        </li>
-                        <li class="select--item">
-                            <input
-                                type="radio"
-                                name="coluna"
-                                value="score"
-                                data-label='<p>Score</p>'
-                                >
-                            <i class="icon active" data-feather="check"></i>
-                            <p>Score</p>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <div class="filter">
