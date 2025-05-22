@@ -587,7 +587,7 @@ td {
             padding: 2rem;
             gap: 1rem;
 
-            &.size-s {
+            .highlight.size-s & {
                 flex-direction: row;
                 align-items: center;
             }
