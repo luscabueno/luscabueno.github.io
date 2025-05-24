@@ -95,10 +95,20 @@
                                     type="radio"
                                     name="coluna"
                                     value="id_cartao"
-                                    data-label='<div class="badge"><p>ID_CARTAO</p></div>'
+                                    data-label='<p>ID cartão</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
-                                <div class="badge"><p>ID_CARTAO</p></div>
+                                <p>ID cartão</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="coluna"
+                                    value="cpf"
+                                    data-label='<p>CPF</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <div class="badge contrast"><p>CPF</p></div>
                             </li>
                             <li class="select--item">
                                 <input
@@ -129,16 +139,6 @@
                                     >
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Nome do portador</p>
-                            </li>
-                            <li class="select--item">
-                                <input
-                                    type="radio"
-                                    name="coluna"
-                                    value="cpf"
-                                    data-label='<p>CPF</p>'
-                                    >
-                                <i class="icon active" data-feather="check"></i>
-                                <p>CPF</p>
                             </li>
                             <li class="select--item">
                                 <input
@@ -198,9 +198,43 @@
                 <div class="text--field">
                     <input placeholder="Inserir valor do filtro">
                 </div>
-                <div class="button primary">
-                    <i class="icon" data-feather="search"></i>
+            </div>
+            <div class="filter">
+                <div class="text--field--label">
+                    <div class="select--button single">
+                        <button class="text--field" id="select_button_cliente">
+                            <div class="select--value group" id="select_value_cliente"><p>Selecionar cliente do filtro</p></div>
+                            <i class="icon secondary" data-feather="chevron-down"></i>
+                        </button>
+                        <ul class="group--select--item" id="select_list_cliente">
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="cliente"
+                                    value="LEG"
+                                    data-label='<div class="badge"><p>LEG</p></div><p>Legacy</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <div class="badge"><p>LEG</p></div>
+                                <p>Legacy</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="cliente"
+                                    value="OCT"
+                                    data-label='<div class="badge"><p>OCT</p></div><p>Octans</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <div class="badge"><p>OCT</p></div>
+                                <p>Octans</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <button class="button primary">
+                    <i class="icon" data-feather="search"></i>
+                </button>
             </div>
         </div>
         <div class="table--body">
@@ -233,7 +267,16 @@
                                 </th>
                                 <th>
                                     <div class="group">
-                                        <div class="badge"><p>ID_CARTAO</p></div>
+                                        <span>ID cartão</span>
+                                        <div class="sorting">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="group">
+                                        <div class="badge contrast"><p>CPF</p></div>
                                         <div class="sorting">
                                             <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
                                             <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
@@ -261,15 +304,6 @@
                                 <th>
                                     <div class="group">
                                         <span>Nome do portador</span>
-                                        <div class="sorting">
-                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
-                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="group">
-                                        <span>CPF</span>
                                         <div class="sorting">
                                             <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
                                             <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
@@ -325,12 +359,12 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>JAL2500002</td>
+                                <td>OCT2500002</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4by4</td>
+                                <td>143.784.797-55</td>
                                 <td>INDIVIDUAL</td>
                                 <td>11021752063926</td>
                                 <td>CHARLES HRECIW</td>
-                                <td>143.784.797-55</td>
                                 <td>Crédito (Mastercard)</td>
                                 <td>31/01/2025</td>
                                 <td>02/02/2025</td>
@@ -338,12 +372,12 @@
                                 <td>09/02/2025</td>
                             </tr>
                             <tr>
-                                <td>JAL2500001</td>
+                                <td>OCT2500001</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4bb7</td>
+                                <td>143.784.797-88</td>
                                 <td>INDIVIDUAL</td>
                                 <td>11021752063959</td>
                                 <td>CHRISTINA PICKLER</td>
-                                <td>143.784.797-88</td>
                                 <td>Crédito (Visa)</td>
                                 <td>30/01/2025</td>
                                 <td>31/01/2025</td>
@@ -351,12 +385,12 @@
                                 <td>12/02/2025</td>
                             </tr>
                             <tr>
-                                <td>JAL2500001</td>
+                                <td>OCT2500001</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4bz5</td>
+                                <td>143.784.797-66</td>
                                 <td>LOTE DEPARTAMENTO</td>
                                 <td>11021752063937</td>
                                 <td>DAVI PEREIRA ROCHA</td>
-                                <td>143.784.797-66</td>
                                 <td>Crédito (Visa)</td>
                                 <td>30/01/2025</td>
                                 <td>31/01/2025</td>
@@ -364,12 +398,12 @@
                                 <td>12/02/2025</td>
                             </tr>
                             <tr>
-                                <td>JAL2500001</td>
+                                <td>OCT2500001</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4ba6</td>
+                                <td>143.784.797-77</td>
                                 <td>INDIVIDUAL</td>
                                 <td>11021752063948</td>
                                 <td>EDUARDA HEMMIG</td>
-                                <td>143.784.797-77</td>
                                 <td>Crédito (Visa)</td>
                                 <td>30/01/2025</td>
                                 <td>31/01/2025</td>
@@ -377,25 +411,25 @@
                                 <td>12/02/2025</td>
                             </tr>
                             <tr>
-                                <td>JAL2500002</td>
+                                <td>OCT2500002</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4bx3</td>
+                                <td>143.784.797-44</td>
                                 <td>LOTE DEPARTAMENTO</td>
                                 <td>11021752063937</td>
                                 <td>JULIA GOMES DE SÁ SILVA</td>
-                                <td>143.784.797-44</td>
                                 <td>Crédito (Mastercard)</td>
                                 <td>31/01/2025</td>
                                 <td>02/02/2025</td>
                                 <td>03/02/2025</td>
                                 <td>09/02/2025</td>
                             </tr>
-                                                        <tr>
-                                <td>JAL2500002</td>
+                            <tr>
+                                <td>OCT2500002</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4by4</td>
+                                <td>143.784.797-55</td>
                                 <td>INDIVIDUAL</td>
                                 <td>11021752063926</td>
                                 <td>LEONARDO DOS SANTOS CAMPOS</td>
-                                <td>143.784.797-55</td>
                                 <td>Crédito (Mastercard)</td>
                                 <td>31/01/2025</td>
                                 <td>02/02/2025</td>
@@ -403,12 +437,12 @@
                                 <td>09/02/2025</td>
                             </tr>
                             <tr>
-                                <td>JAL2500001</td>
+                                <td>OCT2500001</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4bb7</td>
+                                <td>143.784.797-88</td>
                                 <td>INDIVIDUAL</td>
                                 <td>11021752063959</td>
                                 <td>LUCAS EDUARDO BUENO SIQUEIRA</td>
-                                <td>143.784.797-88</td>
                                 <td>Crédito (Visa)</td>
                                 <td>30/01/2025</td>
                                 <td>31/01/2025</td>
@@ -416,12 +450,12 @@
                                 <td>12/02/2025</td>
                             </tr>
                             <tr>
-                                <td>JAL2500001</td>
+                                <td>OCT2500001</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4bz5</td>
+                                <td>143.784.797-66</td>
                                 <td>LOTE DEPARTAMENTO</td>
                                 <td>11021752063937</td>
                                 <td>MATHEUS PETRUKA</td>
-                                <td>143.784.797-66</td>
                                 <td>Crédito (Visa)</td>
                                 <td>30/01/2025</td>
                                 <td>31/01/2025</td>
@@ -429,12 +463,12 @@
                                 <td>12/02/2025</td>
                             </tr>
                             <tr>
-                                <td>JAL2500001</td>
+                                <td>OCT2500001</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4ba6</td>
+                                <td>143.784.797-77</td>
                                 <td>INDIVIDUAL</td>
                                 <td>11021752063948</td>
                                 <td>ROGER VINICIUS SOBRINHO</td>
-                                <td>143.784.797-77</td>
                                 <td>Crédito (Visa)</td>
                                 <td>30/01/2025</td>
                                 <td>31/01/2025</td>
@@ -442,12 +476,12 @@
                                 <td>12/02/2025</td>
                             </tr>
                             <tr>
-                                <td>JAL2500002</td>
+                                <td>OCT2500002</td>
                                 <td>009469b9-bda4-99b0-7495-3234d5bf4bx3</td>
+                                <td>143.784.797-44</td>
                                 <td>LOTE DEPARTAMENTO</td>
                                 <td>11021752063937</td>
                                 <td>WRAYAN BONTORIN</td>
-                                <td>143.784.797-44</td>
                                 <td>Crédito (Mastercard)</td>
                                 <td>31/01/2025</td>
                                 <td>02/02/2025</td>

@@ -310,6 +310,18 @@ td {
     gap: 2rem;
 }
 
+.login--card--header {
+    display: flex;
+    justify-content: center;
+}
+
+.login--card--body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 /* LAYOUT page components: .header */
 
 .header {
