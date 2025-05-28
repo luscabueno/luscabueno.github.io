@@ -219,6 +219,8 @@ th {
     height: 3.25rem;
     padding: 0 1rem;
 
+    background: #05050512;
+
     &.error {
         background: #e75d5524;
     }
@@ -234,25 +236,17 @@ td {
         background: #e75d5524;
     }
 
-    tr.child & {
+    tr:nth-child(even) & {
         background: #c0d5f20f;
-    }
-
-    tr.child &.error {
-        background: #ea888324;
-    }
-
-    tr.child &:first-child {
-        padding: 0 1rem 0 2.75rem;
     }
 }
 
 /* LAYOUT elements: table borders */
 
-th,
+/* th,
 td {
     border-bottom: 1px solid #adc8eB24;
-}
+} */
 
 th + th,
 td + td {
@@ -400,7 +394,6 @@ tfoot > tr > th {
 
 .table--card--body {
     flex: 1;
-    padding: 0 1rem;
     overflow: auto;
 }
 
