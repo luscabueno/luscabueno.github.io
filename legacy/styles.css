@@ -915,39 +915,43 @@ h6, th {
     text-transform: uppercase;
 }
 
-p, td, input, button {
+p, td {
     font-size: 1rem;
     font-weight: 400;
     color: #ebf4ffe6;
 
     text-align: left;
-}
 
-    p.secondary {
-        font-weight: 500;
+    &.secondary {
         color: #d9e8fcb0;
     }
 
-    p.tertiary, input::placeholder {
-        font-weight: 500;
+    &.tertiary {
         color: #c9ddf880;
     }
 
-    p.size-xs {
-        font-size: 0.8rem;
-    }
-
-    p.link {
+    &.link {
         color: #90bdf9;
-    }
 
-        .login--body p.link {
+        .login--body & {
             text-align: center;
         }
+    }
 
-    .select--button:not(:has(.select--item input:checked)) button p {
+    .select--button:not(:has(.select--item input:checked)) button & {
         color: #c9ddf880;
     }
+}
+
+input, button {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ebf4ffe6;
+
+    &::placeholder {
+        color: #c9ddf880;
+    }
+}
 
 /* TEXT global components */
 
