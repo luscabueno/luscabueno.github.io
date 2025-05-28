@@ -60,3 +60,5 @@ window.addEventListener('click', event => {
         }
     }
 })
+
+// open .overlay and .popup
