@@ -19,7 +19,7 @@
                             <p>Cadastro</p>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_menu-controle">
+                        <ul class="select--list" id="select_list_menu-controle">
                             <li>
                                 <a class="select--item" href="produtos.html">
                                     <p>Máquina</p>
@@ -52,7 +52,7 @@
                             <i class="icon" data-feather="user"></i>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_menu-usuario">
+                        <ul class="select--list" id="select_list_menu-usuario">
                             <li>
                                 <a class="select--item" href="index.html">
                                     <p>Log out</p>
@@ -64,14 +64,14 @@
             </div>
         </div>
         <div class="tabsheet">
-            <div class="tabsheet--tab active">
+            <div class="tabsheet--button active">
                 <div class="tabsheet--title">
                     <p>Cadastro de layout</p>
                     <i class="icon" data-feather="x"></i>
                 </div>
                 <div class="tabsheet--label"></div>
             </div>
-            <div class="tabsheet--tab">
+            <div class="tabsheet--button">
                 <div class="tabsheet--title">
                     <p>Nova aba</p>
                     <i class="icon" data-feather="x"></i>
@@ -89,7 +89,7 @@
                         <div class="select--value group" id="select_value_coluna"><p>Selecionar coluna do filtro</p></div>
                         <i class="icon secondary" data-feather="chevron-down"></i>
                     </button>
-                    <ul class="group--select--item" id="select_list_coluna">
+                    <ul class="select--list" id="select_list_coluna">
                         <li class="select--item">
                             <input
                                 type="radio"
@@ -174,7 +174,7 @@
                         <div class="select--value group" id="select_value_cliente"><p>Selecionar cliente do filtro</p></div>
                         <i class="icon secondary" data-feather="chevron-down"></i>
                     </button>
-                    <ul class="group--select--item" id="select_list_cliente">
+                    <ul class="select--list" id="select_list_cliente">
                         <li class="select--item">
                             <input
                                 type="radio"
@@ -220,12 +220,12 @@
                 <div class="group--action--sub">
                 </div>
                 <div class="group--action--sub">
-                    <a href="cadastro-layout-popup.html">
-                        <button class="button primary">
+                    <div class="popup--button">
+                        <button class="button primary" id="popup_button_novo-layout">
                             <i class="icon" data-feather="plus"></i>
                             <p>Novo layout</p>
                         </button>
-                    </a>
+                    </div>
                 </div>
             </div>
             <div class="table--card">
@@ -526,47 +526,49 @@
                 </div>
             </div>
         </div>
-        <div class="overlay">
-            <div class="popup">
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup_novo-layout">
                 <div class="popup--header">
                     <h4>Novo layout</h4>
-                    <button class="button secondary" id="select_button_menu-controle">
-                        <i class="icon" data-feather="x"></i>
-                    </button>
+                    <div class="popup--button--close">
+                        <button class="button secondary">
+                            <i class="icon" data-feather="x"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="tabsheet">
-                    <div class="tabsheet--tab active">
-                        <div class="tabsheet--title">
+                    <div class="tabsheet--button active">
+                        <button class="tabsheet--title" id="tabsheet_button_novo-layout--geral">
                             <p>Geral</p>
-                        </div>
+                        </button>
                         <div class="tabsheet--label"></div>
                     </div>
-                    <div class="tabsheet--tab">
+                    <div class="tabsheet--button">
                         <div class="tabsheet--title">
                             <p>Campos</p>
                         </div>
                         <div class="tabsheet--label"></div>
                     </div>
-                    <div class="tabsheet--tab">
+                    <div class="tabsheet--button">
                         <div class="tabsheet--title">
                             <p>Chips</p>
                         </div>
                         <div class="tabsheet--label"></div>
                     </div>
-                    <div class="tabsheet--tab">
+                    <div class="tabsheet--button">
                         <div class="tabsheet--title">
                             <p>Máquinas</p>
                         </div>
                         <div class="tabsheet--label"></div>
                     </div>
-                    <div class="tabsheet--tab">
+                    <div class="tabsheet--button">
                         <div class="tabsheet--title">
                             <p>Imagens</p>
                         </div>
                         <div class="tabsheet--label"></div>
                     </div>
                 </div>
-                <div class="popup--body">
+                <div class="popup--body" id="popup_body_novo-layout--geral">
                     <div class="group--form">
                         <div class="group--label">
                             <label>Cliente</label>
@@ -575,7 +577,7 @@
                                     <div class="select--value group" id="select_value_popup--cliente"><p>Selecionar cliente</p></div>
                                     <i class="icon secondary" data-feather="chevron-down"></i>
                                 </button>
-                                <ul class="group--select--item" id="select_list_popup--cliente">
+                                <ul class="select--list" id="select_list_popup--cliente">
                                     <li class="select--item">
                                         <input
                                             type="radio"
@@ -627,7 +629,7 @@
                                     <div class="select--value group" id="select_value_popup--tipo-produto"><p>Selecionar tipo do produto</p></div>
                                     <i class="icon secondary" data-feather="chevron-down"></i>
                                 </button>
-                                <ul class="group--select--item" id="select_list_popup--tipo-produto">
+                                <ul class="select--list" id="select_list_popup--tipo-produto">
                                     <li class="select--item">
                                         <input
                                             type="radio"
@@ -720,7 +722,7 @@
                                         <div class="select--value group" id="select_value_popup--cor-termo-frente"><p>Selecionar cor da frente</p></div>
                                         <i class="icon secondary" data-feather="chevron-down"></i>
                                     </button>
-                                    <ul class="group--select--item" id="select_list_popup--cor-termo-frente">
+                                    <ul class="select--list" id="select_list_popup--cor-termo-frente">
                                         <li class="select--item">
                                             <input
                                                 type="radio"
@@ -771,7 +773,7 @@
                                         <div class="select--value group" id="select_value_popup--cor-termo-verso"><p>Selecionar cor da frente</p></div>
                                         <i class="icon secondary" data-feather="chevron-down"></i>
                                     </button>
-                                    <ul class="group--select--item" id="select_list_popup--cor-termo-verso">
+                                    <ul class="select--list" id="select_list_popup--cor-termo-verso">
                                         <li class="select--item">
                                             <input
                                                 type="radio"
@@ -845,7 +847,7 @@
                                         <div class="select--value group" id="select_value_popup--cor-embossing"><p>Selecionar cor do embossing</p></div>
                                         <i class="icon secondary" data-feather="chevron-down"></i>
                                     </button>
-                                    <ul class="group--select--item" id="select_list_popup--cor-embossing">
+                                    <ul class="select--list" id="select_list_popup--cor-embossing">
                                         <li class="select--item">
                                             <input
                                                 type="radio"
@@ -911,9 +913,11 @@
                 </div>
                 <div class="popup--footer">
                     <div class="group--button">
-                        <button class="button secondary">
-                            <p>Cancelar</p>
-                        </button>
+                        <div class="popup--button--close">
+                            <button class="button secondary">
+                                <p>Cancelar</p>
+                            </button>
+                        </div>
                         <button class="button primary">
                             <p>Gravar</p>
                         </button>

@@ -75,6 +75,7 @@ a {
 }
 
 button {
+    background: none;
     border: none;
     outline: none;
 }
@@ -305,7 +306,7 @@ tfoot > tr > th {
     background: #223348;
 }
 
-.tabsheet--tab {
+.tabsheet--button {
     height: 4rem;
     display: flex;
     flex-direction: column;
@@ -332,7 +333,7 @@ tfoot > tr > th {
     border-top-left-radius: 0.1rem;
 }
 
-    .tabsheet--tab.active .tabsheet--label {
+    .tabsheet--button.active .tabsheet--label {
         background: #0c6ce9;
     }
 
@@ -562,7 +563,7 @@ tfoot > tr > th {
 
 .overlay {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -588,7 +589,9 @@ tfoot > tr > th {
 
 .popup {
     max-height: 90vh;
-    width: 100vw;
+    width: 100%;
+    display: none;
+    flex-direction: column;
 
     background: #223348;
     border-radius: 0.5rem;
@@ -607,7 +610,7 @@ tfoot > tr > th {
 
 .popup--body {
     max-height: 65vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
@@ -674,7 +677,7 @@ tfoot > tr > th {
     }
 }
 
-.group--select--item {
+.select--list {
     min-width: 100%;
     position: absolute;
     z-index: 1;
@@ -698,7 +701,7 @@ tfoot > tr > th {
 }
 
     @media (max-width:768px) {
-        .group--select--item {
+        .select--list {
             height: fit-content;
             width: 100%;
             position: fixed;
@@ -963,7 +966,7 @@ label {
     }
 }
 
-.tabsheet--tab {
+.tabsheet--button {
     p, .icon {
         color: #d9e8fcb0;
     }
