@@ -94,15 +94,23 @@ popupButtonsClose.forEach(button => {
 })
 
 // switch .pop--body
-tabButtons = document.querySelectorAll('.tabsheet--button button');
+popupTabButtons = document.querySelectorAll('.popup .tabsheet--button button');
 
-tabButtons.forEach(button => {
+popupTabButtons.forEach(button => {
     button.addEventListener('click', event => {
         // close other .popup--body
-        const popupBodies = document.getElementsByClassName('popup--body');
+        const popupBodies = document.querySelectorAll('.popup--body');
         for (i = 0; i < popupBodies.length; i++) {
             if (popupBodies[i].classList.contains('show')) {
                 popupBodies[i].classList.remove('show');
+            }
+        }
+
+        // inactivate other .tab
+        const tabsheetButtons = document.querySelectorAll('.popup .tabsheet--button');
+        for (i = 0; i < tabsheetButtons.length; i++) {
+            if (tabsheetButtons[i].classList.contains('active')) {
+                tabsheetButtons[i].classList.remove('active');
             }
         }
 
@@ -112,5 +120,9 @@ tabButtons.forEach(button => {
         // open .popup--body
         const popupBody = document.getElementById(`popup_body_${popupBodyName}`);
         popupBody.classList.add('show');
+
+        // activate .tab
+        const tabsheetButton = button.closest('.tabsheet--button');
+        tabsheetButton.classList.add('active');
     })
 })
