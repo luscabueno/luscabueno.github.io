@@ -492,6 +492,12 @@ tfoot > tr > th {
     }
 }
 
+.group--checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
 .filter {
     flex: 1;
     display: flex;
@@ -630,12 +636,6 @@ tfoot > tr > th {
     border-bottom-right-radius: 0.5rem;
 }
 
-.group--radio {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1rem;
-}
-
 .select--button {
     flex: 1;
     position: relative;
@@ -763,12 +763,12 @@ tfoot > tr > th {
     text-align: right;
 }
 
-.show {
-    display: flex;
+.conditional--field {
+    display: none;
 }
 
-.hide {
-    display: none;
+.show {
+    display: flex;
 }
 
 /* LAYOUT div borders */

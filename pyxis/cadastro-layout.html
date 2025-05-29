@@ -664,7 +664,7 @@
                     <div class="popup--body--detail">
                         <div class="group--label">
                             <label>Gravação plana</label>
-                            <div class="group--radio">
+                            <div class="group--checkbox">
                                 <div class="group">
                                     <input
                                         type="radio"
@@ -788,7 +788,7 @@
                     <div class="popup--body--detail">
                         <div class="group--label">
                             <label>Gravação relevo</label>
-                            <div class="group--radio">
+                            <div class="group--checkbox">
                                 <div class="group">
                                     <input
                                         type="checkbox"
@@ -841,20 +841,52 @@
                                             <i class="icon active" data-feather="check"></i>
                                             <p>Puro</p>
                                         </li>
+                                        <li class="select--item">
+                                            <input
+                                                type="radio"
+                                                name="popup--cor-embossing"
+                                                data-label='<p>N/A</p>'
+                                                >
+                                            <i class="icon active" data-feather="check"></i>
+                                            <p>N/A</p>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="group--label">
                                 <label>Cor indenting</label>
-                                <div class="text--field read--only">
-                                    <input value="Preto" disabled>
+                                <div class="select--button single">
+                                    <button class="text--field" id="select_button_popup--cor-indenting">
+                                        <div class="select--value group" id="select_value_popup--cor-indenting"><p>Selecionar cor do indenting</p></div>
+                                        <i class="icon secondary" data-feather="chevron-down"></i>
+                                    </button>
+                                    <ul class="select--list" id="select_list_popup--cor-indenting">
+                                        <li class="select--item">
+                                            <input
+                                                type="radio"
+                                                name="popup--cor-indenting"
+                                                data-label='<p>Preto</p>'
+                                                >
+                                            <i class="icon active" data-feather="check"></i>
+                                            <p>Preto</p>
+                                        </li>
+                                        <li class="select--item">
+                                            <input
+                                                type="radio"
+                                                name="popup--cor-indenting"
+                                                data-label='<p>N/A</p>'
+                                                >
+                                            <i class="icon active" data-feather="check"></i>
+                                            <p>N/A</p>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="group--label">
                         <label>Status</label>
-                        <div class="group--radio">
+                        <div class="group--checkbox">
                             <div class="group">
                                 <input
                                     type="radio"

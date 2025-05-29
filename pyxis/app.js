@@ -126,3 +126,21 @@ popupTabButtons.forEach(button => {
         tabsheetButton.classList.add('active');
     })
 })
+
+// show and hide .conditional--field (speculative-only cause there are a ton of variables to consider with this function)
+checkboxEnablers = document.querySelectorAll('.checkbox--enabler');
+
+checkboxEnablers.forEach(function(element) {
+    element.addEventListener('change', event => {
+        // obtain .conditional--field name
+        const conditionalFieldName = element.id.split('_')[1];
+
+        // show or hide .conditional--field
+        const conditionalField = document.getElementById(`conditional_field_${conditionalFieldName}`);
+        if (element.checked) {
+            conditionalField.classList.add('show');
+        } else {
+            conditionalField.classList.remove('show');
+        }
+    })
+})
