@@ -570,20 +570,20 @@ tfoot > tr > th {
     display: none;
     justify-content: center;
     align-items: center;
-    padding: 10rem;
+    padding: 0 20rem;
     
     background-color: #090A0B33;
 }
 
-    @media(max-width: 1024px) {
+    @media(max-width: 1440px) {
         .overlay {
-            padding: 6rem;
+            padding: 0 6rem;
         }
     }
 
     @media(max-width: 768px) {
         .overlay {
-            padding: 2rem;
+            padding: 0 2rem;
         }
     }
 
