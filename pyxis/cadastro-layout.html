@@ -1400,8 +1400,8 @@
                         </div>
                     </div>
                     <div class="group--action right">
-                        <div class="popup--button">
-                            <button class="button primary" id="popup_button_novo-layout">
+                        <div class="popup--l2--button">
+                            <button class="button primary" id="popup_l2_button_adicionar-maquina">
                                 <i class="icon" data-feather="plus"></i>
                                 <p>Adicionar máquina</p>
                             </button>
@@ -2068,6 +2068,110 @@
                             <label>DLL</label>
                             <div class="text--field read--only">
                                 <input value="PERSOALU.dll" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup--footer">
+                    <div class="group--button">
+                        <div class="popup--l2--button--close sub">
+                            <button class="button secondary">
+                                <p>Cancelar</p>
+                            </button>
+                        </div>
+                        <button class="button primary">
+                            <p>Gravar</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup--l2" id="popup_l2_adicionar-maquina">
+                <div class="popup--header">
+                    <h4>Adicionar máquina</h4>
+                    <div class="popup--l2--button--close">
+                        <button class="button secondary">
+                            <i class="icon" data-feather="x"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="popup--body">
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Unidade</label>
+                            <div class="select--button single">
+                                <button class="text--field" id="select_button_popup--l2--unidade">
+                                    <div class="select--value group" id="select_value_popup--l2--unidade"><p>Selecionar unidade</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list" id="select_list_popup--l2--unidade">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--unidade"
+                                            data-label='<div class="badge">CWB</div><p>Colombo/PR</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge">CWB</div>
+                                        <p>Colombo/PR</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--unidade"
+                                            data-label='<div class="badge">SBC</div><p>São Bernardo do Campo/SP</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge">SBC</div>
+                                        <p>São Bernardo do Campo/SP</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="group--label">
+                            <label>Máquina</label>
+                            <div class="select--button single">
+                                <button class="text--field" id="select_button_popup--l2--maquina">
+                                    <div class="select--value group" id="select_value_popup--l2--maquina"><p>Selecionar ID do ATR</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list" id="select_list_popup--l2--maquina">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--maquina"
+                                            data-label='<p>Datacard 01 - MX20100</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Datacard 01 - MX20100</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--maquina"
+                                            data-label='<p>Datacard 02 - MXX210508</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Datacard 02 - MXX210508</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--maquina"
+                                            data-label='<p>Datacard 03 - MX60825</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Datacard 03 - MX60825</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--maquina"
+                                            data-label='<p>Datacard 04 - MXX210431</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Datacard 04 - MXX210431</p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
