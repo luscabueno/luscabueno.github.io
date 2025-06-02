@@ -5,6 +5,8 @@
     // feather icons
     feather.replace();
 
+// .select -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // open .select
 selectButtons = document.querySelectorAll('.select--button button');
 
@@ -62,6 +64,8 @@ window.addEventListener('click', event => {
     }
 })
 
+// .popup --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // open .overlay and .popup
 popupButtons = document.querySelectorAll('.popup--button button');
 
@@ -93,8 +97,10 @@ popupButtonsClose.forEach(button => {
     })
 })
 
-// switch .pop--body
-popupTabButtons = document.querySelectorAll('.popup .tabsheet--button button');
+// .tabsheet -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// switch .tabsheet .tab, .popup--body
+popupTabButtons = document.querySelectorAll('.popup #tabsheet_main .tabsheet--button button');
 
 popupTabButtons.forEach(button => {
     button.addEventListener('click', event => {
@@ -107,7 +113,7 @@ popupTabButtons.forEach(button => {
         }
 
         // inactivate other .tab
-        const tabsheetButtons = document.querySelectorAll('.popup .tabsheet--button');
+        const tabsheetButtons = document.querySelectorAll('.popup #tabsheet_main .tabsheet--button');
         for (i = 0; i < tabsheetButtons.length; i++) {
             if (tabsheetButtons[i].classList.contains('active')) {
                 tabsheetButtons[i].classList.remove('active');
@@ -124,8 +130,91 @@ popupTabButtons.forEach(button => {
         // activate .tab
         const tabsheetButton = button.closest('.tabsheet--button');
         tabsheetButton.classList.add('active');
+
+        // inactivate other .tabsheet--sub
+        const tabsheetSubs = document.querySelectorAll('.tabsheet--sub');
+        for (i = 0; i < tabsheetSubs.length; i++) {
+            if (tabsheetSubs[i].classList.contains('show')) {
+                tabsheetSubs[i].classList.remove('show');
+            }
+        }
+
+        // open .tabsheet--sub
+        const tabsheetSub = document.getElementById(`tabsheet_sub_${popupBodyName}`);
+        tabsheetSub.classList.add('show');
     })
 })
+
+// .tabsheet--sub ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// .switch .tabsheet--sub .tab, .popup--body--sub
+popupSubTabButtons = document.querySelectorAll('.popup .tabsheet--sub .tabsheet--button button');
+
+popupSubTabButtons.forEach(button => {
+    button.addEventListener('click', event => {
+        // close other .popup--body--sub
+        const popupBodiesSub = document.querySelectorAll('.popup--body--sub');
+        for (i = 0; i < popupBodiesSub.length; i++) {
+            if (popupBodiesSub[i].classList.contains('show')) {
+                popupBodiesSub[i].classList.remove('show');
+            }
+        }
+
+        // inactivate other .tab
+        const tabsheetButtons = document.querySelectorAll('.popup .tabsheet--sub .tabsheet--button');
+        for (i = 0; i < tabsheetButtons.length; i++) {
+            if (tabsheetButtons[i].classList.contains('active')) {
+                tabsheetButtons[i].classList.remove('active');
+            }
+        }
+
+        // obtain .popup--body name
+        const popupBodySubName = button.id.split('_')[2];
+
+        // open .popup--body--sub
+        const popupBodySub = document.getElementById(`popup_body_sub_${popupBodySubName}`);
+        popupBodySub.classList.add('show');
+
+        // activate .tab
+        const tabsheetButton = button.closest('.tabsheet--button');
+        tabsheetButton.classList.add('active');
+    })
+})
+
+// .popup--l2 ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// open .overlay--l2 and .popup--l2
+popupL2Buttons = document.querySelectorAll('.popup--l2--button button');
+
+popupL2Buttons.forEach(button => {
+    button.addEventListener('click', event => {
+        // obtain .popup--l2 name
+        const popupL2Name = button.id.split("_")[3];
+
+        // open .overlay--l2
+        const overlayL2 = document.getElementById('overlay_l2');
+        overlayL2.classList.add('show');
+
+        // open .popup--l2
+        const popupL2 = document.getElementById(`popup_l2_${popupL2Name}`);
+        popupL2.classList.add('show');
+    })
+})
+
+// close .overlay--l2 and .popup--l2
+popupL2ButtonsClose = document.querySelectorAll('.popup--l2--button--close button');
+
+popupL2ButtonsClose.forEach(button => {
+    button.addEventListener('click', event => {
+        const popupL2 = button.closest('.popup--l2');
+        popupL2.classList.remove('show');
+
+        const overlayL2 = document.getElementById('overlay_l2');
+        overlayL2.classList.remove('show');
+    })
+})
+
+// .enabler (WIP)-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // show and hide .conditional--field (speculative-only cause there are a ton of variables to consider with this function)
 checkboxEnablers = document.querySelectorAll('.checkbox--enabler');

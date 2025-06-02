@@ -201,16 +201,12 @@
             </div>
         </div>
         <div class="table--body">
-            <div class="group--action">
-                <div class="group--action--sub">
-                </div>
-                <div class="group--action--sub">
-                    <div class="popup--button">
-                        <button class="button primary" id="popup_button_novo-layout">
-                            <i class="icon" data-feather="plus"></i>
-                            <p>Novo layout</p>
-                        </button>
-                    </div>
+            <div class="group--action right">
+                <div class="popup--button">
+                    <button class="button primary" id="popup_button_novo-layout">
+                        <i class="icon" data-feather="plus"></i>
+                        <p>Novo layout</p>
+                    </button>
                 </div>
             </div>
             <div class="table--card">
@@ -317,7 +313,7 @@
                                 <td></td>
                                 <td>Preto</td>
                                 <td>
-                                    <div class="group space-between">
+                                    <div class="group">
                                         <div class="group">
                                             <span>Multos</span>
                                             <p class="size-xs secondary">05BB</p>
@@ -355,7 +351,7 @@
                                 <td></td>
                                 <td>Preto</td>
                                 <td>
-                                    <div class="group space-between">
+                                    <div class="group">
                                         <div class="group">
                                             <span>Multos</span>
                                             <p class="size-xs secondary">05BF</p>
@@ -393,7 +389,7 @@
                                 <td>Dourado</td>
                                 <td></td>
                                 <td>
-                                    <div class="group space-between">
+                                    <div class="group">
                                         <div class="group">
                                             <span>Multos</span>
                                             <p class="size-xs secondary">05BF</p>
@@ -468,7 +464,7 @@
                                 <td>Secora</td>
                                 <td>Named</td>
                                 <td>
-                                    <div class="group space-between">
+                                    <div class="group">
                                         <span>Ativo</span>
                                         <div class="badge error">
                                             <i class="icon" data-feather="alert-circle"></i>
@@ -521,7 +517,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="tabsheet">
+                <div class="tabsheet" id="tabsheet_main">
                     <div class="tabsheet--button active">
                         <button class="tabsheet--title" id="tabsheet_button_novo-layout--geral">
                             <p>Geral</p>
@@ -549,6 +545,20 @@
                     <div class="tabsheet--button">
                         <button class="tabsheet--title" id="tabsheet_button_novo-layout--imagens">
                             <p>Imagens</p>
+                        </button>
+                        <div class="tabsheet--label"></div>
+                    </div>
+                </div>
+                <div class="tabsheet tabsheet--sub" id="tabsheet_sub_novo-layout--imagens">
+                    <div class="tabsheet--button active">
+                        <button class="tabsheet--title" id="tabsheet_button_novo-layout--imagens--frente">
+                            <p>Frente</p>
+                        </button>
+                        <div class="tabsheet--label"></div>
+                    </div>
+                    <div class="tabsheet--button">
+                        <button class="tabsheet--title" id="tabsheet_button_novo-layout--imagens--verso">
+                            <p>Verso</p>
                         </button>
                         <div class="tabsheet--label"></div>
                     </div>
@@ -661,7 +671,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="popup--body--detail">
+                    <div class="detail">
                         <div class="group--form">
                             <div class="group--label">
                                 <label>Termografia/DoD frente</label>
@@ -876,13 +886,1195 @@
                         </div>
                     </div>
                 </div>
-                <div class="popup--body" id="popup_body_novo-layout--campos">Campos</div>
-                <div class="popup--body" id="popup_body_novo-layout--chips">Chips</div>
-                <div class="popup--body" id="popup_body_novo-layout--maquinas">Máquinas</div>
-                <div class="popup--body" id="popup_body_novo-layout--imagens">Imagens</div>
+                <div class="popup--body" id="popup_body_novo-layout--campos">
+                    <div class="table--card">
+                        <div class="table--card--body">
+                            <table>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col class="col--action">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="group">
+                                                <span>Campo</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>Fonte</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>Tamanho</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>Peso</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>Inclinação</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>Status</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group right">
+                                                <span>Ações</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="badge">PAN_1</div>
+                                        </td>
+                                        <td>Inter</td>
+                                        <td>
+                                            <div class="group">
+                                                <span>16</span>
+                                                <p class="size-xs secondary">pt</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">700</div>
+                                                <span>Bold</span>
+                                            </div>
+                                        </td>
+                                        <td>Regular</td>
+                                        <td>Obrigatório</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="badge">CVV_1</div>
+                                        </td>
+                                        <td>Mastercard Reverse Indent</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Obrigatório</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="badge">NOME_PORTADOR</div>
+                                        </td>
+                                        <td>Inter</td>
+                                        <td>
+                                            <div class="group">
+                                                <span>12</span>
+                                                <p class="size-xs secondary">pt</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">700</div>
+                                                <span>Bold</span>
+                                            </div>
+                                        </td>
+                                        <td>Regular</td>
+                                        <td>Obrigatório</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="badge">DATA_VALIDADE</div>
+                                        </td>
+                                        <td>Inter</td>
+                                        <td>
+                                            <div class="group">
+                                                <span>8</span>
+                                                <p class="size-xs secondary">pt</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">400</div>
+                                                <span>Regular</span>
+                                            </div>
+                                        </td>
+                                        <td>Regular</td>
+                                        <td>Obrigatório</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="badge">NUMERO_AGENCIA</div>
+                                        </td>
+                                        <td>Inter</td>
+                                        <td>
+                                            <div class="group">
+                                                <span>8</span>
+                                                <p class="size-xs secondary">pt</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">400</div>
+                                                <span>Regular</span>
+                                            </div>
+                                        </td>
+                                        <td>Regular</td>
+                                        <td>Opcional</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="badge">NUMERO_CONTA</div>
+                                        </td>
+                                        <td>Inter</td>
+                                        <td>
+                                            <div class="group">
+                                                <span>8</span>
+                                                <p class="size-xs secondary">pt</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">400</div>
+                                                <span>Regular</span>
+                                            </div>
+                                        </td>
+                                        <td>Regular</td>
+                                        <td>Opcional</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">
+                                                    <i class="icon" data-feather="plus"></i>
+                                                    <p>1</p>
+                                                </div>
+                                                <span>NOME_AGENCIA</span>
+                                            </div>
+                                        </td>
+                                        <td>Inter</td>
+                                        <td>
+                                            <div class="group">
+                                                <span>8</span>
+                                                <p class="size-xs secondary">pt</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">400</div>
+                                                <span>Regular</span>
+                                            </div>
+                                        </td>
+                                        <td>Regular</td>
+                                        <td>Opcional</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="group--action right">
+                        <div class="popup--l2--button">
+                            <button class="button primary" id="popup_l2_button_adicionar-campo">
+                                <i class="icon" data-feather="plus"></i>
+                                <p>Adicionar campo</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup--body" id="popup_body_novo-layout--chips">
+                    <div class="table--card">
+                        <div class="table--card--body">
+                            <table>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col class="col--action">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="group">
+                                                <span>Fabricante</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>ID ATR</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>Cor</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>DLL</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group right">
+                                                <span>Ações</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Multos</td>
+                                        <td>05BB</td>
+                                        <td>Prata</td>
+                                        <td>PERSOALU.dll</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Multos</td>
+                                        <td>05BF</td>
+                                        <td>Prata</td>
+                                        <td>PERSOALU.dll</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Multos</td>
+                                        <td>6B02</td>
+                                        <td>Prata</td>
+                                        <td>PERSOALU.dll</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Secora</td>
+                                        <td></td>
+                                        <td>Prata</td>
+                                        <td>PERSOCPSEMVDDA.dll</td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="group--action right">
+                        <div class="popup--l2--button">
+                            <button class="button primary" id="popup_l2_button_adicionar-perfil-chip">
+                                <i class="icon" data-feather="plus"></i>
+                                <p>Adicionar perfil de chip</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup--body" id="popup_body_novo-layout--maquinas">
+                    <div class="table--card">
+                        <div class="table--card--body">
+                            <table>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col class="col--action">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="group">
+                                                <span>Código interno</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>Serial</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group">
+                                                <span>Unidade</span>
+                                                <div class="sorting">
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                    <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="group right">
+                                                <span>Ações</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Datacard 01</td>
+                                        <td>MX20100</td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">CWB</div>
+                                                <span>Colombo/PR</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Datacard 02</td>
+                                        <td>MXX210508</td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">CWB</div>
+                                                <span>Colombo/PR</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Datacard 03</td>
+                                        <td>MX60825</td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">CWB</div>
+                                                <span>Colombo/PR</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Datacard 05</td>
+                                        <td>MXX210348</td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">SBC</div>
+                                                <span>São Bernardo do Campo/SP</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Datacard 06</td>
+                                        <td>MXX210475</td>
+                                        <td>
+                                            <div class="group">
+                                                <div class="badge">SBC</div>
+                                                <span>São Bernardo do Campo/SP</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="group right">
+                                                <i class="icon secondary" data-feather="edit-3"></i>
+                                                <i class="icon secondary" data-feather="trash-2"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="group--action right">
+                        <div class="popup--button">
+                            <button class="button primary" id="popup_button_novo-layout">
+                                <i class="icon" data-feather="plus"></i>
+                                <p>Adicionar máquina</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup--body" id="popup_body_novo-layout--imagens">
+                    <div class="popup--body--sub show" id="popup_body_sub_novo-layout--imagens--frente">
+                        <div class="image--frame">
+                            <div class="upload--card">
+                                <div class="group--form">
+                                    <button class="button secondary">
+                                        <p>Adicionar imagem...</p>
+                                    </button>
+                                    <div class="group center">
+                                        <i class="icon secondary" data-feather="upload"></i>
+                                        <p class="secondary">Arraste aqui a imagem</p>
+                                    </div>
+                                </div>
+                                <p>OCT_JOB_001_F.png</p>
+                                <p class="size-xs tertiary">19.7MB: 50% (tempo restante: 00:00:17)</p>
+                                <div class="progress--bar">
+                                    <div class="progress--bar progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup--body--sub" id="popup_body_sub_novo-layout--imagens--verso">
+                        <div class="image--frame">
+                            <img src="img/model/EXM_CAR Produto exemplo (Mastercard) [001234] V.png">
+                        </div>
+                        <div class="group--action right">
+                            <div class="popup--button">
+                                <button class="button secondary" id="popup_button_novo-layout">
+                                    <i class="icon" data-feather="trash-2"></i>
+                                    <p>Excluir imagem</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="popup--footer">
                     <div class="group--button">
                         <div class="popup--button--close">
+                            <button class="button secondary">
+                                <p>Cancelar</p>
+                            </button>
+                        </div>
+                        <button class="button primary">
+                            <p>Gravar</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay_l2">
+            <div class="popup--l2" id="popup_l2_adicionar-campo">
+                <div class="popup--header">
+                    <h4>Adicionar campo</h4>
+                    <div class="popup--l2--button--close">
+                        <button class="button secondary">
+                            <i class="icon" data-feather="x"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="popup--body">
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Campo</label>
+                            <div class="select--button single">
+                                <button class="text--field" id="select_button_popup--l2--campo">
+                                    <div class="select--value group" id="select_value_popup--l2--campo"><p>Selecionar campo</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list" id="select_list_popup--l2--campo">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>PAN_1</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>PAN_1</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>CVV_1</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>CVV_1</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>PAN_2</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>PAN_2</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>CVV_2</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>CVV_2</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>PAN_3</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>PAN_3</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>CVV_3</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>CVV_3</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>NOME_PORTADOR</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>NOME_PORTADOR</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>NOME_EMPRESA</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>NOME_EMPRESA</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>DATA_EMISSAO</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>DATA_EMISSAO</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>DATA_VALIDADE</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>DATA_VALIDADE</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>NUMERO_AGENCIA</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>NUMERO_AGENCIA</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>NUMERO_CONTA</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>NUMERO_CONTA</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>MATRICULA</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>MATRICULA</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>ID_CARTAO</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>ID_CARTAO</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>ADICIONAL_1</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>ADICIONAL_1</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>ADICIONAL_2</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>ADICIONAL_2</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>ADICIONAL_3</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>ADICIONAL_3</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>ADICIONAL_4</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>ADICIONAL_4</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>ADICIONAL_5</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>ADICIONAL_5</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>BARCODE_CARTAO</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>BARCODE_CARTAO</p></div>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--campo"
+                                            data-label='<div class="badge"><p>QR_CODE_CARTAO</p></div>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>QR_CODE_CARTAO</p></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="group--label">
+                            <label>Nome adicional</label>
+                            <div class="text--field">
+                                <input placeholder="Insira o nome do campo adicional">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Fonte</label>
+                            <div class="select--button single">
+                                <button class="text--field" id="select_button_popup--l2--fonte">
+                                    <div class="select--value group" id="select_value_popup--l2--fonte"><p>Selecionar fonte</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list" id="select_list_popup--l2--fonte">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Archivo</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Archivo</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>ASAP</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>ASAP</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Century Gothic</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Century Gothic</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Inter</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Inter</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Forza</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Forza</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Mark Pro</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Mark Pro</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Montserrat</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Montserrat</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Museo</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Museo</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Museo Sans</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Museo Sans</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Open Sans</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Open Sans</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Quicksand</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Quicksand</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Roboto</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Roboto</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="group--label">
+                            <label>Tamanho</label>
+                            <div class="text--field">
+                                <input>
+                                <p class="size-xs secondary">pt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Peso</label>
+                            <div class="select--button single">
+                                <button class="text--field" id="select_button_popup--l2--peso">
+                                    <div class="select--value group" id="select_value_popup--l2--peso"><p>Selecionar peso</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list" id="select_list_popup--l2--peso">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>100</p></div><p>Thin</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>100</p></div>
+                                        <p>Thin</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>200</p></div><p>Extra Light</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>200</p></div>
+                                        <p>Extra Light</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>300</p></div><p>Light</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>300</p></div>
+                                        <p>Light</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>400</p></div><p>Regular</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>400</p></div>
+                                        <p>Regular</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>500</p></div><p>Medium</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>500</p></div>
+                                        <p>Medium</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>600</p></div><p>Semi bold</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>600</p></div>
+                                        <p>Semi bold</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>700</p></div><p>Bold</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>700</p></div>
+                                        <p>Bold</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>800</p></div><p>Extra Bold</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>800</p></div>
+                                        <p>Extra Bold</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>900</p></div><p>Black</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>900</p></div>
+                                        <p>Black</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="group--label">
+                            <label>Inclinação</label>
+                            <div class="select--button single">
+                                <button class="text--field" id="select_button_popup--l2--inclinacao">
+                                    <div class="select--value group" id="select_value_popup--l2--inclinacao"><p>Selecionar inclinação</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list" id="select_list_popup--l2--inclinacao">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--inclinacao"
+                                            data-label='<p>Regular</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Regular</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--inclinacao"
+                                            data-label='<p>Itálico</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Itálico</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--label">
+                        <label>Status</label>
+                        <div class="group--checkbox">
+                            <div class="group">
+                                <input
+                                    type="radio"
+                                    name="popup--status"
+                                    >
+                                <p>Obrigatório</p>
+                            </div>
+                            <div class="group">
+                                <input
+                                    type="radio"
+                                    name="popup--status"
+                                    >
+                                <p>Opcional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup--footer">
+                    <div class="group--button">
+                        <div class="popup--l2--button--close sub">
+                            <button class="button secondary">
+                                <p>Cancelar</p>
+                            </button>
+                        </div>
+                        <button class="button primary">
+                            <p>Gravar</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup--l2" id="popup_l2_adicionar-perfil-chip">
+                <div class="popup--header">
+                    <h4>Adicionar perfil de chip</h4>
+                    <div class="popup--l2--button--close">
+                        <button class="button secondary">
+                            <i class="icon" data-feather="x"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="popup--body">
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Fabricante</label>
+                            <div class="select--button single">
+                                <button class="text--field" id="select_button_popup--l2--fabricante">
+                                    <div class="select--value group" id="select_value_popup--l2--fabricante"><p>Selecionar fabricante</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list" id="select_list_popup--l2--fabricante">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fabricante"
+                                            data-label='<p>Multos</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Multos</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fabricante"
+                                            data-label='<p>Secora</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Secora</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="group--label">
+                            <label>ID ATR</label>
+                            <div class="select--button single">
+                                <button class="text--field" id="select_button_popup--l2--id-atr">
+                                    <div class="select--value group" id="select_value_popup--l2--id-atr"><p>Selecionar ID do ATR</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list" id="select_list_popup--l2--id-atr">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--id-atr"
+                                            data-label='<p>05BB</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>05BB</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--id-atr"
+                                            data-label='<p>05BF</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>05BF</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--id-atr"
+                                            data-label='<p>6B02</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>6B02</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--id-atr"
+                                            data-label='<p>N/A</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>N/A</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Cor</label>
+                            <div class="text--field read--only">
+                                <input value="Prata" disabled>
+                            </div>
+                        </div>
+                        <div class="group--label">
+                            <label>DLL</label>
+                            <div class="text--field read--only">
+                                <input value="PERSOALU.dll" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup--footer">
+                    <div class="group--button">
+                        <div class="popup--l2--button--close sub">
                             <button class="button secondary">
                                 <p>Cancelar</p>
                             </button>
