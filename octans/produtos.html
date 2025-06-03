@@ -14,11 +14,11 @@
             <div class="nav--top--sub">
                 <div class="group--button menu">
                     <div class="select--button menu">
-                        <button class="button secondary" id="select_button_menu-controle">
+                        <button class="button secondary">
                             <p>Controle</p>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_menu-controle">
+                        <ul class="select--list">
                             <li>
                                 <a class="select--item" href="produtos.html">
                                     <p>Controle de produtos</p>
@@ -32,16 +32,16 @@
                         </ul>
                     </div>
                     <div class="select--button menu">
-                        <button class="button secondary" id="select_button_menu-configuracao">
+                        <button class="button secondary">
                             <i class="icon" data-feather="settings"></i>
                         </button>
                     </div>
                     <div class="select--button menu">
-                        <button class="button secondary" id="select_button_menu-usuario">
+                        <button class="button secondary">
                             <i class="icon" data-feather="user"></i>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_menu-usuario">
+                        <ul class="select--list">
                             <li>
                                 <a class="select--item" href="index.html">
                                     <p>Log out</p>
@@ -75,16 +75,15 @@
             <div class="filter">
                 <div class="text--field--label">
                     <div class="select--button single">
-                        <button class="text--field" id="select_button_periodo">
-                            <div class="select--value group" id="select_value_periodo"><p>Selecionar período do filtro</p></div>
+                        <button class="text--field">
+                            <div class="select--value group"><p>Selecionar período do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_periodo">
+                        <ul class="select--list">
                             <li class="select--item">
                                 <input
                                     type="radio"
                                     name="periodo"
-                                    value="hoje"
                                     data-label='<p>Hoje</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -94,7 +93,6 @@
                                 <input
                                     type="radio"
                                     name="periodo"
-                                    value="semana"
                                     data-label='<p>Esta semana</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -104,7 +102,6 @@
                                 <input
                                     type="radio"
                                     name="periodo"
-                                    value="mes"
                                     data-label='<p>Este mês</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -114,7 +111,6 @@
                                 <input
                                     type="radio"
                                     name="periodo"
-                                    value="personalizado"
                                     data-label='<p>Período personalizado</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -137,16 +133,15 @@
             <div class="filter">
                 <div class="text--field--label">
                     <div class="select--button single">
-                        <button class="text--field" id="select_button_cliente">
-                            <div class="select--value group" id="select_value_cliente"><p>Selecionar cliente do filtro</p></div>
+                        <button class="text--field">
+                            <div class="select--value group"><p>Selecionar cliente do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_cliente">
+                        <ul class="select--list">
                             <li class="select--item">
                                 <input
                                     type="radio"
                                     name="cliente"
-                                    value="LEG"
                                     data-label='<div class="badge"><p>LEG</p></div><p>Legacy</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -157,12 +152,21 @@
                                 <input
                                     type="radio"
                                     name="cliente"
-                                    value="OCT"
                                     data-label='<div class="badge"><p>OCT</p></div><p>Octans</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
                                 <div class="badge"><p>OCT</p></div>
                                 <p>Octans</p>
+                            </li>
+                            <li class="select--item">
+                                <input
+                                    type="radio"
+                                    name="cliente"
+                                    data-label='<div class="badge"><p>PYX</p></div><p>Pyxis</p>'
+                                    >
+                                <i class="icon active" data-feather="check"></i>
+                                <div class="badge"><p>PYX</p></div>
+                                <p>Pyxis</p>
                             </li>
                         </ul>
                     </div>

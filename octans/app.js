@@ -1,62 +1,66 @@
-// lucide icons
-lucide.createIcons();
+// icon libraries ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// feather icons
-feather.replace();
+    // lucide icons
+    lucide.createIcons();
 
-// open .select
+    // feather icons
+    feather.replace();
+
+// .select -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// open
 selectButtons = document.querySelectorAll('.select--button button');
 
 selectButtons.forEach(button => {
     button.addEventListener('click', event => {
-        // close other .select
-        const selectLists = document.getElementsByClassName('group--select--item');
-        for (i = 0; i < selectLists.length; i++) {
-            if (selectLists[i].classList.contains('show')) {
-                selectLists[i].classList.remove('show');
+        // ul
+        const selectList = button.closest('.select--button').querySelector('ul');
+        const selectListAll = document.querySelectorAll('.select--button ul');
+        const selectListSiblings = Array.from(selectListAll).filter(element => element != selectList);
+            // close siblings
+            removeAll(selectListSiblings, 'show');
+            // open/close
+            if (selectList.classList.contains('show')) {
+                selectList.classList.remove('show');
+            } else {
+                selectList.classList.add('show');
             }
-        }
-
-        // obtain .select name
-        const selectName = button.id.split("_")[2];
-
-        // open .group--select--item
-        const selectList = document.getElementById(`select_list_${selectName}`);
-        if (selectList.classList.contains('show')) {
-            selectList.classList.remove('show')
-        } else {
-            selectList.classList.add('show');
-        }
     })
 })
 
-// choose .select
-selectItemInputs = document.querySelectorAll('.select--item input');
+// choose
+selectItems = document.querySelectorAll('.select--item input');
 
-selectItemInputs.forEach(input => {
+selectItems.forEach(input => {
     input.addEventListener('click', event => {
-        // obtain .select name
-        const selectName = input.name;
+        // .select--value
+        const selectValue = input.closest('.select--button').querySelector('.select--value');
+            // change value
+            selectValue.innerHTML = input.dataset.label;
 
-        // change .select value
-        const selectValue = document.getElementById(`select_value_${selectName}`);
-        selectValue.innerHTML = input.dataset.label
-
-        // close .group--select--item
-        const selectList = document.getElementById(`select_list_${selectName}`);
-        selectList.classList.remove('show');
+        // ul
+        const selectList = input.closest('.select--button').querySelector('ul');
+            // close
+            selectList.classList.remove('show');
     })
 })
 
-// cancel .select
+// close
 window.addEventListener('click', event => {
-    const selectLists = document.getElementsByClassName('group--select--item');
+    // ul
+    const selectListAll = document.querySelectorAll('.select--button ul');
+        // close
+        if (!event.target.closest('.select--button')) {
+            removeAll(selectListAll, 'show')
+        }
+})
 
-    if (!event.target.closest('.select--button')) {
-        for (i = 0; i < selectLists.length; i++) {
-            if (selectLists[i].classList.contains('show')) {
-                selectLists[i].classList.remove('show');
-            }
+// global --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function removeAll(group, className) {
+    for (i = 0; i < group.length; i++) {
+        if (group[i].classList.contains(className)) {
+            group[i].classList.remove(className);
         }
     }
-})
+}

@@ -14,11 +14,11 @@
             <div class="nav--top--sub">
                 <div class="group--button menu">
                     <div class="select--button menu">
-                        <button class="button secondary" id="select_button_menu-controle">
+                        <button class="button secondary">
                             <p>Controle</p>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_menu-controle">
+                        <ul class="select--list">
                             <li>
                                 <a class="select--item" href="produtos.html">
                                     <p>Controle de produtos</p>
@@ -32,16 +32,16 @@
                         </ul>
                     </div>
                     <div class="select--button menu">
-                        <button class="button secondary" id="select_button_menu-configuracao">
+                        <button class="button secondary">
                             <i class="icon" data-feather="settings"></i>
                         </button>
                     </div>
                     <div class="select--button menu">
-                        <button class="button secondary" id="select_button_menu-usuario">
+                        <button class="button secondary">
                             <i class="icon" data-feather="user"></i>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_menu-usuario">
+                        <ul class="select--list">
                             <li>
                                 <a class="select--item" href="index.html">
                                     <p>Log out</p>
@@ -75,16 +75,15 @@
             <div class="filter">
                 <div class="text--field--label">
                     <div class="select--button single">
-                        <button class="text--field" id="select_button_coluna">
-                            <div class="select--value group" id="select_value_coluna"><p>Selecionar coluna do filtro</p></div>
+                        <button class="text--field">
+                            <div class="select--value group"><p>Selecionar coluna do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_coluna">
+                        <ul class="select--list">
                             <li class="select--item">
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="op"
                                     data-label='<p>OP</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -94,7 +93,6 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="id_cartao"
                                     data-label='<p>ID cartão</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -104,8 +102,7 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="cpf"
-                                    data-label='<p>CPF</p>'
+                                    data-label='<div class="badge contrast"><p>CPF</p></div>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
                                 <div class="badge contrast"><p>CPF</p></div>
@@ -114,7 +111,6 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="modalidade_entrega"
                                     data-label='<div class="badge"><p>MODALIDADE_ENTREGA</p></div>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -124,7 +120,6 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="hawb"
                                     data-label='<p>HAWB</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -134,7 +129,6 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="nome_portador"
                                     data-label='<p>Nome do portador</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -144,7 +138,6 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="produto"
                                     data-label='<p>Produto</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -154,7 +147,6 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="data_processamento"
                                     data-label='<p>Data de processamento</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -164,7 +156,6 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="data_expedicao"
                                     data-label='<p>Data de expedição</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -174,7 +165,6 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="data_postagem"
                                     data-label='<p>Data de postagem</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -184,7 +174,6 @@
                                 <input
                                     type="radio"
                                     name="coluna"
-                                    value="data_entrega"
                                     data-label='<p>Data de entrega</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -202,16 +191,15 @@
             <div class="filter">
                 <div class="text--field--label">
                     <div class="select--button single">
-                        <button class="text--field" id="select_button_cliente">
-                            <div class="select--value group" id="select_value_cliente"><p>Selecionar cliente do filtro</p></div>
+                        <button class="text--field">
+                            <div class="select--value group"><p>Selecionar cliente do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item" id="select_list_cliente">
+                        <ul class="select--list">
                             <li class="select--item">
                                 <input
                                     type="radio"
                                     name="cliente"
-                                    value="LEG"
                                     data-label='<div class="badge"><p>LEG</p></div><p>Legacy</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>
@@ -222,7 +210,6 @@
                                 <input
                                     type="radio"
                                     name="cliente"
-                                    value="OCT"
                                     data-label='<div class="badge"><p>OCT</p></div><p>Octans</p>'
                                     >
                                 <i class="icon active" data-feather="check"></i>

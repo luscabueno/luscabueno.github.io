@@ -300,10 +300,6 @@ tfoot > tr > th {
     background: #223348;
 }
 
-.tabsheet--sub {
-    display: none;
-}
-
 .tabsheet--button {
     height: 4rem;
     display: flex;
@@ -566,7 +562,7 @@ tfoot > tr > th {
     align-items: center;
 
     & img {
-        max-height: 40vh;
+        max-height: 35vh;
         max-width: 100%;
     }
 }
@@ -601,7 +597,7 @@ tfoot > tr > th {
 }
 
 .popup {
-    height: 90vh;
+    height: 85vh;
     display: none;
     flex-direction: column;
 
@@ -609,39 +605,29 @@ tfoot > tr > th {
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
 
-    &#popup_novo-layout {
-        height: 90vh;
+    &#popup_window_novo-layout {
         width: 70vw;
-    }
 
-    @media (max-width: 1440px) {
-        &#popup_novo-layout {
+        @media (max-width: 1440px) {
             width: 80vw;
         }
-    }
 
-    @media (max-width: 768px) {
-        &#popup_novo-layout {
+        @media (max-width: 768px) {
             width: 90vw;
         }
     }
-}
 
-.popup--l2 {
-    width: 50vw;
-    display: none;
-    flex-direction: column;
+    &.l1 {
+        height: unset;
+        width: 50vw;
 
-    background: #223348;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
+        @media (max-width: 1440px) {
+            width: 60vw;
+        }
 
-    @media (max-width: 1440px) {
-        width: 60vw;
-    }
-
-    @media (max-width: 768px) {
-        width: 80vw;
+        @media (max-width: 768px) {
+            width: 80vw;
+        }
     }
 }
 
@@ -663,7 +649,11 @@ tfoot > tr > th {
     gap: 1rem;
     overflow-y: auto;
 
-    .popup--l2 & {
+    &.multi {
+        padding: 0;
+    }
+
+    .popup.l1 & {
         display: flex;
         overflow: visible;
     }
@@ -673,6 +663,7 @@ tfoot > tr > th {
     flex: 1;
     display: none;
     flex-direction: column;
+    padding: 2rem;
     gap: 1rem;
 }
 
