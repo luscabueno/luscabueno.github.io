@@ -123,26 +123,26 @@ TabButtons.forEach(button => {
         const popupBodyName = button.id.split('_')[2];
         const popupBody = document.getElementById(`popup_body_${popupBodyName}`);
         const popupBodyAll = document.querySelectorAll('.popup--body');
-        const popupBodySubAll = document.querySelectorAll('.popup--body--sub');
-        const popupBodySubFirst = popupBody.querySelector('.popup--body--sub');
             // close siblings
-            if (tabsheet.classList.contains('tabsheet--sub')) {
-                removeAll(popupBodySubAll, 'show');
-            } else {
+            if (!tabsheet.classList.contains('tabsheet--sub')) {
                 removeAll(popupBodyAll, 'show');
             }
             // open
             popupBody.classList.add('show');
 
         // .popup--body--sub
+        const popupBodySubAll = document.querySelectorAll('.popup--body--sub');
+        const popupBodySubFirst = popupBody.querySelector('.popup--body--sub');
             // close siblings
-            if (popupBody.querySelector('.tabsheet--sub')) {
+            if (popupBody.querySelector('.tabsheet--sub') || tabsheet.classList.contains('tabsheet--sub')) {
                 removeAll(popupBodySubAll, 'show');
             }
             // open first
             if (popupBody.querySelector('.tabsheet--sub')) {
                 popupBodySubFirst.classList.add('show');
             }
+            // open
+            popupBody.classList.add('show');
 
         // .tabsheet--button
         const tabsheetButton = button.closest('.tabsheet--button');
