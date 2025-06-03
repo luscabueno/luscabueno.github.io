@@ -68,29 +68,29 @@ popupButtons.forEach(button => {
             // open
             popup.classList.add('show');
 
-        // .tab--body
-        const tabBodyAll = popup.querySelectorAll('.tab--body');
-        const tabBodyFirst = popup.querySelector('.tab--body');
-            // close siblings
-            removeAll(tabBodyAll, 'show');
-            // open first
-            if (popup.querySelector('.tabsheet')) {
-                tabBodyFirst.classList.add('show');
-            }
-
         // .overlay
         const overlay = popup.closest('.overlay');
             // open
             overlay.classList.add('show');
 
+        // .tab--body
+            if (popup.querySelector('.tabsheet')) {
+                const tabBodyAll = popup.querySelectorAll('.tab--body');
+                const tabBodyFirst = popup.querySelector('.tab--body');
+                    // close all children
+                    removeAll(tabBodyAll, 'show');
+                    // open first child
+                    tabBodyFirst.classList.add('show');
+            }
+
         // .tabsheet--button
             if (popup.querySelector('.tabsheet')) {
                 const tabsheetButtonAll = popup.querySelector('.tabsheet').querySelectorAll('.tabsheet--button');
                 const tabsheetButtonFirst = popup.querySelector('.tabsheet--button');
-                // inactivate siblings
-                removeAll(tabsheetButtonAll, 'active');
-                // activate first
-                tabsheetButtonFirst.classList.add('active');
+                    // inactivate all children
+                    removeAll(tabsheetButtonAll, 'active');
+                    // activate first child
+                    tabsheetButtonFirst.classList.add('active');
             }
     })
 })
@@ -119,29 +119,16 @@ TabButtons = document.querySelectorAll('.tabsheet--button button');
 
 TabButtons.forEach(button => {
     button.addEventListener('click', event => {
-        const tabsheet = button.closest('.tabsheet');
 
         // .tab--body
-        const tabBodyName = button.id.split('_')[2];
-        const tabBody = document.getElementById(`popup_body_${tabBodyName}`);
-        const tabBodyAll = document.querySelectorAll('.tab--body');
+        const tabBody = document.getElementById(`tab_body_${button.id.split('_')[2]}`);
+        const tabBodyAll = button.closest('.tab--body').querySelectorAll('.tab--body');
+        const tabBodyFirst = tabBody.querySelector('.tab--body');
             // close siblings
-            if (!tabsheet.classList.contains('tabsheet--sub')) {
-                removeAll(tabBodyAll, 'show');
-            }
-            // open
-            tabBody.classList.add('show');
-
-        // .tab--body--sub
-        const tabBodySubAll = document.querySelectorAll('.tab--body--sub');
-        const tabBodySubFirst = tabBody.querySelector('.tab--body--sub');
-            // close siblings
-            if (tabBody.querySelector('.tabsheet--sub') || tabsheet.classList.contains('tabsheet--sub')) {
-                removeAll(tabBodySubAll, 'show');
-            }
-            // open first
-            if (tabBody.querySelector('.tabsheet--sub')) {
-                tabBodySubFirst.classList.add('show');
+            removeAll(tabBodyAll, 'show');
+            // open first child
+            if (tabBody.querySelector('.tabsheet')) {
+                tabBodyFirst.classList.add('show');
             }
             // open
             tabBody.classList.add('show');
@@ -149,23 +136,20 @@ TabButtons.forEach(button => {
         // .tabsheet--button
         const tabsheetButton = button.closest('.tabsheet--button');
         const tabsheetButtonAll = button.closest('.tabsheet').querySelectorAll('.tabsheet--button');
+        const tabsheetButtonChildren = tabBody.querySelectorAll('.tabsheet--button');
+        const tabsheetButtonFirst = tabBody.querySelector('.tabsheet--button');
             // inactivate siblings
             removeAll(tabsheetButtonAll, 'active');
+            // inactivate children
+            if (tabBody.querySelector('.tabsheet')) {
+                removeAll(tabsheetButtonChildren, 'active');
+            }
+            // activate first child
+            if (tabBody.querySelector('.tabsheet')) {
+                tabsheetButtonFirst.classList.add('active');
+            }
             // activate
             tabsheetButton.classList.add('active');
-
-        // .tabsheet--sub .tabsheet--button
-        const tabsheetSub = tabBody.querySelector('.tabsheet--sub');
-        const tabsheetSubButtonAll = tabBody.querySelectorAll('.tabsheet--sub .tabsheet--button');
-            // inactivate siblings
-            if (tabBody.querySelector('.tabsheet--sub')) {
-                removeAll(tabsheetSubButtonAll, 'active');
-            }
-            // activate first
-            if (tabBody.querySelector('.tabsheet--sub')) {
-                const tabsheetSubButtonFirst = tabsheetSub.querySelector('.tabsheet--button');
-                tabsheetSubButtonFirst.classList.add('active');
-            }
     })
 })
 
