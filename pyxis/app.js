@@ -68,13 +68,15 @@ popupButtons.forEach(button => {
             // open
             popup.classList.add('show');
 
-        // .popup--body
-        const popupBodyAll = popup.querySelectorAll('.popup--body');
-        const popupBodyFirst = popup.querySelector('.popup--body');
+        // .tab--body
+        const tabBodyAll = popup.querySelectorAll('.tab--body');
+        const tabBodyFirst = popup.querySelector('.tab--body');
             // close siblings
-            removeAll(popupBodyAll, 'show');
+            removeAll(tabBodyAll, 'show');
             // open first
-            popupBodyFirst.classList.add('show');
+            if (popup.querySelector('.tabsheet')) {
+                tabBodyFirst.classList.add('show');
+            }
 
         // .overlay
         const overlay = popup.closest('.overlay');
@@ -119,30 +121,30 @@ TabButtons.forEach(button => {
     button.addEventListener('click', event => {
         const tabsheet = button.closest('.tabsheet');
 
-        // .popup--body
-        const popupBodyName = button.id.split('_')[2];
-        const popupBody = document.getElementById(`popup_body_${popupBodyName}`);
-        const popupBodyAll = document.querySelectorAll('.popup--body');
+        // .tab--body
+        const tabBodyName = button.id.split('_')[2];
+        const tabBody = document.getElementById(`popup_body_${tabBodyName}`);
+        const tabBodyAll = document.querySelectorAll('.tab--body');
             // close siblings
             if (!tabsheet.classList.contains('tabsheet--sub')) {
-                removeAll(popupBodyAll, 'show');
+                removeAll(tabBodyAll, 'show');
             }
             // open
-            popupBody.classList.add('show');
+            tabBody.classList.add('show');
 
-        // .popup--body--sub
-        const popupBodySubAll = document.querySelectorAll('.popup--body--sub');
-        const popupBodySubFirst = popupBody.querySelector('.popup--body--sub');
+        // .tab--body--sub
+        const tabBodySubAll = document.querySelectorAll('.tab--body--sub');
+        const tabBodySubFirst = tabBody.querySelector('.tab--body--sub');
             // close siblings
-            if (popupBody.querySelector('.tabsheet--sub') || tabsheet.classList.contains('tabsheet--sub')) {
-                removeAll(popupBodySubAll, 'show');
+            if (tabBody.querySelector('.tabsheet--sub') || tabsheet.classList.contains('tabsheet--sub')) {
+                removeAll(tabBodySubAll, 'show');
             }
             // open first
-            if (popupBody.querySelector('.tabsheet--sub')) {
-                popupBodySubFirst.classList.add('show');
+            if (tabBody.querySelector('.tabsheet--sub')) {
+                tabBodySubFirst.classList.add('show');
             }
             // open
-            popupBody.classList.add('show');
+            tabBody.classList.add('show');
 
         // .tabsheet--button
         const tabsheetButton = button.closest('.tabsheet--button');
@@ -153,14 +155,14 @@ TabButtons.forEach(button => {
             tabsheetButton.classList.add('active');
 
         // .tabsheet--sub .tabsheet--button
-        const tabsheetSub = popupBody.querySelector('.tabsheet--sub');
-        const tabsheetSubButtonAll = popupBody.querySelectorAll('.tabsheet--sub .tabsheet--button');
+        const tabsheetSub = tabBody.querySelector('.tabsheet--sub');
+        const tabsheetSubButtonAll = tabBody.querySelectorAll('.tabsheet--sub .tabsheet--button');
             // inactivate siblings
-            if (popupBody.querySelector('.tabsheet--sub')) {
+            if (tabBody.querySelector('.tabsheet--sub')) {
                 removeAll(tabsheetSubButtonAll, 'active');
             }
             // activate first
-            if (popupBody.querySelector('.tabsheet--sub')) {
+            if (tabBody.querySelector('.tabsheet--sub')) {
                 const tabsheetSubButtonFirst = tabsheetSub.querySelector('.tabsheet--button');
                 tabsheetSubButtonFirst.classList.add('active');
             }
