@@ -94,8 +94,8 @@
                             <div class="select--value cell"><p>Selecionar coluna do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item">
-                            <li class="select--item">
+                        <ul class="select--list hide expand--button--group" id="expand_button_group_coluna">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -105,7 +105,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Classificação</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -115,7 +115,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Descrição</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -129,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filter">
+            <div class="filter hide" id="expand_body_coluna_valor">
                 <div class="text--field">
                     <input placeholder="Inserir valor do filtro">
                 </div>
@@ -160,7 +160,7 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title size-s">
-                            <i class="icon secondary" data-feather="chevron-down"></i>
+                            <i class="icon secondary expand--button--single" id="expand_button__cliente" data-feather="chevron-down"></i>
                             <div class="title">
                                 <h4>Cliente</h4>
                             </div>
@@ -179,7 +179,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table--card--body">
+                <div class="table--card--body hide" id="expand_body__cliente">
                     <table class="table--cadastro--score">
                         <colgroup>
                             <col class="col--classificacao">
@@ -305,7 +305,7 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title size-s">
-                            <i class="icon secondary" data-feather="chevron-down"></i>
+                            <i class="icon secondary expand--button--single" id="expand_button__prazo" data-feather="chevron-down"></i>
                             <div class="title">
                                 <h4>Prazo</h4>
                             </div>
@@ -324,7 +324,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table--card--body">
+                <div class="table--card--body hide" id="expand_body__prazo">
                     <table class="table--cadastro--score">
                         <colgroup>
                             <col class="col--classificacao">
@@ -425,7 +425,7 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title size-s">
-                            <i class="icon secondary" data-feather="chevron-down"></i>
+                            <i class="icon secondary expand--button--single" id="expand_button__urgencia" data-feather="chevron-down"></i>
                             <div class="title">
                                 <h4>Urgência</h4>
                             </div>
@@ -444,7 +444,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table--card--body">
+                <div class="table--card--body hide" id="expand_body__urgencia">
                     <table class="table--cadastro--score">
                         <colgroup>
                             <col class="col--classificacao">
@@ -537,7 +537,7 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title size-s">
-                            <i class="icon secondary" data-feather="chevron-down"></i>
+                            <i class="icon secondary expand--button--single" id="expand_button__complexidade" data-feather="chevron-down"></i>
                             <div class="title">
                                 <h4>Complexidade</h4>
                             </div>
@@ -556,7 +556,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table--card--body">
+                <div class="table--card--body hide" id="expand_body__complexidade">
                     <table class="table--cadastro--score">
                         <colgroup>
                             <col class="col--classificacao">
@@ -649,9 +649,9 @@
                 <div class="table--card--header">
                     <div class="table--card--header--sub">
                         <div class="group--title size-s">
-                            <i class="icon secondary" data-feather="chevron-down"></i>
+                            <i class="icon secondary expand--button--single" id="expand_button__impacto" data-feather="chevron-down"></i>
                             <div class="title">
-                                <h4>Complexidade</h4>
+                                <h4>Impacto</h4>
                             </div>
                         </div>
                     </div>
@@ -660,7 +660,7 @@
                             <div class="highlight size-s">
                                 <div class="highlight--data">
                                     <i class="icon" data-feather="anchor"></i>
-                                    <h4>15%</h4>
+                                    <h4>5%</h4>
                                 </div>
                                 <div class="highlight--label">
                                 </div>
@@ -668,7 +668,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="table--card--body">
+                <div class="table--card--body hide" id="expand_body__impacto">
                     <table class="table--cadastro--score">
                         <colgroup>
                             <col class="col--classificacao">
@@ -711,7 +711,7 @@
                         <tbody>
                             <tr>
                                 <td><div class="badge"><p>Baixo</p></div></td>
-                                <td>Complexidade rotineira</td>
+                                <td>Impacto localizado</td>
                                 <td><div class="badge success"><p>2.5</p></div></td>
                                 <td>
                                     <div class="group right">
@@ -722,7 +722,7 @@
                             </tr>
                             <tr>
                                 <td><div class="badge"><p>Médio</p></div></td>
-                                <td>Complexidade moderada</td>
+                                <td>Impacto incremental</td>
                                 <td><div class="badge warning"><p>5.0</p></div></td>
                                 <td>
                                     <div class="group right">
@@ -733,7 +733,7 @@
                             </tr>
                             <tr>
                                 <td><div class="badge"><p>Alto</p></div></td>
-                                <td>Complexidade desafiadora</td>
+                                <td>Impacto estratégico</td>
                                 <td><div class="badge error"><p>7.5</p></div></td>
                                 <td>
                                     <div class="group right">
@@ -744,7 +744,7 @@
                             </tr>
                             <tr>
                                 <td><div class="badge"><p>Crítico</p></div></td>
-                                <td>Conhecimento externo</td>
+                                <td>Redefinição do modelo de negócio</td>
                                 <td><div class="badge error"><p>10.0</p></div></td>
                                 <td>
                                     <div class="group right">

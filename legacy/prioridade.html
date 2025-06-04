@@ -124,8 +124,8 @@
                             <div class="select--value cell"><p>Selecionar coluna do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item">
-                            <li class="select--item">
+                        <ul class="select--list hide expand--button--group" id="expand_button_group_coluna">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -135,7 +135,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Score total</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -145,7 +145,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Código IS</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -155,7 +155,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Repositório</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -165,7 +165,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Cliente</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -175,7 +175,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Status</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -185,7 +185,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Prazo</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -199,7 +199,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filter">
+            <div class="filter hide" id="expand_body_coluna_valor">
                 <div class="text--field">
                     <input placeholder="Inserir valor do filtro">
                 </div>

@@ -18,7 +18,7 @@
                             <p>Controle</p>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="select--list">
+                        <ul class="select--list hide">
                             <li>
                                 <a class="select--item" href="produtos.html">
                                     <p>Controle de produtos</p>
@@ -41,7 +41,7 @@
                             <i class="icon" data-feather="user"></i>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="select--list">
+                        <ul class="select--list hide">
                             <li>
                                 <a class="select--item" href="index.html">
                                     <p>Log out</p>
@@ -79,8 +79,8 @@
                             <div class="select--value group"><p>Selecionar coluna do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="select--list">
-                            <li class="select--item">
+                        <ul class="select--list hide expand--button--group" id="expand_button_group_coluna">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -89,7 +89,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>OP</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -98,7 +98,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>ID cartão</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -107,7 +107,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <div class="badge contrast"><p>CPF</p></div>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -116,7 +116,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <div class="badge"><p>MODALIDADE_ENTREGA</p></div>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -125,7 +125,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>HAWB</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -134,7 +134,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Nome do portador</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_valor">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -143,7 +143,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Produto</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_periodo">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -152,7 +152,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Data de processamento</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_periodo">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -161,7 +161,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Data de expedição</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_periodo">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -170,7 +170,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Data de postagem</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_coluna_periodo">
                                 <input
                                     type="radio"
                                     name="coluna"
@@ -183,9 +183,19 @@
                     </div>
                 </div>
             </div>
-            <div class="filter">
+            <div class="filter hide" id="expand_body_coluna_valor">
                 <div class="text--field">
                     <input placeholder="Inserir valor do filtro">
+                </div>
+            </div>
+            <div class="filter hide" id="expand_body_coluna_periodo">
+                <div class="text--field">
+                    <input placeholder="Data de início">
+                    <i class="icon secondary" data-feather="calendar"></i>
+                </div>
+                <div class="text--field">
+                    <input placeholder="Data de fim">
+                    <i class="icon secondary" data-feather="calendar"></i>
                 </div>
             </div>
             <div class="filter">
@@ -195,7 +205,7 @@
                             <div class="select--value group"><p>Selecionar cliente do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="select--list">
+                        <ul class="select--list hide">
                             <li class="select--item">
                                 <input
                                     type="radio"

@@ -18,7 +18,7 @@
                             <p>Controle</p>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="select--list">
+                        <ul class="select--list hide">
                             <li>
                                 <a class="select--item" href="produtos.html">
                                     <p>Controle de produtos</p>
@@ -41,7 +41,7 @@
                             <i class="icon" data-feather="user"></i>
                             <i class="icon" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="select--list">
+                        <ul class="select--list hide">
                             <li>
                                 <a class="select--item" href="index.html">
                                     <p>Log out</p>
@@ -79,7 +79,7 @@
                             <div class="select--value group"><p>Selecionar período do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="select--list">
+                        <ul class="select--list hide expand--button--group" id="expand_button_group_periodo">
                             <li class="select--item">
                                 <input
                                     type="radio"
@@ -107,7 +107,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Este mês</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_periodo_personalizado">
                                 <input
                                     type="radio"
                                     name="periodo"
@@ -120,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filter">
+            <div class="filter hide" id="expand_body_periodo_personalizado">
                 <div class="text--field">
                     <input placeholder="Data de início">
                     <i class="icon secondary" data-feather="calendar"></i>
@@ -137,7 +137,7 @@
                             <div class="select--value group"><p>Selecionar cliente do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="select--list">
+                        <ul class="select--list hide">
                             <li class="select--item">
                                 <input
                                     type="radio"
@@ -410,7 +410,7 @@
                             <tr>
                                 <td>
                                     <div class="group">
-                                        <i class="icon secondary" data-feather="chevron-down"></i>
+                                        <i class="icon secondary expand--button--single" data-feather="chevron-right" id="expand_button__credito"></i>
                                         <div class="badge"><p>G3</p></div>
                                         <span>Crédito</span>
                                     </div>
@@ -430,7 +430,7 @@
                                 <td>0</td>
                                 <td>5.000</td>
                             </tr>
-                            <tr class="child">
+                            <tr class="child hide" id="expand_body__credito">
                                 <td class="nesting">
                                     <div class="group">
                                         <p class="size-xs secondary">P1JAL0022</p>
@@ -452,7 +452,7 @@
                                 <td>0</td>
                                 <td>606</td>
                             </tr>
-                            <tr class="child">
+                            <tr class="child hide" id="expand_body__credito">
                                 <td class="nesting">
                                     <div class="group">
                                         <p class="size-xs secondary">P1JAL0022</p>

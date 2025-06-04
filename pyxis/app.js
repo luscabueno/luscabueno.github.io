@@ -1,10 +1,10 @@
 // icon libraries -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // lucide icons
-    lucide.createIcons();
+// lucide icons
+lucide.createIcons();
 
-    // feather icons
-    feather.replace();
+// feather icons
+feather.replace();
 
 // select -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -18,13 +18,9 @@ selectButtons.forEach(button => {
         const selectListAll = document.querySelectorAll('.select--button ul');
         const selectListSiblings = Array.from(selectListAll).filter(element => element != selectList);
             // close siblings
-            removeAll(selectListSiblings, 'show');
+            hideAll(selectListSiblings);
             // open/close
-            if (selectList.classList.contains('show')) {
-                selectList.classList.remove('show');
-            } else {
-                selectList.classList.add('show');
-            }
+            showHide(selectList);
     })
 })
 
@@ -41,7 +37,7 @@ selectItems.forEach(input => {
         // ul
         const selectList = input.closest('.select--button').querySelector('ul');
             // close
-            selectList.classList.remove('show');
+            hide(selectList);
     })
 })
 
@@ -51,7 +47,7 @@ window.addEventListener('click', event => {
     const selectListAll = document.querySelectorAll('.select--button ul');
         // close
         if (!event.target.closest('.select--button')) {
-            removeAll(selectListAll, 'show')
+            hideAll(selectListAll);
         }
 })
 
@@ -66,21 +62,21 @@ popupButtons.forEach(button => {
         const popupName = button.id.split("_")[2];
         const popup = document.getElementById(`popup_window_${popupName}`);
             // open
-            popup.classList.add('show');
+            show(popup);
 
         // .overlay
         const overlay = popup.closest('.overlay');
             // open
-            overlay.classList.add('show');
+            show(overlay);
 
-        // .tab--body
+        // .tabsheet--body
             if (popup.querySelector('.tabsheet')) {
-                const tabBodyAll = popup.querySelectorAll('.tab--body');
-                const tabBodyFirst = popup.querySelector('.tab--body');
+                const tabBodyAll = popup.querySelectorAll('.tabsheet--body');
+                const tabBodyFirst = popup.querySelector('.tabsheet--body');
                     // close all children
-                    removeAll(tabBodyAll, 'show');
+                    hideAll(tabBodyAll);
                     // open first child
-                    tabBodyFirst.classList.add('show');
+                    show(tabBodyFirst);
             }
 
         // .tabsheet--button
@@ -88,9 +84,9 @@ popupButtons.forEach(button => {
                 const tabsheetButtonAll = popup.querySelector('.tabsheet').querySelectorAll('.tabsheet--button');
                 const tabsheetButtonFirst = popup.querySelector('.tabsheet--button');
                     // inactivate all children
-                    removeAll(tabsheetButtonAll, 'active');
+                    inactivateAll(tabsheetButtonAll);
                     // activate first child
-                    tabsheetButtonFirst.classList.add('active');
+                    activate(tabsheetButtonFirst);
             }
     })
 })
@@ -103,12 +99,12 @@ popupButtonsClose.forEach(button => {
         // .popup
         const popup = button.closest('.popup');
             // close
-            popup.classList.remove('show');
+            hide(popup);
 
         // .overlay
         const overlay = button.closest('.overlay');
             // close
-            overlay.classList.remove('show');
+            hide(overlay);
     })
 })
 
@@ -120,18 +116,18 @@ TabButtons = document.querySelectorAll('.tabsheet--button button');
 TabButtons.forEach(button => {
     button.addEventListener('click', event => {
 
-        // .tab--body
+        // .tabsheet--body
         const tabBody = document.getElementById(`tab_body_${button.id.split('_')[2]}`);
-        const tabBodyAll = button.closest('.tab--body').querySelectorAll('.tab--body');
-        const tabBodyFirst = tabBody.querySelector('.tab--body');
+        const tabBodyAll = button.closest('.tabsheet--body').querySelectorAll('.tabsheet--body');
+        const tabBodyFirst = tabBody.querySelector('.tabsheet--body');
             // close siblings
-            removeAll(tabBodyAll, 'show');
+            hideAll(tabBodyAll);
             // open first child
             if (tabBody.querySelector('.tabsheet')) {
-                tabBodyFirst.classList.add('show');
+                show(tabBodyFirst);
             }
             // open
-            tabBody.classList.add('show');
+            show(tabBody);
 
         // .tabsheet--button
         const tabsheetButton = button.closest('.tabsheet--button');
@@ -139,46 +135,115 @@ TabButtons.forEach(button => {
         const tabsheetButtonChildren = tabBody.querySelectorAll('.tabsheet--button');
         const tabsheetButtonFirst = tabBody.querySelector('.tabsheet--button');
             // inactivate siblings
-            removeAll(tabsheetButtonAll, 'active');
+            inactivateAll(tabsheetButtonAll);
             // inactivate children
             if (tabBody.querySelector('.tabsheet')) {
-                removeAll(tabsheetButtonChildren, 'active');
+                inactivateAll(tabsheetButtonChildren);
             }
             // activate first child
             if (tabBody.querySelector('.tabsheet')) {
-                tabsheetButtonFirst.classList.add('active');
+                activate(tabsheetButtonFirst);
             }
             // activate
-            tabsheetButton.classList.add('active');
+            activate(tabsheetButton);
+    })
+})
+
+// .expand -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// multi button
+expandButtonsMulti = document.querySelectorAll('.expand--button--group > *');
+
+expandButtonsMulti.forEach(element => {
+    element.addEventListener('click', event => {
+        const expandButton = element;
+        const expandButtonName = element.id.split('_')[3];
+        const expandGroup = element.closest('.expand--button--group');
+        const expandGroupName = expandGroup.id.split('_')[3];
+
+        // #expand_body_...
+        const expandBodyAll = document.querySelectorAll(`[id=expand_body_${expandGroupName}_${expandButtonName}]`);
+        const expandBodyGroupAll = document.querySelectorAll(`[id^=expand_body_${expandGroupName}]`);
+            // close siblings
+            hideAll(expandBodyGroupAll);
+            // open
+            if (!expandButton.id == '') {
+                showAll(expandBodyAll);
+            }
+    })
+})
+
+// single button
+expandButtonsSingle = document.querySelectorAll('.expand--button--single');
+
+expandButtonsSingle.forEach(element => {
+    element.addEventListener('click', event => {
+        const expandButtonName = element.id.split('_')[3];
+
+        // #expand_body_...
+        const expandBody = document.querySelectorAll(`[id=expand_body__${expandButtonName}]`);
+            // open
+            showhideAll(expandBody);
     })
 })
 
 // global --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-function removeAll(group, className) {
+// hide
+function hide(element) {
+    element.classList.add('hide');
+}
+
+function hideAll(group) {
     for (i = 0; i < group.length; i++) {
-        if (group[i].classList.contains(className)) {
-            group[i].classList.remove(className);
+        if (!group[i].classList.contains('hide')) {
+            group[i].classList.add('hide');
         }
     }
 }
 
-// .expand (WIP) -------------------------------------------------------------------------------------------------------------------------------------------------------
+// show
+function show(element) {
+    element.classList.remove('hide');
+}
 
-// show and hide .conditional--field (speculative-only cause there are a ton of variables to consider with this function)
-checkboxEnablers = document.querySelectorAll('.checkbox--enabler');
-
-checkboxEnablers.forEach(function(element) {
-    element.addEventListener('change', event => {
-        // obtain .conditional--field name
-        const conditionalFieldName = element.id.split('_')[1];
-
-        // show or hide .conditional--field
-        const conditionalField = document.getElementById(`conditional_field_${conditionalFieldName}`);
-        if (element.checked) {
-            conditionalField.classList.add('show');
-        } else {
-            conditionalField.classList.remove('show');
+function showAll(group) {
+    for (i = 0; i < group.length; i++) {
+        if (group[i].classList.contains('hide')) {
+            group[i].classList.remove('hide');
         }
-    })
-})
+    }
+}
+
+// show/hide toggle
+function showHide(element) {
+    if (element.classList.contains('hide')) {
+        element.classList.remove('hide');
+    } else {
+        element.classList.add('hide');
+    }
+}
+
+function showhideAll(group) {
+    for (i = 0; i < group.length; i++)    {
+        if (group[i].classList.contains('hide')) {
+            group[i].classList.remove('hide');
+        } else {
+            group[i].classList.add('hide');
+        }
+    }
+}
+
+// activate
+function activate(element) {
+    element.classList.add('active');
+}
+
+// inactivate
+function inactivateAll(group) {
+    for (i = 0; i < group.length; i++) {
+        if (group[i].classList.contains('active')) {
+            group[i].classList.remove('active');
+        }
+    }
+}

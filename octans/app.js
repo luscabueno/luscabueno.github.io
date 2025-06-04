@@ -1,10 +1,10 @@
 // icon libraries ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    // lucide icons
-    lucide.createIcons();
+// lucide icons
+lucide.createIcons();
 
-    // feather icons
-    feather.replace();
+// feather icons
+feather.replace();
 
 // .select -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -18,13 +18,9 @@ selectButtons.forEach(button => {
         const selectListAll = document.querySelectorAll('.select--button ul');
         const selectListSiblings = Array.from(selectListAll).filter(element => element != selectList);
             // close siblings
-            removeAll(selectListSiblings, 'show');
+            hideAll(selectListSiblings);
             // open/close
-            if (selectList.classList.contains('show')) {
-                selectList.classList.remove('show');
-            } else {
-                selectList.classList.add('show');
-            }
+            showHide(selectList);
     })
 })
 
@@ -41,7 +37,7 @@ selectItems.forEach(input => {
         // ul
         const selectList = input.closest('.select--button').querySelector('ul');
             // close
-            selectList.classList.remove('show');
+            hide(selectList);
     })
 })
 
@@ -51,16 +47,87 @@ window.addEventListener('click', event => {
     const selectListAll = document.querySelectorAll('.select--button ul');
         // close
         if (!event.target.closest('.select--button')) {
-            removeAll(selectListAll, 'show')
+            hideAll(selectListAll);
         }
+})
+
+// .expand -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// multi button
+expandButtonsMulti = document.querySelectorAll('.expand--button--group > *');
+
+expandButtonsMulti.forEach(element => {
+    element.addEventListener('click', event => {
+        const expandButton = element;
+        const expandButtonName = element.id.split('_')[3];
+        const expandGroup = element.closest('.expand--button--group');
+        const expandGroupName = expandGroup.id.split('_')[3];
+
+        // #expand_body_...
+        const expandBodyAll = document.querySelectorAll(`[id=expand_body_${expandGroupName}_${expandButtonName}]`);
+        const expandBodyGroupAll = document.querySelectorAll(`[id^=expand_body_${expandGroupName}]`);
+            // close siblings
+            hideAll(expandBodyGroupAll);
+            // open
+            if (!expandButton.id == '') {
+                showAll(expandBodyAll);
+            }
+    })
+})
+
+// single button
+expandButtonsSingle = document.querySelectorAll('.expand--button--single');
+
+expandButtonsSingle.forEach(element => {
+    element.addEventListener('click', event => {
+        const expandButtonName = element.id.split('_')[3];
+
+        // #expand_body_...
+        const expandBody = document.querySelectorAll(`[id=expand_body__${expandButtonName}]`);
+            // open
+            showhideAll(expandBody);
+    })
 })
 
 // global --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-function removeAll(group, className) {
+// hide
+function hide(element) {
+    element.classList.add('hide');
+}
+
+function hideAll(group) {
     for (i = 0; i < group.length; i++) {
-        if (group[i].classList.contains(className)) {
-            group[i].classList.remove(className);
+        if (!group[i].classList.contains('hide')) {
+            group[i].classList.add('hide');
+        }
+    }
+}
+
+// show
+function showAll(group) {
+    for (i = 0; i < group.length; i++) {
+        if (group[i].classList.contains('hide')) {
+            group[i].classList.remove('hide');
+        }
+    }
+}
+
+// show/hide toggle
+function showHide(element) {
+    if (element.classList.contains('hide')) {
+        element.classList.remove('hide');
+    } else {
+        element.classList.add('hide');
+    }
+}
+
+function showhideAll(group) {
+    for (i = 0; i < group.length; i++)    {
+        if (group[i].classList.contains('hide')) {
+            group[i].classList.remove('hide');
+        } else {
+            group[i].classList.add('hide');
         }
     }
 }

@@ -116,10 +116,10 @@
                 <div class="text--field--label">
                     <div class="select--button">
                         <button class="text--field">
-                            <div class="select--value cell"><p>Selecionar cliente do filtro</p></div>
+                            <div class="select--value cell"><p>Selecionar coluna do filtro</p></div>
                             <i class="icon secondary" data-feather="chevron-down"></i>
                         </button>
-                        <ul class="group--select--item">
+                        <ul class="select--list hide expand--button--group" id="expand_button_group_periodo">
                             <li class="select--item">
                                 <input
                                     type="radio"
@@ -150,7 +150,7 @@
                                 <i class="icon active" data-feather="check"></i>
                                 <p>Este mês</p>
                             </li>
-                            <li class="select--item">
+                            <li class="select--item" id="expand_button_periodo_personalizado">
                                 <input
                                     type="radio"
                                     name="periodo"
@@ -164,7 +164,7 @@
                     </div>
                 </div>
             </div>
-            <div class="filter">
+            <div class="filter hide" id="expand_body_periodo_personalizado">
                 <div class="text--field">
                     <input placeholder="Data de início">
                     <i class="icon secondary" data-feather="calendar"></i>

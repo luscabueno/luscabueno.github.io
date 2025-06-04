@@ -28,31 +28,23 @@
 
 :root {
     font-size: 22px;
-}
 
     @media (max-width: 1920px) {
-        :root {
-            font-size: 14px;
-        }
+        font-size: 14px;
     }
 
     @media (max-width: 768px) {
-        :root {
-            font-size: 13px;
-        }
+        font-size: 13px;
     }
 
     @media (max-width: 375px) {
-        :root {
-            font-size: 12px;
-        }
+        font-size: 12px;
     }
 
     @media (max-width: 320px) {
-        :root {
-            font-size: 11px;
-        }
+        font-size: 11px;
     }
+}
 
 /* LAYOUT */
 
@@ -400,18 +392,6 @@ tfoot > tr > th {
 
 /* LAYOUT global components */
 
-.group--action {
-    display: flex;
-    flex-flow: row wrap-reverse;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.group--action--sub {
-    display: flex;
-    gap: 1rem;
-}
-
 .avatar {
     height: 1.5rem;
     width: 1.5rem;
@@ -440,11 +420,6 @@ tfoot > tr > th {
     &.warning {
         background: #ffaa001a;
     }
-}
-
-.group--badge {
-    display: flex;
-    gap: 0.5rem;
 }
 
 .button {
@@ -484,21 +459,6 @@ tfoot > tr > th {
     }
 }
 
-.group--button {
-    display: flex;
-    gap: 0.5rem;
-
-    &.menu {
-        gap: 0.15rem;
-    }
-}
-
-.group--checkbox {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1rem;
-}
-
 .detail {
     display: flex;
     flex-direction: column;
@@ -515,46 +475,6 @@ tfoot > tr > th {
     gap: 1rem;
 }
 
-.group--filter {
-    position: sticky;
-    top: 4rem;
-    display: flex;
-    padding: 1rem 2rem;
-    gap: 1rem;
-
-    background: #223348;
-}
-
-    @media (max-width: 768px) {
-        .group--filter {
-            flex-flow: column;
-        }
-    }
-
-.group--form {
-    display: flex;
-    gap: 1rem;
-}
-
-    @media(max-width: 768px) {
-        .group--form {
-            flex-direction: column;
-        }
-    }
-
-.group {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.group--label {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
 .image--frame {
     flex: 1;
     display: flex;
@@ -569,19 +489,15 @@ tfoot > tr > th {
 
 .logo {
     width: 7rem;
-}
 
-    @media (max-width: 2560px) {
-        .login--body .logo {
-            width: 13rem;
-        }
-    }
+    .login--body & {
+        width: 13rem;
 
-    @media (max-width: 768px) {
-        .login--body .logo {
+        @media (max-width: 768px) {
             width: 12rem;
         }
     }
+}
 
 .overlay {
     height: 100%;
@@ -589,7 +505,7 @@ tfoot > tr > th {
     position: fixed;
     top: 0;
     z-index: 1;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     
@@ -598,7 +514,7 @@ tfoot > tr > th {
 
 .popup {
     height: 85vh;
-    display: none;
+    display: flex;
     flex-direction: column;
 
     background: #223348;
@@ -643,7 +559,7 @@ tfoot > tr > th {
 
 .popup--body {
     flex: 1;
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
@@ -661,7 +577,7 @@ tfoot > tr > th {
 
 .popup--body--sub {
     flex: 1;
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
@@ -728,7 +644,7 @@ tfoot > tr > th {
     min-width: 100%;
     position: absolute;
     z-index: 1;
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 0.3rem;
     overflow-y: auto;
@@ -746,25 +662,22 @@ tfoot > tr > th {
     .select--button.single & {
         top: 0;
     }
-}
 
     @media (max-width:768px) {
-        .select--list {
-            max-height: 30rem;
-            height: fit-content;
-            width: 100%;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            padding: 2.5rem 1rem;
-            margin-top: auto;
+        max-height: 30rem;
+        height: fit-content;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 2.5rem 1rem;
+        margin-top: auto;
 
-            background: #2b3d52;
-            outline: none;
-            border-radius: 0;
-            box-shadow: 0 -25rem 0 25rem #090a0b3b;
-        }
+        outline: none;
+        border-radius: 0;
+        box-shadow: 0 -25rem 0 25rem #090a0b3b;
     }
+}
 
 .sorting {
     display: flex;
@@ -790,17 +703,6 @@ tfoot > tr > th {
     }
 }
 
-.group--text--field {
-    display: flex;
-    gap: 1rem;
-
-    .login--body & {
-        width: 100%;
-        max-width: 25rem;
-        flex-direction: column;
-    }
-}
-
 .text--field--label {
     flex: 1;
     display: flex;
@@ -816,6 +718,82 @@ tfoot > tr > th {
 
     border: 1px dashed #c9ddf880;
     border-radius: 0.5rem;
+}
+
+/* LAYOUT global groups */
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.group--action {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.group--action--sub {
+    display: flex;
+    gap: 1rem;
+}
+
+.group--button {
+    display: flex;
+    gap: 0.5rem;
+
+    &.menu {
+        gap: 0.15rem;
+    }
+}
+
+.group--checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
+.group--filter {
+    position: sticky;
+    top: 4rem;
+    display: flex;
+    padding: 1rem 2rem;
+    gap: 1rem;
+
+    background: #223348;
+
+    @media (max-width: 768px) {
+        flex-flow: column;
+    }
+}
+
+.group--form {
+    display: flex;
+    gap: 1rem;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.group--label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.group--text--field {
+    display: flex;
+    gap: 1rem;
+
+    .login--body & {
+        width: 100%;
+        max-width: 25rem;
+        flex-direction: column;
+    }
 }
 
 /* LAYOUT global modifiers */
@@ -834,12 +812,8 @@ tfoot > tr > th {
     text-align: right;
 }
 
-.conditional--field {
+.hide {
     display: none;
-}
-
-.show {
-    display: flex;
 }
 
 /* LAYOUT div borders */
