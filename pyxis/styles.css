@@ -331,7 +331,7 @@ tfoot > tr > th {
     justify-content: center;
     align-items: center;
 
-    background-image: url(img/bg_001.png);
+    background-image: url(img/bg/bg_001.png);
     background-size: auto 125%;
     background-position: center;
     background-repeat: no-repeat;
