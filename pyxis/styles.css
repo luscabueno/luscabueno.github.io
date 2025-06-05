@@ -196,7 +196,8 @@ table {
 }
 
 col {
-    &.col--action {
+    &.col--action,
+    &.col--quantity {
         width: 1%;
 
         #table--cadastro-layout & {
