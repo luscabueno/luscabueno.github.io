@@ -2,20 +2,8 @@
 - ROOT SCALING
 - MARKUP
   - MARKUP reset
-  - MARKUP elements
-  - MARKUP page components
-    - .login
-    - .nav--top
-    - .table
-  - MARKUP global components
-- TEXT
-  - TEXT elements
-  - TEXT global components
-- STYLING
-  - STYLING elements
-  - STYLING header borders
-  - STYLING major components
-  - STYLING minor components
+  - LAYOUT elements
+  - LAYOUT components
 */
 
 /* ROOT SCALING */
@@ -45,21 +33,20 @@
     }
 }
 
-/* MARKUP */
+/* LAYOUT */
 
 /* MARKUP reset */
 
-body, div, h1, h2, h3, h4, h5, h6, p {
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    text-box-trim: trim-both;
-    text-box-edge: cap alphabetic;
+    box-sizing: border-box;
 }
 
-body {
+body, h1, h2, h3, h4, h5, h6, p {
     line-height: 1;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 
 a {
@@ -67,7 +54,13 @@ a {
     text-decoration: none;
 }
 
-/* MARKUP components */
+/* LAYOUT elements */
+
+body {
+    background: #223348;
+}
+
+/* LAYOUT components */
 
 .project--grid {
     height: 100%;
@@ -100,10 +93,4 @@ a {
 .logo {
     max-height: 6rem;
     width: 20rem;
-}
-
-/* STYLING elements */
-
-body {
-    background: #223348;
 }
