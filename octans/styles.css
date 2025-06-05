@@ -13,6 +13,8 @@
     - LAYOUT page components: .login
     - LAYOUT page components: .table
   - LAYOUT global components
+  - LAYOUT global groups
+  - LAYOUT function components
   - LAYOUT div borders
 - TEXT
   - TEXT elements
@@ -552,10 +554,11 @@ tfoot > tr > th {
     }
 }
 
-/* LAYOUT global modifiers */
+/* LAYOUT function components */
 
-.hide {
-    display: none;
+[id^=expand_button],
+[id^=popup_button] {
+    cursor: pointer;
 }
 
 /* LAYOUT div borders */
@@ -586,6 +589,12 @@ tfoot > tr > th {
 
 .padding {
     border-bottom: 1px solid #adc8eB24;
+}
+
+/* LAYOUT global modifiers */
+
+.hide {
+    display: none;
 }
 
 /* TEXT */

@@ -9,18 +9,16 @@
     - LAYOUT navigation components: .nav--lateral
     - LAYOUT navigation components: .nav--top
   - LAYOUT page components
-    - .login
-    - .header
-    - .dashboard
-    - .kanban
-    - .table
+    - LAYOUT page components: .login
+    - LAYOUT page components: .header
+    - LAYOUT page components: .dashboard
+    - LAYOUT page components: .kanban
+    - LAYOUT page components: .table
   - LAYOUT global components
+  - LAYOUT global groups
+  - LAYOUT function components
   - LAYOUT div borders
   - LAYOUT global modifiers
-    - Try making this section obsolete:
-      - .padding is only being used in login screen, can be a page component.
-      - .underline can be a text global modifier for <span>. a global modifier section in TEXT is acceptable for italic, underline and other modifications.
-      - .right is the only acceptable modifier so far for its universal utility. maybe reduce it to just this.
 - TEXT
   - TEXT elements
   - TEXT global components
@@ -129,7 +127,11 @@ table {
 
 col {
     &.col--action {
-        width: 5rem;
+        width: 1%;
+
+        .table--cadastro--score & {
+            width: 5rem;
+        }
     }
 
     table.table--cadastro--score &.col--classificacao {
@@ -506,10 +508,6 @@ td {
     }
 }
 
-.expand--button--single {
-    cursor: pointer;
-}
-
 .filter {
     flex: 1;
     display: flex;
@@ -802,6 +800,13 @@ td {
         padding: 1rem;
         gap: 0.5rem;
     }
+}
+
+/* LAYOUT function components */
+
+[id^=expand_button],
+[id^=popup_button] {
+    cursor: pointer;
 }
 
 /* LAYOUT div borders */

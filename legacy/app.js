@@ -69,13 +69,13 @@ window.addEventListener('click', event => {
 // .expand -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // multi button
-expandButtonsMulti = document.querySelectorAll('.expand--button--group > *');
+expandButtonsMulti = document.querySelectorAll('[id^=expand_button_group] > *');
 
 expandButtonsMulti.forEach(element => {
     element.addEventListener('click', event => {
         const expandButton = element;
         const expandButtonName = element.id.split('_')[3];
-        const expandGroup = element.closest('.expand--button--group');
+        const expandGroup = element.closest('[id^=expand_button_group]');
         const expandGroupName = expandGroup.id.split('_')[3];
 
         // #expand_body_...
@@ -91,7 +91,7 @@ expandButtonsMulti.forEach(element => {
 })
 
 // single button
-expandButtonsSingle = document.querySelectorAll('.expand--button--single');
+expandButtonsSingle = document.querySelectorAll('[id^=expand_button__]');
 
 expandButtonsSingle.forEach(element => {
     element.addEventListener('click', event => {
@@ -103,16 +103,6 @@ expandButtonsSingle.forEach(element => {
             showhideAll(expandBody);
     })
 })
-
-// global --------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-function removeAll(group, className) {
-    for (i = 0; i < group.length; i++) {
-        if (group[i].classList.contains(className)) {
-            group[i].classList.remove(className);
-        }
-    }
-}
 
 // global --------------------------------------------------------------------------------------------------------------------------------------------------------------
 

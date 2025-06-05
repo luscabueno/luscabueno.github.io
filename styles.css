@@ -21,37 +21,26 @@
 /* ROOT SCALING */
 
 :root {
-    font-size: 16px;
+    /* font-size: 16px; */
     color-scheme: dark;
-    /* REM size definition. */
 }
 
-@media (max-width: 2560px) {
-    :root {
-        font-size: 22px;
-    }
-}
+:root {
+    font-size: 22px;
 
-@media (max-width: 1920px) {
-    :root {
+    @media (max-width: 1920px) {
         font-size: 14px;
     }
-}
 
-@media (max-width: 768px) {
-    :root {
+    @media (max-width: 768px) {
         font-size: 13px;
     }
-}
 
-@media (max-width: 375px) {
-    :root {
+    @media (max-width: 375px) {
         font-size: 12px;
     }
-}
 
-@media (max-width: 320px) {
-    :root {
+    @media (max-width: 320px) {
         font-size: 11px;
     }
 }
@@ -85,7 +74,7 @@ a {
     display: flex;
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
         .project--grid {
             flex-direction: column;
         }
@@ -102,13 +91,14 @@ a {
         border-left: 1px solid #adc8eB24;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
         .project + .project {
         border-top: 1px solid #adc8eB24;
         }
     }
 
 .logo {
+    max-height: 6rem;
     width: 20rem;
 }
 

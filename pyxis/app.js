@@ -54,12 +54,12 @@ window.addEventListener('click', event => {
 // popup --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // open
-popupButtons = document.querySelectorAll('.popup--button button');
+popupButtons = document.querySelectorAll('[id^=popup_open]');
 
-popupButtons.forEach(button => {
-    button.addEventListener('click', event => {
+popupButtons.forEach(element => {
+    element.addEventListener('click', event => {
         // .popup
-        const popupName = button.id.split("_")[2];
+        const popupName = element.id.split("_")[2];
         const popup = document.getElementById(`popup_window_${popupName}`);
             // open
             show(popup);
@@ -92,17 +92,17 @@ popupButtons.forEach(button => {
 })
 
 // close
-popupButtonsClose = document.querySelectorAll('.popup--button--close button');
+popupButtonsClose = document.querySelectorAll('[id=popup_close]');
 
-popupButtonsClose.forEach(button => {
-    button.addEventListener('click', event => {
+popupButtonsClose.forEach(element => {
+    element.addEventListener('click', event => {
         // .popup
-        const popup = button.closest('.popup');
+        const popup = element.closest('[id^=popup_window]');
             // close
             hide(popup);
 
         // .overlay
-        const overlay = button.closest('.overlay');
+        const overlay = element.closest('.overlay');
             // close
             hide(overlay);
     })
@@ -111,14 +111,14 @@ popupButtonsClose.forEach(button => {
 // tabsheet -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // switch
-TabButtons = document.querySelectorAll('.tabsheet--button button');
+TabButtons = document.querySelectorAll('.tabsheet--button');
 
-TabButtons.forEach(button => {
-    button.addEventListener('click', event => {
+TabButtons.forEach(element => {
+    element.addEventListener('click', event => {
 
-        // .tabsheet--body
-        const tabBody = document.getElementById(`tab_body_${button.id.split('_')[2]}`);
-        const tabBodyAll = button.closest('.tabsheet--body').querySelectorAll('.tabsheet--body');
+        // #tabsheet_body
+        const tabBody = document.getElementById(`tabsheet_body_${element.id.split('_')[2]}`);
+        const tabBodyAll = element.closest('.tabsheet--body').querySelectorAll('.tabsheet--body');
         const tabBodyFirst = tabBody.querySelector('.tabsheet--body');
             // close siblings
             hideAll(tabBodyAll);
@@ -130,8 +130,8 @@ TabButtons.forEach(button => {
             show(tabBody);
 
         // .tabsheet--button
-        const tabsheetButton = button.closest('.tabsheet--button');
-        const tabsheetButtonAll = button.closest('.tabsheet').querySelectorAll('.tabsheet--button');
+        const tabsheetButton = element.closest('.tabsheet--button');
+        const tabsheetButtonAll = element.closest('.tabsheet').querySelectorAll('.tabsheet--button');
         const tabsheetButtonChildren = tabBody.querySelectorAll('.tabsheet--button');
         const tabsheetButtonFirst = tabBody.querySelector('.tabsheet--button');
             // inactivate siblings
@@ -152,13 +152,13 @@ TabButtons.forEach(button => {
 // .expand -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // multi button
-expandButtonsMulti = document.querySelectorAll('.expand--button--group > *');
+expandButtonsMulti = document.querySelectorAll('[id^=expand_button_group] > *');
 
 expandButtonsMulti.forEach(element => {
     element.addEventListener('click', event => {
         const expandButton = element;
         const expandButtonName = element.id.split('_')[3];
-        const expandGroup = element.closest('.expand--button--group');
+        const expandGroup = element.closest('[id^=expand_button_group]');
         const expandGroupName = expandGroup.id.split('_')[3];
 
         // #expand_body_...
@@ -170,20 +170,6 @@ expandButtonsMulti.forEach(element => {
             if (!expandButton.id == '') {
                 showAll(expandBodyAll);
             }
-    })
-})
-
-// single button
-expandButtonsSingle = document.querySelectorAll('.expand--button--single');
-
-expandButtonsSingle.forEach(element => {
-    element.addEventListener('click', event => {
-        const expandButtonName = element.id.split('_')[3];
-
-        // #expand_body_...
-        const expandBody = document.querySelectorAll(`[id=expand_body__${expandButtonName}]`);
-            // open
-            showhideAll(expandBody);
     })
 })
 

@@ -13,6 +13,8 @@
     - LAYOUT page components: .login
     - LAYOUT page components: .table
   - LAYOUT global components
+  - LAYOUT global groups
+  - LAYOUT function components
   - LAYOUT div borders
 - TEXT
   - TEXT elements
@@ -195,15 +197,11 @@ table {
 
 col {
     &.col--action {
-        width: 6.5rem;
-    }
+        width: 1%;
 
-    table#table--controle--produto &.col--quantidade {
-        min-width: 10rem;
-    }
-
-    table#table--controle--cartao &.col--data {
-        min-width: 14rem;
+        #table--cadastro-layout & {
+            width: 6.5rem;
+        }
     }
 }
 
@@ -334,7 +332,7 @@ tfoot > tr > th {
     align-items: center;
 
     background-image: url(img/bg_001.png);
-    background-size: auto 100%;
+    background-size: auto 125%;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #223348;
@@ -521,7 +519,9 @@ tfoot > tr > th {
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
 
-    &#popup_window_novo-layout {
+    &#popup_window_novo-layout,
+    &#popup_window_editar-familia,
+    &#popup_window_visualizar-familia {
         width: 70vw;
 
         @media (max-width: 1440px) {
@@ -711,10 +711,13 @@ tfoot > tr > th {
 }
 
 .upload--card {
+    width: fit-content;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 
     border: 1px dashed #c9ddf880;
     border-radius: 0.5rem;
@@ -796,24 +799,11 @@ tfoot > tr > th {
     }
 }
 
-/* LAYOUT global modifiers */
+/* LAYOUT function components */
 
-.space-between {
-    justify-content: space-between;
-}
-
-.center {
-    justify-content: center;
-    align-items: center;
-}
-
-.right {
-    justify-content: right;
-    text-align: right;
-}
-
-.hide {
-    display: none;
+[id^=expand_button],
+[id^=popup_open] {
+    cursor: pointer;
 }
 
 /* LAYOUT div borders */
@@ -844,6 +834,26 @@ tfoot > tr > th {
 
 .padding {
     border-bottom: 1px solid #adc8eB24;
+}
+
+/* LAYOUT global modifiers */
+
+.space-between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    justify-content: right;
+    text-align: right;
+}
+
+.hide {
+    display: none;
 }
 
 /* TEXT */

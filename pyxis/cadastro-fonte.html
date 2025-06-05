@@ -1,0 +1,1054 @@
+<html>
+    <head>
+        <title>Pyxis</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_drop_down,arrow_drop_up">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="nav--top">
+            <div class="nav--top--sub">
+                <img src="img/login_logo.svg" class="logo">
+                <div class="badge"><p>PR • PRD</p></div>
+            </div>
+            <div class="nav--top--sub">
+                <div class="group--button menu">
+                    <div class="select--button menu">
+                        <button class="button secondary">
+                            <p>Cadastro</p>
+                            <i class="icon" data-feather="chevron-down"></i>
+                        </button>
+                        <ul class="select--list hide">
+                            <li>
+                                <a class="select--item" href="cadastro-layout.html">
+                                    <p>Layout</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="select--item" href="cadastro-maquina.html">
+                                    <p>Máquina</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="select--item" href="cadastro-fonte.html">
+                                    <p>Fonte</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select--button menu">
+                        <button class="button secondary">
+                            <i class="icon" data-feather="user"></i>
+                            <i class="icon" data-feather="chevron-down"></i>
+                        </button>
+                        <ul class="select--list hide">
+                            <li>
+                                <a class="select--item" href="index.html">
+                                    <p>Log out</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabsheet">
+            <div class="tabsheet--button active">
+                <div class="tabsheet--title">
+                    <p>Cadastro de fonte</p>
+                    <i class="icon" data-feather="x"></i>
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="tabsheet--button">
+                <div class="tabsheet--title">
+                    <p>Nova aba</p>
+                    <i class="icon" data-feather="x"></i>
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="button secondary">
+                <i class="icon" data-feather="plus"></i>
+            </div>
+        </div>
+        <div class="group--filter">
+            <div class="filter">
+                <div class="select--button single">
+                    <button class="text--field">
+                        <div class="select--value group"><p>Selecionar coluna do filtro</p></div>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </button>
+                    <ul class="select--list hide" id="expand_button_group_coluna">
+                        <li class="select--item" id="expand_button_coluna_valor">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                data-label='<p>Nome</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <p>Nome</p>
+                        </li>
+                        <li class="select--item" id="expand_button_coluna_peso">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                data-label='<p>Peso</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <p>Peso</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter hide" id="expand_body_coluna_valor">
+                <div class="text--field">
+                    <input placeholder="Inserir valor do filtro">
+                </div>
+                <button class="button primary">
+                    <i class="icon" data-feather="search"></i>
+                </button>
+            </div>
+            <div class="filter hide" id="expand_body_coluna_peso">
+                <div class="select--button single">
+                    <button class="text--field">
+                        <div class="select--value group"><p>Selecionar peso do filtro</p></div>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </button>
+                    <ul class="select--list hide">
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--peso"
+                                data-label='<div class="badge"><p>100</p></div><p>Thin</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>100</p></div>
+                            <p>Thin</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--peso"
+                                data-label='<div class="badge"><p>200</p></div><p>Extra Light</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>200</p></div>
+                            <p>Extra Light</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--peso"
+                                data-label='<div class="badge"><p>300</p></div><p>Light</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>300</p></div>
+                            <p>Light</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--peso"
+                                data-label='<div class="badge"><p>400</p></div><p>Regular</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>400</p></div>
+                            <p>Regular</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--peso"
+                                data-label='<div class="badge"><p>500</p></div><p>Medium</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>500</p></div>
+                            <p>Medium</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--peso"
+                                data-label='<div class="badge"><p>600</p></div><p>Semi bold</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>600</p></div>
+                            <p>Semi bold</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--peso"
+                                data-label='<div class="badge"><p>700</p></div><p>Bold</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>700</p></div>
+                            <p>Bold</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--peso"
+                                data-label='<div class="badge"><p>800</p></div><p>Extra Bold</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>800</p></div>
+                            <p>Extra Bold</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--peso"
+                                data-label='<div class="badge"><p>900</p></div><p>Black</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>900</p></div>
+                            <p>Black</p>
+                        </li>
+                    </ul>
+                </div>
+                <button class="button primary">
+                    <i class="icon" data-feather="search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="table--body">
+            <div class="group--action right">
+                <button class="button secondary" id="popup_open_adicionar-fonte">
+                    <i class="icon" data-feather="plus"></i>
+                    <p>Adicionar fonte</p>
+                </button>
+                <button class="button primary" id="popup_open_nova-familia">
+                    <i class="icon" data-feather="plus"></i>
+                    <p>Nova família</p>
+                </button>
+            </div>
+            <div class="table--card">
+                <div class="table--card--body">
+                    <table id="table--cadastro-fonte">
+                        <colgroup>
+                            <col>
+                            <col class="col--quantity">
+                            <col class="col--action">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="group">
+                                        <span>Nome</span>
+                                        <div class="sorting">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="group">
+                                        <span>Variações</span>
+                                        <div class="sorting">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="group right">
+                                        <span>Ações</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Archivo</td>
+                                <td>5</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" id="popup_open_visualizar-familia" data-feather="eye"></i>
+                                        <i class="icon secondary" id="popup_open_editar-familia" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ASAP</td>
+                                <td>5</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Century Gothic</td>
+                                <td>1</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Inter</td>
+                                <td>7</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Forza</td>
+                                <td>2</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mark Pro</td>
+                                <td>4</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Montserrat</td>
+                                <td>3</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Museo</td>
+                                <td>3</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Museo Sans</td>
+                                <td>3</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Open Sans</td>
+                                <td>1</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Quicksand</td>
+                                <td>2</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Roboto</td>
+                                <td>1</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="overlay hide">
+            <div class="popup hide" id="popup_window_visualizar-familia">
+                <div class="popup--header">
+                    <h4>Visualizar família</h4>
+                    <button class="button secondary" id="popup_close">
+                        <i class="icon" data-feather="x"></i>
+                    </button>
+                </div>
+                <div class="popup--body">
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Nome</label>
+                            <div class="text--field read--only">
+                                <input placeholder="Inserir nome da família" value="Archivo" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Fontes</label>
+                            <div class="table--card">
+                                <div class="table--card--body">
+                                    <table>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col class="col--action">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="group">
+                                                        <span>Peso</span>
+                                                        <div class="sorting">
+                                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="group">
+                                                        <span>Inclinação</span>
+                                                        <div class="sorting">
+                                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="group right">
+                                                        <span>Ações</span>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>400</p></div>
+                                                        <p>Regular</p>
+                                                    </div>
+                                                </td>
+                                                <td>Regular</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>700</p></div>
+                                                        <p>Bold</p>
+                                                    </div>
+                                                </td>
+                                                <td>Regular</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>700</p></div>
+                                                        <p>Bold</p>
+                                                    </div>
+                                                </td>
+                                                <td>Itálico</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>900</p></div>
+                                                        <p>Black</p>
+                                                    </div>
+                                                </td>
+                                                <td>Regular</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>900</p></div>
+                                                        <p>Black</p>
+                                                    </div>
+                                                </td>
+                                                <td>Itálico</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--action right">
+                        <button class="button primary" id="popup_open_adicionar-fonte">
+                            <i class="icon" data-feather="plus"></i>
+                            <p>Adicionar fonte</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="popup--footer">
+                    <div class="group--button">
+                        <button class="button secondary" id="popup_close">
+                            <p>Cancelar</p>
+                        </button>
+                        <button class="button primary">
+                            <p>Gravar</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup hide" id="popup_window_editar-familia">
+                <div class="popup--header">
+                    <h4>Editar família</h4>
+                    <button class="button secondary" id="popup_close">
+                        <i class="icon" data-feather="x"></i>
+                    </button>
+                </div>
+                <div class="popup--body">
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Nome</label>
+                            <div class="text--field">
+                                <input placeholder="Inserir nome da família" value="Archivo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Fontes</label>
+                            <div class="table--card">
+                                <div class="table--card--body">
+                                    <table>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col class="col--action">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="group">
+                                                        <span>Peso</span>
+                                                        <div class="sorting">
+                                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="group">
+                                                        <span>Inclinação</span>
+                                                        <div class="sorting">
+                                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="group right">
+                                                        <span>Ações</span>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>400</p></div>
+                                                        <p>Regular</p>
+                                                    </div>
+                                                </td>
+                                                <td>Regular</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>700</p></div>
+                                                        <p>Bold</p>
+                                                    </div>
+                                                </td>
+                                                <td>Regular</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>700</p></div>
+                                                        <p>Bold</p>
+                                                    </div>
+                                                </td>
+                                                <td>Itálico</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>900</p></div>
+                                                        <p>Black</p>
+                                                    </div>
+                                                </td>
+                                                <td>Regular</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="group">
+                                                        <div class="badge"><p>900</p></div>
+                                                        <p>Black</p>
+                                                    </div>
+                                                </td>
+                                                <td>Itálico</td>
+                                                <td>
+                                                    <div class="group right">
+                                                        <i class="icon secondary" data-feather="download"></i>
+                                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--action right">
+                        <button class="button primary" id="popup_open_adicionar-fonte">
+                            <i class="icon" data-feather="plus"></i>
+                            <p>Adicionar fonte</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="popup--footer">
+                    <div class="group--button">
+                        <button class="button secondary" id="popup_close">
+                            <p>Cancelar</p>
+                        </button>
+                        <button class="button primary">
+                            <p>Gravar</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay hide">
+            <div class="popup l1 hide" id="popup_window_nova-familia">
+                <div class="popup--header">
+                    <h4>Nova família de fonte</h4>
+                    <button class="button secondary" id="popup_close">
+                        <i class="icon" data-feather="x"></i>
+                    </button>
+                </div>
+                <div class="popup--body">
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Nome</label>
+                            <div class="text--field">
+                                <input placeholder="Inserir nome da família">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup--footer">
+                    <div class="group--button">
+                        <button class="button secondary" id="popup_close">
+                            <p>Cancelar</p>
+                        </button>
+                        <button class="button primary">
+                            <p>Gravar</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup l1 hide" id="popup_window_adicionar-fonte">
+                <div class="popup--header">
+                    <h4>Adicionar fonte</h4>
+                    <button class="button secondary" id="popup_close">
+                        <i class="icon" data-feather="x"></i>
+                    </button>
+                </div>
+                <div class="popup--body">
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Família</label>
+                            <div class="select--button single">
+                                <button class="text--field">
+                                    <div class="select--value group"><p>Selecionar família da fonte</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list hide">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Archivo</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Archivo</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>ASAP</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>ASAP</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Century Gothic</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Century Gothic</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Inter</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Inter</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Forza</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Forza</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Mark Pro</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Mark Pro</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Montserrat</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Montserrat</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Museo</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Museo</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Museo Sans</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Museo Sans</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Open Sans</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Open Sans</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Quicksand</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Quicksand</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--fonte"
+                                            data-label='<p>Roboto</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Roboto</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Peso</label>
+                            <div class="select--button single">
+                                <button class="text--field">
+                                    <div class="select--value group"><p>Selecionar peso da fonte</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list hide">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>100</p></div><p>Thin</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>100</p></div>
+                                        <p>Thin</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>200</p></div><p>Extra Light</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>200</p></div>
+                                        <p>Extra Light</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>300</p></div><p>Light</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>300</p></div>
+                                        <p>Light</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>400</p></div><p>Regular</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>400</p></div>
+                                        <p>Regular</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>500</p></div><p>Medium</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>500</p></div>
+                                        <p>Medium</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>600</p></div><p>Semi bold</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>600</p></div>
+                                        <p>Semi bold</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>700</p></div><p>Bold</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>700</p></div>
+                                        <p>Bold</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>800</p></div><p>Extra Bold</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>800</p></div>
+                                        <p>Extra Bold</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--peso"
+                                            data-label='<div class="badge"><p>900</p></div><p>Black</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>900</p></div>
+                                        <p>Black</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="group--label">
+                            <label>Inclinação</label>
+                            <div class="select--button single">
+                                <button class="text--field">
+                                    <div class="select--value group"><p>Selecionar inclinação da fonte</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list hide">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--inclinacao"
+                                            data-label='<p>Regular</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Regular</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--l2--inclinacao"
+                                            data-label='<p>Itálico</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <p>Itálico</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="group--form">
+                            <div class="group--label">
+                                <label>Arquivo de fonte</label>
+                                <div class="upload--card">
+                                    <div class="group--form">
+                                        <button class="button secondary">
+                                            <p>Adicionar arquivo de fonte...</p>
+                                        </button>
+                                        <div class="group center">
+                                            <i class="icon secondary" data-feather="upload"></i>
+                                            <p class="secondary">Arraste aqui o arquivo de fonte</p>
+                                        </div>
+                                    </div>
+                                    <p>Montserrat_light.ttf</p>
+                                    <p class="size-xs tertiary">157KB: 50% (tempo restante: 00:00:01)</p>
+                                    <div class="progress--bar">
+                                        <div class="progress--bar progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group--label hide">
+                                <label>Arquivo de fonte</label>
+                                <div class="group">
+                                    <p class="link">Montserrat_light.ttf</p>
+                                    <i class="icon secondary hide" data-feather="x"></i>
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--action right hide">
+                        <button class="button secondary">
+                            <i class="icon" data-feather="trash-2"></i>
+                            <p>Excluir arquivo de fonte</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="popup--footer">
+                    <div class="group--button">
+                        <button class="button secondary" id="popup_close">
+                            <p>Cancelar</p>
+                        </button>
+                        <button class="button primary">
+                            <p>Gravar</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,535 @@
+<html>
+    <head>
+        <title>Pyxis</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_drop_down,arrow_drop_up">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="nav--top">
+            <div class="nav--top--sub">
+                <img src="img/login_logo.svg" class="logo">
+                <div class="badge"><p>PR • PRD</p></div>
+            </div>
+            <div class="nav--top--sub">
+                <div class="group--button menu">
+                    <div class="select--button menu">
+                        <button class="button secondary">
+                            <p>Cadastro</p>
+                            <i class="icon" data-feather="chevron-down"></i>
+                        </button>
+                        <ul class="select--list hide">
+                            <li>
+                                <a class="select--item" href="cadastro-layout.html">
+                                    <p>Layout</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="select--item" href="cadastro-maquina.html">
+                                    <p>Máquina</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="select--item" href="cadastro-fonte.html">
+                                    <p>Fonte</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select--button menu">
+                        <button class="button secondary">
+                            <i class="icon" data-feather="user"></i>
+                            <i class="icon" data-feather="chevron-down"></i>
+                        </button>
+                        <ul class="select--list hide">
+                            <li>
+                                <a class="select--item" href="index.html">
+                                    <p>Log out</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabsheet">
+            <div class="tabsheet--button active">
+                <div class="tabsheet--title">
+                    <p>Cadastro de máquina</p>
+                    <i class="icon" data-feather="x"></i>
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="tabsheet--button">
+                <div class="tabsheet--title">
+                    <p>Nova aba</p>
+                    <i class="icon" data-feather="x"></i>
+                </div>
+                <div class="tabsheet--label"></div>
+            </div>
+            <div class="button secondary">
+                <i class="icon" data-feather="plus"></i>
+            </div>
+        </div>
+        <div class="group--filter">
+            <div class="filter">
+                <div class="select--button single">
+                    <button class="text--field">
+                        <div class="select--value group"><p>Selecionar coluna do filtro</p></div>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </button>
+                    <ul class="select--list hide" id="expand_button_group_coluna">
+                        <li class="select--item" id="expand_button_coluna_valor">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                data-label='<p>Código</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <p>Código</p>
+                        </li>
+                        <li class="select--item" id="expand_button_coluna_valor">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                data-label='<p>Descrição</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <p>Descrição</p>
+                        </li>
+                        <li class="select--item" id="expand_button_coluna_unidade">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                data-label='<p>Unidade</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <p>Unidade</p>
+                        </li>
+                        <li class="select--item" id="expand_button_coluna_status">
+                            <input
+                                type="radio"
+                                name="coluna"
+                                data-label='<p>Status</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <p>Status</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter hide" id="expand_body_coluna_valor">
+                <div class="text--field">
+                    <input placeholder="Inserir valor do filtro">
+                </div>
+                <button class="button primary">
+                    <i class="icon" data-feather="search"></i>
+                </button>
+            </div>
+            <div class="filter hide" id="expand_body_coluna_unidade">
+                <div class="select--button single">
+                    <button class="text--field">
+                        <div class="select--value group"><p>Selecionar unidade do filtro</p></div>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </button>
+                    <ul class="select--list hide">
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--unidade"
+                                data-label='<div class="badge"><p>CWB</p></div><p>Colombo/PR</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>CWB</p></div>
+                            <p>Colombo/PR</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--unidade"
+                                data-label='<div class="badge"><p>SBC</p></div><p>São Bernardo do Campo/SP</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <div class="badge"><p>SBC</p></div>
+                            <p>São Bernardo do Campo/SP</p>
+                        </li>
+                    </ul>
+                </div>
+                <button class="button primary">
+                    <i class="icon" data-feather="search"></i>
+                </button>
+            </div>
+            <div class="filter hide" id="expand_body_coluna_status">
+                <div class="select--button single">
+                    <button class="text--field">
+                        <div class="select--value group"><p>Selecionar status do filtro</p></div>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </button>
+                    <ul class="select--list hide">
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--status"
+                                data-label='<p>Ativo</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <p>Ativo</p>
+                        </li>
+                        <li class="select--item">
+                            <input
+                                type="radio"
+                                name="coluna--status"
+                                data-label='<p>Inativo</p>'
+                                >
+                            <i class="icon active" data-feather="check"></i>
+                            <p>Inativo</p>
+                        </li>
+                    </ul>
+                </div>
+                <button class="button primary">
+                    <i class="icon" data-feather="search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="table--body">
+            <div class="group--action right">
+                <button class="button primary" id="popup_open_nova-maquina">
+                    <i class="icon" data-feather="plus"></i>
+                    <p>Nova máquina</p>
+                </button>
+            </div>
+            <div class="table--card">
+                <div class="table--card--body">
+                    <table id="table--cadastro-maquina">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col class="col--action">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="group">
+                                        <span>Código</span>
+                                        <div class="sorting">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="group">
+                                        <span>Descrição</span>
+                                        <div class="sorting">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="group">
+                                        <span>Unidade</span>
+                                        <div class="sorting">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="group">
+                                        <span>Status</span>
+                                        <div class="sorting">
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_up</i>
+                                            <i class="icon sorting material-symbols-outlined">arrow_drop_down</i>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="group right">
+                                        <span>Ações</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MX20100</td>
+                                <td>Datacard 01</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>CWB</p></div>
+                                        <span>Colombo/PR</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MXX210508</td>
+                                <td>Datacard 02</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>CWB</p></div>
+                                        <span>Colombo/PR</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MX60825</td>
+                                <td>Datacard 03</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>CWB</p></div>
+                                        <span>Colombo/PR</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MXX210431</td>
+                                <td>Datacard 04</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>CWB</p></div>
+                                        <span>Colombo/PR</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MXX210348</td>
+                                <td>Datacard 05</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>SBC</p></div>
+                                        <span>São Bernardo do Campo/SP</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MXX210475</td>
+                                <td>Datacard 06</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>SBC</p></div>
+                                        <span>São Bernardo do Campo/SP</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MXX210430</td>
+                                <td>Datacard 07</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>SBC</p></div>
+                                        <span>São Bernardo do Campo/SP</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MXX210476</td>
+                                <td>Datacard 08</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>SBC</p></div>
+                                        <span>São Bernardo do Campo/SP</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MXX610737</td>
+                                <td>Datacard 09</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>SBC</p></div>
+                                        <span>São Bernardo do Campo/SP</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MX2138</td>
+                                <td>Datacard 10</td>
+                                <td>
+                                    <div class="group">
+                                        <div class="badge"><p>SBC</p></div>
+                                        <span>São Bernardo do Campo/SP</span>
+                                    </div>
+                                </td>
+                                <td>Ativo</td>
+                                <td>
+                                    <div class="group right">
+                                        <i class="icon secondary" data-feather="eye"></i>
+                                        <i class="icon secondary" data-feather="edit-3"></i>
+                                        <i class="icon secondary" data-feather="trash-2"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="overlay hide">
+            <div class="popup l1 hide" id="popup_window_nova-maquina">
+                <div class="popup--header">
+                    <h4>Nova máquina</h4>
+                    <button class="button secondary" id="popup_close">
+                        <i class="icon" data-feather="x"></i>
+                    </button>
+                </div>
+                <div class="popup--body">
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Unidade</label>
+                            <div class="select--button single">
+                                <button class="text--field">
+                                    <div class="select--value group"><p>Selecionar unidade</p></div>
+                                    <i class="icon secondary" data-feather="chevron-down"></i>
+                                </button>
+                                <ul class="select--list hide">
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--unidade"
+                                            data-label='<div class="badge"><p>CWB</p></div><p>Colombo/PR</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>CWB</p></div>
+                                        <p>Colombo/PR</p>
+                                    </li>
+                                    <li class="select--item">
+                                        <input
+                                            type="radio"
+                                            name="popup--unidade"
+                                            data-label='<div class="badge"><p>SBC</p></div><p>São Bernardo do Campo/SP</p>'
+                                            >
+                                        <i class="icon active" data-feather="check"></i>
+                                        <div class="badge"><p>SBC</p></div>
+                                        <p>São Bernardo do Campo/SP</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="group--label">
+                            <label>Código</label>
+                            <div class="text--field">
+                                <input placeholder="Inserir código da máquina">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--form">
+                        <div class="group--label">
+                            <label>Descrição</label>
+                            <div class="text--field">
+                                <input placeholder="Inserir descrição da máquina">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group--label">
+                        <label>Status</label>
+                        <div class="group--checkbox">
+                            <div class="group">
+                                <input
+                                    type="radio"
+                                    name="popup--status"
+                                    >
+                                <p>Ativo</p>
+                            </div>
+                            <div class="group">
+                                <input
+                                    type="radio"
+                                    name="popup--status"
+                                    >
+                                <p>Inativo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup--footer">
+                    <div class="group--button">
+                        <button class="button secondary" id="popup_close">
+                            <p>Cancelar</p>
+                        </button>
+                        <button class="button primary">
+                            <p>Gravar</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
