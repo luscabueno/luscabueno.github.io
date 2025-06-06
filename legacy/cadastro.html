@@ -146,9 +146,9 @@
                     </button>
                 </div>
                 <div class="group--action--sub">
-                    <button class="button secondary" id="popup_open_editar-categorias">
+                    <button class="button secondary" id="popup_open_editar-criterios">
                         <i class="icon" data-feather="edit-3"></i>
-                        <p>Editar categorias</p>
+                        <p>Editar critérios</p>
                     </button>
                     <button class="button primary" id="popup_open_nova-classificacao">
                         <i class="icon" data-feather="plus"></i>
@@ -180,7 +180,7 @@
                     </div>
                 </div>
                 <div class="table--card--body hide" id="expand_body__cliente">
-                    <table class="table--cadastro--score">
+                    <table id="table_cadastro-score">
                         <colgroup>
                             <col class="col--classificacao">
                             <col>
@@ -325,7 +325,7 @@
                     </div>
                 </div>
                 <div class="table--card--body hide" id="expand_body__prazo">
-                    <table class="table--cadastro--score">
+                    <table id="table_cadastro-score">
                         <colgroup>
                             <col class="col--classificacao">
                             <col>
@@ -445,7 +445,7 @@
                     </div>
                 </div>
                 <div class="table--card--body hide" id="expand_body__urgencia">
-                    <table class="table--cadastro--score">
+                    <table id="table_cadastro-score">
                         <colgroup>
                             <col class="col--classificacao">
                             <col>
@@ -557,7 +557,7 @@
                     </div>
                 </div>
                 <div class="table--card--body hide" id="expand_body__complexidade">
-                    <table class="table--cadastro--score">
+                    <table id="table_cadastro-score">
                         <colgroup>
                             <col class="col--classificacao">
                             <col>
@@ -669,7 +669,7 @@
                     </div>
                 </div>
                 <div class="table--card--body hide" id="expand_body__impacto">
-                    <table class="table--cadastro--score">
+                    <table id="table_cadastro-score">
                         <colgroup>
                             <col class="col--classificacao">
                             <col>
@@ -759,9 +759,9 @@
             </div>
         </div>
         <div class="overlay hide">
-            <div class="popup hide" id="popup_window_editar-categorias">
+            <div class="popup hide" id="popup_window_editar-criterios">
                 <div class="popup--header">
-                    <h4>Editar categorias</h4>
+                    <h4>Editar critérios</h4>
                     <button class="button secondary" id="popup_close">
                         <i class="icon" data-feather="x"></i>
                     </button>
@@ -769,10 +769,10 @@
                 <div class="popup--body">
                     <div class="group--form">
                         <div class="group--label">
-                            <label>Categorias</label>
+                            <label>Critérios</label>
                             <div class="table--card">
                                 <div class="table--card--body">
-                                    <table>
+                                    <table id="table_editar-criterios">
                                         <colgroup>
                                             <col>
                                             <col>
@@ -861,9 +861,9 @@
                         </div>
                     </div>
                     <div class="group--action right">
-                        <button class="button primary" id="popup_open_nova-categoria">
+                        <button class="button primary" id="popup_open_novo-criterio">
                             <i class="icon" data-feather="plus"></i>
-                            <p>Nova categoria</p>
+                            <p>Novo critério</p>
                         </button>
                     </div>
                     <div class="group--form">
@@ -889,9 +889,9 @@
             </div>
         </div>
         <div class="overlay hide">
-            <div class="popup l1 hide" id="popup_window_nova-categoria">
+            <div class="popup l1 hide" id="popup_window_novo-criterio">
                 <div class="popup--header">
-                    <h4>Nova categoria</h4>
+                    <h4>Novo critério</h4>
                     <button class="button secondary" id="popup_close">
                         <i class="icon" data-feather="x"></i>
                     </button>
@@ -901,13 +901,13 @@
                         <div class="group--label">
                             <label>Nome</label>
                             <div class="text--field">
-                                <input placeholder="Inserir nome da categoria">
+                                <input placeholder="Inserir nome do critério">
                             </div>
                         </div>
                         <div class="group--label">
                             <label>Peso</label>
                             <div class="text--field">
-                                <input placeholder="Inserir peso da categoria">
+                                <input placeholder="Inserir peso do critério">
                                 <p class="size-xs tertiary">%</p>
                             </div>
                         </div>
@@ -934,17 +934,17 @@
                 <div class="popup--body">
                     <div class="group--form">
                         <div class="group--label">
-                            <label>Categoria</label>
+                            <label>Critério</label>
                             <div class="select--button">
                                 <button class="text--field">
-                                    <div class="select--value cell"><p>Selecionar categoria</p></div>
+                                    <div class="select--value cell"><p>Selecionar critério</p></div>
                                     <i class="icon secondary" data-feather="chevron-down"></i>
                                 </button>
                                 <ul class="select--list hide">
                                     <li class="select--item">
                                         <input
                                             type="radio"
-                                            name="categoria"
+                                            name="criterio"
                                             data-label='<p>Cliente</p>'
                                             >
                                         <i class="icon active" data-feather="check"></i>
@@ -953,7 +953,7 @@
                                     <li class="select--item">
                                         <input
                                             type="radio"
-                                            name="categoria"
+                                            name="criterio"
                                             data-label='<p>Prazo</p>'
                                             >
                                         <i class="icon active" data-feather="check"></i>
@@ -962,7 +962,7 @@
                                     <li class="select--item">
                                         <input
                                             type="radio"
-                                            name="categoria"
+                                            name="criterio"
                                             data-label='<p>Urgência</p>'
                                             >
                                         <i class="icon active" data-feather="check"></i>
@@ -971,7 +971,7 @@
                                     <li class="select--item">
                                         <input
                                             type="radio"
-                                            name="categoria"
+                                            name="criterio"
                                             data-label='<p>Complexidade</p>'
                                             >
                                         <i class="icon active" data-feather="check"></i>
@@ -980,7 +980,7 @@
                                     <li class="select--item">
                                         <input
                                             type="radio"
-                                            name="categoria"
+                                            name="criterio"
                                             data-label='<p>Impacto</p>'
                                             >
                                         <i class="icon active" data-feather="check"></i>

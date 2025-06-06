@@ -511,7 +511,7 @@ tfoot > tr > th {
 }
 
 .popup {
-    height: 85vh;
+    width: 70vw;
     display: flex;
     flex-direction: column;
 
@@ -519,22 +519,20 @@ tfoot > tr > th {
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
 
-    &#popup_window_novo-layout,
-    &#popup_window_editar-familia,
-    &#popup_window_visualizar-familia {
-        width: 70vw;
-
-        @media (max-width: 1440px) {
-            width: 80vw;
-        }
-
-        @media (max-width: 768px) {
-            width: 90vw;
-        }
+    &:has(#tabsheet_bar) {
+        height: 85vh;
     }
 
+    @media (max-width: 1440px) {
+        width: 80vw;
+    }
+
+    @media (max-width: 768px) {
+        width: 90vw;
+    }
+ 
+
     &.l1 {
-        height: unset;
         width: 50vw;
 
         @media (max-width: 1440px) {

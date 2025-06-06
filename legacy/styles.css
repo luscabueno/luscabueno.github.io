@@ -118,7 +118,13 @@ table {
     border-spacing: 0;
     white-space: nowrap;
 
-    &.table--cadastro--score {
+    &#table_cadastro-score {
+        width: 100%;
+        min-width: 45rem;
+        table-layout: fixed;
+    }
+
+    &#table_editar-criterios {
         width: 100%;
         min-width: 45rem;
         table-layout: fixed;
@@ -129,16 +135,20 @@ col {
     &.col--action {
         width: 1%;
 
-        .table--cadastro--score & {
+        #table_cadastro-score & {
+            width: 5rem;
+        }
+
+        #table_editar-criterios & {
             width: 5rem;
         }
     }
 
-    table.table--cadastro--score &.col--classificacao {
+    table#table_cadastro-score &.col--classificacao {
         width: 25%;
     }
 
-    table.table--cadastro--score &.col--score {
+    table#table_cadastro-score &.col--score {
         width: 20%;
     }
 }
@@ -623,13 +633,16 @@ td {
 
 .popup {
     width: 70vw;
-    height: 85vh;
     display: flex;
     flex-direction: column;
 
     background: #223348;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1.5rem -0.25rem #0d0f1142, 0 0.15rem 0.25rem -0.15rem #0505051A;
+
+    &:has(#tabsheet_bar) {
+        height: 85vh;
+    }
 
     @media (max-width: 1440px) {
         width: 80vw;
@@ -640,7 +653,6 @@ td {
     }
 
     &.l1 {
-        height: unset;
         width: 50vw;
 
         @media (max-width: 1440px) {
