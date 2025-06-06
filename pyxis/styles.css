@@ -375,7 +375,6 @@ tfoot > tr > th {
 
 .table--card {
     min-height: 0;
-    /* min-width: 25rem; */
     display: flex;
     flex-direction: column;
 

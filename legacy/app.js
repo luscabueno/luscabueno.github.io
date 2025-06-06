@@ -66,6 +66,43 @@ window.addEventListener('click', event => {
         }
 })
 
+// popup --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// open
+popupButtons = document.querySelectorAll('[id^=popup_open]');
+
+popupButtons.forEach(element => {
+    element.addEventListener('click', event => {
+        // .popup
+        const popupName = element.id.split("_")[2];
+        const popup = document.getElementById(`popup_window_${popupName}`);
+            // open
+            show(popup);
+
+        // .overlay
+        const overlay = popup.closest('.overlay');
+            // open
+            show(overlay);
+    })
+})
+
+// close
+popupButtonsClose = document.querySelectorAll('[id=popup_close]');
+
+popupButtonsClose.forEach(element => {
+    element.addEventListener('click', event => {
+        // .popup
+        const popup = element.closest('[id^=popup_window]');
+            // close
+            hide(popup);
+
+        // .overlay
+        const overlay = element.closest('.overlay');
+            // close
+            hide(overlay);
+    })
+})
+
 // .expand -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // multi button
@@ -120,6 +157,10 @@ function hideAll(group) {
 }
 
 // show
+function show(element) {
+    element.classList.remove('hide');
+}
+
 function showAll(group) {
     for (i = 0; i < group.length; i++) {
         if (group[i].classList.contains('hide')) {
