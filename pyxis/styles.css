@@ -892,46 +892,55 @@ h6, th {
 
     text-align: left;
     text-transform: uppercase;
-}
 
-    h6.error, th.error {
+    &.error {
         color: #ff9e99;
     }
+}
 
-p, td, input, select, button {
+p, td {
     font-size: 1rem;
     color: #ebf4ffe6;
 
     text-align: left;
-}
 
-    p.error, td.error {
+    &.error {
         color: #ff9e99;
     }
 
-    p.secondary {
+    &.secondary {
         color: #d9e8fcb0;
     }
 
-    p.tertiary, input::placeholder {
+    &.tertiary {
         color: #c9ddf880;
     }
 
-    p.size-xs {
+    &.link {
+        color: #90bdf9;
+
+        .login--body & {
+            text-align: center;
+        }
+    }
+
+    &.size-xs {
         font-size: 0.8rem;
     }
 
-    p.link {
-        color: #90bdf9;
-    }
-
-        .login--body p.link {
-            text-align: center;
-        }
-
-    .select--button.single:not(:has(.select--item input:checked)) button p {
+    .select--button.single:not(:has(.select--item input:checked)) button & {
         color: #c9ddf880;
     }
+}
+
+input, button {
+    font-size: 1rem;
+    color: #ebf4ffe6;
+
+    &::placeholder {
+        color: #c9ddf880;
+    }
+}
 
 label {
     font-size: 0.9rem;
