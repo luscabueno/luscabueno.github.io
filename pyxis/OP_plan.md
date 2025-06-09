@@ -1,0 +1,23 @@
+- Login
+    - Select current department.
+- Listas
+    - App bar should have logo, title (current departament) and a button for changing departmental view (all or individual departments).
+    - Search bar
+    - Lists
+        - "Pendentes" (all time)
+            - "Todas"
+            - "Alertas"
+            - "D+0" (shipping today)
+            - "D+1" (shipping tomorrow)
+                - These should use a connected button group
+        - "Concluídas" (last 24h)
+- OP
+    - Tabsheet for opening many OPs simultaneously and easy access to current production. OPs opened from "listas" are immediately added to tabsheet and can be closed by a "x" command.
+        - "Operação" (main info always displayed)
+            - System centerpiece
+                - "Iniciar" and "Concluir" using extended FABs
+                    - "Concluir" should spawn a secondary button for re-opening
+        - "Informações" (secondary info toggled in a button)
+            - Tables that are on Pyxis now, may be discarded
+- Configurações
+    - Dark/light mode
