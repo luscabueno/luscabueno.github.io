@@ -1,0 +1,110 @@
+# Pyxis Operacional
+
+- `Administrativo`
+  - Atendimento
+    - Solicitação exceção
+  - Comercial
+    - Solicitação produto
+    - Solicitação pedido
+  - Financeiro
+    - Faturas
+    - Relatório custos
+- `Processamento`
+  - Arquivos
+  - Processadores
+- `Estoque`
+  - Entrada
+  - Movimentação
+  - Pesquisa estoque
+  - Relatório endereçamento
+  - Relatório movimentação
+  - ...
+  - Entrada rejeitos
+  - Destruição rejeitos
+  - ...
+  - Solicitação insumos
+- `Produção`
+  - Pedidos
+    - Pendências
+    - Pesquisa pedidos
+    - Pesquisa documentos
+    - ...
+    - Criar ordem de produção
+  - Gestão
+    - Notificações
+    - Pesquisa produção
+  - Manuseio
+    - Audit
+    - Pesquisa audits
+  - Pré-expedição
+    - Pré-expedição
+    - Pesquisa lotes
+    - ...
+    - Tratamento exceção
+    - Pesquisa exceções
+    - ...
+    - Agrupamento documento **???**
+    - Protocolo transfer expedição **???**
+  - Expedição
+    - Expedição
+    - Expedição gráfica
+    - Pesquisa expedições
+    - ...
+    - Devolução
+    - ...
+    - Geração etiqueta de triagem **???**
+- `Suporte`
+  - Suporte Manutenção
+  - Suporte Produtos
+  - Suporte Infra
+  - Suporte cliente (RRC)
+- `Segurança`
+  - Logs
+- `Usuário`
+  - Notificações
+  - Alteração senha
+  - Logout
+
+**Obs.:**
+  - Funções "Pesquisa" estavam agregadas de duas formas distintas anteriormente, parcialmente em uma aba dedicada "Relatórios", e parcialmente dentro de setores que interagem operacionalmente com o objeto pesquisado. Agora funções "Pesquisa" pertencem aos setores que interagem operacionalmente com o objeto pesquisado apenas.
+  - "Pesquisa" sendo usado para funções que geram dados visíveis já na tela. Podem gerar relatórios.
+  - "Relatório" sendo usado apenas para funções que geram dados visíveis exclusivamente em relatórios.
+
+# Pyxis Cadastro
+
+- `Administrativo`
+  - Contabilidade
+    - Famílias contábeis
+  - Financeiro
+    - Regras de faturamento
+  - RH
+    - Feriados
+- `Processamento`
+  - Agenda processamento
+- `Infra`
+  - Máquinas
+  - Motivos suporte
+- `Estoque`
+  - Motivos rejeito
+- `Produtos`
+  - Clientes
+  - Insumos
+  - Produtos
+  - ...
+  - Contratos entregadora
+  - Locais
+  - ...
+  - Configs
+  - Faixas cobertura
+  - Faixas consumo
+  - Quebras
+  - Tabelas de/para
+- `Documentação`
+  - Instruções
+- `Segurança`
+  - Grupos
+  - Usuários
+- `Usuário`
+  - Notificações
+  - Alteração senha
+  - Logout
