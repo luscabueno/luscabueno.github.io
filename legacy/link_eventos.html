@@ -1,0 +1,520 @@
+<html>
+    <head>
+        <title>Legacy</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_drop_down,arrow_drop_up">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="nav--lateral" id="lateral_nav">
+            <div class="nav--lateral--header">
+                <a href="dashboard.html"><img src="img/login_logo.svg" class="logo"></a>
+                <a onclick="lateralNavClose()"><i class="icon secondary" data-feather="x"></i></a>
+            </div>
+            <div class="nav--lateral--body">
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <p class="secondary">Dashboard</p>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </div>
+                    <div class="nav--lateral--tab--body">
+                        <a class="nav--lateral--option" href="dashboard.html">
+                            <i class="icon" data-feather="layers"></i>
+                            <p>Tarefas</p>
+                        </a>
+                        <a class="nav--lateral--option" href="prioridade.html">
+                            <i class="icon" data-feather="alert-triangle"></i>
+                            <p>Prioridades</p>
+                        </a>
+                        <a class="nav--lateral--option" href="link.html">
+                            <i class="icon" data-feather="link"></i>
+                            <p>Links</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <p class="secondary">Cadastro</p>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </div>
+                    <div class="nav--lateral--tab--body">
+                        <a href="cadastro.html" class="nav--lateral--option">
+                            <i class="icon" data-feather="bar-chart-2"></i>
+                            <p>Score</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <p class="secondary">Configurações</p>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </div>
+                    <div class="nav--lateral--tab--body">
+                        <a class="nav--lateral--option">
+                            <i class="icon" data-feather="user"></i>
+                            <p>Usuários</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav--top">
+            <div class="nav--top--sub">
+                <a onclick="lateralNavOpen()"><i class="icon secondary" data-feather="menu"></i></a>
+                <img src="img/login_logo.svg" class="logo">
+            </div>
+            <div class="nav--top--sub">
+                <a href="index.html"><p class="secondary">Log out</p></a>
+                <i class="icon secondary" data-feather="bell"></i>
+                <i class="icon secondary" data-feather="settings"></i>
+                <div class="avatar">
+                    <img class="avatar--photo" src="img/avatar/example.jpg">
+                    <div class="status error"></div>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header--sub">
+                <div class="group--title">
+                    <div class="title">
+                        <div class="title--sub">
+                            <p class="tertiary">Dashboard / Tarefas / Projetos / #4</p>
+                            <h3>JAL - Sistema de priorização de tarefas</h3>
+                        </div>
+                        <div class="group">
+                            <div class="badge"><p>Em andamento</p></div>
+                            <div class="badge success"><p>15.5</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header--sub">
+                <div class="group--highlight">
+                    <div class="highlight border-left--add">
+                        <div class="highlight--data">
+                            <div class="highlight--data--sub">
+                                <i class="icon" data-feather="clock"></i>
+                                <h6>Em andamento</h6>
+                            </div>
+                            <h1>112h</h1>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight border-left--add">
+                        <div class="highlight--data">
+                            <div class="highlight--data--sub">
+                                <i class="icon" data-feather="pause-circle"></i>
+                                <h6>Aguardando</h6>
+                            </div>
+                            <h1>104h</h1>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group--action">
+            <div class="group--action--sub">
+                <a href="link.html">
+                    <div class="button secondary">
+                        <i class="icon" data-feather="link"></i>
+                    </div>
+                </a>
+                <a href="link_eventos.html">
+                    <div class="button secondary">
+                        <i class="icon" data-feather="clock"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="kanban--content action">
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Cliente</h4>
+                        <div class="badge"><p>-</p></div>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>18h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <h4>18h</h4>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card section">
+                        <p>N/A</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>18h</p>
+                        </div>
+                        <p class="tertiary">10/09/2025 - 12/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge success"><p>Concluído</p></div>
+                        <p class="tertiary">12/09/2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Projetos</h4>
+                        <div class="badge"><p>Em andamento</p></div>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>25h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <h4>81h</h4>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card section">
+                        <div class="group">
+                            <p>#4</p>
+                            <i class="icon" data-feather="minus-circle"></i>
+                            <p>15h</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>4h</p>
+                        </div>
+                        <p class="tertiary">10/09/2025 - 10/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge success"><p>Liberado</p></div>
+                        <p class="tertiary">10/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>19min</p>
+                        </div>
+                        <p class="tertiary">10/09/2025 - 10/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge error"><p>Aguardando Cliente</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <p>18h</p>
+                        </div>
+                        <p class="tertiary">10/09/2025 - 12/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>20h</p>
+                        </div>
+                        <p class="tertiary">12/09/2025 - 14/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge success"><p>Liberado</p></div>
+                        <p class="tertiary">14/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>1h</p>
+                        </div>
+                        <p class="tertiary">14/09/2025 - 14/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge success"><p>Liberado</p></div>
+                        <p class="tertiary">14/09/2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Análise</h4>
+                        <div class="badge success"><p>Concluído</p></div>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>38h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <h4>-</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card section">
+                        <div class="group">
+                            <p>#1442</p>
+                            <i class="icon" data-feather="minus-circle"></i>
+                            <p>2h</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>15h</p>
+                        </div>
+                        <p class="tertiary">10/09/2025 - 12/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge success"><p>Concluído</p></div>
+                        <p class="tertiary">12/09/2025</p>
+                    </div>
+                    <div class="kanban--card section">
+                        <div class="group">
+                            <p>#1444</p>
+                            <i class="icon" data-feather="minus-circle"></i>
+                            <p>7h</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>36min</p>
+                        </div>
+                        <p class="tertiary">10/09/2025 - 10/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge error"><p>Aguardando Projetos</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <p>39h</p>
+                        </div>
+                        <p class="tertiary">10/09/2025 - 14/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>5h</p>
+                        </div>
+                        <p class="tertiary">14/09/2025 - 14/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge error"><p>Aguardando Projetos</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <p>1h</p>
+                        </div>
+                        <p class="tertiary">14/09/2025 - 14/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>18h</p>
+                        </div>
+                        <p class="tertiary">14/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge success"><p>Concluído</p></div>
+                        <p class="tertiary">14/09/2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Produtos</h4>
+                        <div class="badge"><p>Em andamento</p></div>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>11h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <h4>5h</h4>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card section">
+                        <div class="group">
+                            <p>#3</p>
+                            <i class="icon" data-feather="minus-circle"></i>
+                            <p>16h</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>7h</p>
+                        </div>
+                        <p class="tertiary">10/09/2025 - 12/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge success"><p>Concluído</p></div>
+                        <p class="tertiary">12/09/2025</p>
+                    </div>
+                    <div class="kanban--card section">
+                        <div class="group">
+                            <p>#4</p>
+                            <i class="icon" data-feather="minus-circle"></i>
+                            <p>20min</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>3h</p>
+                        </div>
+                        <p class="tertiary">11/09/2025</p>
+                    </div>
+                    <div class="kanban--card section">
+                        <div class="group">
+                            <p>#5</p>
+                            <i class="icon" data-feather="minus-circle"></i>
+                            <p>4h</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>1h</p>
+                        </div>
+                        <p class="tertiary">10/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge error"><p>Aguardando Projetos</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <p>41h</p>
+                        </div>
+                        <p class="tertiary">10/09/2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Desenvolvimento</h4>
+                        <div class="badge"><p>Em andamento</p></div>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>20h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <h4>-</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card section">
+                        <div class="group">
+                            <p>#4903</p>
+                            <i class="icon" data-feather="minus-circle"></i>
+                            <p>26h</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge"><p>Em andamento</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="clock"></i>
+                            <p>20h</p>
+                        </div>
+                        <p class="tertiary">10/09/2025 - 13/09/2025</p>
+                    </div>
+                    <div class="kanban--card">
+                        <div class="badge error"><p>Aguardando Produtos</p></div>
+                        <div class="group">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <p>5h</p>
+                        </div>
+                        <p class="tertiary">13/09/2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>QA</h4>
+                        <div class="badge"><p>Em andamento</p></div>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>-</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="pause-circle"></i>
+                            <h4>-</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card section">
+                        <p>Sem eventos registrados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
