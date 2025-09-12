@@ -284,6 +284,8 @@ td {
 /* LAYOUT navigation components: .tabsheet */
 
 .tabsheet {
+    position: sticky;
+    top: 4rem;
     display: flex;
     align-items: center;
     padding: 0 2rem;
