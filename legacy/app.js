@@ -103,7 +103,41 @@ popupButtonsClose.forEach(element => {
     })
 })
 
-// .expand -------------------------------------------------------------------------------------------------------------------------------------------------------------
+// tabsheet -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// switch
+tabButtons = document.querySelectorAll('.tabsheet--button');
+
+tabButtons.forEach(element => {
+    element.addEventListener('click', event => {
+
+        // #tabsheet_body
+        const tabBody = document.getElementById(`tabsheet_body_${element.id.split('_')[2]}`);
+        const tabBodyAll = element.closest('.tabsheet--body').querySelectorAll('.tabsheet--body');
+            // close siblings
+            hideAll(tabBodyAll);
+            // open
+            show(tabBody);
+
+        // .tabsheet--button
+        const tabsheetButton = element.closest('.tabsheet--button');
+        const tabsheetButtonAll = element.closest('.tabsheet').querySelectorAll('.tabsheet--button');
+            // inactivate siblings
+            inactivateAll(tabsheetButtonAll);
+            // activate
+            activate(tabsheetButton);
+
+        // .group--highlight
+        const groupHighlight = document.getElementById(`highlight_${element.id.split('_')[2]}`);
+        const groupHighlightAll = document.getElementById('highlight_change').querySelectorAll('.group--highlight');
+            // hide siblings
+            hideAll(groupHighlightAll);
+            // show
+            show(groupHighlight);
+    })
+})
+
+// .expand ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // multi button
 expandButtonsMulti = document.querySelectorAll('[id^=expand_button_group] > *');
@@ -184,6 +218,20 @@ function showhideAll(group) {
             group[i].classList.remove('hide');
         } else {
             group[i].classList.add('hide');
+        }
+    }
+}
+
+// activate
+function activate(element) {
+    element.classList.add('active');
+}
+
+// inactivate
+function inactivateAll(group) {
+    for (i = 0; i < group.length; i++) {
+        if (group[i].classList.contains('active')) {
+            group[i].classList.remove('active');
         }
     }
 }

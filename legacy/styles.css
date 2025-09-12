@@ -51,9 +51,9 @@
     }
 }
 
-/* LAYOUT */
+/* MARKUP */
 
-/* LAYOUT reset */
+/* MARKUP reset */
 
 * {
     margin: 0;
@@ -72,6 +72,7 @@ a {
 }
 
 button {
+    background: none;
     border: none;
     outline: none;
 }
@@ -279,6 +280,49 @@ td {
     display: flex;
     align-items: center;
 }
+
+/* LAYOUT navigation components: .tabsheet */
+
+.tabsheet {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+    overflow-x: auto;
+
+    background: #223348;
+}
+
+.tabsheet--button {
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .popup .tabsheet & {
+        height: 3rem;
+    }
+}
+
+.tabsheet--title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tabsheet--label {
+    height: 0.2rem;
+    width: 2rem;
+
+    background: none;
+    border-top-right-radius: 0.1rem;
+    border-top-left-radius: 0.1rem;
+}
+
+    .tabsheet--button.active .tabsheet--label {
+        background: #0c6ce9;
+    }
 
 /* LAYOUT page components */
 
@@ -1015,6 +1059,10 @@ td {
     border-bottom: 1px solid #adc8eB24;
 }
 
+.tabsheet {
+    border-bottom: 1px solid #adc8eB24;
+}
+
 .table--card--header--sub + .table--card--header--sub {
     border-left: 1px solid #adc8eB24;
 }
@@ -1229,5 +1277,23 @@ input, button {
         align-items: center;
 
         color: #c9ddf880;
+    }
+}
+
+.tabsheet--button {
+    p, .icon {
+        color: #d9e8fcb0;
+    }
+
+    &.active {
+        p, .icon {
+            color: #90bdf9;
+        }
+    }
+}
+
+.tabsheet--title {
+    p {
+        white-space: nowrap;
     }
 }
