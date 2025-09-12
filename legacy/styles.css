@@ -456,7 +456,7 @@ td {
 
     @media (max-width: 1024px) {
         flex: unset;
-        height: 90vh;
+        height: 85vh;
     }
 }
 
