@@ -122,6 +122,33 @@ input {
     flex: 1;
 }
 
+input[type="checkbox"] {
+    flex: unset;
+    appearance: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: #b4cdee3d;
+    border-radius: 0.25rem;
+
+    &::before {
+        content: url(img/icon/checkbox_check.svg);
+        display: none;
+    }
+
+    &:checked {
+        background-color: #0c6ce9;
+    }
+
+    &:checked::before {
+        display: block;
+    }
+}
+
 /* LAYOUT elements: table */
 
 table {
@@ -445,6 +472,7 @@ td {
 /* LAYOUT page components: .kanban */
 
 .kanban--content {
+    position: relative;
     flex: 1;
     display: flex;
     padding: 2rem;
@@ -456,9 +484,236 @@ td {
         padding: 0 2rem 2rem 2rem;
     }
 
+    &.fixed {
+        overflow-y: auto;
+    }
+
     @media (max-width: 1024px) {
         flex: unset;
         height: 85vh;
+    }
+}
+
+.flowchart--arrow {
+    position: absolute;
+
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #90bdf9;
+
+    &::before {
+        content: "";
+        height: 0.4rem;
+        width: 0.4rem;
+        position: absolute;
+        top: -0.2rem;
+        left: -0.2rem;
+
+        background: #90bdf9;
+        border-radius: 0.5rem;
+    }
+
+    &.error {
+        border-color: #ff9e99;
+
+        &::before {
+            background: #ff9e99;
+        }
+    }
+
+    &.success {
+        border-color: #12d965;  
+
+        &::before {
+            background: #12d965;
+        }
+    }
+
+    &.warning {
+        border-color: #fecb45;
+
+        &::before {
+            background: #fecb45;
+        }
+    }
+
+    &.primary {
+        border-color: #90bdf9;
+
+        &::before {
+            background: #90bdf9;
+        }
+    }
+
+    &.single {
+        &::after {
+            content: "";
+            position: absolute;
+            top: -0.25rem;
+            right: -0.2rem;
+
+            border-top: 0.3rem solid transparent;
+            border-bottom: 0.3rem solid transparent;
+            border-left: 0.4rem solid #90bdf9;
+        }
+
+        &.error {
+            &::after {
+                border-left-color: #ff9e99;
+            }
+        }
+
+        &.success {
+            &::after {
+                border-left-color: #12d965;
+            }
+        }
+
+        &.warning {
+            &::after {
+                border-left-color: #fecb45;
+            }
+        }
+
+        &.primary {
+            &::after {
+                border-left-color: #90bdf9;
+            }
+        }
+
+        &#s-a {
+            width: 3rem;
+            top: 15.5rem;
+            left: 25.9rem;
+        }
+
+        &#a-d1 {
+            width: 29rem;
+            top: 15.5rem;
+            left: 51.9rem;
+        }
+
+        &#d-q1 {
+            width: 3rem;
+            top: 15.5rem;
+            left: 103.9rem;
+        }
+
+        &#d-q2 {
+            width: 3rem;
+            top: 24.9rem;
+            left: 103.9rem;
+        }
+
+        &#q-c1 {
+            width: 3rem;
+            top: 15.5rem;
+            left: 129.9rem;
+        }
+
+        &#p-cadastro1 {
+            width: 3rem;
+            top: 34.6rem;
+            left: 77.9rem;
+        }
+
+        &#p-cadastro2 {
+            width: 3rem;
+            top: 34.6rem;
+            left: 103.9rem;
+        }
+
+        &#p-cadastro3 {
+            width: 3rem;
+            top: 34.6rem;
+            left: 129.9rem;
+        }
+
+        &#p-report1 {
+            width: 3rem;
+            top: 44.1rem;
+            left: 77.9rem;
+        }
+
+        &#p-report2 {
+            width: 3rem;
+            top: 44.1rem;
+            left: 103.9rem;
+        }
+
+        &#p-report3 {
+            width: 3rem;
+            top: 44.1rem;
+            left: 129.9rem;
+        }
+    }
+
+    &.double {
+        border-width: 0 0 1px 1px;
+        border-radius: 0 0 0 0.5rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            right: -0.2rem;
+
+            border-top: 0.3rem solid transparent;
+            border-bottom: 0.3rem solid transparent;
+            border-left: 0.4rem solid #90bdf9;
+        }
+
+        &.error {
+            &::after {
+                border-left-color: #ff9e99;
+            }
+        }
+
+        &.success {
+            &::after {
+                border-left-color: #12d965;
+            }
+        }
+
+        &.warning {
+            &::after {
+                border-left-color: #fecb45;
+            }
+        }
+
+        &.primary {
+            &::after {
+                border-left-color: #90bdf9;
+            }
+        }
+
+        &#a-p1 {
+            width: 15.4rem;
+            height: 33.8rem;
+            top: 19.9rem;
+            left: 39.5rem;
+        }
+
+        &#a-p2 {
+            width: 14.4rem;
+            height: 24.2rem;
+            top: 19.9rem;
+            left: 40.5rem;
+        }
+
+        &#a-p3 {
+            width: 13.4rem;
+            height: 14.8rem;
+            top: 19.9rem;
+            left: 41.5rem;
+        }
+
+        &#a-d2 {
+            width: 38.4rem;
+            height: 5rem;
+            top: 19.9rem;
+            left: 42.5rem;
+        }
     }
 }
 
@@ -472,6 +727,10 @@ td {
     background: #223348;
     border: 1px solid #b4cdee3d;
     border-radius: 0.5rem;
+
+    .fixed & {
+        max-height: unset;
+    }
 }
 
 .kanban--column--body {
@@ -491,12 +750,46 @@ td {
     background: #2b3d52;
     border-radius: 0.5rem;
 
-    &.section {
-        min-height: 3.5rem;
-        justify-content: center;
-        align-items: center;
+    &.error {
+        background: #e75d551a;
+    }
 
+    &.success {
+        background: #0ff56f1a;
+    }
+
+    &.warning {
+        background: #ffaa001a;
+    }
+
+    &.primary {
+        background: #338CFF1a;
+    }
+
+    .fixed & {
+        height: 8.5rem;
+    }
+}
+
+.kanban--card--sub {
+    display: flex;
+    min-height: 3.5rem;
+    justify-content: center;
+    align-items: center;
+
+    background: #05050512;
+    border-radius: 0.5rem;
+
+    &.placeholder {
+        background: #05050533;
+    }
+
+    &.empty {
         background: unset;
+    }
+
+    .fixed & {
+        height: 8.5rem;
     }
 }
 
@@ -584,6 +877,10 @@ td {
 
     &.warning {
         background: #ffaa001a;
+    }
+
+    &.primary {
+        background: #338CFF1a;
     }
 }
 
@@ -876,6 +1173,10 @@ td {
     &.warning {
         background: #F5AF00;
     }
+
+    &.primary {
+        background: #0C6CE9;
+    }
 }
 
 .text--field {
@@ -962,6 +1263,12 @@ td {
     .login--body & {
         flex-direction: column;
     }
+}
+
+.group--checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
 }
 
 .group--filter {
@@ -1230,6 +1537,12 @@ input, button {
     &.warning {
         p, .icon {
             color: #fecb45;
+        }
+    }
+
+    &.primary {
+        p, .icon {
+            color: #90bdf9;
         }
     }
 }

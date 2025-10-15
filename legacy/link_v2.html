@@ -1,0 +1,831 @@
+<html>
+    <head>
+        <title>Legacy</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_drop_down,arrow_drop_up">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="tabsheet--body">
+        <div class="nav--lateral" id="lateral_nav">
+            <div class="nav--lateral--header">
+                <a href="dashboard.html"><img src="img/login_logo.svg" class="logo"></a>
+                <a onclick="lateralNavClose()"><i class="icon secondary" data-feather="x"></i></a>
+            </div>
+            <div class="nav--lateral--body">
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <p class="secondary">Dashboard</p>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </div>
+                    <div class="nav--lateral--tab--body">
+                        <a class="nav--lateral--option" href="dashboard.html">
+                            <i class="icon" data-feather="layers"></i>
+                            <p>Tarefas</p>
+                        </a>
+                        <a class="nav--lateral--option" href="prioridade.html">
+                            <i class="icon" data-feather="alert-triangle"></i>
+                            <p>Prioridades</p>
+                        </a>
+                        <a class="nav--lateral--option" href="link.html">
+                            <i class="icon" data-feather="link"></i>
+                            <p>Links</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <p class="secondary">Cadastro</p>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </div>
+                    <div class="nav--lateral--tab--body">
+                        <a href="cadastro.html" class="nav--lateral--option">
+                            <i class="icon" data-feather="bar-chart-2"></i>
+                            <p>Score</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav--lateral--tab">
+                    <div class="nav--lateral--tab--header">
+                        <p class="secondary">Configurações</p>
+                        <i class="icon secondary" data-feather="chevron-down"></i>
+                    </div>
+                    <div class="nav--lateral--tab--body">
+                        <a class="nav--lateral--option">
+                            <i class="icon" data-feather="user"></i>
+                            <p>Usuários</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav--top">
+            <div class="nav--top--sub">
+                <a onclick="lateralNavOpen()"><i class="icon secondary" data-feather="menu"></i></a>
+                <img src="img/login_logo.svg" class="logo">
+            </div>
+            <div class="nav--top--sub">
+                <a href="index.html"><p class="secondary">Log out</p></a>
+                <i class="icon secondary" data-feather="bell"></i>
+                <i class="icon secondary" data-feather="settings"></i>
+                <div class="avatar">
+                    <img class="avatar--photo" src="img/avatar/example.jpg">
+                    <div class="status error"></div>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header--sub">
+                <div class="group--title">
+                    <div class="title">
+                        <div class="title--sub">
+                            <p class="tertiary">Issues / Integração / Sustentação #940</p>
+                            <h3>JAL - Nova processadora Dock</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header--sub" id="highlight_change">
+                <div class="group--highlight" id="highlight_geral">
+                    <div class="highlight border-left--add">
+                        <div class="highlight--data">
+                            <div class="highlight--data--sub">
+                                <i class="icon" data-feather="link"></i>
+                                <h6>Ligadas</h6>
+                            </div>
+                            <h1>11</h1>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight border-left--add">
+                        <div class="highlight--data">
+                            <div class="highlight--data--sub">
+                                <i class="icon" data-feather="check-circle"></i>
+                                <h6>Concluídas</h6>
+                            </div>
+                            <h1>6</h1>
+                        </div>
+                        <div class="highlight--label success"></div>
+                    </div>
+                </div>
+                <div class="group--highlight hide" id="highlight_eventos">
+                    <div class="highlight border-left--add">
+                        <div class="highlight--data">
+                            <div class="highlight--data--sub">
+                                <i class="icon" data-feather="clock"></i>
+                                <h6>Em andamento</h6>
+                            </div>
+                            <h1>112h</h1>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight border-left--add">
+                        <div class="highlight--data">
+                            <div class="highlight--data--sub">
+                                <i class="icon" data-feather="arrow-left-circle"></i>
+                                <h6>Aguardando</h6>
+                            </div>
+                            <h1>104h</h1>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabsheet" id="tabsheet_bar">
+            <button class="tabsheet--button active" id="tabsheet_button_geral">
+                <div class="tabsheet--title">
+                    <p>Geral</p>
+                </div>
+                <div class="tabsheet--label"></div>
+            </button>
+            <button class="tabsheet--button" id="tabsheet_button_eventos">
+                <div class="tabsheet--title">
+                    <p>Eventos</p>
+                </div>
+                <div class="tabsheet--label"></div>
+            </button>
+        </div>
+        <div class="kanban--content tabsheet--body" id="tabsheet_body_geral">
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Sustentação</h4>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card">
+                        <p class="tertiary">#940</p>
+                        <h4>Onboarding</h4>
+                        <p class="tertiary">JAL - Nova processadora Dock</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Victor Oliveira</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge primary"><p>Liberado</p></div>
+                            <div class="badge"><p>78.1</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Análise</h4>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card">
+                        <p class="tertiary">#1442</p>
+                        <h4>Especificação</h4>
+                        <p class="tertiary">JAL - Nova processadora Dock</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Eduardo Schneider</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge primary"><p>Liberado</p></div>
+                            <div class="badge"><p>74.9</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Processos</h4>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card">
+                        <p class="tertiary">#3</p>
+                        <h4>Cadastro</h4>
+                        <p class="tertiary">JAL - Novos códigos de produto para processadora Dock</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Everton Moraes</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge success"><p>Em andamento</p></div>
+                            <div class="badge error"><p>38.2</p></div>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <p class="tertiary">#5</p>
+                        <h4>Report</h4>
+                        <p class="tertiary">JAL - Adaptações em campos de report</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Everton Moraes</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge primary"><p>Liberado</p></div>
+                            <div class="badge"><p>7.9</p></div>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <p class="tertiary">#4</p>
+                        <h4>Layout</h4>
+                        <p class="tertiary">JAL - Alteração em layout de .CAR</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Larissa Gabriella</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge success"><p>Em andamento</p></div>
+                            <div class="badge warning"><p>27.3</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Desenvolvimento</h4>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card">
+                        <p class="tertiary">#4903</p>
+                        <h4>Processador SFP</h4>
+                        <p class="tertiary">JAL - Novo processador Dock</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Nicolas Coradassi</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge primary"><p>Liberado</p></div>
+                            <div class="badge"><p>86.2</p></div>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <p class="tertiary">#4905</p>
+                        <h4>Processador WEB</h4>
+                        <p class="tertiary">JAL - Novos retornos Dock</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Guilherme Miranda</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge success"><p>Em andamento</p></div>
+                            <div class="badge error"><p>39.5</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>QA</h4>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card">
+                        <p class="tertiary">#868</p>
+                        <h4>Homologação SFP</h4>
+                        <p class="tertiary">JAL - Novo processador Dock</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Jeniffer Marcondes</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge primary"><p>Liberado</p></div>
+                            <div class="badge"><p>26.3</p></div>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <p class="tertiary">#860</p>
+                        <h4>Homologação WEB</h4>
+                        <p class="tertiary">JAL - Novos retornos Dock</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Jeniffer Marcondes</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge primary"><p>Liberado</p></div>
+                            <div class="badge"><p>29.0</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>CMO</h4>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card">
+                        <p class="tertiary">#1571</p>
+                        <h4>Deployment SFP</h4>
+                        <p class="tertiary">JAL - Novo processador Dock</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Rosiane Quenia</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge"><p>Pendente</p></div>
+                            <div class="badge success"><p>5.2</p></div>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <p class="tertiary">#1572</p>
+                        <h4>Deployment Report</h4>
+                        <p class="tertiary">JAL - Adaptações em campos de report</p>
+                        <div class="group">
+                            <img src="img/avatar/default.svg" class="avatar">
+                            <p>Rosiane Quenia</p>
+                        </div>
+                        <div class="group">
+                            <div class="badge"><p>Pendente</p></div>
+                            <div class="badge success"><p>4.7</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kanban--content fixed tabsheet--body hide" id="tabsheet_body_eventos">
+            <div class="flowchart--arrow single primary" id="s-a"></div>
+            <div class="flowchart--arrow double primary" id="a-p1"></div>
+            <div class="flowchart--arrow double primary" id="a-p2"></div>
+            <div class="flowchart--arrow double primary" id="a-p3"></div>
+            <div class="flowchart--arrow single primary" id="a-d1"></div>
+            <div class="flowchart--arrow double primary" id="a-d2"></div>
+            <div class="flowchart--arrow single primary" id="d-q1"></div>
+            <div class="flowchart--arrow single success" id="d-q2"></div>
+            <div class="flowchart--arrow single primary" id="q-c1"></div>
+            <div class="flowchart--arrow single success" id="p-cadastro1"></div>
+            <div class="flowchart--arrow single success" id="p-cadastro2"></div>
+            <div class="flowchart--arrow single success" id="p-cadastro3"></div>
+            <div class="flowchart--arrow single primary" id="p-report1"></div>
+            <div class="flowchart--arrow single primary" id="p-report2"></div>
+            <div class="flowchart--arrow single primary" id="p-report3"></div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Sustentação</h4>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>19h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="arrow-left-circle"></i>
+                            <h4>16h (2x)</h4>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card primary">
+                        <p class="tertiary">#940</p>
+                        <h4>Onboarding</h4>
+                        <p class="tertiary">Prazo: 10/10/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Conclusão</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Análise</h4>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>13h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="arrow-left-circle"></i>
+                            <h4>5h (1x)</h4>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card primary">
+                        <p class="tertiary">#1442</p>
+                        <h4>Especificação</h4>
+                        <p class="tertiary">Prazo: 17/10/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Branch</p>
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Main</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Processos</h4>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>17h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="arrow-left-circle"></i>
+                            <h4>2h (1x)</h4>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body fixed">
+                    <div class="kanban--card--sub empty">
+                    </div>
+                    <div class="kanban--card--sub empty">
+                    </div>
+                    <div class="kanban--card success">
+                        <p class="tertiary">#3</p>
+                        <h4>Cadastro</h4>
+                        <p class="tertiary">Prazo: 19/10/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Homologação</p>
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                disabled
+                                >
+                            <p>Produção</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card primary">
+                        <p class="tertiary">#5</p>
+                        <h4>Report</h4>
+                        <p class="tertiary">Prazo: 23/10/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Branch</p>
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Main</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card success">
+                        <p class="tertiary">#4</p>
+                        <h4>Layout</h4>
+                        <p class="tertiary">Prazo: 15/11/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Branch</p>
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                disabled
+                                >
+                            <p>Main</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>Desenvolvimento</h4>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>27h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="arrow-left-circle"></i>
+                            <h4>7h (1x)</h4>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card primary">
+                        <p class="tertiary">#4903</p>
+                        <h4>Processador SFP</h4>
+                        <p class="tertiary">Prazo: 05/11/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Branch</p>
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Main</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card success">
+                        <p class="tertiary">#5113</p>
+                        <h4>Processador WEB</h4>
+                        <p class="tertiary">Prazo: 02/11/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Branch</p>
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                disabled
+                                >
+                            <p>Main</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card--sub">
+                        <div class="badge success">
+                            <p>Cadastro / #3</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card--sub">
+                        <div class="badge primary">
+                            <p>Report / #5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>QA</h4>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>21h</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="arrow-left-circle"></i>
+                            <h4>-</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card primary">
+                        <p class="tertiary">#868</p>
+                        <h4>Homologação SFP</h4>
+                        <p class="tertiary">Prazo: 09/11/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Conclusão</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card primary">
+                        <p class="tertiary">#860</p>
+                        <h4>Homologação WEB</h4>
+                        <p class="tertiary">Prazo: 09/11/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                checked
+                                disabled
+                                >
+                            <p>Conclusão</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card--sub">
+                        <div class="badge success">
+                            <p>Cadastro / #3</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card--sub">
+                        <div class="badge primary">
+                            <p>Report / #5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kanban--column">
+                <div class="group--title size-s">
+                    <div class="title">
+                        <h4>CMO</h4>
+                    </div>
+                </div>
+                <div class="group--highlight">
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="clock"></i>
+                            <h4>-</h4>
+                        </div>
+                        <div class="highlight--label"></div>
+                    </div>
+                    <div class="highlight size-s">
+                        <div class="highlight--data">
+                            <i class="icon" data-feather="arrow-left-circle"></i>
+                            <h4>-</h4>
+                        </div>
+                        <div class="highlight--label error"></div>
+                    </div>
+                </div>
+                <div class="kanban--column--body">
+                    <div class="kanban--card">
+                        <p class="tertiary">#1571</p>
+                        <h4>Deployment SFP</h4>
+                        <p class="tertiary">Prazo: 15/11/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                disabled
+                                >
+                            <p>Conclusão</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card--sub placeholder">
+                        <p class="tertiary">Deployment WEB</p>
+                    </div>
+                    <div class="kanban--card--sub">
+                        <div class="badge success">
+                            <p>Cadastro / #3</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card">
+                        <p class="tertiary">#1572</p>
+                        <h4>Deployment Report</h4>
+                        <p class="tertiary">Prazo: 15/11/2025</p>
+                        <div class="group">
+                            <input
+                                type="checkbox"
+                                name="popup--gravacao-plana"
+                                disabled
+                                >
+                            <p>Conclusão</p>
+                        </div>
+                    </div>
+                    <div class="kanban--card--sub placeholder">
+                        <p class="tertiary">Deployment Layout</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popover">
+            <table>
+                <tr>
+                    <th>Categoria</th>
+                    <th class="right">Peso</th>
+                    <th class="column--div">Classificação</th>
+                    <th class="right">Score</th>
+                    <th class="right column--div">Score sub-total</th>
+                </tr>
+                <tr>
+                    <td>Cliente</td>
+                    <td class="right">30%</td>
+                    <td class="column--div"><div class="badge"><p>JAL</p></div></td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge warning"><p>5.0</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge warning"><p>15.0</p></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prazo</td>
+                    <td class="right">30%</td>
+                    <td class="column--div">06/05/2025</td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge error"><p>8.0</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge error"><p>24.0</p></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Urgência</td>
+                    <td class="right">20%</td>
+                    <td class="column--div"><div class="badge"><p>Médio</p></td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge warning"><p>5.0</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge warning"><p>10.0</p></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Complexidade</td>
+                    <td class="right">15%</td>
+                    <td class="column--div"><div class="badge"><p>Baixo</p></td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge success"><p>2.5</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge success"><p>3.8</p></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Impacto</td>
+                    <td class="right">5%</td>
+                    <td class="column--div"><div class="badge"><p>Alto</p></td>
+                    <td>
+                        <div class="group right">
+                            <div class="badge error"><p>10.0</p></div>
+                        </div>
+                    </td>
+                    <td class="column--div">
+                        <div class="group right">
+                            <div class="badge error"><p>5.0</p></div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
