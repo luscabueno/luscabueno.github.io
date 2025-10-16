@@ -495,13 +495,18 @@ td {
 }
 
 .flowchart--arrow {
+
+    /* line shape */
+    
     position: absolute;
 
     border-style: solid;
     border-color: #c9ddf880;
 
-    /* line shape */
-    
+    &.error {border-color: #ff9e99;}
+    &.success {border-color: #12d965;}
+    &.primary {border-color: #90bdf9;}
+
     &.left, &.right {
         border-width: 0 0 1px 0;
     }
@@ -543,6 +548,10 @@ td {
         border-radius: 0.5rem;
     }
 
+    &.error {&::before {background: #ff9e99;}}
+    &.success {&::before {background: #12d965;}}
+    &.primary {&::before {background: #90bdf9;}}
+
     /* ::after shape */
 
     &::after {
@@ -558,6 +567,10 @@ td {
             border-bottom: var(--base) solid transparent;
             border-right: var(--height) solid #c9ddf880;
         }
+
+        &.error {&::after {border-right-color: #ff9e99;}}
+        &.success {&::after {border-right-color: #12d965;}}
+        &.primary {&::after {border-right-color: #90bdf9;}}
     }
 
     &.right, &.up-right, &.down-right {
@@ -566,6 +579,10 @@ td {
             border-bottom: var(--base) solid transparent;
             border-left: var(--height) solid #c9ddf880;
         }
+
+        &.error {&::after {border-left-color: #ff9e99;}}
+        &.success {&::after {border-left-color: #12d965;}}
+        &.primary {&::after {border-left-color: #90bdf9;}}
     }
 
     &.up, &.left-up, &.right-up {
@@ -574,6 +591,10 @@ td {
             border-left: var(--base) solid transparent;
             border-right: var(--base) solid transparent;
         }
+
+        &.error {&::after {border-bottom-color: #ff9e99;}}
+        &.success {&::after {border-bottom-color: #12d965;}}
+        &.primary {&::after {border-bottom-color: #90bdf9;}}
     }
 
     &.down, &.left-down, &.right-down {
@@ -582,86 +603,157 @@ td {
             border-left: var(--base) solid transparent;
             border-right: var(--base) solid transparent;
         }
+
+        &.error {&::after {border-top-color: #ff9e99;}}
+        &.success {&::after {border-top-color: #12d965;}}
+        &.primary {&::after {border-top-color: #90bdf9;}}
     }
 
     /* ::before position */
 
     &.left {
         &::before {
-            bottom: calc(var(--diameter) / -2 - 0.05rem);
-            right: calc(var(--diameter) / -2 + 0.05rem);
+            bottom: calc(var(--diameter) / -2 - 0.025rem);
+            right: calc(var(--diameter) / -2 - 0.025rem);
         }
     }
 
     &.right {
         &::before {
-            top: calc(var(--diameter) / -2 + 0.05rem);
-            left: calc(var(--diameter) / -2 + 0.05rem);
+            top: calc(var(--diameter) / -2 + 0.025rem);
+            left: calc(var(--diameter) / -2 - 0.025rem);
         }
     }
 
-    &.down, &.right-down {
+    &.up {
         &::before {
-            top: calc(var(--diameter) / -2 - 0.05rem);
-            left: calc(var(--diameter) / -2 + 0.05rem);
+            bottom: calc(var(--diameter) / -2 - 0.025rem);
+            left: calc(var(--diameter) / -2 + 0.025rem);
         }
     }
 
-    &.up, &.right-up {
+    &.down {
         &::before {
-            bottom: calc(var(--diameter) / -2 - 0.05rem);
-            left: calc(var(--diameter) / -2 + 0.05rem);
+            top: calc(var(--diameter) / -2 - 0.025rem);
+            left: calc(var(--diameter) / -2 + 0.025rem);
+        }
+    }
+
+    &.left-up, &.up-left {
+        &::before {
+            bottom: calc(var(--diameter) / -2 - 0.025rem);
+            right: calc(var(--diameter) / -2 - 0.025rem);
+        }
+    }
+
+    &.left-down, &.down-left {
+        &::before {
+            top: calc(var(--diameter) / -2 - 0.025rem);
+            right: calc(var(--diameter) / -2 - 0.025rem);
+        }
+    }
+
+    &.right-up, &.up-right {
+        &::before {
+            bottom: calc(var(--diameter) / -2 - 0.025rem);
+            left: calc(var(--diameter) / -2 - 0.025rem);
+        }
+    }
+
+    &.right-down, &.down-right {
+        &::before {
+            top: calc(var(--diameter) / -2 - 0.025rem);
+            left: calc(var(--diameter) / -2 - 0.025rem);
         }
     }
 
     /* ::after position */
 
-    &.right {
-        &::after {
-            top: calc(var(--base) / -1 + 0.05rem);
-            right: -0.1rem;
-        }
-    }
-
     &.left {
         &::after {
-            top: calc(var(--base) / -1 + 0.05rem);
+            top: calc(var(--base) / -1 + 0.025rem);
             left: -0.1rem;
         }
     }
 
-    &.down {
+    &.right {
         &::after {
-            bottom: -0.1rem;
-            left: calc(var(--base) / -1 + 0.05rem);
+            top: calc(var(--base) / -1 + 0.025rem);
+            right: -0.1rem;
         }
     }
 
     &.up {
         &::after {
             top: -0.1rem;
-            left: calc(var(--base) / -1 + 0.05rem);
+            left: calc(var(--base) / -1 + 0.025rem);
+        }
+    }
+
+    &.down {
+        &::after {
+            bottom: -0.1rem;
+            left: calc(var(--base) / -1 + 0.025rem);
+        }
+    }
+
+    &.left-up {
+        &::after {
+            top: -0.1rem;
+            left: calc(var(--base) / -1 - 0.025rem);
+        }
+    }
+
+    &.left-down {
+        &::after {
+            bottom: -0.1rem;
+            left: calc(var(--base) / -1 - 0.025rem);
+        }
+    }
+
+    &.right-up {
+        &::after {
+            top: -0.1rem;
+            right: calc(var(--base) / -1 - 0.025rem);
+        }
+    }
+
+    &.right-down {
+        &::after {
+            bottom: -0.1rem;
+            right: calc(var(--base) / -1 - 0.025rem);
+        }
+    }
+
+    &.up-left {
+        &::after {
+            top: calc(var(--base) / -1 - 0.025rem);
+            left: -0.1rem;
+        }
+    }
+
+    &.down-left {
+        &::after {
+            bottom: calc(var(--base) / -1 - 0.025rem);
+            left: -0.1rem;
+        }
+    }
+
+    &.up-right {
+        &::after {
+            top: calc(var(--base) / -1 - 0.025rem);
+            right: -0.1rem;
+        }
+    }
+
+    &.down-right {
+        &::after {
+            bottom: calc(var(--base) / -1 - 0.025rem);
+            right: -0.1rem;
         }
     }
 
     /* line position */
-
-    &#test_line_1 {
-        left: 15rem;
-        width: 2rem;
-        height: 2rem;
-    }
-
-    &#test_line_2 {
-        left: 20rem;
-        width: 2rem;
-        height: 2rem;
-    }
-
-    &#test_line_3 {
-        left: 13rem;
-        height: 2rem;
-    }
 
     &#s-a {
         width: 3rem;
@@ -755,54 +847,6 @@ td {
         height: 5rem;
         top: 20rem;
         left: 42rem;
-    }
-
-    &.error {
-        border-color: #ff9e99;
-
-        &::before {
-            background: #ff9e99;
-        }
-
-        &::after {
-            border-left-color: #ff9e99;
-        }
-    }
-
-    &.success {
-        border-color: #12d965;  
-
-        &::before {
-            background: #12d965;
-        }
-
-        &::after {
-            border-left-color: #12d965;
-        }
-    }
-
-    &.warning {
-        border-color: #fecb45;
-
-        &::before {
-            background: #fecb45;
-        }
-
-        &::after {
-            border-left-color: #fecb45;
-        }
-    }
-
-    &.primary {
-        border-color: #90bdf9;
-
-        &::before {
-            background: #90bdf9;
-        }
-
-        &::after {
-            border-left-color: #90bdf9;
-        }
     }
 }
 
