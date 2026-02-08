@@ -3,6 +3,7 @@
     --rem: 14px;
     --border-l1: 1rem;
     --border-l2: 0.5rem;
+    --border-max: 1024rem;
 
     --background-l0: hsl(0 0 5);
     --background-l1: hsl(0 0 10);
@@ -10,7 +11,8 @@
 
     --font-family: "Arimo", "Inter", sans-serif;
     --text-primary: hsl(0 0 90);
-    --text-secondary: hsl(0 0 60);
+    --text-secondary: hsl(0 0 70);
+    --text-tertiary: hsl(0 0 50);
 }
 
 /* reset */
@@ -27,11 +29,27 @@ a, button {
     cursor: pointer;
 }
 
-/* styles */
+/* styles elements */
 body {
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
+    gap: 1rem;
 
     background-color: var(--background-l0);
+}
+
+button {
+    width: fit-content;
+
+    padding: 1rem;
+
+    background-color: var(--button);
+    border-radius: var(--border-l2);
+
+    &:focus {
+        outline: solid 3px red;
+    }
 }
 
 p {
@@ -41,27 +59,13 @@ p {
     &.secondary {
         color: var(--text-secondary);
     }
+
+    &.tertiary {
+        color: var(--text-tertiary);
+    }
 }
 
-.header {
-    height: 8rem;
-
-    display: flex;
-    justify-content: space-between;
-
-    background-color: var(--background-l1);
-    border-radius: var(--border-l1);
-}
-
-.banner {
-    height: 100%;
-    padding: 1rem;
-    gap: 1rem;
-
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-}
+/* styles classes components */
 
 .avatar {
     height: 6rem;
@@ -71,22 +75,55 @@ p {
     border-radius: var(--border-l2);
 }
 
-.menu {
-    height: 100%;
-    padding: 1rem;
-    gap: 1rem;
-
+.tags {
     display: flex;
-    box-sizing: border-box;
+    flex-wrap: wrap;
+
+    justify-content: start;
+    gap: 0.5rem;
 }
 
-.menu a {
-    width: 12rem;
+.tag {
+    height: 1rem;
+    width: fit-content;
+
     padding: 1rem;
+
+    background-color: var(--button);
+    border-radius: var(--border-max);
+}
+
+/* styles classes layout */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+    overflow-x: hidden;
+
+    background-color: var(--background-l1);
+    border-radius: var(--border-l1);
+}
+
+.header .banner {
+    flex: 1;
+}
+
+.header .menu {
+    flex: 1;
+
+    display: flex;
+    gap: 1rem;
+}
+
+.header .menu a {
+    flex: 1;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding: 1rem;
 
     background-color: var(--button);
     border-radius: var(--border-l2);
@@ -94,4 +131,37 @@ p {
     &:focus {
         outline: 3px solid red;
     }
+}
+
+.content.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 3fr));
+    gap: 1rem;
+}
+
+.content.projects .card {
+    height: 20rem;
+
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+
+    background-color: var(--background-l1);
+    border-radius: var(--border-l1);
+}
+
+.content.projects .card .banner {
+    flex: 1;
+
+    background-color: var(--button);
+    border-radius: var(--border-l2);
+}
+
+.content.projects .card .information {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 1rem;
 }
