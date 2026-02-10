@@ -91,6 +91,18 @@ p {
 
     background-color: var(--button);
     border-radius: var(--border-max);
+
+    &.icon {
+        width: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            height: 1.5rem;
+        }
+    }
 }
 
 /* styles classes layout */
