@@ -52,6 +52,12 @@ button {
     }
 }
 
+dialog {
+    &::backdrop {
+        background-color: red;
+    }
+}
+
 p {
     font-family: var(--font-family);
     color: var(--text-primary);
