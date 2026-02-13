@@ -1,6 +1,10 @@
 /* variables */
 :root {
     --rem: 14px;
+    @media screen and (max-width: 995px) {
+        --rem: 24px;
+    }
+
     --border-l1: 1rem;
     --border-l2: 0.5rem;
     --border-max: 1024rem;
