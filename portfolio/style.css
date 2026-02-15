@@ -1,7 +1,7 @@
 /* variables */
 :root {
     --rem: 14px;
-    @media screen and (max-width: 995px) {
+    @media screen and (max-width: 992px) {
         --rem: 24px;
     }
 
@@ -13,6 +13,7 @@
     --background-l1: hsl(0 0 10);
     --backdrop: hsl(0 0 0 / 0.5);
     --button: hsl(0 0 15);
+    --focus: hsl(0 0 50);
 
     --font-family: "Arimo", "Inter", sans-serif;
     --text-primary: hsl(0 0 90);
@@ -48,21 +49,21 @@ button {
     height: 1rem;
     width: fit-content;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
+    gap: 0.5rem;
 
     background-color: var(--button);
     border-radius: var(--border-l2);
 
     &.icon {
         width: 1rem;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     &:focus {
-        outline: solid 3px red;
+        outline: solid 3px var(--focus);
     }
 }
 
@@ -78,6 +79,10 @@ dialog {
 
     &::backdrop {
         background-color: var(--backdrop);
+    }
+
+    @media screen and (max-width: 992px) {
+        width: 85vw;
     }
 }
 
@@ -102,6 +107,16 @@ p {
 
     background-color: var(--button);
     border-radius: var(--border-l2);
+}
+
+.material-symbols-outlined {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }
 
 .tags {
@@ -170,7 +185,7 @@ p {
     border-radius: var(--border-l2);
 
     &:focus {
-        outline: 3px solid red;
+        outline: 3px solid var(--focus);
     }
 }
 
