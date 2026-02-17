@@ -1,8 +1,13 @@
 /* variables */
 :root {
     --rem: 14px;
-    @media screen and (max-width: 992px) {
-        --rem: 24px;
+
+    @media screen and (max-width: 768px) {
+        --rem: 13px;
+    }
+
+    @media screen and (max-width: 425px) {
+        --rem: 12px;
     }
 
     --border-l1: 1rem;
@@ -63,13 +68,13 @@ button {
     }
 
     &:focus {
-        outline: solid 3px var(--focus);
+        outline: solid 0.25rem var(--focus);
     }
 }
 
 dialog {
     height: 85vh;
-    width: 75vw;
+    width: 60vw;
 
     padding: 0;
 
@@ -79,6 +84,7 @@ dialog {
 
     &::backdrop {
         background-color: var(--backdrop);
+        backdrop-filter: blur(1rem);
     }
 
     @media screen and (max-width: 992px) {
@@ -191,8 +197,16 @@ p {
 
 .content.projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(32rem, 3fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+
+    @media screen and (max-width: 1600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .content.projects .card {
@@ -204,13 +218,28 @@ p {
 
     background-color: var(--background-l1);
     border-radius: var(--border-l1);
+
+    @media screen and (max-width: 425px) {
+        height: unset;
+
+        flex-direction: column;
+    }
 }
 
 .content.projects .card .banner {
     flex: 1;
 
-    background-color: var(--button);
+    background-image: url(img/projects/1_aquece-bem/aquece-bem_3.jpg);
+    background-size: cover;
+    background-position: center;
     border-radius: var(--border-l2);
+
+    @media screen and (max-width: 425px) {
+        flex: unset;
+
+        height: 24rem;
+        flex-direction: column;
+    }
 }
 
 .content.projects .card .information {
@@ -240,8 +269,17 @@ dialog.project .information {
     gap: 1rem;
 }
 
-dialog.project .image {
-    height: 128rem;
+dialog.project .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: unset;
+    }
+}
+
+dialog.project .gallery img {
     width: 100%;
 
     background-color: var(--button);
