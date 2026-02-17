@@ -225,10 +225,7 @@ p {
     border-radius: var(--border-l2);
 
     @media screen and (max-width: 425px) {
-        flex: unset;
-
-        height: 24rem;
-        flex-direction: column;
+        width: 100%;
     }
 }
 
