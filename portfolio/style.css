@@ -2,14 +2,6 @@
 :root {
     --rem: 14px;
 
-    @media screen and (max-width: 768px) {
-        --rem: 13px;
-    }
-
-    /* @media screen and (max-width: 425px) {
-        --rem: 12px;
-    } */
-
     --border-l1: 1rem;
     --border-l2: 0.5rem;
     --border-max: 1024rem;
@@ -23,7 +15,6 @@
     --font-family: "Arimo", "Inter", sans-serif;
     --text-primary: hsl(0 0 90);
     --text-secondary: hsl(0 0 70);
-    --text-tertiary: hsl(0 0 50);
 }
 
 /* reset */
@@ -226,12 +217,7 @@ p {
     }
 }
 
-.content.projects .card .banner {
-    flex: 1;
-
-    background-image: url(img/projects/1_aquece-bem/aquece-bem_3.jpg);
-    background-size: cover;
-    background-position: center;
+.content.projects .card > img {
     border-radius: var(--border-l2);
 
     @media screen and (max-width: 425px) {
