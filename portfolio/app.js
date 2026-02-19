@@ -1,3 +1,7 @@
+// cards
+
+// ...
+
 // dialog
 
 const dialog = document.querySelector('dialog.project');
@@ -5,26 +9,59 @@ const showDialog = document.querySelectorAll('.show-dialog');
 const closeDialog = document.querySelectorAll('.close-dialog');
 
 showDialog.forEach(element => {
-    element.addEventListener('click', () => {
+    element.addEventListener('click', async () => {
         const projectName = element.closest('.card').id;
-        const projectGallery = dialog.querySelector('.gallery');
+        const projectData = await loadProject(projectName);
+        const projectSkillTags = projectData.skill_tags;
+        const projectCategoryTags = projectData.category_tags;
+        const projectTitle = projectData.title;
+        const projectDescription = projectData.description;
+        const projectImages = projectData.images;
 
-        const projectImages = [
-            'img/projects/aquece-bem/aquece-bem_1.jpg',
-            'img/projects/aquece-bem/aquece-bem_2.jpg',
-            'img/projects/aquece-bem/aquece-bem_3.jpg',
-            'img/projects/aquece-bem/aquece-bem_4.jpg'
-        ];
+        const dialogTags = dialog.querySelector('.tags');
+        const dialogTitle = dialog.querySelector('.dialog-title');
+        const dialogDescription = dialog.querySelector('.dialog-description');
+        const dialogGallery = dialog.querySelector('.gallery');
 
-        // clear previous
-        projectGallery.replaceChildren();
+        // replace text
+        dialogTitle.innerHTML = projectTitle;
+        dialogDescription.innerHTML = projectDescription;
 
-        // show current
-        projectImages.forEach(element => {
+        // clear previous tags
+        dialogTags.replaceChildren();
+
+        // show current tags
+        projectSkillTags.forEach(item => {
+            const tag = document.createElement('div');
+            tag.classList.add('tag', 'icon');
+            
             const img = document.createElement('img');
-            img.src = element;
+            img.src = `img/icons/skill-${item}.svg`
 
-            projectGallery.append(img);
+            tag.append(img);
+            dialogTags.append(tag);
+        })
+
+        projectCategoryTags.forEach(item => {
+            const tag = document.createElement('div');
+            tag.classList.add('tag');
+
+            const p = document.createElement('p');
+            p.innerHTML = item;
+
+            tag.append(p);
+            dialogTags.append(tag);
+        })
+
+        // clear previous images
+        dialogGallery.replaceChildren();
+
+        // show current images
+        projectImages.forEach(item => {
+            const img = document.createElement('img');
+            img.src = item;
+
+            dialogGallery.append(img);
         })
 
         // show
@@ -38,3 +75,9 @@ closeDialog.forEach(element => {
         dialog.close();
     })
 })
+
+async function loadProject(projectName) {
+    const response = await fetch(`img/projects/${projectName}/project.json`);
+    const data = await response.json();
+    return data;
+}

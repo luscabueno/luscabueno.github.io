@@ -123,8 +123,6 @@ p {
 .tags {
     display: flex;
     flex-wrap: wrap;
-
-    justify-content: start;
     gap: 0.5rem;
 }
 

@@ -1,0 +1,20 @@
+{
+    "skill_tags": [
+        "illustrator", "photoshop"
+    ],
+    "category_tags": [
+        "Branding", "Social", "Stationery"
+    ],
+    "title": [
+        "VVC"
+    ],
+    "description": [
+        "Descrição breve sobre o projeto VVC."
+    ],
+    "images": [
+        "img/projects/vvc/vvc_1.jpg",
+        "img/projects/vvc/vvc_2.jpg",
+        "img/projects/vvc/vvc_3.jpg",
+        "img/projects/vvc/vvc_4.jpg"
+    ]
+}

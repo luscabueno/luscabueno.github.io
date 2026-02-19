@@ -1,0 +1,20 @@
+{
+    "skill_tags": [
+        "illustrator", "photoshop"
+    ],
+    "category_tags": [
+        "Branding", "Social", "Stationery"
+    ],
+    "title": [
+        "Catavolt"
+    ],
+    "description": [
+        "Descrição breve sobre o projeto Catavolt."
+    ],
+    "images": [
+        "img/projects/catavolt/catavolt_1.jpg",
+        "img/projects/catavolt/catavolt_2.jpg",
+        "img/projects/catavolt/catavolt_3.jpg",
+        "img/projects/catavolt/catavolt_4.jpg"
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "skill_tags": [
+        "illustrator", "photoshop"
+    ],
+    "category_tags": [
+        "Branding", "Social", "Stationery"
+    ],
+    "title": [
+        "Aquece Bem"
+    ],
+    "description": [
+        "Descrição breve sobre o projeto Aquece Bem."
+    ],
+    "images": [
+        "img/projects/aquece-bem/aquece-bem_1.jpg",
+        "img/projects/aquece-bem/aquece-bem_2.jpg",
+        "img/projects/aquece-bem/aquece-bem_3.jpg",
+        "img/projects/aquece-bem/aquece-bem_4.jpg"
+    ]
+}
