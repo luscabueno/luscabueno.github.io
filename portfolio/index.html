@@ -5,28 +5,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add,add_2,arrow_outward,close">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
-        <dialog class="project">
-            <div class="content">
-                <div class="information">
-                    <header>
-                        <div class="tags"></div>
-                        <button class="icon close-dialog">
-                            <span class="material-symbols-outlined">close</span>
-                        </button>
-                    </header>
-                    <div>
-                        <p class="dialog-title"></p>
-                        <p class="dialog-description secondary"></p>
-                    </div>
-                </div>
-                <div class="gallery"></div>
-            </div>
-        </dialog>
-        <div class="header">
+    <body class="projects">
+        <header>
             <div class="banner">
                 <div class="avatar"></div>
             </div>
@@ -44,31 +27,39 @@
                     <p>SKILLS</p>
                 </a>
             </div>
-        </div>
-        <div class="content projects">
-            <div class="card" id="aquece-bem">
-                <img src="img/projects/aquece-bem/aquece-bem_1.jpg">
-                <div class="information">
-                    <div class="tags">
-                        <div class="tag icon">
-                            <img src="img/icons/skill-photoshop.svg">
-                        </div>
-                        <div class="tag icon">
-                            <img src="img/icons/skill-illustrator.svg">
-                        </div>
-                        <div class="tag">
-                            <p class="secondary">Branding</p>
-                        </div>
-                        <div class="tag">
-                            <p class="secondary">Social</p>
-                        </div>
-                        <div class="tag">
-                            <p class="secondary">Stationery</p>
-                        </div>
+        </header>
+        <div class="content"></div>
+
+        <!-- project dialog -->
+
+        <dialog class="project">
+            <header>
+                <div class="tags"></div>
+                <button class="icon close-dialog">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </header>
+            <div class="content">
+                <div>
+                    <div>
+                        <p class="title"></p>
+                        <p class="description secondary"></p>
                     </div>
-                    <div class="description">
-                        <p>01</p>
-                        <p class="secondary">Descrição breve sobre o projeto.</p>
+                </div>
+                <div class="gallery"></div>
+            </div>
+        </dialog>
+
+        <!-- templates -->
+
+        <template id="template-project-card">
+            <div class="card">
+                <img class="cover" src="img/projects/catavolt/catavolt_1.jpg">
+                <div class="information">
+                    <div class="tags"></div>
+                    <div>
+                        <p class="title"></p>
+                        <p class="description secondary"></p>
                     </div>
                     <button class="show-dialog">
                         <p>DETALHES</p>
@@ -76,55 +67,8 @@
                     </button>
                 </div>
             </div>
-            <div class="card" id="vvc">
-                <img src="img/projects/vvc/vvc_1.jpg">
-                <div class="information">
-                    <div class="tags">
-                        <div class="tag icon">
-                            <img src="img/icons/skill-blender.svg">
-                        </div>
-                        <div class="tag">
-                            <p class="secondary">Social</p>
-                        </div>
-                        <div class="tag">
-                            <p class="secondary">Stationery</p>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p>02</p>
-                        <p class="secondary">Descrição breve sobre o projeto.</p>
-                    </div>
-                    <button class="show-dialog">
-                        <p>DETALHES</p>
-                        <span class="icon material-symbols-outlined">arrow_outward</span>
-                    </button>
-                </div>
-            </div>
-            <div class="card" id="catavolt">
-                <img src="img/projects/catavolt/catavolt_1.jpg">
-                <div class="information">
-                    <div class="tags">
-                        <div class="tag icon">
-                            <img src="img/icons/skill-html.svg">
-                        </div>
-                        <div class="tag">
-                            <p class="secondary">Social</p>
-                        </div>
-                        <div class="tag">
-                            <p class="secondary">Stationery</p>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p>03</p>
-                        <p class="secondary">Descrição breve sobre o projeto.</p>
-                    </div>
-                    <button class="show-dialog">
-                        <p>DETALHES</p>
-                        <span class="icon material-symbols-outlined">arrow_outward</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+        </template>
+
     </body>
-    <script src="app.js"></script>
+    <script src="js/main.js"></script>
 </html>

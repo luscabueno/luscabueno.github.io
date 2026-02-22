@@ -148,9 +148,9 @@ p {
     }
 }
 
-/* styles classes layout */
+/* styles classes body */
 
-.header {
+body.projects header {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -161,18 +161,18 @@ p {
     border-radius: var(--border-l1);
 }
 
-.header .banner {
+body.projects header .banner {
     flex: 1;
 }
 
-.header .menu {
+body.projects header .menu {
     flex: 1;
 
     display: flex;
     gap: 1rem;
 }
 
-.header .menu a {
+body.projects header .menu a {
     flex: 1;
 
     display: flex;
@@ -188,7 +188,7 @@ p {
     }
 }
 
-.content.projects {
+body.projects .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -202,7 +202,7 @@ p {
     }
 }
 
-.content.projects .card {
+body.projects .content .card {
     height: 20rem;
 
     display: flex;
@@ -219,7 +219,7 @@ p {
     }
 }
 
-.content.projects .card > img {
+body.projects .content .card > img {
     border-radius: var(--border-l2);
 
     @media screen and (max-width: 425px) {
@@ -227,7 +227,7 @@ p {
     }
 }
 
-.content.projects .card .information {
+body.projects .content .card .information {
     flex: 1;
 
     display: flex;
@@ -236,16 +236,18 @@ p {
     gap: 1rem;
 }
 
+/* styles classes dialog */
+
+dialog.project header {
+    display: flex;
+    justify-content: space-between;
+}
+
 dialog.project .content {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-}
-
-dialog.project header {
-    display: flex;
-    justify-content: space-between;
 }
 
 dialog.project .information {
