@@ -1,6 +1,7 @@
 // global
 
-const projectContainer = document.querySelector('body.projects .content');
+const projectGrid = document.querySelector('body.projects .content');
+const projectDialog = document.querySelector('dialog.project');
 
 function renderIconTags(tagsList) {
     return tagsList.map(item => {
@@ -69,7 +70,7 @@ async function renderProjects() {
         projectCard.querySelector('.title').textContent = projectData.title;
         projectCard.querySelector('.description').textContent = projectData.description;
 
-        projectContainer.append(projectCard);
+        projectGrid.append(projectCard);
     }
 }
 
@@ -83,7 +84,7 @@ async function loadProject(projectName) {
     return data;
 }
 
-projectContainer.addEventListener('click', async (event) => {
+projectGrid.addEventListener('click', async (event) => {
     // trigger check
     const trigger = event.target.closest('.show-dialog');
     if (trigger === null) return;
@@ -94,95 +95,32 @@ projectContainer.addEventListener('click', async (event) => {
 
     // load data
     const projectData = await loadProject(projectName);
-    const projectSkillTags = projectData.skill_tags;
-    const projectCategoryTags = projectData.category_tags;
-    const projectImages = projectData.images;
-
-    // load elements
-    const projectDialog = document.querySelector('dialog.project');
-    const dialogTags = projectDialog.querySelector('.tags');
-    const dialogTitle = projectDialog.querySelector('.title');
-    const dialogDescription = projectDialog.querySelector('.description');
-    const dialogGallery = projectDialog.querySelector('.gallery');
-
-    // clear previous data
-    dialogTags.replaceChildren();
-    dialogGallery.replaceChildren();
 
     // render tags
-    // ...
+    projectDialog.querySelector('.tags').replaceChildren();
+    renderIconTags(projectData.skill_tags).forEach(tag => {
+        projectDialog.querySelector('.tags').append(tag);
+    })
+    renderTextTags(projectData.category_tags).forEach(tag => {
+        projectDialog.querySelector('.tags').append(tag);
+    })
 
     // render text
-    dialogTitle.textContent = projectData.title;
-    dialogDescription.textContent = projectData.description;
+    projectDialog.querySelector('.title').textContent = projectData.title;
+    projectDialog.querySelector('.description').textContent = projectData.description;
+
+    // render images
+    projectDialog.querySelector('.gallery').replaceChildren();
+    projectData.images.forEach(image => {
+        const img = document.createElement('img');
+        img.src = image;
+
+        projectDialog.querySelector('.gallery').append(img);
+    })
 
     // show dialog
     projectDialog.showModal();
 })
-
-// const dialog = document.querySelector('dialog.project');
-// const showDialog = document.querySelectorAll('.show-dialog');
-
-// showDialog.forEach(element => {
-//     element.addEventListener('click', async () => {
-//         const projectName = element.closest('.card').id;
-//         const projectData = await loadProject(projectName);
-//         const projectSkillTags = projectData.skill_tags;
-//         const projectCategoryTags = projectData.category_tags;
-//         const projectTitle = projectData.title;
-//         const projectDescription = projectData.description;
-//         const projectImages = projectData.images;
-
-//         const dialogTags = dialog.querySelector('.tags');
-//         const dialogTitle = dialog.querySelector('.dialog-title');
-//         const dialogDescription = dialog.querySelector('.dialog-description');
-//         const dialogGallery = dialog.querySelector('.gallery');
-
-//         // replace text
-//         dialogTitle.innerHTML = projectTitle;
-//         dialogDescription.innerHTML = projectDescription;
-
-//         // clear previous tags
-//         dialogTags.replaceChildren();
-
-//         // show current tags
-//         projectSkillTags.forEach(item => {
-//             const tag = document.createElement('div');
-//             tag.classList.add('tag', 'icon');
-            
-//             const img = document.createElement('img');
-//             img.src = `img/icons/skill-${item}.svg`
-
-//             tag.append(img);
-//             dialogTags.append(tag);
-//         })
-
-//         projectCategoryTags.forEach(item => {
-//             const tag = document.createElement('div');
-//             tag.classList.add('tag');
-
-//             const p = document.createElement('p');
-//             p.innerHTML = item;
-
-//             tag.append(p);
-//             dialogTags.append(tag);
-//         })
-
-//         // clear previous images
-//         dialogGallery.replaceChildren();
-
-//         // show current images
-//         projectImages.forEach(item => {
-//             const img = document.createElement('img');
-//             img.src = item;
-
-//             dialogGallery.append(img);
-//         })
-
-//         // show
-//         dialog.showModal();
-//     })
-// })
 
 const closeDialog = document.querySelectorAll('.close-dialog');
 
