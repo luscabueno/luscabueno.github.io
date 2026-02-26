@@ -11,10 +11,13 @@
     "description": [
         "Descrição breve sobre o projeto Catavolt."
     ],
+    "cover": [
+        "img/projects/catavolt/cover.jpg"
+    ],
     "images": [
-        "img/projects/catavolt/catavolt_1.jpg",
-        "img/projects/catavolt/catavolt_2.jpg",
-        "img/projects/catavolt/catavolt_3.jpg",
-        "img/projects/catavolt/catavolt_4.jpg"
+        "img/projects/catavolt/1.jpg",
+        "img/projects/catavolt/2.jpg",
+        "img/projects/catavolt/3.jpg",
+        "img/projects/catavolt/4.jpg"
     ]
 }

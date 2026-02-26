@@ -11,10 +11,13 @@
     "description": [
         "Descrição breve sobre o projeto Aquece Bem."
     ],
+    "cover": [
+        "img/projects/aquece-bem/cover.jpg"
+    ],
     "images": [
-        "img/projects/aquece-bem/aquece-bem_1.jpg",
-        "img/projects/aquece-bem/aquece-bem_2.jpg",
-        "img/projects/aquece-bem/aquece-bem_3.jpg",
-        "img/projects/aquece-bem/aquece-bem_4.jpg"
+        "img/projects/aquece-bem/1.jpg",
+        "img/projects/aquece-bem/2.jpg",
+        "img/projects/aquece-bem/3.jpg",
+        "img/projects/aquece-bem/4.jpg"
     ]
 }

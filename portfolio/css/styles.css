@@ -12,7 +12,7 @@
     --button: hsl(0 0 15);
     --focus: hsl(0 0 50);
 
-    --font-family: "Arimo", "Inter", sans-serif;
+    --font-family: "Syne", sans-serif;
     --text-primary: hsl(0 0 90);
     --text-secondary: hsl(0 0 70);
 }
@@ -22,7 +22,7 @@
     font-size: var(--rem);
 }
 
-body, p {
+body, p, h4 {
     margin: 0;
 }
 
@@ -89,6 +89,7 @@ dialog {
 
 p {
     font-family: var(--font-family);
+    font-weight: 400;
     color: var(--text-primary);
 
     &.secondary {
@@ -184,7 +185,7 @@ body.projects header .menu a {
     border-radius: var(--border-l2);
 
     &:focus {
-        outline: 3px solid var(--focus);
+        outline: solid 0.25rem var(--focus);
     }
 }
 

@@ -1,0 +1,23 @@
+{
+    "skill_tags": [
+        "illustrator", "photoshop"
+    ],
+    "category_tags": [
+        "Branding", "Social", "Stationery"
+    ],
+    "title": [
+        "SDM"
+    ],
+    "description": [
+        "Descrição breve sobre o projeto SDM."
+    ],
+    "cover": [
+        "img/projects/sdm/cover.jpg"
+    ],
+    "images": [
+        "img/projects/sdm/1.jpg",
+        "img/projects/sdm/2.jpg",
+        "img/projects/sdm/3.jpg",
+        "img/projects/sdm/4.jpg"
+    ]
+}

@@ -11,10 +11,13 @@
     "description": [
         "Descrição breve sobre o projeto VVC."
     ],
+    "cover": [
+        "img/projects/vvc/cover.jpg"
+    ],
     "images": [
-        "img/projects/vvc/vvc_1.jpg",
-        "img/projects/vvc/vvc_2.jpg",
-        "img/projects/vvc/vvc_3.jpg",
-        "img/projects/vvc/vvc_4.jpg"
+        "img/projects/vvc/1.jpg",
+        "img/projects/vvc/2.jpg",
+        "img/projects/vvc/3.jpg",
+        "img/projects/vvc/4.jpg"
     ]
 }

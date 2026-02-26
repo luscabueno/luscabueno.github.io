@@ -1,0 +1,23 @@
+{
+    "skill_tags": [
+        "illustrator", "photoshop"
+    ],
+    "category_tags": [
+        "Branding", "Social", "Stationery"
+    ],
+    "title": [
+        "Studio WOW"
+    ],
+    "description": [
+        "Descrição breve sobre o projeto Studio WOW."
+    ],
+    "cover": [
+        "img/projects/studio-wow/cover.jpg"
+    ],
+    "images": [
+        "img/projects/studio-wow/1.jpg",
+        "img/projects/studio-wow/2.jpg",
+        "img/projects/studio-wow/3.jpg",
+        "img/projects/studio-wow/4.jpg"
+    ]
+}

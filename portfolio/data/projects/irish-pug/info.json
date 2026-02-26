@@ -1,0 +1,23 @@
+{
+    "skill_tags": [
+        "illustrator", "photoshop"
+    ],
+    "category_tags": [
+        "Branding", "Social", "Stationery"
+    ],
+    "title": [
+        "Irish Pug"
+    ],
+    "description": [
+        "Descrição breve sobre o projeto Irish Pug."
+    ],
+    "cover": [
+        "img/projects/irish-pug/cover.jpg"
+    ],
+    "images": [
+        "img/projects/irish-pug/1.jpg",
+        "img/projects/irish-pug/2.jpg",
+        "img/projects/irish-pug/3.jpg",
+        "img/projects/irish-pug/4.jpg"
+    ]
+}

@@ -54,7 +54,7 @@ async function renderProjects() {
         projectCard.querySelector('.card').id = item;
 
         // render cover
-        projectCard.querySelector('.cover').src = projectData.images[0];
+        projectCard.querySelector('.cover').src = projectData.cover;
 
         // render tags
         const skillTags = renderIconTags(projectData.skill_tags);

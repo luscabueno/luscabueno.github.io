@@ -1,0 +1,23 @@
+{
+    "skill_tags": [
+        "illustrator", "photoshop"
+    ],
+    "category_tags": [
+        "Branding", "Social", "Stationery"
+    ],
+    "title": [
+        "Octans"
+    ],
+    "description": [
+        "Descrição breve sobre o projeto Octans."
+    ],
+    "cover": [
+        "img/projects/octans/cover.jpg"
+    ],
+    "images": [
+        "img/projects/octans/1.jpg",
+        "img/projects/octans/2.jpg",
+        "img/projects/octans/3.jpg",
+        "img/projects/octans/4.jpg"
+    ]
+}

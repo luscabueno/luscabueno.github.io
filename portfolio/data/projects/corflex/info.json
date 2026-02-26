@@ -1,0 +1,23 @@
+{
+    "skill_tags": [
+        "illustrator", "photoshop"
+    ],
+    "category_tags": [
+        "Branding", "Social", "Stationery"
+    ],
+    "title": [
+        "Corflex"
+    ],
+    "description": [
+        "Descrição breve sobre o projeto Corflex."
+    ],
+    "cover": [
+        "img/projects/corflex/cover.jpg"
+    ],
+    "images": [
+        "img/projects/corflex/1.jpg",
+        "img/projects/corflex/2.jpg",
+        "img/projects/corflex/3.jpg",
+        "img/projects/corflex/4.jpg"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "skill_tags": [
+        "illustrator", "photoshop"
+    ],
+    "category_tags": [
+        "Branding", "Social", "Stationery"
+    ],
+    "title": [
+        "Horus"
+    ],
+    "description": [
+        "Descrição breve sobre o projeto Horus."
+    ],
+    "cover": [
+        "img/projects/horus/cover.jpg"
+    ],
+    "images": [
+        "img/projects/horus/1.jpg",
+        "img/projects/horus/2.jpg",
+        "img/projects/horus/3.jpg",
+        "img/projects/horus/4.jpg"
+    ]
+}
