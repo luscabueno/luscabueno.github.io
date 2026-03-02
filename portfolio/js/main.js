@@ -3,6 +3,8 @@
 const projectGrid = document.querySelector('body.projects .content');
 const projectDialog = document.querySelector('dialog.project');
 
+// tags
+
 function renderIconTags(tagsList) {
     return tagsList.map(item => {
         const tag = document.createElement('div');
@@ -76,7 +78,7 @@ async function renderProjects() {
 
 renderProjects();
 
-// dialog
+// project dialog
 
 async function loadProject(projectName) {
     const response = await fetch(`data/projects/${projectName}/info.json`);
@@ -86,7 +88,7 @@ async function loadProject(projectName) {
 
 projectGrid.addEventListener('click', async (event) => {
     // trigger check
-    const trigger = event.target.closest('.show-dialog');
+    const trigger = event.target.closest('.show-project-dialog');
     if (trigger === null) return;
 
     // trigger pass
@@ -121,6 +123,12 @@ projectGrid.addEventListener('click', async (event) => {
     // show dialog
     projectDialog.showModal();
 })
+
+// menu dialog
+
+// ...
+
+// close dialog
 
 const closeDialog = document.querySelectorAll('.close-dialog');
 

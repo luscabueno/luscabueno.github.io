@@ -39,6 +39,10 @@ body {
     gap: 1rem;
 
     background-color: var(--background-l0);
+
+    &:has(dialog[open]) {
+        overflow: hidden;
+    }
 }
 
 button {
@@ -103,14 +107,6 @@ p {
 
 /* styles classes components */
 
-.avatar {
-    height: 6rem;
-    width: 6rem;
-
-    background-color: var(--button);
-    border-radius: var(--border-l2);
-}
-
 .material-symbols-outlined {
     color: var(--text-primary);
     font-size: 1.3rem;
@@ -162,8 +158,16 @@ body.projects header {
     border-radius: var(--border-l1);
 }
 
-body.projects header .banner {
+body.projects header .title {
     flex: 1;
+}
+
+body.projects header .title .avatar {
+    height: 6rem;
+    width: 6rem;
+
+    background-color: var(--button);
+    border-radius: var(--border-l2);
 }
 
 body.projects header .menu {
@@ -171,9 +175,14 @@ body.projects header .menu {
 
     display: flex;
     gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 body.projects header .menu a {
+    height: 4rem;
     flex: 1;
 
     display: flex;
@@ -189,12 +198,21 @@ body.projects header .menu a {
     }
 }
 
+body.projects > header button {
+    height: 4rem;
+    width: 4rem;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
 body.projects .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1440px) {
         grid-template-columns: repeat(2, 1fr);
     }
 
